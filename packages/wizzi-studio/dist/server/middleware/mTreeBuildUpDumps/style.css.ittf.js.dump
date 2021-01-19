@@ -1,37 +1,123 @@
-// 12/4/2019:7:50:25  by C:\My\wizzi\v5\apps\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
+// 14/1/2021:14:58:23  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
 $.n(); // set the context state to NodeContext
 var $0 = {}; // the root node of the MTree buildup
-var $1 = { n: "css", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //18
+var $1 = { n: "css", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //61
 $.a($0, $1, 5);
-var $2 = { n: "<", v: "body", r: 9, c: 5, s: "f1", u: "f1",  }; //19
+var $2 = { n: "<", v: "body", r: 3, c: 5, s: "f1", u: "f1",  }; //62
 $.a($1, $2, 7);
-var $3 = { n: "margin", v: "0", r: 10, c: 9, s: "f1", u: "f1",  }; //20
+var $3 = { n: "font-family", v: "Arial, Serif", r: 4, c: 9, s: "f1", u: "f1",  }; //63
 $.a($2, $3, 9);
-var $4 = { n: "padding", v: "0", r: 11, c: 9, s: "f1", u: "f1",  }; //21
+var $4 = { n: "background-color", v: "#f4f4f4", r: 5, c: 9, s: "f1", u: "f1",  }; //64
 $.a($2, $4, 11);
-var $5 = { n: "<", v: "::-webkit-scrollbar", r: 13, c: 5, s: "f1", u: "f1",  }; //22
+var $5 = { n: ".", v: "navbar", r: 7, c: 5, s: "f1", u: "f1",  }; //65
 $.a($1, $5, 13);
-var $6 = { n: "width", v: "15px", r: 14, c: 9, s: "f1", u: "f1",  }; //23
+var $6 = { n: "background-color", v: "#3b5998", r: 8, c: 9, s: "f1", u: "f1",  }; //66
 $.a($5, $6, 15);
-var $7 = { n: "<", v: "::-webkit-scrollbar-track", r: 16, c: 5, s: "f1", u: "f1",  }; //24
-$.a($1, $7, 17);
-var $8 = { n: "-webkit-box-shadow", v: "inset 0 0 6px rgba(0,0,0,0.3)", r: 17, c: 9, s: "f1", u: "f1",  }; //25
-$.a($7, $8, 19);
-var $9 = { n: "-webkit-border-radius", v: "10px", r: 18, c: 9, s: "f1", u: "f1",  }; //26
-$.a($7, $9, 21);
-var $10 = { n: "border-radius", v: "10px", r: 19, c: 9, s: "f1", u: "f1",  }; //27
-$.a($7, $10, 23);
-var $11 = { n: "<", v: "::-webkit-scrollbar-thumb", r: 21, c: 5, s: "f1", u: "f1",  }; //28
-$.a($1, $11, 25);
-var $12 = { n: "-webkit-border-radius", v: "10px", r: 22, c: 9, s: "f1", u: "f1",  }; //29
-$.a($11, $12, 27);
-var $13 = { n: "border-radius", v: "10px", r: 23, c: 9, s: "f1", u: "f1",  }; //30
-$.a($11, $13, 29);
-var $14 = { n: "background", v: "rgba(50,200,220,0.8)", r: 24, c: 9, s: "f1", u: "f1",  }; //31
-$.a($11, $14, 31);
-var $15 = { n: "-webkit-box-shadow", v: "inset 0 0 6px rgba(0,0,0,0.5)", r: 25, c: 9, s: "f1", u: "f1",  }; //32
-$.a($11, $15, 33);
-var $16 = { n: "<", v: "::-webkit-scrollbar-thumb:window-inactive", r: 27, c: 5, s: "f1", u: "f1",  }; //33
-$.a($1, $16, 35);
-var $17 = { n: "background", v: "rgba(255,0,0,0.4)", r: 28, c: 9, s: "f1", u: "f1",  }; //34
-$.a($16, $17, 37);
+var $7 = { n: "overflow", v: "hidden", r: 9, c: 9, s: "f1", u: "f1",  }; //67
+$.a($5, $7, 17);
+var $8 = { n: "height", v: "63px", r: 10, c: 9, s: "f1", u: "f1",  }; //68
+$.a($5, $8, 19);
+var $9 = { n: ".", v: "navbar a", r: 12, c: 5, s: "f1", u: "f1",  }; //69
+$.a($1, $9, 21);
+var $10 = { n: "float", v: "left", r: 13, c: 9, s: "f1", u: "f1",  }; //70
+$.a($9, $10, 23);
+var $11 = { n: "display", v: "block", r: 14, c: 9, s: "f1", u: "f1",  }; //71
+$.a($9, $11, 25);
+var $12 = { n: "color", v: "#f2f2f2", r: 15, c: 9, s: "f1", u: "f1",  }; //72
+$.a($9, $12, 27);
+var $13 = { n: "text-align", v: "center", r: 16, c: 9, s: "f1", u: "f1",  }; //73
+$.a($9, $13, 29);
+var $14 = { n: "padding", v: "14px 16px", r: 17, c: 9, s: "f1", u: "f1",  }; //74
+$.a($9, $14, 31);
+var $15 = { n: "text-decoration", v: "none", r: 18, c: 9, s: "f1", u: "f1",  }; //75
+$.a($9, $15, 33);
+var $16 = { n: "font-size", v: "17px", r: 19, c: 9, s: "f1", u: "f1",  }; //76
+$.a($9, $16, 35);
+var $17 = { n: ".", v: "navbar ul", r: 21, c: 5, s: "f1", u: "f1",  }; //77
+$.a($1, $17, 37);
+var $18 = { n: "margin", v: "8px 0 0 0", r: 22, c: 9, s: "f1", u: "f1",  }; //78
+$.a($17, $18, 39);
+var $19 = { n: "list-style", v: "none", r: 23, c: 9, s: "f1", u: "f1",  }; //79
+$.a($17, $19, 41);
+var $20 = { n: ".", v: "navbar a:hover", r: 25, c: 5, s: "f1", u: "f1",  }; //80
+$.a($1, $20, 43);
+var $21 = { n: "background-color", v: "#ddd", r: 26, c: 9, s: "f1", u: "f1",  }; //81
+$.a($20, $21, 45);
+var $22 = { n: "color", v: "#000", r: 27, c: 9, s: "f1", u: "f1",  }; //82
+$.a($20, $22, 47);
+var $23 = { n: ".", v: "side-nav", r: 29, c: 5, s: "f1", u: "f1",  }; //83
+$.a($1, $23, 49);
+var $24 = { n: "height", v: "100%", r: 30, c: 9, s: "f1", u: "f1",  }; //84
+$.a($23, $24, 51);
+var $25 = { n: "width", v: "0", r: 31, c: 9, s: "f1", u: "f1",  }; //85
+$.a($23, $25, 53);
+var $26 = { n: "position", v: "fixed", r: 32, c: 9, s: "f1", u: "f1",  }; //86
+$.a($23, $26, 55);
+var $27 = { n: "z-index", v: "1", r: 33, c: 9, s: "f1", u: "f1",  }; //87
+$.a($23, $27, 57);
+var $28 = { n: "top", v: "0", r: 34, c: 9, s: "f1", u: "f1",  }; //88
+$.a($23, $28, 59);
+var $29 = { n: "left", v: "0", r: 35, c: 9, s: "f1", u: "f1",  }; //89
+$.a($23, $29, 61);
+var $30 = { n: "background-color", v: "#111", r: 36, c: 9, s: "f1", u: "f1",  }; //90
+$.a($23, $30, 63);
+var $31 = { n: "opacity", v: "0.9", r: 37, c: 9, s: "f1", u: "f1",  }; //91
+$.a($23, $31, 65);
+var $32 = { n: "overflow-x", v: "hidden", r: 38, c: 9, s: "f1", u: "f1",  }; //92
+$.a($23, $32, 67);
+var $33 = { n: "padding-top", v: "60px", r: 39, c: 9, s: "f1", u: "f1",  }; //93
+$.a($23, $33, 69);
+var $34 = { n: "transition", v: "0.5s", r: 40, c: 9, s: "f1", u: "f1",  }; //94
+$.a($23, $34, 71);
+var $35 = { n: ".", v: "side-nav a", r: 42, c: 5, s: "f1", u: "f1",  }; //95
+$.a($1, $35, 73);
+var $36 = { n: "padding", v: "10px 10px 10px 30px", r: 43, c: 9, s: "f1", u: "f1",  }; //96
+$.a($35, $36, 75);
+var $37 = { n: "text-decoration", v: "none", r: 44, c: 9, s: "f1", u: "f1",  }; //97
+$.a($35, $37, 77);
+var $38 = { n: "color", v: "#ccc", r: 45, c: 9, s: "f1", u: "f1",  }; //98
+$.a($35, $38, 79);
+var $39 = { n: "font-size", v: "22px", r: 46, c: 9, s: "f1", u: "f1",  }; //99
+$.a($35, $39, 81);
+var $40 = { n: "display", v: "block", r: 47, c: 9, s: "f1", u: "f1",  }; //100
+$.a($35, $40, 83);
+var $41 = { n: "transition", v: "0.3s", r: 48, c: 9, s: "f1", u: "f1",  }; //101
+$.a($35, $41, 85);
+var $42 = { n: ".", v: "side-nav a:hover", r: 50, c: 5, s: "f1", u: "f1",  }; //102
+$.a($1, $42, 87);
+var $43 = { n: "color", v: "#fff", r: 51, c: 9, s: "f1", u: "f1",  }; //103
+$.a($42, $43, 89);
+var $44 = { n: ".", v: "side-nav .btn-close", r: 53, c: 5, s: "f1", u: "f1",  }; //104
+$.a($1, $44, 91);
+var $45 = { n: "position", v: "absolute", r: 54, c: 9, s: "f1", u: "f1",  }; //105
+$.a($44, $45, 93);
+var $46 = { n: "top", v: "0", r: 55, c: 9, s: "f1", u: "f1",  }; //106
+$.a($44, $46, 95);
+var $47 = { n: "right", v: "22px", r: 56, c: 9, s: "f1", u: "f1",  }; //107
+$.a($44, $47, 97);
+var $48 = { n: "font-size", v: "36px", r: 57, c: 9, s: "f1", u: "f1",  }; //108
+$.a($44, $48, 99);
+var $49 = { n: "margin-left", v: "50px", r: 58, c: 9, s: "f1", u: "f1",  }; //109
+$.a($44, $49, 101);
+var $50 = { n: "#", v: "main", r: 60, c: 5, s: "f1", u: "f1",  }; //110
+$.a($1, $50, 103);
+var $51 = { n: "transition", v: "margin-left 0.5s", r: 61, c: 9, s: "f1", u: "f1",  }; //111
+$.a($50, $51, 105);
+var $52 = { n: "padding", v: "20px", r: 62, c: 9, s: "f1", u: "f1",  }; //112
+$.a($50, $52, 107);
+var $53 = { n: "overflow", v: "hidden", r: 63, c: 9, s: "f1", u: "f1",  }; //113
+$.a($50, $53, 109);
+var $54 = { n: "width", v: "100%", r: 64, c: 9, s: "f1", u: "f1",  }; //114
+$.a($50, $54, 111);
+var $55 = { n: "media", v: "max-width 568px", r: 66, c: 5, s: "f1", u: "f1",  }; //115
+$.a($1, $55, 113);
+var $56 = { n: ".", v: "navbar-nav", r: 67, c: 9, s: "f1", u: "f1",  }; //116
+$.a($55, $56, 115);
+var $57 = { n: "display", v: "none", r: 68, c: 13, s: "f1", u: "f1",  }; //117
+$.a($56, $57, 117);
+var $58 = { n: "media", v: "min-width 568px", r: 70, c: 5, s: "f1", u: "f1",  }; //118
+$.a($1, $58, 119);
+var $59 = { n: ".", v: "open-slide", r: 71, c: 9, s: "f1", u: "f1",  }; //119
+$.a($58, $59, 121);
+var $60 = { n: "display", v: "none", r: 72, c: 13, s: "f1", u: "f1",  }; //120
+$.a($59, $60, 123);

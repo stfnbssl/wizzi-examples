@@ -1,4 +1,4 @@
-// 3/10/2018:17:48:8  by C:\My\wizzi\v5\apps\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
+// 29/12/2020:22:22:37  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
 $.n(); // set the context state to NodeContext
 var $0 = {}; // the root node of the MTree buildup
 var $1 = { n: "html", v: "", r: 1, c: 1, s: "f2", u: "f2",  }; //60
@@ -158,10 +158,10 @@ $.a($25, $27, 157);
 var $28 = { n: "ul", v: "", r: 34, c: 17, s: "f2", u: "f2",  }; //89
 $.a($10, $28, 159);
 $.s("f2");
-for (var i29=0, l29 = nav_menu.length; i29<l29; i29++) { //90
+var item_count = nav_menu.length; //90
+for (var i29=0; i29<item_count; i29++) { //90
     var item = nav_menu[i29]; //90
-    var _index = i29; //90
-    var _count = nav_menu.length; //90
+    var item_index = i29; //90
     $.n();
     var $30 = { n: "li", v: "", r: 36, c: 25, s: "f2", u: "f2",  }; //91
     $.a($28, $30, 167);
@@ -186,10 +186,10 @@ for (var i29=0, l29 = nav_menu.length; i29<l29; i29++) { //90
         var $38 = { n: "ul", v: "", r: 44, c: 37, s: "f2", u: "f2",  }; //99
         $.a($36, $38, 187);
         $.s("f2");
-        for (var i39=0, l39 = item.sub.length; i39<l39; i39++) { //100
+        var sub_item_count = item.sub.length; //100
+        for (var i39=0; i39<sub_item_count; i39++) { //100
             var sub_item = item.sub[i39]; //100
-            var _index = i39; //100
-            var _count = item.sub.length; //100
+            var sub_item_index = i39; //100
             $.n();
             var $40 = { n: "li", v: "", r: 46, c: 45, s: "f2", u: "f2",  }; //101
             $.a($38, $40, 195);
@@ -201,10 +201,10 @@ for (var i29=0, l29 = nav_menu.length; i29<l29; i29++) { //90
     }
 }
 $.s("f2");
-for (var i43=0, l43 = nav_menu.length; i43<l43; i43++) { //104
+var item_count = nav_menu.length; //104
+for (var i43=0; i43<item_count; i43++) { //104
     var item = nav_menu[i43]; //104
-    var _index = i43; //104
-    var _count = nav_menu.length; //104
+    var item_index = i43; //104
     if (item.title === nav1sel && typeof(item.sub) !== 'undefined' && item.sub.length > 0) { //105
         $.n();
         var $45 = { n: "nav", v: "", r: 52, c: 21, s: "f2", u: "f2",  }; //106
@@ -214,10 +214,10 @@ for (var i43=0, l43 = nav_menu.length; i43<l43; i43++) { //104
         var $47 = { n: "ul", v: "", r: 54, c: 25, s: "f2", u: "f2",  }; //108
         $.a($45, $47, 215);
         $.s("f2");
-        for (var i48=0, l48 = item.sub.length; i48<l48; i48++) { //109
+        var sub_item_count = item.sub.length; //109
+        for (var i48=0; i48<sub_item_count; i48++) { //109
             var sub_item = item.sub[i48]; //109
-            var _index = i48; //109
-            var _count = item.sub.length; //109
+            var sub_item_index = i48; //109
             $.n();
             var $49 = { n: "li", v: "", r: 56, c: 33, s: "f2", u: "f2",  }; //110
             $.a($47, $49, 223);

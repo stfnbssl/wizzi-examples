@@ -1,0 +1,8 @@
+﻿$group
+
+    artifact .editorconfig
+        src .editorconfig.text.ittf
+        schema text
+        generator text/document
+        dest-path .editorconfig
+        extension editorconfig

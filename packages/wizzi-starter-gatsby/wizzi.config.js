@@ -6,8 +6,7 @@ module.exports = {
     plugins: [
         'wizzi-core', 
         'wizzi-js', 
-        'wizzi-web',
-        'wizzi-meta'
+        'wizzi-web'
     ], 
     schemas: [
     ],

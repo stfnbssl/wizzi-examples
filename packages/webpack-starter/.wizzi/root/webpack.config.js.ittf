@@ -1,0 +1,37 @@
+﻿module
+	kind es6
+
+    $include v07/app/webpack/imports
+
+	set module.exports
+		{
+            @ mode "development"
+			[ entry
+				@ './src/index.js'
+			
+			{ module
+				[ rules
+					$include v07/app/webpack/module.rules
+
+			{ resolve
+                $include v07/app/webpack/resolve
+			
+			{ output
+				@ path path.resolve(__dirname, '..', 'app', 'scripts')
+				@ filename '${pkg.name}.js'
+                $include v07/app/webpack/output
+			
+			{ node
+				@ fs 'empty'
+				@ module 'empty'
+				@ 'mongodb' 'empty'
+				@ 'mongodb-core' 'empty'
+
+			[ plugins
+                $include v07/app/webpack/plugins
+			
+			@ devtool 'cheap-module-source-map'
+			
+			{ devServer
+				@ contentBase './dist'
+                $include v07/app/webpack/devServer

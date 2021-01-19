@@ -1,0 +1,24 @@
+{
+	name "wizzi-angular"
+	version "0.0.1"
+	description "Wizzi starter template for Angular packages"
+	author "Stefano Bassoli"
+	license "MIT"
+    
+
+    { Build
+        useAngular true
+        { angular
+    { Server
+        port 4200
+    { Keys
+        fontAwesome 'eab461efef'
+    { Css
+        useReset true
+        { reset
+            useMeyer true
+        useFontAwesome true
+        { fontAwesome
+        useBootstrap false
+        { bootstrap
+            v4 false

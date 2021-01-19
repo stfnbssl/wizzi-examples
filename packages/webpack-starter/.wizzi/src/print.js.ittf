@@ -1,0 +1,8 @@
+module
+	kind react
+
+	function print
+        param msg
+        log msg
+
+    set module.exports = print

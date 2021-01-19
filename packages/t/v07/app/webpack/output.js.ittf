@@ -1,7 +1,7 @@
 ﻿$group
 
-	$if app.Build.isLibrary
-		@ library '${app.Build.libraryName}'
+	$if pkg.Build.isLibrary
+		@ library '${pkg.Build.libraryName}'
 		@ libraryTarget 'var'
 
 	

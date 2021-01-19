@@ -2,12 +2,12 @@
 	p
 		@ align center
 		a
-			href https://wizzifactory.github.io
+			href https://stfnbssl.github.io/wizzi
 			@ rel noopener
 			@ target _blank
 			img
 				@ width 450
-				@ src https://wizzifactory.github.io/images/logo.svg
+				@ src https://stfnbssl.github.io/wizzi/images/logo.svg
 				@ alt Wizzi
 
 	h1 Wizzi studio

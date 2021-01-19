@@ -1,6 +1,6 @@
 ﻿$group
 	
-	$if app.Build.useNextjs
+	$if pkg.Build.useNextjs
 		
 		"next/babel"
 
@@ -8,9 +8,9 @@
 
 		"@babel/env"
 
-		$if app.Build.useReact
+		$if pkg.Build.useReact
 			"@babel/react"
-        $if app.Build.useStage2
+        $if pkg.Build.useStage2
 			"@babel/stage-2"
-		$if app.Build.useTypescript
+		$if pkg.Build.useTypescript
 			"@babel/typescript"

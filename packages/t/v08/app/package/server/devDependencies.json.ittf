@@ -1,0 +1,12 @@
+$group
+
+    @babel/cli "^7.2.3"
+    @babel/core "^7.4.0"
+    @babel/preset-env "^7.4.2"
+    @babel/register "^7.4.0"
+    babel-polyfill "^6.26.0"
+    cpx "^1.5.0"
+    $if pkg.Build.useMocha
+        mocha "^5.2.0"
+    $if pkg.Build.useNodemon
+        nodemon "^1.17.5"

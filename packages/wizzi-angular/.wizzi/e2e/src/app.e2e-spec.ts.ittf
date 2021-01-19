@@ -1,0 +1,41 @@
+module
+    import 
+        @ AppPage
+        from './app.po'
+    import 
+        @ browser
+        @ logging
+        from 'protractor'
+    _ describe
+        @ 'workspace-project App'
+        => 
+            let page
+                :ref AppPage
+            _ beforeEach
+                => 
+                    set page = new AppPage()
+            _ it
+                @ 'should display welcome message'
+                async=> 
+                    await 
+                        _ page.navigateTo
+                    _ expect
+                        await 
+                            _ page.getTitleText
+                        ._ toEqual
+                            @ 'wizzi-angular app is running!'
+            _ afterEach
+                async=> 
+                    # Assert that there are no errors emitted from the browser
+                    const logs
+                        await 
+                            _ browser.manage
+                                ._ logs
+                                ._ get
+                                    @ logging.Type.BROWSER
+                    _ expect(logs).not.toContain
+                        _ jasmine.objectContaining
+                            { 
+                                @ level logging.Level.SEVERE
+                                :as 
+                                    :ref logging.Entry

@@ -1,6 +1,6 @@
 ﻿$group
 
-	$if app.Build.useHotReplacement
+	$if pkg.Build.useHotReplacement
 		
 			@ open true
 			@ hot true

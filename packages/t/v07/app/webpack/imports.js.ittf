@@ -2,9 +2,7 @@
 	
 	const path = require('path')
 	const resolve = path.resolve
-
-	$if pkg.Build.useMonaco || pkg.Build.useMonaco2 || pkg.Build.useHotReplacement
-		const webpack = require('webpack')
+	const webpack = require('webpack')
 	
 	$if pkg.Build.useMonaco
 		# const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')

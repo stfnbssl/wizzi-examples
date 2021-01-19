@@ -1,6 +1,6 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\gatsby-starter\.wizzi\plugins\gatsby-source-wizzi\highlightCode.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-gatsby\.wizzi\plugins\gatsby-source-wizzi\highlightCode.js.ittf
 */
 'use strict';
 // credits https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-remark-prismjs/src/highlight-code.js

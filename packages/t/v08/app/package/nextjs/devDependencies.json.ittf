@@ -1,0 +1,4 @@
+$group
+
+    @zeit/next-css "latest"
+    raw-loader "latest"

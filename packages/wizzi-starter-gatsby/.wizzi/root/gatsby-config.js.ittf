@@ -1,6 +1,6 @@
 ﻿module
 	kind es6
-	$if app.Build.useDotenv
+	$if pkg.Build.useDotenv
 		_ require('dotenv').config()
 
 	set module.exports

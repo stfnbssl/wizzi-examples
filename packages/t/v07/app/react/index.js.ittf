@@ -1,78 +1,78 @@
 $group
 
 	$
-		var rootContainer = app.Build.react.rootContainer ? app.Build.react.rootContainer : 'AppContainer';
+		var rootContainer = pkg.Build.react.rootContainer ? pkg.Build.react.rootContainer : 'AppContainer';
 
-	$if app.Build.useBabel && app.Build.babel.useBabelRegister
+	$if pkg.Build.useBabel && pkg.Build.babel.useBabelRegister
 		_ require('@babel/register')
 	
-	$if app.Build.react.mainStylesBefore
-		_ require('${app.Build.react.mainStylesBefore}')
+	$if pkg.Build.react.mainStylesBefore
+		_ require('${pkg.Build.react.mainStylesBefore}')
 
-	$if app.Build.useCodemirror
+	$if pkg.Build.useCodemirror
 		_ require('codemirror/lib/codemirror.css')
 		_ require('codemirror/mode/css/css')
-		$if app.Build.codemirror.modes
-			$foreach m in app.Build.codemirror.modes
+		$if pkg.Build.codemirror.modes
+			$foreach m in pkg.Build.codemirror.modes
 				_ require('codemirror/mode/${m}/${m}');
-			$foreach t in app.Build.codemirror.themes
+			$foreach t in pkg.Build.codemirror.themes
 				_ require('codemirror/theme/${t}.css')
 		# _ require('codemirror/addon/scroll/simplescrollbars')
 	
-	$if app.Build.react.mainStyles
-		_ require('${app.Build.react.mainStyles}')
-	$if app.Build.react.mainStylesAfter
-		_ require('${app.Build.react.mainStylesAfter}')
+	$if pkg.Build.react.mainStyles
+		_ require('${pkg.Build.react.mainStyles}')
+	$if pkg.Build.react.mainStylesAfter
+		_ require('${pkg.Build.react.mainStylesAfter}')
 
 	import React from 'react'
 	
-	$if app.Build.hotReload
+	$if pkg.Build.hotReload
 		import { AppContainer as HotAppContainer } from 'react-hot-loader'
 	
-	$if app.Build.react.useRedux
+	$if pkg.Build.react.useRedux
 		import { Provider } from 'react-redux'
 		import configureStore from './store/configureStore'
 	
-	$if app.Build.useGraphql && app.Build.graphql.useApolloClient
+	$if pkg.Build.useGraphql && pkg.Build.graphql.useApolloClient
 		import ApolloClient from 'apollo-boost'
 		import { ApolloProvider } from 'react-apollo'
 
-	$if app.Build.react.useReactPerf
+	$if pkg.Build.react.useReactPerf
 		import ReactPerf from 'react-addons-perf'
 	
 	import { render } from 'react-dom'
 
-	$if app.Build.react.useMaterialUI
+	$if pkg.Build.react.useMaterialUI
 		import MuiThemeContainer from './containers/MuiThemeContainer'
 	$else
 		import ${rootContainer} from './containers/${rootContainer}'
 
-	$if app.Build.react.useCreateReactApp
+	$if pkg.Build.react.useCreateReactApp
 		import registerServiceWorker from './registerServiceWorker'
 
 	$hook imports
 
-	$if app.Build.react.useReactPerf
+	$if pkg.Build.react.useReactPerf
 		set window.Perf = ReactPerf
 
-	$if app.Build.react.useRedux
+	$if pkg.Build.react.useRedux
 		# preloadedState param not used
 		# export const store = configureStore(preloadedState)
 		export const store = configureStore()
 
 
-	const rootEl = document.querySelector('#${app.Build.react.rootElementId}')
+	const rootEl = document.querySelector('#${pkg.Build.react.rootElementId}')
 
-	$if app.Build.useGraphql && app.Build.graphql.useApolloClient
+	$if pkg.Build.useGraphql && pkg.Build.graphql.useApolloClient
 
 		const client
 			new ApolloClient
 				{
-					@ uri '${app.Build.graphql.serverUri}'
+					@ uri '${pkg.Build.graphql.serverUri}'
 		_ render
 			< ApolloProvider
 				@ client {client}
-				$if app.Build.react.useMaterialUI
+				$if pkg.Build.react.useMaterialUI
 					< MuiThemeContainer
 				$else
 					< ${rootContainer}
@@ -81,24 +81,24 @@ $group
 	$else
 
 		_ render
-			$if app.Build.react.useRedux
+			$if pkg.Build.react.useRedux
 				< Provider
 					@ store {store}
-					$if app.Build.react.useMaterialUI
+					$if pkg.Build.react.useMaterialUI
 						< MuiThemeContainer
 					$else
 						< ${rootContainer}
 			$else
-				$if app.Build.react.useMaterialUI
+				$if pkg.Build.react.useMaterialUI
 					< MuiThemeContainer
 				$else
 					< ${rootContainer}
 			@ rootEl
 
-	$if app.Build.react.useCreateReactApp
+	$if pkg.Build.react.useCreateReactApp
 		_ registerServiceWorker
 
-	$if app.Build.useHotReload
+	$if pkg.Build.useHotReload
 		if process.env.NODE_ENV !== 'production' && module.hot
 			_ module.hot.accept
 				@ './containers/${rootContainer}'
@@ -110,7 +110,7 @@ $group
 								=>
 									param { error }
 									throw error
-							$if app.Build.react.useRedux
+							$if pkg.Build.react.useRedux
 								< Provider
 									@ store {store}
 									< NextApp

@@ -1,12 +1,12 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\gatsby-starter\.wizzi\root\gatsby-config.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-gatsby\.wizzi\root\gatsby-config.js.ittf
 */
 'use strict';
 require('dotenv').config();
 module.exports = {
     siteMetadata: {
-        title: "Gatsby starter"
+        title: "Gatsby starter by Wizzi"
     }, 
     plugins: [
         {

@@ -2,33 +2,9 @@ element include svg
 	tag background-image + svg
 	ast
 	category
-
-	item
-		title color function
-		ittf
-			css
-                . forecolor
-                    background color(red a(90%))
-    
-	item
-		title background-image + svg wizzi model
-		ittf
-			css
-                . alpha
-                    background-image
-                        svg
-                            preserve-aspect-ratio none
-                            view-box 0 0 1024 800
-                            circle
-                                cx 220
-                                cy 70
-                                r 50
-                                stroke red
-                                fill green
-
 	
 	item
-		title background-image + svg wizzi model 2
+		title script tag with inclusion of a svg model
 		ittf
 			css
 				< body

@@ -1,0 +1,22 @@
+module
+    import 
+        @ browser
+        @ by
+        @ element
+        from 'protractor'
+    export 
+        class AppPage
+            m navigateTo
+                async
+                :return
+                    :ref Promise
+                        :param 
+                            :ref unknown
+                return browser.get(browser.baseUrl)
+            m getTitleText
+                async
+                :return
+                    :ref Promise
+                        :param string
+                return 
+                    _ element(by.css('app-root .content span')).getText
