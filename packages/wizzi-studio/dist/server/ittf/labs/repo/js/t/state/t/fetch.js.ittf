@@ -50,10 +50,16 @@
 				function
 					param response
 					log 'fetch${fname}.then', response
-					_ State.set
-						@ ${action}
-						@ K.STATE.SUCCESS
-						@ response.data
+                    if response.data && response.data.status && response.data.status.code == 0
+                        _ State.set
+                            @ ${action}
+                            @ K.STATE.SUCCESS
+                            @ response.data.data
+					else
+                        _ State.set
+                            @ ${action}
+                            @ K.STATE.FAILURE
+                            @ response.data.status.message
 			._ catch
 				function
 					param err

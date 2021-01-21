@@ -1,5 +1,6 @@
-var ${name}
-	$params queryBody, name
-	_ check.optional
-		@ '${queryBody}'
-		@ '${name}'
+$group
+    $params queryBody, name
+    var ${name}
+        _ check.optional
+            @ '${queryBody}'
+            @ '${name}'

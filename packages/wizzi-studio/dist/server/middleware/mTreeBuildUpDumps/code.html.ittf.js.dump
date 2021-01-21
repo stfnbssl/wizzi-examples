@@ -1,235 +1,363 @@
-// 3/10/2018:17:48:10  by C:\My\wizzi\v5\apps\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
+// 21/1/2021:16:14:54  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
 $.n(); // set the context state to NodeContext
 var $0 = {}; // the root node of the MTree buildup
-var $1 = { n: "html", v: "", r: 1, c: 1, s: "f2", u: "f2",  }; //60
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //57
 $.a($0, $1, 5);
-$.s("f2");
-var c_bg_0 = "#333"; //220
-var c_bg_1 = "#666"; //221
-var c_bg_2 = "#999"; //222
-var c_0 = "#ded"; //223
-var c_1 = "#fff"; //224
-var c_2 = "#f44"; //225
-var c_bg_f_0 = "#000"; //226
-//Color Variables //227
-var color1 = '#E84545'; //Red //228
-var color2 = '#53354A'; //Plum //229
-var color3 = '#903749'; //Maroon //230
-var nav_menu = [ //231
-{  //232
-title: 'Concepts', //233
-href: 'concepts.html.ittf', //234
-},  //235
-{  //236
-title: 'Documentation', //237
-href: 'documentation.html.ittf', //238
-sub: [ //239
-{  //240
-title: 'Intro', //241
-href: 'docs/intro.html.ittf', //242
-},  //243
-{  //244
-title: 'Ittf', //245
-href: 'docs/ittf.html.ittf', //246
-},  //247
-{  //248
-title: 'JsWizzi', //249
-href: 'docs/jswizzi.html.ittf', //250
-},  //251
-{  //252
-title: 'Models', //253
-href: 'docs/models.html.ittf', //254
-},  //255
-{  //256
-title: 'Artifacts', //257
-href: 'docs/artifacts.html.ittf', //258
-},  //259
-{  //260
-title: 'Jobs', //261
-href: 'docs/jobs.html.ittf', //262
-},  //263
-{  //264
-title: 'Plugins', //265
-href: 'docs/plugins.html.ittf', //266
-},  //267
-]  //268
-},  //269
-{  //270
-title: 'Code', //271
-href: 'code.html.ittf', //272
-sub: [ //273
-{  //274
-title: 'intro', //275
-href: 'code/intro.html.ittf', //276
-},  //277
-{  //278
-title: 'wizzi', //279
-href: 'code/wizzi.html.ittf', //280
-},  //281
-{  //282
-title: 'mTree', //283
-href: 'code/mtree.html.ittf', //284
-},  //285
-{  //286
-title: 'repo', //287
-href: 'code/repo.html.ittf', //288
-},  //289
-{  //290
-title: 'utils', //291
-href: 'code/utils.html.ittf', //292
-},  //293
-{  //294
-title: 'core', //295
-href: 'code/core.html.ittf', //296
-},  //297
-{  //298
-title: 'js', //299
-href: 'code/js.html.ittf', //300
-},  //301
-{  //302
-title: 'web', //303
-href: 'code/web.html.ittf', //304
-},  //305
-{  //306
-title: 'demo', //307
-href: 'code/demo.html.ittf', //308
-},  //309
-]  //310
-},  //311
-{  //312
-title: 'Starters', //313
-href: 'starters.html.ittf', //314
-},  //315
-{  //316
-title: 'Project', //317
-href: 'project.html.ittf', //318
-}];  //319
-var level = nav2sel == null ? 1 : 2; //63
-var linkPrefix = nav2sel == null ? '' : '../'; //64
+$.s("f1");
+var currentPage = 'go'; //59
 $.n();
-var $4 = { n: "head", v: "", r: 10, c: 5, s: "f2", u: "f2",  }; //65
-$.a($1, $4, 111);
-var $5 = { n: "css", v: $.ip("f2", "${linkPrefix}css/reset.css.ittf", "string", 112, false), r: 11, c: 9, s: "f2", u: "f2",  }; //66
-$.a($4, $5, 113);
-var $6 = { n: "css", v: $.ip("f2", "${linkPrefix}css/styles.css.ittf", "string", 114, false), r: 12, c: 9, s: "f2", u: "f2",  }; //67
-$.a($4, $6, 115);
-var $7 = { n: "body", v: "", r: 13, c: 5, s: "f2", u: "f2",  }; //68
-$.a($1, $7, 117);
-var $8 = { n: "nav", v: "", r: 14, c: 9, s: "f2", u: "f2",  }; //69
-$.a($7, $8, 119);
-var $9 = { n: "class", v: "navBar", r: 15, c: 13, s: "f2", u: "f2",  }; //70
-$.a($8, $9, 121);
-var $10 = { n: "nav", v: "", r: 16, c: 13, s: "f2", u: "f2",  }; //71
-$.a($8, $10, 123);
-var $11 = { n: "class", v: "navMain", r: 17, c: 17, s: "f2", u: "f2",  }; //72
-$.a($10, $11, 125);
-var $12 = { n: "a", v: "", r: 18, c: 17, s: "f2", u: "f2",  }; //73
-$.a($10, $12, 127);
-var $13 = { n: "href", v: "index.html.ittf", r: 19, c: 21, s: "f2", u: "f2",  }; //74
-$.a($12, $13, 129);
-var $14 = { n: ".", v: "logo", r: 20, c: 21, s: "f2", u: "f2",  }; //75
-$.a($12, $14, 131);
-var $15 = { n: "img", v: "", r: 21, c: 25, s: "f2", u: "f2",  }; //76
-$.a($14, $15, 133);
-var $16 = { n: "width", v: "100", r: 22, c: 29, s: "f2", u: "f2",  }; //77
-$.a($15, $16, 135);
-var $17 = { n: "height", v: "45px", r: 23, c: 29, s: "f2", u: "f2",  }; //78
-$.a($15, $17, 137);
-var $18 = { n: "src", v: $.ip("f2", "${linkPrefix}images/logo.svg.ittf", "string", 138, false), r: 24, c: 29, s: "f2", u: "f2",  }; //79
-$.a($15, $18, 139);
-var $19 = { n: "input", v: "", r: 25, c: 17, s: "f2", u: "f2",  }; //80
-$.a($10, $19, 141);
-var $20 = { n: "type", v: "checkbox", r: 26, c: 21, s: "f2", u: "f2",  }; //81
-$.a($19, $20, 143);
-var $21 = { n: "id", v: "menu-toggle", r: 27, c: 21, s: "f2", u: "f2",  }; //82
-$.a($19, $21, 145);
-var $22 = { n: "label", v: "", r: 28, c: 17, s: "f2", u: "f2",  }; //83
-$.a($10, $22, 147);
-var $23 = { n: "for", v: "menu-toggle", r: 29, c: 21, s: "f2", u: "f2",  }; //84
-$.a($22, $23, 149);
-var $24 = { n: "class", v: "label-toggle", r: 30, c: 21, s: "f2", u: "f2",  }; //85
-$.a($22, $24, 151);
-var $25 = { n: "label", v: "&times;", r: 31, c: 17, s: "f2", u: "f2",  }; //86
-$.a($10, $25, 153);
-var $26 = { n: "for", v: "menu-toggle", r: 32, c: 21, s: "f2", u: "f2",  }; //87
-$.a($25, $26, 155);
-var $27 = { n: "class", v: "label-toggle-close", r: 33, c: 21, s: "f2", u: "f2",  }; //88
-$.a($25, $27, 157);
-var $28 = { n: "ul", v: "", r: 34, c: 17, s: "f2", u: "f2",  }; //89
-$.a($10, $28, 159);
+var $3 = { n: "head", v: "", r: 5, c: 5, s: "f1", u: "f1",  }; //60
+$.a($1, $3, 10);
+var $4 = { n: "@title", v: "The Wizzi Factory", r: 7, c: 9, s: "f1", u: "f1",  }; //61
+$.a($3, $4, 12);
+var $5 = { n: "css", v: "https://fonts.googleapis.com/css?family=Roboto", r: 8, c: 9, s: "f1", u: "f1",  }; //62
+$.a($3, $5, 14);
+var $6 = { n: "css", v: "css/normalize.css", r: 9, c: 9, s: "f1", u: "f1",  }; //63
+$.a($3, $6, 16);
+var $7 = { n: "css", v: "css/styles.css.ittf", r: 10, c: 9, s: "f1", u: "f1",  }; //64
+$.a($3, $7, 18);
+var $8 = { n: "body", v: "", r: 12, c: 5, s: "f1", u: "f1",  }; //65
+$.a($1, $8, 20);
+var $9 = { n: "header", v: "", r: 13, c: 9, s: "f1", u: "f1",  }; //66
+$.a($8, $9, 22);
+var $10 = { n: "class", v: "navigation", r: 14, c: 13, s: "f1", u: "f1",  }; //67
+$.a($9, $10, 24);
+var $11 = { n: ".", v: "header-items", r: 16, c: 13, s: "f1", u: "f1",  }; //68
+$.a($9, $11, 26);
+var $12 = { n: "role", v: "navigation", r: 17, c: 17, s: "f1", u: "f1",  }; //69
+$.a($11, $12, 28);
+var $13 = { n: "class", v: "header-items", r: 18, c: 17, s: "f1", u: "f1",  }; //70
+$.a($11, $13, 30);
+var $14 = { n: "div", v: "", r: 20, c: 17, s: "f1", u: "f1",  }; //71
+$.a($11, $14, 32);
+var $15 = { n: "class", v: "header-logo", r: 21, c: 21, s: "f1", u: "f1",  }; //72
+$.a($14, $15, 34);
+var $16 = { n: "a", v: "Wizzi Factory", r: 22, c: 21, s: "f1", u: "f1",  }; //73
+$.a($14, $16, 36);
+var $17 = { n: "class", v: "logo", r: 23, c: 25, s: "f1", u: "f1",  }; //74
+$.a($16, $17, 38);
+var $18 = { n: "href", v: "index.html", r: 24, c: 25, s: "f1", u: "f1",  }; //75
+$.a($16, $18, 40);
 $.s("f2");
-for (var i29=0, l29 = nav_menu.length; i29<l29; i29++) { //90
-    var item = nav_menu[i29]; //90
-    var _index = i29; //90
-    var _count = nav_menu.length; //90
+var xtitle = titleShort ? titleShort : title;
+$.n();
+var $20 = { n: "li", v: "", r: 6, c: 5, s: "f2", u: "f2",  }; //127
+$.a($11, $20, 45);
+$.s("f2");
+if (current === '${name}') { //128
     $.n();
-    var $30 = { n: "li", v: "", r: 36, c: 25, s: "f2", u: "f2",  }; //91
-    $.a($28, $30, 167);
-    $.s("f2");
-    if (item.title === nav1sel) { //92
+    var $22 = { n: "a", v: $.ip("f2", "${title}", "string", 49, false), r: 8, c: 13, s: "f2", u: "f2",  }; //129
+    $.a($20, $22, 50);
+    var $23 = { n: "class", v: "selected-header-item", r: 9, c: 17, s: "f2", u: "f2",  }; //130
+    $.a($22, $23, 52);
+    var $24 = { n: "href", v: $.ip("f2", "${href}.html", "string", 53, false), r: 10, c: 17, s: "f2", u: "f2",  }; //131
+    $.a($22, $24, 54);
+}
+else {
+    $.n();
+    var $26 = { n: "a", v: $.ip("f2", "${xtitle}", "string", 58, false), r: 12, c: 13, s: "f2", u: "f2",  }; //133
+    $.a($20, $26, 59);
+    var $27 = { n: "class", v: "header-item", r: 13, c: 17, s: "f2", u: "f2",  }; //134
+    $.a($26, $27, 61);
+    var $28 = { n: "href", v: $.ip("f2", "${href}.html", "string", 62, false), r: 14, c: 17, s: "f2", u: "f2",  }; //135
+    $.a($26, $28, 63);
+}
+$.s("f3");
+var xtitle = titleShort ? titleShort : title;
+$.n();
+var $30 = { n: "li", v: "", r: 6, c: 5, s: "f3", u: "f2",  }; //138
+$.a($11, $30, 69);
+$.s("f3");
+if (current === '${name}') { //139
+    $.n();
+    var $32 = { n: "a", v: $.ip("f3", "${title}", "string", 73, false), r: 8, c: 13, s: "f3", u: "f2",  }; //140
+    $.a($30, $32, 74);
+    var $33 = { n: "class", v: "selected-header-item", r: 9, c: 17, s: "f3", u: "f2",  }; //141
+    $.a($32, $33, 76);
+    var $34 = { n: "href", v: $.ip("f3", "${href}.html", "string", 77, false), r: 10, c: 17, s: "f3", u: "f2",  }; //142
+    $.a($32, $34, 78);
+}
+else {
+    $.n();
+    var $36 = { n: "a", v: $.ip("f3", "${xtitle}", "string", 82, false), r: 12, c: 13, s: "f3", u: "f2",  }; //144
+    $.a($30, $36, 83);
+    var $37 = { n: "class", v: "header-item", r: 13, c: 17, s: "f3", u: "f2",  }; //145
+    $.a($36, $37, 85);
+    var $38 = { n: "href", v: $.ip("f3", "${href}.html", "string", 86, false), r: 14, c: 17, s: "f3", u: "f2",  }; //146
+    $.a($36, $38, 87);
+}
+$.s("f4");
+var xtitle = titleShort ? titleShort : title;
+$.n();
+var $40 = { n: "li", v: "", r: 6, c: 5, s: "f4", u: "f2",  }; //149
+$.a($11, $40, 93);
+$.s("f4");
+if (current === '${name}') { //150
+    $.n();
+    var $42 = { n: "a", v: $.ip("f4", "${title}", "string", 97, false), r: 8, c: 13, s: "f4", u: "f2",  }; //151
+    $.a($40, $42, 98);
+    var $43 = { n: "class", v: "selected-header-item", r: 9, c: 17, s: "f4", u: "f2",  }; //152
+    $.a($42, $43, 100);
+    var $44 = { n: "href", v: $.ip("f4", "${href}.html", "string", 101, false), r: 10, c: 17, s: "f4", u: "f2",  }; //153
+    $.a($42, $44, 102);
+}
+else {
+    $.n();
+    var $46 = { n: "a", v: $.ip("f4", "${xtitle}", "string", 106, false), r: 12, c: 13, s: "f4", u: "f2",  }; //155
+    $.a($40, $46, 107);
+    var $47 = { n: "class", v: "header-item", r: 13, c: 17, s: "f4", u: "f2",  }; //156
+    $.a($46, $47, 109);
+    var $48 = { n: "href", v: $.ip("f4", "${href}.html", "string", 110, false), r: 14, c: 17, s: "f4", u: "f2",  }; //157
+    $.a($46, $48, 111);
+}
+$.s("f1");
+if (currentPage === 'api') { //79
+    $.n();
+    var $50 = { n: "a", v: "Api", r: 34, c: 21, s: "f1", u: "f1",  }; //80
+    $.a($11, $50, 117);
+    var $51 = { n: "class", v: "selected-header-item", r: 35, c: 25, s: "f1", u: "f1",  }; //81
+    $.a($50, $51, 119);
+    var $52 = { n: "href", v: "wf-api.html", r: 36, c: 25, s: "f1", u: "f1",  }; //82
+    $.a($50, $52, 121);
+}
+else {
+    $.n();
+    var $54 = { n: "a", v: "Api", r: 38, c: 21, s: "f1", u: "f1",  }; //84
+    $.a($11, $54, 126);
+    var $55 = { n: "class", v: "header-item", r: 39, c: 25, s: "f1", u: "f1",  }; //85
+    $.a($54, $55, 128);
+    var $56 = { n: "href", v: "wf-api.html", r: 40, c: 25, s: "f1", u: "f1",  }; //86
+    $.a($54, $56, 130);
+}
+$.s("f1");
+if (currentPage === 'code') { //87
+    $.n();
+    var $58 = { n: "a", v: "Code", r: 43, c: 21, s: "f1", u: "f1",  }; //88
+    $.a($11, $58, 136);
+    var $59 = { n: "class", v: "selected-header-item", r: 44, c: 25, s: "f1", u: "f1",  }; //89
+    $.a($58, $59, 138);
+    var $60 = { n: "href", v: "wizzi-fs.html", r: 45, c: 25, s: "f1", u: "f1",  }; //90
+    $.a($58, $60, 140);
+}
+else {
+    $.n();
+    var $62 = { n: "a", v: "Code", r: 47, c: 21, s: "f1", u: "f1",  }; //92
+    $.a($11, $62, 145);
+    var $63 = { n: "class", v: "header-item", r: 48, c: 25, s: "f1", u: "f1",  }; //93
+    $.a($62, $63, 147);
+    var $64 = { n: "href", v: "wizzi-fs.html", r: 49, c: 25, s: "f1", u: "f1",  }; //94
+    $.a($62, $64, 149);
+}
+$.s("f1");
+if (currentPage === 'code') { //95
+    $.n();
+    var $66 = { n: ".", v: "navigation__bottom", r: 58, c: 17, s: "f1", u: "f1",  }; //96
+    $.a($9, $66, 155);
+    var $67 = { n: ".", v: "container navigation__inner", r: 59, c: 21, s: "f1", u: "f1",  }; //97
+    $.a($66, $67, 157);
+    $.s("f5");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $69 = { n: "li", v: "", r: 6, c: 5, s: "f5", u: "f3",  }; //172
+    $.a($67, $69, 162);
+    $.s("f5");
+    if (current === '${name}') { //173
         $.n();
-        var $32 = { n: "class", v: "nav1selected", r: 38, c: 33, s: "f2", u: "f2",  }; //93
-        $.a($30, $32, 172);
+        var $71 = { n: "a", v: $.ip("f5", "${title}", "string", 166, false), r: 8, c: 13, s: "f5", u: "f3",  }; //174
+        $.a($69, $71, 167);
+        var $72 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f5", u: "f3",  }; //175
+        $.a($71, $72, 169);
+        var $73 = { n: "href", v: $.ip("f5", "${href}.html", "string", 170, false), r: 10, c: 17, s: "f5", u: "f3",  }; //176
+        $.a($71, $73, 171);
     }
-    $.n();
-    var $33 = { n: "a", v: $.ip("f2", "${item.title}", "string", 175, false), r: 39, c: 29, s: "f2", u: "f2",  }; //94
-    $.a($30, $33, 176);
-    var $34 = { n: "href", v: $.ip("f2", "${linkPrefix}${item.href}", "string", 177, false), r: 40, c: 33, s: "f2", u: "f2",  }; //95
-    $.a($33, $34, 178);
-    $.s("f2");
-    if (item.title === nav1sel && typeof(item.sub) !== 'undefined' && item.sub.length > 0) { //96
+    else {
         $.n();
-        var $36 = { n: "nav", v: "", r: 42, c: 33, s: "f2", u: "f2",  }; //97
-        $.a($30, $36, 183);
-        var $37 = { n: "class", v: "navSub1_mobile", r: 43, c: 37, s: "f2", u: "f2",  }; //98
-        $.a($36, $37, 185);
-        var $38 = { n: "ul", v: "", r: 44, c: 37, s: "f2", u: "f2",  }; //99
-        $.a($36, $38, 187);
-        $.s("f2");
-        for (var i39=0, l39 = item.sub.length; i39<l39; i39++) { //100
-            var sub_item = item.sub[i39]; //100
-            var _index = i39; //100
-            var _count = item.sub.length; //100
-            $.n();
-            var $40 = { n: "li", v: "", r: 46, c: 45, s: "f2", u: "f2",  }; //101
-            $.a($38, $40, 195);
-            var $41 = { n: "a", v: $.ip("f2", "${sub_item.title}", "string", 196, false), r: 47, c: 49, s: "f2", u: "f2",  }; //102
-            $.a($40, $41, 197);
-            var $42 = { n: "href", v: $.ip("f2", "${linkPrefix}${sub_item.href}", "string", 198, false), r: 48, c: 53, s: "f2", u: "f2",  }; //103
-            $.a($41, $42, 199);
-        }
+        var $75 = { n: "a", v: $.ip("f5", "${xtitle}", "string", 175, false), r: 12, c: 13, s: "f5", u: "f3",  }; //178
+        $.a($69, $75, 176);
+        var $76 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f5", u: "f3",  }; //179
+        $.a($75, $76, 178);
+        var $77 = { n: "href", v: $.ip("f5", "${href}.html", "string", 179, false), r: 14, c: 17, s: "f5", u: "f3",  }; //180
+        $.a($75, $77, 180);
+    }
+    $.s("f6");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $79 = { n: "li", v: "", r: 6, c: 5, s: "f6", u: "f3",  }; //183
+    $.a($67, $79, 186);
+    $.s("f6");
+    if (current === '${name}') { //184
+        $.n();
+        var $81 = { n: "a", v: $.ip("f6", "${title}", "string", 190, false), r: 8, c: 13, s: "f6", u: "f3",  }; //185
+        $.a($79, $81, 191);
+        var $82 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f6", u: "f3",  }; //186
+        $.a($81, $82, 193);
+        var $83 = { n: "href", v: $.ip("f6", "${href}.html", "string", 194, false), r: 10, c: 17, s: "f6", u: "f3",  }; //187
+        $.a($81, $83, 195);
+    }
+    else {
+        $.n();
+        var $85 = { n: "a", v: $.ip("f6", "${xtitle}", "string", 199, false), r: 12, c: 13, s: "f6", u: "f3",  }; //189
+        $.a($79, $85, 200);
+        var $86 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f6", u: "f3",  }; //190
+        $.a($85, $86, 202);
+        var $87 = { n: "href", v: $.ip("f6", "${href}.html", "string", 203, false), r: 14, c: 17, s: "f6", u: "f3",  }; //191
+        $.a($85, $87, 204);
+    }
+    $.s("f7");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $89 = { n: "li", v: "", r: 6, c: 5, s: "f7", u: "f3",  }; //194
+    $.a($67, $89, 210);
+    $.s("f7");
+    if (current === '${name}') { //195
+        $.n();
+        var $91 = { n: "a", v: $.ip("f7", "${title}", "string", 214, false), r: 8, c: 13, s: "f7", u: "f3",  }; //196
+        $.a($89, $91, 215);
+        var $92 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f7", u: "f3",  }; //197
+        $.a($91, $92, 217);
+        var $93 = { n: "href", v: $.ip("f7", "${href}.html", "string", 218, false), r: 10, c: 17, s: "f7", u: "f3",  }; //198
+        $.a($91, $93, 219);
+    }
+    else {
+        $.n();
+        var $95 = { n: "a", v: $.ip("f7", "${xtitle}", "string", 223, false), r: 12, c: 13, s: "f7", u: "f3",  }; //200
+        $.a($89, $95, 224);
+        var $96 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f7", u: "f3",  }; //201
+        $.a($95, $96, 226);
+        var $97 = { n: "href", v: $.ip("f7", "${href}.html", "string", 227, false), r: 14, c: 17, s: "f7", u: "f3",  }; //202
+        $.a($95, $97, 228);
+    }
+    $.s("f8");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $99 = { n: "li", v: "", r: 6, c: 5, s: "f8", u: "f3",  }; //205
+    $.a($67, $99, 234);
+    $.s("f8");
+    if (current === '${name}') { //206
+        $.n();
+        var $101 = { n: "a", v: $.ip("f8", "${title}", "string", 238, false), r: 8, c: 13, s: "f8", u: "f3",  }; //207
+        $.a($99, $101, 239);
+        var $102 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f8", u: "f3",  }; //208
+        $.a($101, $102, 241);
+        var $103 = { n: "href", v: $.ip("f8", "${href}.html", "string", 242, false), r: 10, c: 17, s: "f8", u: "f3",  }; //209
+        $.a($101, $103, 243);
+    }
+    else {
+        $.n();
+        var $105 = { n: "a", v: $.ip("f8", "${xtitle}", "string", 247, false), r: 12, c: 13, s: "f8", u: "f3",  }; //211
+        $.a($99, $105, 248);
+        var $106 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f8", u: "f3",  }; //212
+        $.a($105, $106, 250);
+        var $107 = { n: "href", v: $.ip("f8", "${href}.html", "string", 251, false), r: 14, c: 17, s: "f8", u: "f3",  }; //213
+        $.a($105, $107, 252);
+    }
+    $.s("f9");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $109 = { n: "li", v: "", r: 6, c: 5, s: "f9", u: "f3",  }; //216
+    $.a($67, $109, 258);
+    $.s("f9");
+    if (current === '${name}') { //217
+        $.n();
+        var $111 = { n: "a", v: $.ip("f9", "${title}", "string", 262, false), r: 8, c: 13, s: "f9", u: "f3",  }; //218
+        $.a($109, $111, 263);
+        var $112 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f9", u: "f3",  }; //219
+        $.a($111, $112, 265);
+        var $113 = { n: "href", v: $.ip("f9", "${href}.html", "string", 266, false), r: 10, c: 17, s: "f9", u: "f3",  }; //220
+        $.a($111, $113, 267);
+    }
+    else {
+        $.n();
+        var $115 = { n: "a", v: $.ip("f9", "${xtitle}", "string", 271, false), r: 12, c: 13, s: "f9", u: "f3",  }; //222
+        $.a($109, $115, 272);
+        var $116 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f9", u: "f3",  }; //223
+        $.a($115, $116, 274);
+        var $117 = { n: "href", v: $.ip("f9", "${href}.html", "string", 275, false), r: 14, c: 17, s: "f9", u: "f3",  }; //224
+        $.a($115, $117, 276);
+    }
+    $.s("f10");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $119 = { n: "li", v: "", r: 6, c: 5, s: "f10", u: "f3",  }; //227
+    $.a($67, $119, 282);
+    $.s("f10");
+    if (current === '${name}') { //228
+        $.n();
+        var $121 = { n: "a", v: $.ip("f10", "${title}", "string", 286, false), r: 8, c: 13, s: "f10", u: "f3",  }; //229
+        $.a($119, $121, 287);
+        var $122 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f10", u: "f3",  }; //230
+        $.a($121, $122, 289);
+        var $123 = { n: "href", v: $.ip("f10", "${href}.html", "string", 290, false), r: 10, c: 17, s: "f10", u: "f3",  }; //231
+        $.a($121, $123, 291);
+    }
+    else {
+        $.n();
+        var $125 = { n: "a", v: $.ip("f10", "${xtitle}", "string", 295, false), r: 12, c: 13, s: "f10", u: "f3",  }; //233
+        $.a($119, $125, 296);
+        var $126 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f10", u: "f3",  }; //234
+        $.a($125, $126, 298);
+        var $127 = { n: "href", v: $.ip("f10", "${href}.html", "string", 299, false), r: 14, c: 17, s: "f10", u: "f3",  }; //235
+        $.a($125, $127, 300);
+    }
+    $.s("f11");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $129 = { n: "li", v: "", r: 6, c: 5, s: "f11", u: "f3",  }; //238
+    $.a($67, $129, 306);
+    $.s("f11");
+    if (current === '${name}') { //239
+        $.n();
+        var $131 = { n: "a", v: $.ip("f11", "${title}", "string", 310, false), r: 8, c: 13, s: "f11", u: "f3",  }; //240
+        $.a($129, $131, 311);
+        var $132 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f11", u: "f3",  }; //241
+        $.a($131, $132, 313);
+        var $133 = { n: "href", v: $.ip("f11", "${href}.html", "string", 314, false), r: 10, c: 17, s: "f11", u: "f3",  }; //242
+        $.a($131, $133, 315);
+    }
+    else {
+        $.n();
+        var $135 = { n: "a", v: $.ip("f11", "${xtitle}", "string", 319, false), r: 12, c: 13, s: "f11", u: "f3",  }; //244
+        $.a($129, $135, 320);
+        var $136 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f11", u: "f3",  }; //245
+        $.a($135, $136, 322);
+        var $137 = { n: "href", v: $.ip("f11", "${href}.html", "string", 323, false), r: 14, c: 17, s: "f11", u: "f3",  }; //246
+        $.a($135, $137, 324);
+    }
+    $.s("f12");
+    var xtitle = titleShort ? titleShort : title;
+    $.n();
+    var $139 = { n: "li", v: "", r: 6, c: 5, s: "f12", u: "f3",  }; //249
+    $.a($67, $139, 330);
+    $.s("f12");
+    if (current === '${name}') { //250
+        $.n();
+        var $141 = { n: "a", v: $.ip("f12", "${title}", "string", 334, false), r: 8, c: 13, s: "f12", u: "f3",  }; //251
+        $.a($139, $141, 335);
+        var $142 = { n: "class", v: "selected-header-item-bottom", r: 9, c: 17, s: "f12", u: "f3",  }; //252
+        $.a($141, $142, 337);
+        var $143 = { n: "href", v: $.ip("f12", "${href}.html", "string", 338, false), r: 10, c: 17, s: "f12", u: "f3",  }; //253
+        $.a($141, $143, 339);
+    }
+    else {
+        $.n();
+        var $145 = { n: "a", v: $.ip("f12", "${xtitle}", "string", 343, false), r: 12, c: 13, s: "f12", u: "f3",  }; //255
+        $.a($139, $145, 344);
+        var $146 = { n: "class", v: "header-item.bottom", r: 13, c: 17, s: "f12", u: "f3",  }; //256
+        $.a($145, $146, 346);
+        var $147 = { n: "href", v: $.ip("f12", "${href}.html", "string", 347, false), r: 14, c: 17, s: "f12", u: "f3",  }; //257
+        $.a($145, $147, 348);
     }
 }
-$.s("f2");
-for (var i43=0, l43 = nav_menu.length; i43<l43; i43++) { //104
-    var item = nav_menu[i43]; //104
-    var _index = i43; //104
-    var _count = nav_menu.length; //104
-    if (item.title === nav1sel && typeof(item.sub) !== 'undefined' && item.sub.length > 0) { //105
-        $.n();
-        var $45 = { n: "nav", v: "", r: 52, c: 21, s: "f2", u: "f2",  }; //106
-        $.a($8, $45, 211);
-        var $46 = { n: "class", v: "navSub1", r: 53, c: 25, s: "f2", u: "f2",  }; //107
-        $.a($45, $46, 213);
-        var $47 = { n: "ul", v: "", r: 54, c: 25, s: "f2", u: "f2",  }; //108
-        $.a($45, $47, 215);
-        $.s("f2");
-        for (var i48=0, l48 = item.sub.length; i48<l48; i48++) { //109
-            var sub_item = item.sub[i48]; //109
-            var _index = i48; //109
-            var _count = item.sub.length; //109
-            $.n();
-            var $49 = { n: "li", v: "", r: 56, c: 33, s: "f2", u: "f2",  }; //110
-            $.a($47, $49, 223);
-            var $50 = { n: "a", v: $.ip("f2", "${sub_item.title}", "string", 224, false), r: 57, c: 37, s: "f2", u: "f2",  }; //111
-            $.a($49, $50, 225);
-            var $51 = { n: "href", v: $.ip("f2", "${linkPrefix}${sub_item.href}", "string", 226, false), r: 58, c: 41, s: "f2", u: "f2",  }; //112
-            $.a($50, $51, 227);
-        }
-    }
-}
 $.n();
-var $52 = { n: "main", v: "", r: 60, c: 9, s: "f2", u: "f2",  }; //113
-$.a($7, $52, 233);
-var $53 = { n: "class", v: "mainContent", r: 61, c: 13, s: "f2", u: "f2",  }; //114
-$.a($52, $53, 235);
+var $148 = { n: "main", v: "", r: 69, c: 9, s: "f1", u: "f1",  }; //106
+$.a($8, $148, 353);
+var $149 = { n: "id", v: "main-content", r: 70, c: 13, s: "f1", u: "f1",  }; //107
+$.a($148, $149, 355);
+var $150 = { n: "div", v: "Work in progress. Not ready.", r: 72, c: 13, s: "f1", u: "f1",  }; //108
+$.a($148, $150, 357);
+var $151 = { n: "style", v: "border-bottom: 1px solid blue", r: 73, c: 17, s: "f1", u: "f1",  }; //109
+$.a($150, $151, 359);
+var $152 = { n: "js", v: "jquery-3.2.1.js", r: 77, c: 9, s: "f1", u: "f1",  }; //111
+$.a($8, $152, 361);
+var $153 = { n: "js", v: "wizzifactory.js", r: 78, c: 9, s: "f1", u: "f1",  }; //112
+$.a($8, $153, 363);

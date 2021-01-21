@@ -13,7 +13,7 @@ html
 	
 	$include common/options-analize
 
-	layout( &opt )
+    h/layouts/docs-layout( &opt )
 
 		$append head-styles
 			css style.css.ittf
@@ -101,10 +101,6 @@ html
 						padding 10px
 						width 100%
 
-
-
-
-		$$ h/root/layout( Documentation )
 
 		# mc-wrapper
 			class mc-wrapper-layout

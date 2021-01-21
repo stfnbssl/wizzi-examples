@@ -1,32 +1,34 @@
-h/root/layout()
-	
-	$append head-styles
-		css https://fonts.googleapis.com/css?family=Open+Sans:300,400,700
-		css https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css
-		css /static/lib/codemirror/lib/codemirror.css
-		css /static/lib/codemirror/addon/display/fullscreen.css
-		# css css/main.css.ittf
+html
 
-	h1 React router example 
+	$include common/options-init
 	
-	# container
-	
-	js https://unpkg.com/react@15.6.0/dist/react.js
-	js https://unpkg.com/react-dom@15.6.0/dist/react-dom.js
-	js https://unpkg.com/prop-types/prop-types.js
-	js https://unpkg.com/react-router/umd/react-router.min.js
-	js https://unpkg.com/react-router-dom/umd/react-router-dom.min.js
-	js https://unpkg.com/babel-standalone@6.15.0/babel.min.js
-		data-plugins transform-decorators-legacy
-	js /static/lib/pubsub/pubsub.js
-	js /static/lib/axios/axios.js
-	js /static/lib/classnames/classnames@2.2.5.js
-	js /static/lib/codemirror/lib/codemirror.js
-	js /static/lib/codemirror/mode/javascript/javascript.js
-	js /static/lib/codemirror/mode/yaml/yaml.js
-	js /static/lib/codemirror/addon/display/fullscreen.js
-	script
-		src js/main.js.ittf
-		type text/babel
-		
+    $
+		opt.logo_w = 70;
+		opt.logo_h = 30;
+		opt.sidebar_1 = false;
+		opt.sb_1_min_w = 0;
+		opt.title = 'Labs - splitters';
+        opt.useAxios = true;
+        opt.usePubSub = false;
+        opt.useBabel = true;
+        opt.babel = {};
+        opt.useReact = true;
+        opt.react = {
+            useRouter = true
+        };
+        opt.useCodemirror = false;
+        opt.codemirror = {};
+        opt.useFontAwesome = true;
+        opt.mainCss = '';
+        opt.mainJs = 'js/main.js.ittf';
+        opt.useGoogleFonts = true;
+        opt.googleFonts = [
+            'Open+Sans:300,400,700'
+        ];
+
+    $include common/options-analize
+
+    h/layouts/basic-layout( &opt )
+
+        # container
 

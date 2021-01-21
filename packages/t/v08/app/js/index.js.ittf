@@ -3,7 +3,9 @@ $group
     # for module hotReplacement
     # see https://nativescript.org/blog/deep-dive-into-hot-module-replacement-with-webpack-part-two-handling-updates/
 
-    # import printMe from './print.js'
+    import hjsMe from './print.js'
+    $if pkg.Code.useHighlight
+        import './highlight.default.min.css'
     import './index.css';
 
     function page
@@ -20,6 +22,7 @@ $group
             @ fa_panel
         _ element.appendChild
             @ hello_panel
+        $hook page
         return element
     
     function panel
@@ -36,6 +39,8 @@ $group
         const element = document.createElement('i')
         set element.className = 'fas fa-' + name + ' fa-5x'
         return element
+
+    $hook functions
 
     const rootElement
         _ page

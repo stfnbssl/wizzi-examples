@@ -1,6 +1,6 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\wizzi-studio\.wizzi\ittf\server\serverApp.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\.wizzi\ittf\server\serverApp.js.ittf
 */
 'use strict';
 
@@ -22,10 +22,9 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-// TODO var flash = require('connect-flash')
+var flash = require('connect-flash');
 var compress = require('compression');
 var methodOverride = require('method-override');
-var cors = require('cors');
 /**
      webpack middleware
 */
@@ -58,7 +57,6 @@ module.exports.init = function(options, callback) {
     initStaticFolders(app);
     initWebpack(app);
     initSession(app, db);
-    initCors(app);
     console.log('calling initApis');
     initApis(app, config, api, init_step_2_CB(app, db, callback));
 };
@@ -104,7 +102,7 @@ function initWebpack(app) {
     
     var webpackConfig;
     getGlobbedFiles(path.join(__dirname, './webpacks/**/*.browser.config.js')).forEach(function(configPath) {
-        console.log(chalk.yellow('gobbled webpack config'), chalk.white(path.resolve(configPath)))
+        console.log(chalk.yellow('gobbled webpack config'), chalk.red(path.resolve(configPath)))
         webpackConfig = require(path.resolve(configPath));
         
         // Use this middleware to set up hot module reloading via webpack.
@@ -139,7 +137,7 @@ function initMiddleware(app) {
     app.use(bodyParser.json({limit: '50mb'}));
     app.use(methodOverride());
     app.use(cookieParser());
-    // TODO _ app.use(flash())
+    app.use(flash());
 }
 function initStaticFolders(app, options) {
     // Setting the app router and static folders
@@ -168,10 +166,9 @@ function initSession(app, options) {
         next();
     });
     
-    console.log('****** VIA THIS ****** config.sessionSecret', config.sessionSecret);
     app.use(session({
-        saveUninitialized: false, 
-        resave: false, 
+        saveUninitialized: true, 
+        resave: true, 
         secret: config.sessionSecret, 
         cookie: {
             maxAge: config.sessionCookie.maxAge, 
@@ -182,22 +179,19 @@ function initSession(app, options) {
         store: null
     }));
 }
-function initCors(app) {
-    app.use(cors());
-}
 function initApis(app, config, api, callback) {
     var files = getGlobbedFiles(path.join(__dirname, './apis/*.js'));
     async.map(files, function(apiPath, callback) {
-        console.log(chalk.yellow('gobbled api file'), chalk.white(path.resolve(apiPath)))
+        console.log(chalk.yellow('gobbled api file'), chalk.red(path.resolve(apiPath)))
         require(path.resolve(apiPath))(app, config, api, function(err, notUsed) {
             if (err) {
-                return callback(err);
+                return callback(error(err));
             }
             return callback(null);
         })
     }, function(err, result) {
         if (err) {
-            return callback(err);
+            return callback(error(err));
         }
         initRoutes(app, api);
         callback(null);
@@ -205,7 +199,7 @@ function initApis(app, config, api, callback) {
 }
 function initRoutes(app, api) {
     getGlobbedFiles(path.join(__dirname, './routes/*.js')).forEach(function(routePath) {
-        console.log(chalk.yellow('gobbled routing file'), chalk.white(path.resolve(routePath)))
+        console.log(chalk.yellow('gobbled routing file'), chalk.red(path.resolve(routePath)))
         require(path.resolve(routePath))(app, api);
     })
 }

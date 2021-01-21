@@ -1,4 +1,5 @@
-﻿script
-	$params url
-	src ${url}
-	crossorigin anonymous
+﻿$group
+    $params url
+    script
+        src ${url}
+        crossorigin anonymous

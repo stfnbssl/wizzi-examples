@@ -1,8 +1,9 @@
-﻿_ app.delete
-	$params path
-	@ '${path}'
-	function
-		param req
-		param res
-		param next
-		$hook
+﻿$group
+    $params path
+    _ app.delete
+        @ '${path}'
+        function
+            param req
+            param res
+            param next
+            $hook

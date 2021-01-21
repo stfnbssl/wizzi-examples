@@ -1,5 +1,5 @@
 ﻿$group
-	$params current, name, href, title, titleShort|@@null
+	$params current, name, href, title|titolo, titleShort|@@null
 
 	$ var xtitle = titleShort ? titleShort : title;
 

@@ -1,6 +1,33 @@
-﻿h/react-page( basic, nocss )
+﻿html
 
-	$append body-scripts
-		js /static/lib/jss/jss.js
-		js /static/lib/jss/jss-preset-default.js
-		js /static/lib/classnames/classnames@2.2.5.js
+	$include common/options-init
+	
+    $
+		opt.logo_w = 70;
+		opt.logo_h = 30;
+		opt.sidebar_1 = false;
+		opt.sb_1_min_w = 0;
+		opt.title = 'Labs - jss - basic';
+        opt.useAxios = true;
+        opt.usePubSub = false;
+        opt.useBabel = true;
+        opt.babel = {};
+        opt.useReact = true;
+        opt.react = {};
+        opt.useCodemirror = false;
+        opt.codemirror = {};
+        opt.useFontAwesome = false;
+        opt.useJss = true;
+        opt.mainCss = 'css/react.css.ittf';
+        opt.mainJs = 'js/basic.js.ittf';
+        opt.useGoogleFonts = true;
+        opt.googleFonts = [
+            'Open+Sans:300,400,700',
+            'Roboto:300,400,500'
+        ];
+
+    $include common/options-analize
+
+    h/layouts/basic-layout( &opt )
+
+        # container

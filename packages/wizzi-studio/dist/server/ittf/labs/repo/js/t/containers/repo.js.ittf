@@ -7,8 +7,9 @@
 				{
 
 		m render
-			# log 'state', this.state
+			log 'state', this.state
 			const { folderData } = this.props
+            log 'folderData', folderData
 
 			if !folderData || folderData.state === K.STATE.LOADING
 				return
@@ -18,9 +19,9 @@
 				return
 					div
 						h3 ... Error ...
-						p { folderData.data }
+						p { folderData.data.message }
 
-			const { folderOrFile } = folderData.data
+			const folderOrFile = folderData.data
 
 			if folderOrFile.kind == 0
 				return

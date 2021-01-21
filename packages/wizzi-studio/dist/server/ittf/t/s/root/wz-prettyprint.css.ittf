@@ -9,7 +9,7 @@
 		color #F1F2F3
 
 	. tag
-		color #8AC763
+		color #AAFF00
 
 	. str
 		color #EC7600  $$ string content
@@ -40,7 +40,7 @@
 	. pp-ln
 		color #999
 	. pp-pln
-		color #CCC
+		color #EEE
 	. pp-str
 		color #EC7600  $$ string content
 	. pp-kwd
@@ -55,7 +55,7 @@
 		color #ff0040  $$  mixin call
 		cursor pointer
 	. pp-tag
-		color #8AC763  $$ a markup tag name
+		color #50fa7b  $$ a markup tag name
 	. pp-atn
 		color #E0E2E4  $$ a markup attribute name
 	. pp-atv
@@ -67,18 +67,53 @@
 	. pp-arg
 		color yellow  $$ a mixin arg
 
-	< pre
-		margin 0
-	
+    . code-title::before
+        content ''
+        position relative
+        left -16px
+        border-left 2px solid #3391FE
+
+    . code-panel
+        margin-bottom 1em
+        margin-top 1em
+    
+    . code-prettyprint
+        font-size 13px
+        border 1px solid #ddd
+        border-radius 3px
+        box-shadow 0 1px 3px hsla(0, 0%, 0%, 0.05)
+        overflow auto     
+    
+    . code-prettyprint.source
+        width inherit
+    
+    . code-prettyprint > code
+        padding 15px
+    
+    . code-prettyprint code
+        font-size 100%
+        line-height 18px
+        display block
+        background-color #3e383d
+        color #cDcEc3
+    
+    < pre
+        background #fff
+        padding 0px   
+        margin 0
+    
+    < pre code
+        padding 0
+        font-size inherit
+        color inherit
+        white-space pre-wrap
+        background-color transparent
+        border-radius 0
+
 	< pre.prettyprint
-		padding 0.8rem
-		border-left 5px solid #999
-		font-size 1rem
-		line-height 1.1em
 		overflow auto
 		$$ background #2B3A42
-		background #3e586d
-		margin-bottom 1rem
+		background #3e383d
 		text-shadow 0 1px #888
 		font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
 		text-align left
@@ -113,7 +148,7 @@
 		+ .L5
 		+ .L7
 		+ .L9
-		background #013a56
+		background #555
 
 	. prettyprint-js
 		background #fff

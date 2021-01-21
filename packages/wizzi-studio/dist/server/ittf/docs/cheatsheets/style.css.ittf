@@ -1,6 +1,6 @@
 ﻿css
 
-	$include layout
+	$include h/layouts/docs-layout
 
 	$include options
 
@@ -20,12 +20,14 @@
 		font-size 15px
 		padding 2rem
 
+    $*
 	< pre[class*="language-"] 
 		margin 0 0 1rem 0
 		padding 0 1rem
 
 	< code[class*="language-"], pre[class*="language-"]
 		line-height 1
+    *$
 
 	. head-bar-item
 		display flex

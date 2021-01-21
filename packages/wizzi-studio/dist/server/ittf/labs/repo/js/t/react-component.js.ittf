@@ -3,21 +3,21 @@
 
 	var ${name}
 		iife
-			function
-				param K
-				param State
-				param Pub
-				param Sub
+            param K
+            param State
+            param Pub
+            param Sub
 
-				class _${name}
-					super React.Component
+            class _${name}
+                super React.Component
 
-					$hook
+                $hook
 
-				
-				return _${name}
+            
+            return _${name}
 			
-			@ bxKodes
-			@ bxState
-			@ PubSub.publish
-			@ PubSub.subscribe
+			(
+                @ bxKodes
+                @ bxState
+                @ PubSub.publish
+                @ PubSub.subscribe

@@ -9,17 +9,23 @@ html
 		opt.logo_h = 30;
 		opt.sidebar_1 = true;
 		opt.sb_1_min_w = 80;
-		opt.title = 'Schema cheat sheet';
-		opt.usePrism = true;
-		if (cs.schema === 'js') {
-			opt.language = 'language-javascript';
-		} else {
-			opt.language = 'language-' + cs.schema;
-		}
+		opt.title = 'wzSchema <b>' + cs.schema.toUpperCase() + '</b> cheat sheet';
+		opt.usePrism = false;
+        opt.useHighlight = true;
+		if (opt.usePrism) {
+            if (cs.schema === 'js') {
+                opt.language = 'language-javascript';
+            } else {
+                opt.language = 'language-' + cs.schema;
+            }
+        } else {
+            opt.language = cs.schema;
+        }
+        var _schemas = ['ittf', 'js', 'jsx', 'ts', 'html', 'css', 'scss', 'svg', 'graphql', 'json', 'xml', 'text'];
 	
 	$include common/options-analize
 
-	layout( &opt )
+	h/layouts/docs-layout( &opt )
 
 		$append head-styles
 			$if isWizziStudio
@@ -46,32 +52,49 @@ html
 											a ${item.title}
 												href #${item.title}
 				. mc-content
+                    div
+                        $foreach item in _schemas
+                            $if item != cs.schema
+                                span
+                                    style margin: 3px; padding:10px; background-color: #333; cursor: pointer; 
+                                    a ${item}
+                                        style color: #0ff; 
+                                        href /ittf/docs/cheatsheets/wizzischema.html.ittf?_context=cs&_cs=cheatsheet;${item}
 					$foreach e in cs.elements
-						div
+						$*
+                        div
 							style display: flex;
 							id ${e.name}
 							head-bar-item( element, ${e.name} )
 							head-bar-item( tag, ${e.tag} )
 							head-bar-item( ast, ${e.ast} )
 							head-bar-item( category, ${e.category} )
+                        *$
 
 						$foreach item in e.items
 							h3 ${item.title}
+                                class code-title
+                                style margin: 30px 0; padding-top:10px; border-top: 1px solid hsl(0, 0%, 87%);
 								id ${item.title}
 							div
-								style display: flex;
-								pre
-									style width: 30%;
-									code
-										class ${opt.language}
-										+ ${item.expected}
-								pre
-									style width: 30%;
-									class prettyprint
-									+ ${item.ittfPretty}
-								pre
-									style width: 30%;
-									code
-										class ${opt.language}
-										+ ${item.generated}
+                                $if item.expected && item.expected.length > 0
+                                    div
+                                        style display: flex;
+                                        pre
+                                            style width: 100%;
+                                            code
+                                                class ${opt.language}
+                                                + ${item.expected}
+                                div
+                                    style display: flex;
+                                    pre
+                                        style width: 50%; margin-right: 5px; padding: 15px;
+                                        class code-prettyprint prettyprint source
+                                        + ${item.ittfPretty}
+                                    pre
+                                        style width: 50%; margin-left: 5px;
+                                        class code-prettyprint prettyprint source
+                                        code 
+                                            class ${opt.language}
+                                            + ${item.generated}
 

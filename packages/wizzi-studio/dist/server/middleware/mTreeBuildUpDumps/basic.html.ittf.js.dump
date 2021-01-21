@@ -1,44 +1,306 @@
-// 30/12/2018:15:54:31  by C:\My\wizzi\v5\apps\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
+// 21/1/2021:15:58:59  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
 $.n(); // set the context state to NodeContext
 var $0 = {}; // the root node of the MTree buildup
-var $1 = { n: "html", v: "", r: 1, c: 1, s: "f2", u: "f2",  }; //30
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //29
 $.a($0, $1, 5);
-var $2 = { n: "head", v: "", r: 3, c: 5, s: "f2", u: "f2",  }; //31
-$.a($1, $2, 7);
-var $3 = { n: "css", v: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700", r: 4, c: 9, s: "f2", u: "f2",  }; //32
-$.a($2, $3, 9);
-var $4 = { n: "css", v: "https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", r: 5, c: 9, s: "f2", u: "f2",  }; //33
-$.a($2, $4, 11);
+$.s("f1");
+var opt = { //78
+resetMarginsPaddingsBorders: true, //79
+resetDisplayBlock: false, //80
+resetOlUl: true, //81
+resetBlockquote: false, //82
+resetTable: false, //83
+resetLinks: true, //84
+prettyprint: false, //85
+debug_css: false, //86
+c_0: '#000', //87
+c_bg_0: '#fff', //88
+fa_1: false, //89
+sidebar_1: false, //90
+sb_1_min_w: 0, //91
+logo_w: 70, //92
+logo_h: 35, //93
+};  //94
+opt.logo_w = 70; //32
+opt.logo_h = 30; //33
+opt.sidebar_1 = false; //34
+opt.sb_1_min_w = 0; //35
+opt.title = 'Labs - jss - basic'; //36
+opt.useAxios = true; //37
+opt.usePubSub = false; //38
+opt.useBabel = true; //39
+opt.babel = {}; //40
+opt.useReact = true; //41
+opt.react = {}; //42
+opt.useCodemirror = false; //43
+opt.codemirror = {}; //44
+opt.useFontAwesome = false; //45
+opt.useJss = true; //46
+opt.mainCss = 'css/react.css.ittf'; //47
+opt.mainJs = 'js/basic.js.ittf'; //48
+opt.useGoogleFonts = true; //49
+opt.googleFonts = [ //50
+'Open+Sans:300,400,700',  //51
+'Roboto:300,400,500'  //52
+];  //53
+if (opt.sidebar_1) { //102
+opt.fa_1 = true; //103
+}  //104
+$.n();
+var $5 = { n: "head", v: "", r: 4, c: 5, s: "f2", u: "f4",  }; //124
+$.a($1, $5, 51);
+var $6 = { n: "@title", v: $.ip("f2", "${opt.title}", "string", 52, false), r: 5, c: 9, s: "f2", u: "f4",  }; //125
+$.a($5, $6, 53);
+var $7 = { n: "meta", v: "", r: 6, c: 9, s: "f2", u: "f4",  }; //126
+$.a($5, $7, 55);
+var $8 = { n: "charset", v: "utf-8", r: 7, c: 13, s: "f2", u: "f4",  }; //127
+$.a($7, $8, 57);
+var $9 = { n: "meta", v: "", r: 8, c: 9, s: "f2", u: "f4",  }; //128
+$.a($5, $9, 59);
+var $10 = { n: "name", v: "viewport", r: 9, c: 13, s: "f2", u: "f4",  }; //129
+$.a($9, $10, 61);
+var $11 = { n: "content", v: "width=device-width, initial-scale=1", r: 10, c: 13, s: "f2", u: "f4",  }; //130
+$.a($9, $11, 63);
 $.s("f2");
-if (usecss == 'yes') { //35
+if (opt.useGoogleFonts) { //173
+    var item_count = opt.googleFonts.length; //174
+    for (var i13=0; i13<item_count; i13++) { //174
+        var item = opt.googleFonts[i13]; //174
+        var item_index = i13; //174
+        $.n();
+        var $14 = { n: "css", v: $.ip("f2", "https://fonts.googleapis.com/css?family=${item}", "string", 71, false), r: 5, c: 13, s: "f2", u: "f5",  }; //175
+        $.a($5, $14, 72);
+    }
+}
+$.s("f2");
+if (opt.useReact) { //176
     $.n();
-    var $6 = { n: "css", v: $.ip("f2", "css/${name}.css.ittf", "string", 15, false), r: 8, c: 13, s: "f2", u: "f2",  }; //36
-    $.a($2, $6, 16);
+    var $16 = { n: "link", v: "", r: 8, c: 9, s: "f2", u: "f5",  }; //177
+    $.a($5, $16, 79);
+    var $17 = { n: "rel", v: "stylesheet", r: 9, c: 13, s: "f2", u: "f5",  }; //178
+    $.a($16, $17, 81);
+    var $18 = { n: "href", v: "https://fonts.googleapis.com/icon?family=Material+Icons", r: 10, c: 13, s: "f2", u: "f5",  }; //179
+    $.a($16, $18, 83);
+}
+$.s("f2");
+if (opt.useBootstrap) { //180
+    $.n();
+    var $20 = { n: "css", v: "/static/lib/bootstrap/dist/css/bootstrap.min.css", r: 13, c: 9, s: "f2", u: "f5",  }; //181
+    $.a($5, $20, 89);
+}
+$.s("f2");
+if (opt.usePrism) { //182
+    if (isWizziStudio) { //183
+        $.n();
+        var $23 = { n: "css", v: "/static/lib/prism/prism.css", r: 17, c: 13, s: "f2", u: "f5",  }; //184
+        $.a($5, $23, 96);
+    }
+    else {
+        $.n();
+        var $25 = { n: "css", v: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css", r: 19, c: 13, s: "f2", u: "f5",  }; //186
+        $.a($5, $25, 101);
+    }
+}
+$.s("f2");
+if (opt.useHighlight) { //187
+    $.n();
+    var $27 = { n: "link", v: "", r: 27, c: 9, s: "f2", u: "f5",  }; //188
+    $.a($5, $27, 108);
+    var $28 = { n: "rel", v: "stylesheet", r: 28, c: 13, s: "f2", u: "f5",  }; //189
+    $.a($27, $28, 110);
+    var $29 = { n: "href", v: "/static/lib/highlightjs-master/dracula.css", r: 29, c: 13, s: "f2", u: "f5",  }; //190
+    $.a($27, $29, 112);
+}
+$.s("f2");
+if (opt.useCodemirror) { //191
+    $.n();
+    var $31 = { n: "css", v: "/static/lib/codemirror/lib/codemirror.css", r: 32, c: 9, s: "f2", u: "f5",  }; //192
+    $.a($5, $31, 118);
+    var $32 = { n: "css", v: "/static/lib/codemirror/addon/display/fullscreen.css", r: 33, c: 9, s: "f2", u: "f5",  }; //193
+    $.a($5, $32, 120);
+}
+$.s("f2");
+if (opt.mainCss && opt.mainCss.length > 0) { //194
+    $.n();
+    var $34 = { n: "link", v: "", r: 36, c: 9, s: "f2", u: "f5",  }; //195
+    $.a($5, $34, 126);
+    var $35 = { n: "rel", v: "stylesheet", r: 37, c: 13, s: "f2", u: "f5",  }; //196
+    $.a($34, $35, 128);
+    var $36 = { n: "href", v: $.ip("f2", "${opt.mainCss}", "string", 129, false), r: 38, c: 13, s: "f2", u: "f5",  }; //197
+    $.a($34, $36, 130);
+}
+$.s("f2");
+if (opt.useFontAwesome) { //198
+    var fontAwesomeKey = 'eab461efef'; //200
+    $.n();
+    var $39 = { n: "script", v: "", r: 43, c: 9, s: "f2", u: "f5",  }; //201
+    $.a($5, $39, 137);
+    var $40 = { n: "src", v: $.ip("f2", "https://kit.fontawesome.com/${fontAwesomeKey}.js", "string", 138, false), r: 44, c: 13, s: "f2", u: "f5",  }; //202
+    $.a($39, $40, 139);
+    var $41 = { n: "crossorigin", v: "anonymous", r: 45, c: 13, s: "f2", u: "f5",  }; //203
+    $.a($39, $41, 141);
 }
 $.n();
-var $7 = { n: "body", v: "", r: 9, c: 5, s: "f2", u: "f2",  }; //37
-$.a($1, $7, 20);
-var $8 = { n: "#", v: "container", r: 10, c: 9, s: "f2", u: "f2",  }; //38
-$.a($7, $8, 22);
-var $9 = { n: "js", v: "https://unpkg.com/react@15.5.4/dist/react.min.js", r: 11, c: 9, s: "f2", u: "f2",  }; //39
-$.a($7, $9, 24);
-var $10 = { n: "js", v: "https://unpkg.com/react-dom/dist/react-dom.min.js", r: 12, c: 9, s: "f2", u: "f2",  }; //40
-$.a($7, $10, 26);
-var $11 = { n: "js", v: "/static/lib/react/prop-types.js", r: 13, c: 9, s: "f2", u: "f2",  }; //41
-$.a($7, $11, 28);
-var $12 = { n: "js", v: "https://unpkg.com/babel-standalone@6.15.0/babel.min.js", r: 14, c: 9, s: "f2", u: "f2",  }; //42
-$.a($7, $12, 30);
-var $13 = { n: "data-plugins", v: "transform-decorators-legacy", r: 15, c: 13, s: "f2", u: "f2",  }; //43
-$.a($12, $13, 32);
-var $14 = { n: "js", v: "/static/lib/jss/jss.js", r: 4, c: 9, s: "f1", u: "f1",  }; //8
-$.a($7, $14, 34);
-var $15 = { n: "js", v: "/static/lib/jss/jss-preset-default.js", r: 5, c: 9, s: "f1", u: "f1",  }; //9
-$.a($7, $15, 36);
-var $16 = { n: "js", v: "/static/lib/classnames/classnames@2.2.5.js", r: 6, c: 9, s: "f1", u: "f1",  }; //10
-$.a($7, $16, 38);
-var $17 = { n: "script", v: "", r: 17, c: 9, s: "f2", u: "f2",  }; //45
-$.a($7, $17, 40);
-var $18 = { n: "src", v: $.ip("f2", "js/${name}.js.ittf", "string", 41, false), r: 18, c: 13, s: "f2", u: "f2",  }; //46
-$.a($17, $18, 42);
-var $19 = { n: "type", v: "text/babel", r: 19, c: 13, s: "f2", u: "f2",  }; //47
-$.a($17, $19, 44);
+var $42 = { n: "body", v: "", r: 18, c: 5, s: "f2", u: "f4",  }; //134
+$.a($1, $42, 145);
+var $43 = { n: "#", v: "container", r: 33, c: 9, s: "f1", u: "f1",  }; //56
+$.a($42, $43, 147);
+$.s("f2");
+if (isWizziStudio) { //230
+    $.n();
+    var $45 = { n: "script", v: "", r: 4, c: 9, s: "f2", u: "f6",  }; //231
+    $.a($1, $45, 152);
+    var $46 = { n: "module", v: "", r: 5, c: 13, s: "f2", u: "f6",  }; //232
+    $.a($45, $46, 154);
+    var $47 = { n: "_", v: "document.addEventListener", r: 6, c: 17, s: "f2", u: "f6",  }; //233
+    $.a($46, $47, 156);
+    var $48 = { n: "@", v: "'keydown'", r: 7, c: 21, s: "f2", u: "f6",  }; //234
+    $.a($47, $48, 158);
+    var $49 = { n: "=>", v: "", r: 8, c: 21, s: "f2", u: "f6",  }; //235
+    $.a($47, $49, 160);
+    var $50 = { n: "param", v: "event", r: 9, c: 25, s: "f2", u: "f6",  }; //236
+    $.a($49, $50, 162);
+    var $51 = { n: "var", v: "keyName = event.key", r: 10, c: 25, s: "f2", u: "f6",  }; //237
+    $.a($49, $51, 164);
+    var $52 = { n: "if", v: "keyName === 'Control'", r: 11, c: 25, s: "f2", u: "f6",  }; //238
+    $.a($49, $52, 166);
+    var $53 = { n: "#", v: "do not alert when only Control key is pressed.", r: 12, c: 29, s: "f2", u: "f6",  }; //239
+    $.a($52, $53, 168);
+    var $54 = { n: "return", v: "", r: 13, c: 29, s: "f2", u: "f6",  }; //240
+    $.a($52, $54, 170);
+    var $55 = { n: "if", v: "event.ctrlKey && keyName === 'j'", r: 15, c: 25, s: "f2", u: "f6",  }; //241
+    $.a($49, $55, 172);
+    var $56 = { n: "set", v: "location.href= location.pathname + '?meta=json'", r: 16, c: 29, s: "f2", u: "f6",  }; //242
+    $.a($55, $56, 174);
+    var $57 = { n: "_", v: "event.preventDefault", r: 17, c: 29, s: "f2", u: "f6",  }; //243
+    $.a($55, $57, 176);
+    var $58 = { n: "_", v: "event.stopPropagation", r: 18, c: 29, s: "f2", u: "f6",  }; //244
+    $.a($55, $58, 178);
+    var $59 = { n: "if", v: "event.ctrlKey && keyName === 'h'", r: 20, c: 25, s: "f2", u: "f6",  }; //245
+    $.a($49, $59, 180);
+    var $60 = { n: "set", v: "location.href= location.pathname + '?meta=html'", r: 21, c: 29, s: "f2", u: "f6",  }; //246
+    $.a($59, $60, 182);
+    var $61 = { n: "_", v: "event.preventDefault", r: 22, c: 29, s: "f2", u: "f6",  }; //247
+    $.a($59, $61, 184);
+    var $62 = { n: "_", v: "event.stopPropagation", r: 23, c: 29, s: "f2", u: "f6",  }; //248
+    $.a($59, $62, 186);
+    var $63 = { n: "if", v: "event.ctrlKey && keyName === 'b'", r: 25, c: 25, s: "f2", u: "f6",  }; //249
+    $.a($49, $63, 188);
+    var $64 = { n: "var", v: "i = location.pathname.lastIndexOf('/')", r: 26, c: 29, s: "f2", u: "f6",  }; //250
+    $.a($63, $64, 190);
+    var $65 = { n: "set", v: "location.href= location.pathname.substr(0, i) + '?meta=html'", r: 27, c: 29, s: "f2", u: "f6",  }; //251
+    $.a($63, $65, 192);
+    var $66 = { n: "_", v: "event.preventDefault", r: 28, c: 29, s: "f2", u: "f6",  }; //252
+    $.a($63, $66, 194);
+    var $67 = { n: "_", v: "event.stopPropagation", r: 29, c: 29, s: "f2", u: "f6",  }; //253
+    $.a($63, $67, 196);
+}
+$.s("f2");
+if (opt.useReact) { //297
+    $.n();
+    var $69 = { n: "js", v: "https://unpkg.com/react@latest/umd/react.development.js", r: 4, c: 9, s: "f2", u: "f7",  }; //298
+    $.a($1, $69, 202);
+    var $70 = { n: "js", v: "https://unpkg.com/react-dom@latest/umd/react-dom.development.js", r: 5, c: 9, s: "f2", u: "f7",  }; //299
+    $.a($1, $70, 204);
+    var $71 = { n: "js", v: "https://unpkg.com/prop-types@latest/prop-types.min.js", r: 6, c: 9, s: "f2", u: "f7",  }; //300
+    $.a($1, $71, 206);
+    var $72 = { n: "js", v: "https://unpkg.com/@material-ui/core/umd/material-ui.development.js", r: 7, c: 9, s: "f2", u: "f7",  }; //301
+    $.a($1, $72, 208);
+    var $73 = { n: "js", v: "https://unpkg.com/babel-standalone@latest/babel.min.js", r: 8, c: 9, s: "f2", u: "f7",  }; //302
+    $.a($1, $73, 210);
+    var $74 = { n: "js", v: "https://unpkg.com/react-router-dom/umd/react-router-dom.min.js", r: 9, c: 9, s: "f2", u: "f7",  }; //303
+    $.a($1, $74, 212);
+    var $75 = { n: "js", v: "/static/lib/classnames/classnames@2.2.5.js", r: 10, c: 9, s: "f2", u: "f7",  }; //304
+    $.a($1, $75, 214);
+}
+$.s("f2");
+if (opt.useJQuery || opt.useBootstrap) { //305
+    $.n();
+    var $77 = { n: "js", v: "/static/lib/jquery/dist/jquery.js", r: 13, c: 9, s: "f2", u: "f7",  }; //306
+    $.a($1, $77, 220);
+}
+$.s("f2");
+if (opt.useBootstrap) { //307
+    $.n();
+    var $79 = { n: "js", v: "/static/lib/bootstrap/dist/js/bootstrap.min.js", r: 16, c: 9, s: "f2", u: "f7",  }; //308
+    $.a($1, $79, 226);
+}
+$.s("f2");
+if (opt.useUnderscore) { //309
+    $.n();
+    var $81 = { n: "js", v: "/static/lib/underscore/underscore.js", r: 19, c: 9, s: "f2", u: "f7",  }; //310
+    $.a($1, $81, 232);
+}
+$.s("f2");
+if (opt.usePrism) { //311
+    if (isWizziStudio) { //312
+        $.n();
+        var $84 = { n: "js", v: "/static/lib/prism/prism.js", r: 23, c: 13, s: "f2", u: "f7",  }; //313
+        $.a($1, $84, 239);
+    }
+    else {
+        $.n();
+        var $86 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js", r: 25, c: 13, s: "f2", u: "f7",  }; //315
+        $.a($1, $86, 244);
+    }
+}
+$.s("f2");
+if (opt.useSplit) { //316
+    $.n();
+    var $88 = { n: "js", v: "/static/lib/controls/split.js", r: 28, c: 9, s: "f2", u: "f7",  }; //317
+    $.a($1, $88, 251);
+}
+$.s("f2");
+if (opt.useAce) { //318
+    $.n();
+    var $90 = { n: "js", v: "/static/lib/ace/src-noconflict/ace.js", r: 31, c: 9, s: "f2", u: "f7",  }; //319
+    $.a($1, $90, 257);
+}
+$.s("f2");
+if (opt.useHighlight) { //320
+    $.n();
+    var $92 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js", r: 34, c: 9, s: "f2", u: "f7",  }; //321
+    $.a($1, $92, 263);
+}
+$.s("f2");
+if (opt.useCodemirror) { //322
+    $.n();
+    var $94 = { n: "js", v: "/static/lib/codemirror/lib/codemirror.js", r: 37, c: 9, s: "f2", u: "f7",  }; //323
+    $.a($1, $94, 269);
+    var $95 = { n: "js", v: "/static/lib/codemirror/mode/javascript/javascript.js", r: 38, c: 9, s: "f2", u: "f7",  }; //324
+    $.a($1, $95, 271);
+    var $96 = { n: "js", v: "/static/lib/codemirror/mode/yaml/yaml.js", r: 39, c: 9, s: "f2", u: "f7",  }; //325
+    $.a($1, $96, 273);
+    var $97 = { n: "js", v: "/static/lib/codemirror/addon/display/fullscreen.js", r: 40, c: 9, s: "f2", u: "f7",  }; //326
+    $.a($1, $97, 275);
+}
+$.s("f2");
+if (opt.usePubSub) { //327
+    $.n();
+    var $99 = { n: "js", v: "/static/lib/pubsub/pubsub.js", r: 43, c: 9, s: "f2", u: "f7",  }; //328
+    $.a($1, $99, 281);
+}
+$.s("f2");
+if (opt.useAxios) { //329
+    $.n();
+    var $101 = { n: "js", v: "/static/lib/axios/axios.js", r: 46, c: 9, s: "f2", u: "f7",  }; //330
+    $.a($1, $101, 287);
+}
+$.s("f2");
+if (opt.useJss) { //331
+    $.n();
+    var $103 = { n: "js", v: "/static/lib/jss/jss.js", r: 49, c: 9, s: "f2", u: "f7",  }; //332
+    $.a($1, $103, 293);
+    var $104 = { n: "js", v: "/static/lib/jss/jss-preset-default.js", r: 50, c: 9, s: "f2", u: "f7",  }; //333
+    $.a($1, $104, 295);
+}
+$.s("f2");
+if (opt.mainJs && opt.mainJs.length > 0) { //334
+    $.n();
+    var $106 = { n: "script", v: "", r: 53, c: 9, s: "f2", u: "f7",  }; //335
+    $.a($1, $106, 301);
+    var $107 = { n: "src", v: $.ip("f2", "${opt.mainJs}", "string", 302, false), r: 54, c: 13, s: "f2", u: "f7",  }; //336
+    $.a($106, $107, 303);
+    var $108 = { n: "type", v: "text/babel", r: 55, c: 13, s: "f2", u: "f7",  }; //337
+    $.a($106, $108, 305);
+}

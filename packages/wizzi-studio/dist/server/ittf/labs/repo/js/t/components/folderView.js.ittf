@@ -4,8 +4,7 @@
 		
 		m render
 			const { folderData } = this.props
-			const { folderOrFile, userId, projectId, folderId } = folderData.data
-			const { items } = folderOrFile
+			const { kind, userId, projectId, items } = folderData.data
 
 			function sortFiles
 				param left, right
@@ -38,12 +37,16 @@
 												svg-file()
 										
 										var href
-										if folderId
+                                            {
+                                                @ userId item.fullPath
+										
+                                        $*
+                                        if item.folderPath
 											set href
 												{
 													@ userId userId
 													@ projectId projectId
-													@ folderId (folderId + '/' + item.basename)
+													@ folderId (item.folderPath + '/' + item.basename)
 										elif projectId
 											set href
 												{
@@ -55,6 +58,7 @@
 												{
 													@ userId userId
 													@ projectId item.basename
+                                        *$
 										
 										return
 											tr

@@ -1,1 +1,5 @@
-common/proj_gitignore()
+text
+    $
+        var app = {};
+    
+    app/.gitignore(&app)

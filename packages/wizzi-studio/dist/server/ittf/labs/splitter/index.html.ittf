@@ -1,1 +1,32 @@
-﻿h/react-page( splitters )
+﻿html
+
+	$include common/options-init
+	
+    $
+		opt.logo_w = 70;
+		opt.logo_h = 30;
+		opt.sidebar_1 = false;
+		opt.sb_1_min_w = 0;
+		opt.title = 'Labs - splitters';
+        opt.useAxios = true;
+        opt.usePubSub = false;
+        opt.useBabel = true;
+        opt.babel = {};
+        opt.useReact = true;
+        opt.react = {};
+        opt.useCodemirror = false;
+        opt.codemirror = {};
+        opt.useFontAwesome = true;
+        opt.mainCss = 'css/splitters.css.ittf';
+        opt.mainJs = 'js/splitters.js.ittf';
+        opt.useGoogleFonts = true;
+        opt.googleFonts = [
+            'Open+Sans:300,400,700',
+            'Roboto:300,400,500'
+        ];
+
+    $include common/options-analize
+
+    h/layouts/basic-layout( &opt )
+
+        # container

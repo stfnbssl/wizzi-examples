@@ -11,7 +11,7 @@
 	
 	width 660
 	height 260
-	preserve-aspect-ratio xMidYMid meet
+	$$ preserve-aspect-ratio xMidYMid meet
 	rect
 		x 0
 		y 0
@@ -30,7 +30,7 @@
 			\b 175 ${opt.y2} 175 ${opt.y1a + 20} 
 			\b 230 ${opt.y2} 230 ${opt.ybottom}
 
-	i( 250, &opt )
+    i( 250, &opt )
 	zeta( 320, &opt )
 	zeta( 450, &opt )
 	i( 590, &opt )	

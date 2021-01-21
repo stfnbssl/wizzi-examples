@@ -1,8 +1,9 @@
-﻿li 
-	$params href, icon, text
-    a 
-        href ${href}
-        i 
-            class fa fa-${icon} fa-2x
-        span ${text}
-            class nav-text
+﻿$group
+    $params href, icon, text
+    li 
+        a 
+            href ${href}
+            i 
+                class fa fa-${icon} fa-2x
+            span ${text}
+                class nav-text

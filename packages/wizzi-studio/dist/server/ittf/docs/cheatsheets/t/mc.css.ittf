@@ -17,7 +17,7 @@ $group
 	. mc-frame-bar
 		width calc(100% - ${opt.sb_1_min_w}px)
 		height 40px
-		background #549fd8
+		background #545f58
 		display flex
 		flex-direction row
 
@@ -52,7 +52,7 @@ $group
 				border-bottom 1px solid ${c_0}
 				color ${c_0}
 				display block
-				font-size 1rem
+				font-size 0.8rem
 				padding 0.3rem 0 0.3rem 1rem
 				< a
 					color ${c_0}

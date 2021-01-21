@@ -1,1 +1,7 @@
-﻿common/mit_license( 1982 - 2018 The Wizzi Team )
+﻿text
+    $
+        var app = {
+            copy: '1982 - 2021 Stefano Bassoli'
+        };
+    
+    app/.gitignore(&app)

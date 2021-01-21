@@ -1,0 +1,10 @@
+﻿$group
+
+	[ externals
+		$if pkg.Build.useReactExternals
+			{ 
+				@ "react" "React"
+				@ "react-dom" "ReactDOM"
+
+		$if pkg.Build.useRequireHttp
+			@ require('webpack-require-http')

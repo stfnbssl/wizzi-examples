@@ -1,6 +1,6 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\wizzi-studio\.wizzi\ittf\server\webpacks\home\src\components\files.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\.wizzi\ittf\server\webpacks\home\src\components\files.js.ittf
 */
 'use strict';
 export const requireMarkdown = require.context('../pages', true, /^((?![\\/]component-demos[\\/]).)*\.md$/);

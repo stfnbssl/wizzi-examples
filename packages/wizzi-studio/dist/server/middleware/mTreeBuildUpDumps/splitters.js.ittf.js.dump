@@ -1,4 +1,4 @@
-// 4/10/2018:16:2:52  by C:\My\wizzi\v5\apps\wizzi-studio\dist\node_modules\wizzi-mtree\lib\loader\evaluator.js
+// 21/1/2021:15:51:57  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
 $.n(); // set the context state to NodeContext
 var $0 = {}; // the root node of the MTree buildup
 var $1 = { n: "module", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //35
@@ -235,25 +235,25 @@ var $116 = { n: "p", v: "propTypes", r: 6, c: 9, s: "f1", u: "f5",  }; //777
 $.a($114, $116, 235);
 var $117 = { n: "static", v: "", r: 7, c: 13, s: "f1", u: "f5",  }; //778
 $.a($116, $117, 237);
-var $118 = { n: "@", v: "vertical React.PropTypes.bool", r: 8, c: 13, s: "f1", u: "f5",  }; //779
+var $118 = { n: "@", v: "vertical PropTypes.bool", r: 8, c: 13, s: "f1", u: "f5",  }; //779
 $.a($116, $118, 239);
-var $119 = { n: "@", v: "primary React.PropTypes.bool", r: 9, c: 13, s: "f1", u: "f5",  }; //780
+var $119 = { n: "@", v: "primary PropTypes.bool", r: 9, c: 13, s: "f1", u: "f5",  }; //780
 $.a($116, $119, 241);
-var $120 = { n: "@", v: "size React.PropTypes.number", r: 10, c: 13, s: "f1", u: "f5",  }; //781
+var $120 = { n: "@", v: "size PropTypes.number", r: 10, c: 13, s: "f1", u: "f5",  }; //781
 $.a($116, $120, 243);
-var $121 = { n: "@", v: "percentage React.PropTypes.bool", r: 11, c: 13, s: "f1", u: "f5",  }; //782
+var $121 = { n: "@", v: "percentage PropTypes.bool", r: 11, c: 13, s: "f1", u: "f5",  }; //782
 $.a($116, $121, 245);
 var $122 = { n: "#", v: "", r: 12, c: 13, s: "f1", u: "f5",  }; //783
 $.a($116, $122, 247);
 var $123 = { n: "@", v: "children", r: 13, c: 17, s: "f1", u: "f5",  }; //784
 $.a($122, $123, 249);
-var $124 = { n: "_", v: "React.PropTypes.oneOfType", r: 14, c: 21, s: "f1", u: "f5",  }; //785
+var $124 = { n: "_", v: "PropTypes.oneOfType", r: 14, c: 21, s: "f1", u: "f5",  }; //785
 $.a($123, $124, 251);
 var $125 = { n: "[", v: "", r: 15, c: 25, s: "f1", u: "f5",  }; //786
 $.a($124, $125, 253);
-var $126 = { n: "@", v: "React.PropTypes.arrayOf(React.PropTypes.node)", r: 16, c: 29, s: "f1", u: "f5",  }; //787
+var $126 = { n: "@", v: "PropTypes.arrayOf(PropTypes.node)", r: 16, c: 29, s: "f1", u: "f5",  }; //787
 $.a($125, $126, 255);
-var $127 = { n: "@", v: "React.PropTypes.node", r: 17, c: 29, s: "f1", u: "f5",  }; //788
+var $127 = { n: "@", v: "PropTypes.node", r: 17, c: 29, s: "f1", u: "f5",  }; //788
 $.a($125, $127, 257);
 var $128 = { n: "p", v: "defaultProps", r: 19, c: 9, s: "f1", u: "f5",  }; //789
 $.a($114, $128, 259);
@@ -337,27 +337,27 @@ var $167 = { n: "p", v: "propTypes", r: 22, c: 9, s: "f1", u: "f3",  }; //510
 $.a($154, $167, 337);
 var $168 = { n: "static", v: "", r: 23, c: 13, s: "f1", u: "f3",  }; //511
 $.a($167, $168, 339);
-var $169 = { n: "@", v: "customClassName React.PropTypes.string", r: 24, c: 13, s: "f1", u: "f3",  }; //512
+var $169 = { n: "@", v: "customClassName PropTypes.string", r: 24, c: 13, s: "f1", u: "f3",  }; //512
 $.a($167, $169, 341);
-var $170 = { n: "@", v: "vertical React.PropTypes.bool", r: 25, c: 13, s: "f1", u: "f3",  }; //513
+var $170 = { n: "@", v: "vertical PropTypes.bool", r: 25, c: 13, s: "f1", u: "f3",  }; //513
 $.a($167, $170, 343);
-var $171 = { n: "@", v: "percentage React.PropTypes.bool", r: 26, c: 13, s: "f1", u: "f3",  }; //514
+var $171 = { n: "@", v: "percentage PropTypes.bool", r: 26, c: 13, s: "f1", u: "f3",  }; //514
 $.a($167, $171, 345);
-var $172 = { n: "@", v: "primaryIndex React.PropTypes.number", r: 27, c: 13, s: "f1", u: "f3",  }; //515
+var $172 = { n: "@", v: "primaryIndex PropTypes.number", r: 27, c: 13, s: "f1", u: "f3",  }; //515
 $.a($167, $172, 347);
-var $173 = { n: "@", v: "primaryMinSize React.PropTypes.number", r: 28, c: 13, s: "f1", u: "f3",  }; //516
+var $173 = { n: "@", v: "primaryMinSize PropTypes.number", r: 28, c: 13, s: "f1", u: "f3",  }; //516
 $.a($167, $173, 349);
-var $174 = { n: "@", v: "secondaryInitialSize React.PropTypes.number", r: 29, c: 13, s: "f1", u: "f3",  }; //517
+var $174 = { n: "@", v: "secondaryInitialSize PropTypes.number", r: 29, c: 13, s: "f1", u: "f3",  }; //517
 $.a($167, $174, 351);
-var $175 = { n: "@", v: "secondaryMinSize React.PropTypes.number", r: 30, c: 13, s: "f1", u: "f3",  }; //518
+var $175 = { n: "@", v: "secondaryMinSize PropTypes.number", r: 30, c: 13, s: "f1", u: "f3",  }; //518
 $.a($167, $175, 353);
 var $176 = { n: "#", v: "", r: 31, c: 13, s: "f1", u: "f3",  }; //519
 $.a($167, $176, 355);
 var $177 = { n: "@", v: "children", r: 32, c: 17, s: "f1", u: "f3",  }; //520
 $.a($176, $177, 357);
-var $178 = { n: "_", v: "React.PropTypes.arrayOf", r: 33, c: 21, s: "f1", u: "f3",  }; //521
+var $178 = { n: "_", v: "PropTypes.arrayOf", r: 33, c: 21, s: "f1", u: "f3",  }; //521
 $.a($177, $178, 359);
-var $179 = { n: "@", v: "React.PropTypes.node", r: 34, c: 25, s: "f1", u: "f3",  }; //522
+var $179 = { n: "@", v: "PropTypes.node", r: 34, c: 25, s: "f1", u: "f3",  }; //522
 $.a($178, $179, 361);
 var $180 = { n: "p", v: "defaultProps", r: 36, c: 9, s: "f1", u: "f3",  }; //523
 $.a($154, $180, 363);

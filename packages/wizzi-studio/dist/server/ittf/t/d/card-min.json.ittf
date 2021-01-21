@@ -1,8 +1,10 @@
-﻿{
-	$params label, href
-	key ""
-	teaser "${label}"
-	title ""
-	href "${href}"
-	subtitle ""
-	backgroundColor ""
+﻿$group
+    $params label, href
+    {
+        
+        key ""
+        teaser "${label}"
+        title ""
+        href "${href}"
+        subtitle ""
+        backgroundColor ""

@@ -1,0 +1,62 @@
+{
+    "name": "wizzi-react",
+    "version": "0.0.1",
+    "description": "Wizzi starter template for React packages",
+    "author": "Stefano Bassoli",
+    "license": "MIT",
+    "Code": {},
+    "Build": {
+        "useWebpack": true,
+        "webpack": {
+            "useCss": true,
+            "useSass": false,
+            "useHtml": true,
+            "useDevServer": true
+        },
+        "useHotReplacement": true,
+        "hotReplacement": {},
+        "useBabel": true,
+        "babel": {},
+        "useReact": true,
+        "react": {
+            "rootContainer": "AppContainer",
+            "rootElementId": "root",
+            "useRouter": true,
+            "router": {},
+            "useRedux": false,
+            "redux": {
+                "useInitialLoad": true,
+                "initialLoad": {},
+                "useThunk": true,
+                "thunk": {
+                    "useExtraArgument": true
+                },
+                "useFirestore": false,
+                "firestore": {},
+                "useAuth": false,
+                "auth": {},
+                "useForm": false,
+                "form": {}
+            },
+            "useMaterialUI": true,
+            "materialUI": {
+                "useAutocomplete": false,
+                "autocomplete": {
+                    "useReactSelect": false
+                },
+                "usePickers": false,
+                "useLab": false,
+                "useIcons": true
+            }
+        }
+    },
+    "Styles": {
+        "theme": {
+            "dark": true
+        },
+        "colors": {
+            "primary": "green",
+            "secondary": "orange"
+        }
+    }
+}

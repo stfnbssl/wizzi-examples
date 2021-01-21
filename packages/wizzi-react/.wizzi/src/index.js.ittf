@@ -1,0 +1,4 @@
+module
+	kind react
+
+	$include v07/app/react/index

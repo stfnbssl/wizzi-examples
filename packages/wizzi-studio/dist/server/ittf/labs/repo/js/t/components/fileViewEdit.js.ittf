@@ -4,8 +4,7 @@
 		
 		m render
 			const { folderData } = this.props
-			const { folderOrFile, userId, projectId, folderId } = folderData.data
-			const { content } = folderOrFile
+			const { userId, projectId, folderId, content } = folderData.data
 
 			return
 				. file js-code-editor container-preview show-code

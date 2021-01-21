@@ -1,7 +1,7 @@
 ﻿$group
 	$params action|@@null
 
-	onClick
+	@ onClick
 		function
 			param event
 			_ event.preventDefault()

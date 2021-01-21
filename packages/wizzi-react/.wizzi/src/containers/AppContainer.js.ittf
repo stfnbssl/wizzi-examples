@@ -1,0 +1,55 @@
+﻿module
+	kind react
+
+	$
+		var md = {};
+		md.name = "AppContainer";
+		md.withRouter = false;
+        md.withStyles = false;
+        md.withContext = false;
+	
+	v07/app/react/container(&md)
+
+        $append imports
+            $if pkg.Build.react.useRouter
+                import AppRouter from './AppRouter'
+            import App from '../components/app'
+            $if pkg.Build.react.useRedux
+                import
+                    @ changeUserState
+                    from '../store/actions'
+        
+        => handleChangeUserState
+            param name
+            param value
+            $if pkg.Build.react.useRedux
+                _ this.props.dispatchChangeUserState
+                    {
+                        @ ...this.props.userState
+                        @ [name] value
+
+        render
+            return
+                div
+                    $if pkg.Build.react.useRouter
+                        < AppRouter
+                    < App
+                        $if pkg.Build.react.useRedux
+                            @ userState {this.props.userState}
+                            @ onChangeUserState {this.handleChangeUserState}
+
+        $append dispatch-to-props
+            $if pkg.Build.react.useRedux
+                @ dispatchChangeUserState
+                    =>
+                        param userState
+                        log 'dispatchChangeTheme', userState
+                        _ dispatch
+                            _ changeUserState
+                                @ userState
+
+        $append state-to-props
+            $if pkg.Build.react.useRedux
+                @ userState state.app.userState
+
+        $append merge-props

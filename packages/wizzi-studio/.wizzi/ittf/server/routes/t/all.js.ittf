@@ -1,8 +1,9 @@
-﻿_ app.all
-	$params path
-	@ '${path}'
-	function
-		param req
-		param res
-		param next
-		$hook
+﻿$group
+    $params path
+    _ app.all
+        @ '${path}'
+        function
+            param req
+            param res
+            param next
+            $hook

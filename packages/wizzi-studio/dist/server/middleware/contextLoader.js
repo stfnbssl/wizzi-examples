@@ -1,6 +1,6 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\wizzi-studio\.wizzi\ittf\server\middleware\contextLoader.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\.wizzi\ittf\server\middleware\contextLoader.js.ittf
 */
 'use strict';
 var path = require('path');
@@ -240,6 +240,7 @@ function loadCheatsheet(name, callback) {
                         else {
                             item.generated = verify.htmlEscape(script.mTreeBuildUpScript);
                         }
+                        item.generated = item.generated ? item.generated.trim() : 'No result. Something went wrong!';
                         callback(null);
                     });
                 }
@@ -256,7 +257,7 @@ function loadCheatsheet(name, callback) {
                         }
                         else {
                             artifactText = verify.htmlEscape(artifactText);
-                            item.generated = artifactText;
+                            item.generated = artifactText ? artifactText.trim() : 'No result. Something went wrong!';
                         }
                         callback(null);
                     });
@@ -292,8 +293,42 @@ function buildExpected(ittf, sb, indent) {
         }
     }
 }
+var schemaArtifactMap = {
+    js: 'js/module', 
+    jsx: 'js/module', 
+    ts: 'ts/module', 
+    html: 'html/document', 
+    css: 'css/document', 
+    scss: 'scss/document', 
+    svg: 'svg/document', 
+    vtt: 'vtt/document', 
+    md: 'md/document', 
+    json: 'json/document', 
+    ittf: 'ittf/document'
+};
+function artifactNameFromSchema(schema) {
+    // log 'artifactNameFromSchema', schema, schemaArtifactMap[schema]
+    return schemaArtifactMap[schema];
+}
+var schemaIttfRootMap = {
+    js: 'module', 
+    jsx: 'module', 
+    ts: 'module', 
+    html: 'html', 
+    css: 'css', 
+    scss: 'scss', 
+    svg: 'svg', 
+    md: 'vtt', 
+    vtt: 'vtt', 
+    json: '{', 
+    ittf: 'any'
+};
+function ittfRootFromSchema(schema) {
+    // log 'ittfRootFromSchema', schema, schemaIttfRootMap[schema]
+    return schemaIttfRootMap[schema];
+}
 function wrapperForSchema(schema) {
-    if (schema === 'js') {
+    if (schema === 'js' || schema === 'jsx') {
         return {
                 n: 'module', 
                 children: [
@@ -323,36 +358,4 @@ function wrapperForSchema(schema) {
                 ]
             };
     }
-}
-var schemaArtifactMap = {
-    js: 'js/module', 
-    ts: 'ts/module', 
-    html: 'html/document', 
-    css: 'css/document', 
-    scss: 'scss/document', 
-    svg: 'svg/document', 
-    vtt: 'vtt/document', 
-    md: 'md/document', 
-    json: 'json/document', 
-    ittf: 'ittf/document'
-};
-function artifactNameFromSchema(schema) {
-    // log 'artifactNameFromSchema', schema, schemaArtifactMap[schema]
-    return schemaArtifactMap[schema];
-}
-var schemaIttfRootMap = {
-    js: 'module', 
-    ts: 'module', 
-    html: 'html', 
-    css: 'css', 
-    scss: 'scss', 
-    svg: 'svg', 
-    md: 'vtt', 
-    vtt: 'vtt', 
-    json: '{', 
-    ittf: 'any'
-};
-function ittfRootFromSchema(schema) {
-    // log 'ittfRootFromSchema', schema, schemaIttfRootMap[schema]
-    return schemaIttfRootMap[schema];
 }

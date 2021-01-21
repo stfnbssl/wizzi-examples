@@ -1,0 +1,36 @@
+wfjob webpack-react
+
+  $
+    var ittf_models_folder     = path.join(__dirname, 'models');
+    var ittf_root_folder       = path.join(__dirname, 'root');
+    var ittf_src_folder        = path.join(__dirname, 'src');
+    var dest_folder            = path.join(__dirname, '..', 'app');
+  
+  model pkg
+    export-name pkg
+    schema json
+    src ${ittf_models_folder}/pkg.json.ittf
+
+  line models
+		cwd-folder ${ittf_models_folder}
+		wfjob/any_json()
+
+  line root
+		cwd-folder ${ittf_root_folder}
+        wfjob/.babelrc()
+        wfjob/any_json()
+        wfjob/any_js()
+
+  line src
+		cwd-folder ${ittf_src_folder}
+        dest-folder ${dest_folder}/src
+
+		wfjob/any_html()
+        wfjob/any_css()
+        wfjob/any_js()
+
+  production
+		dest-folder ${dest_folder}
+		line-ref models
+        line-ref root
+        line-ref src
