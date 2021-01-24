@@ -1,0 +1,10 @@
+html
+    $
+        var opt = {
+        }
+
+    h/layouts/basic-layout(&opt)
+   
+        . m2
+            $include menu_2
+

@@ -1,6 +1,8 @@
-li
+$group
     $params text, href, clazz|list-group-item
-	class ${clazz}
-	tabindex -1
-	a ${text}
-		href ${href}
+    li
+    	class ${clazz}
+    	tabindex -1
+    	a ${text}
+    		href ${href}
+    	$hook

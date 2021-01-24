@@ -52,9 +52,17 @@
 			function
 				param element
 				param value
+                param options
 
 				var e = wz.element(element)
 				var classes, cur, finalValue
+
+                if options && options.removeOnClass
+                    var elements = document.getElementsByClassName(options.removeOnClass)
+                    _ Array.from(elements).forEach
+                        function
+                            param element
+                            _ wz.removeClass(element, value)
 
 				if value && typeof value === "string"
 
@@ -100,6 +108,7 @@
 			function
 				param element
 				param value
+                
 				if wz.hasClass(element, value)
 					_ wz.removeClass(element, value)
 				else
@@ -204,6 +213,20 @@
 					@ 'click'
 					@ handler
 					@ useCapture
+
+		set wz.clickClass
+			function
+				param classname
+				param handler
+				param useCapture
+                var elements = document.getElementsByClassName(classname)
+                _ Array.from(elements).forEach
+                    function
+                        param element
+                        _ wz.click
+                            @ element
+                            @ handler
+                            @ useCapture
 			
 		set wz.unclick
 			function

@@ -1,0 +1,8 @@
+$group
+    select
+        class input100
+        id ${item.name}_${fd.name}
+        name ${fd.name}
+        $foreach value in fd.values
+            option ${value}
+                value ${value}

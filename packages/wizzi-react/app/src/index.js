@@ -3,6 +3,7 @@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-react\.wizzi\src\index.js.ittf
 */
 'use strict';
+import './styles/main.css';
 import React from 'react';
 import { render } from 'react-dom';
 import MuiThemeContainer from './containers/MuiThemeContainer';

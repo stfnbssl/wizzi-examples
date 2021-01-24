@@ -5,6 +5,7 @@
 'use strict';
 import React from "react";
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {Items} from '../components/dataui/items';
 function AppRouter() {
     return  (
             <Router>
@@ -21,6 +22,9 @@ function AppRouter() {
                     <Route path="/topics" component={Topics}>
                     </Route>
                 
+                    <Route path="/items" component={RoutedComponent(Items)}>
+                    </Route>
+                
                 </div>
             
             </Router>
@@ -29,14 +33,17 @@ function AppRouter() {
 }
 function Home() {
     return  (
-            <h2>
-            Home</h2>
+            <div className="mainRoute">
+                <h2>
+                Home</h2>
+            
+            </div>
         )
     ;
 }
 function About(props) {
     return  (
-            <div>
+            <div className="mainRoute">
                 <h2>
                 About</h2>
             
@@ -49,7 +56,7 @@ function About(props) {
 }
 function Topic({history, match, location}) {
     return  (
-            <div>
+            <div className="mainRoute">
                 <h3>
                 Requested Param: {match.params.id}</h3>
             
@@ -80,7 +87,7 @@ function Topic({history, match, location}) {
 }
 function Topics({match}) {
     return  (
-            <div>
+            <div className="mainRoute">
                 <h2>
                 Topics</h2>
             
@@ -113,28 +120,52 @@ function Topics({match}) {
         )
     ;
 }
+function RoutedComponent(Comp) {
+    return () => {
+            return  (
+                    <div className="mainRoute">
+                        <Comp>
+                        </Comp>
+                    
+                    </div>
+                )
+            ;
+        };
+}
 function Header() {
     return  (
-            <ul>
-                <li>
-                    <Link to="/">
-                    Home</Link>
+            <div id="header">
+                <ul>
+                    <li>
+                        <Link to="/">
+                        Home</Link>
+                    
+                    </li>
                 
-                </li>
-            
-                <li>
-                    <Link to="/about">
-                    About</Link>
+                    <li>
+                        <Link to="/about">
+                        About</Link>
+                    
+                    </li>
                 
-                </li>
-            
-                <li>
-                    <Link to="/topics">
-                    Topics</Link>
+                    <li>
+                        <Link to="/topics">
+                        Topics</Link>
+                    
+                    </li>
                 
-                </li>
+                    <li>
+                        <Link to="/items">
+                        Items</Link>
+                    
+                    </li>
+                
+                </ul>
             
-            </ul>
+                <div className="clear">
+                </div>
+            
+            </div>
         )
     ;
 }

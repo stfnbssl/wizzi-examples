@@ -3,8 +3,9 @@ h/root/empty_layout( Uikit step 1 )
 	$append head-styles
 		css /static/lib/uikit-3.0.0/css/uikit.min.css
 
-	h1 Accordion
-
+    div
+        style width: 80%; margin: 100px auto;
+    	h1 Accordion
 		ul 
 			@ uk-accordion 
 			li 
@@ -27,19 +28,19 @@ h/root/empty_layout( Uikit step 1 )
 				. uk-accordion-content
 					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.
 					
-    h1 Tab
+        h1 Tab
         ul 
             @ uk-tab 
             li 
                 class uk-active
                 a Left
-                    href #t1
+                    href t1
             li 
                 a Item
-                    href #t2
+                    href t2
             li 
                 a Item
-                    href #t3
+                    href t3
             li 
                 class uk-disabled
                 a Disabled
@@ -47,14 +48,14 @@ h/root/empty_layout( Uikit step 1 )
             class uk-tab
             li
                 id t1
-                lorem 30
+                lorem 10
             li
                 id t2
                 lorem 40
             li
                 id t3
                 lorem 20
-                
+                    
     
 
 	$append body-scripts

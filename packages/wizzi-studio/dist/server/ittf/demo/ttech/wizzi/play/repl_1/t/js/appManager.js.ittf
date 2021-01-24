@@ -33,28 +33,62 @@
 
 		m createOptions
 			set this.selectedSchema = this.store.get('lastSchema')
-			_ wz.value('selectedSchema', this.selectedSchema)
+			$$ VIA _ wz.value('selectedSchema', this.selectedSchema)
 
 			# _ this.setIttfContentFromStore
 			# _ this.setSnippetContentFromStore
 
-			_ wz.change
+			$* VIA
+            _ wz.change
 				@ 'selectedSchema'
 				=>
 					log 'onChangeSchema', event.target.value
-					set this.selectedSchema = event.target.value
-					emit( schema-selected
-						@ name this.selectedSchema
-					_ this.store.set('lastSchema', this.selectedSchema)
-					# _ this.setIttfContentFromStore
-					# _ this.setSnippetContentFromStore
+                    _ this.selectSchema
+                        @ event.target.value
+            *$
+
+            _ wz.clickClass
+                @ 'sh-bo-lsb-schema-button'
+                =>
+                    log 'onClick', event.target.id.substring(3)
+                    $*
+                    _ wz.value
+                        @ 'selectedSchema'
+                        @ event.target.id.substring(3)
+                    *$
+                    _ this.selectSchema
+                        @ event.target.id.substring(3)
+
+            _ wz.addClass
+                @ 'id_' + this.selectedSchema
+                @ 'selected'
+                {
+                    @ removeOnClass 'sh-bo-lsb-schema-button'
 
 			emit( schema-selected
 				@ name this.selectedSchema
 
-			_ wz.show('selectedSchema')
+			$$ VIA _ wz.show('selectedSchema')
 
-		m setIttfContentFromStore
+		m selectSchema
+            param schema
+            set this.selectedSchema = schema
+            emit( schema-selected
+                @ name this.selectedSchema
+            _ this.store.set('lastSchema', this.selectedSchema)
+            _ this.applySchemaChange
+                @ this.lastKey
+                @ this.lastValue
+                @ 100
+            _ wz.addClass
+                @ 'id_' + schema
+                @ 'selected'
+                {
+                    @ removeOnClass 'sh-bo-lsb-schema-button'
+            # _ this.setIttfContentFromStore
+            # _ this.setSnippetContentFromStore
+        
+        m setIttfContentFromStore
 			var content
 				_ this.store.get
 					@ this.selectedSchema + '_ittf_content'
@@ -108,10 +142,14 @@
 
 		m setEvents
 			on( editvaluechanged
-				var key = data.key
-				var value = data.value
-				var defer = data.defer
+				set this.lastKey = data.key
+                set this.lastValue = data.value
 				var elapse = data.defer ? 2 * 1500 : 100
+                _ this.applySchemaChange
+                    @ data.key
+                    @ data.value
+                    @ data.defer ? 2 * 1500 : 100
+                return
 				if key === 'gen-ittf'
 					if this.timers['gen']
 						_ clearTimeout
@@ -139,7 +177,38 @@
 						@ this.selectedSchema + '_snippet_content'
 						@ value
 
-		m generate
+		m applySchemaChange
+            param key
+            param value
+            param elapse
+            if key === 'gen-ittf'
+                if this.timers['gen']
+                    _ clearTimeout
+                        @ this.timers['gen']
+                set this.timers['gen']
+                    _ setTimeout
+                        =>
+                            _ this.generate
+                                @ value
+                        @ elapse
+                _ this.store.set
+                    @ this.selectedSchema + '_ittf_content'
+                    @ value
+            elif key === 'snippet-source'
+                if this.timers['wizzify']
+                    _ clearTimeout
+                        @ this.timers['wizzify']
+                set this.timers['wizzify']
+                    _ setTimeout
+                        =>
+                            _ this.wizzify
+                                @ value
+                        @ elapse
+                _ this.store.set
+                    @ this.selectedSchema + '_snippet_content'
+                    @ value
+
+        m generate
 			param value
 			_ wz.genFromText
 				@ value
@@ -177,3 +246,6 @@
 						emit( seteditvalue
 							@ key 'snippet-result'
 							@ value result
+
+
+

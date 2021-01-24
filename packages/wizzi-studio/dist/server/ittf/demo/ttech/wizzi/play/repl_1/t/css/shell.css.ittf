@@ -25,6 +25,7 @@
 		min-height 0px !important
 		min-width 0px !important
 		flex 1 1 0% !important
+        width 100% !important
 
 	. sh-bo-lsb
         -webkit-box-direction normal !important
@@ -35,6 +36,22 @@
 		# bg for test
 		background-color rgb(230, 230, 230) !important
 
+    . sh-bo-lsb-schema-button        
+        font-size 1.3em
+        font-weight bold
+        margin 5px
+        padding 5px
+        background-color #434343
+        color #bbb
+        border-radius 5px
+        text-align center
+        cursor pointer
+        & :hover
+            color #ddd
+    . sh-bo-lsb-schema-button.selected
+        color #fff
+        font-size 1.35em
+
 	. sh-bo-co
         -webkit-box-direction normal !important
         -webkit-box-orient vertical !important
@@ -43,6 +60,11 @@
         min-width 0px !important
         min-height 0px !important
         flex 1 1 0% !important
+        background-color #bcbcbc
+
+    . sh-bo-co-title        
+        font-size 1.5em
+        font-weight bold
 	
 	. sh-bo-co-ge
 		display flex !important
@@ -50,14 +72,16 @@
 		min-height 0px !important
 		min-width 0px !important
 		flex 1 1 0% !important
+        margin 5px
 
 	. sh-bo-co-ge-ittf
-		min-width 50rem !important
 		height 100% !important
+        width 50%
 
 	. sh-bo-co-ge-result
 		flex 1 1 0% !important
 		height 100% !important
+        width 50%
 
 	. sh-bo-co-wi
 		display flex !important
@@ -65,14 +89,17 @@
 		min-height 0px !important
 		min-width 0px !important
 		flex 1 1 0% !important
+        margin 5px
+        
 
 	. sh-bo-co-wi-snippet
-		min-width 50rem !important
 		height 100% !important
+        width 50%
 
 	. sh-bo-co-wi-result
 		flex 1 1 0% !important
 		height 100% !important
+        width 50%
 
 	. sh-fo
         -webkit-box-align center !important
@@ -92,15 +119,20 @@
 	# gen-ittf-editor
 		height 100% !important
 		width 100% !important
+        max-height 41vh
+        
 
 	# gen-result-editor
 		height 100% !important
 		width 100% !important
+        max-height 41vh
 
 	# snippet-source-editor
 		height 100% !important
 		width 100% !important
+        max-height 41vh
 
 	# snippet-result-editor
 		height 100% !important
 		width 100% !important
+        max-height 41vh

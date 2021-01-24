@@ -4,7 +4,6 @@
     "description": "Wizzi starter template for React packages",
     "author": "Stefano Bassoli",
     "license": "MIT",
-    "Code": {},
     "Build": {
         "useWebpack": true,
         "webpack": {
@@ -24,6 +23,8 @@
             "useRouter": true,
             "router": {},
             "useRedux": false,
+            "useStateHooks": true,
+            "stateHooks": {},
             "redux": {
                 "useInitialLoad": true,
                 "initialLoad": {},
@@ -48,6 +49,10 @@
                 "useLab": false,
                 "useIcons": true
             }
+        },
+        "useLocalStorage": true,
+        "localStorage": {
+            "key": "wr-state"
         }
     },
     "Styles": {
@@ -56,7 +61,21 @@
         },
         "colors": {
             "primary": "green",
-            "secondary": "orange"
+            "secondary": "orange",
+            "white": "#fff",
+            "black": "#000",
+            "red": "#f00",
+            "orange": "#f80",
+            "grey_2": "#444"
+        },
+        "useMainCss": true,
+        "mainCss": {
+            "path": "./styles/main.css"
         }
+    },
+    "Code": {},
+    "App": {
+        "useLogin": false,
+        "login": {}
     }
 }

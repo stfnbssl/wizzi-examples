@@ -27,6 +27,8 @@
 					{
 						@ key this.key
 						@ editorElementId this.elementId
+                        @ width '100%'
+                        @ height '100%'
 			
 			_ this.editor.initialize
 			

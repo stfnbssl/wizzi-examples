@@ -18,6 +18,16 @@
                 import
                     @ changeUserState
                     from '../store/actions'
+            $if pkg.Build.react.useStateHooks
+                import Provider from '../state/store'
+            
+            const AppWrapper
+                $if pkg.Build.react.useStateHooks
+                    + Provider
+                $else
+                    function
+                        return
+                            div
         
         => handleChangeUserState
             param name
@@ -28,15 +38,17 @@
                         @ ...this.props.userState
                         @ [name] value
 
+
         render
             return
-                div
-                    $if pkg.Build.react.useRouter
+                < AppWrapper
+                    div
+                        id main
                         < AppRouter
-                    < App
-                        $if pkg.Build.react.useRedux
-                            @ userState {this.props.userState}
-                            @ onChangeUserState {this.handleChangeUserState}
+                        < App
+                            $if pkg.Build.react.useRedux
+                                @ userState {this.props.userState}
+                                @ onChangeUserState {this.handleChangeUserState}
 
         $append dispatch-to-props
             $if pkg.Build.react.useRedux

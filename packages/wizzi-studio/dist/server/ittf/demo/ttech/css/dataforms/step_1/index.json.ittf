@@ -1,0 +1,53 @@
+{
+
+    { table1
+        kind "table"
+        name "books"
+        label "Books"
+        [ fields
+            {
+                name "author"
+                label "Author"
+                type "text"
+            {
+                name "title"
+                label "Title"
+                type "text"
+            {
+                name "kind"
+                label "Kind"
+                type "select"
+                [ values
+                    "giallo"
+                    "noir"
+                    "romantico"
+                    "avventuroso"
+
+            {
+                name "startedRead"
+                label "Starte read"
+                type "date"
+            {
+                name "finishedRead"
+                label "Finished read"
+                type "date"
+
+    { table2
+        kind "table"
+        name "signup"
+        label "Sign up"
+        agreeUserTerms true
+        [ fields
+            {
+                name "name"
+                label "Name"
+                type "text"
+            {
+                name "email"
+                label "E-mail"
+                type "text"
+            {
+                name "password"
+                label "Password"
+                type "text"
+

@@ -1,4 +1,4 @@
 module
 	kind react
 
-	$include v07/app/react/index
+	$include v08/app/react/index

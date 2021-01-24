@@ -14,6 +14,9 @@ $group
 		$include h/root/head-styles
 		
 		$hook head-styles
+
+        - default
+        css ./styles.css.ittf
 		
     body 
 			$hook
@@ -25,3 +28,6 @@ $group
 		$include h/root/body-scripts
 		
 		$hook body-scripts
+
+        - default
+        js ./script.js.ittf

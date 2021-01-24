@@ -7,8 +7,22 @@ html
 		opt.useAce = true;
 		opt.useSweetalert = true;
 		opt.useEventEmitter = true;
+        opt.schemas = [
+            'css',
+            'html',
+            'graphql',
+            'js',
+            'json',
+            'md',
+            'scss',
+            'svg',
+            'ts',
+            'vtt',
+            'vue',
+            'xml'
+        ];
 	
-	h/root/empty_layout_opt(&opt)
+    h/root/empty_layout_opt(&opt)
 
 		$append head-styles
 		    $if isWizziStudio
@@ -40,6 +54,9 @@ html
     							    src /images/logo.svg
     							width 100px
     							height 40px
+                    . m2
+                        ul
+                            $$ $include h/menu_2
 				
 				. sh-bo
 
@@ -48,7 +65,8 @@ html
 						. control-panel
 							style display: flex; flex-direction: column;
 
-							. control
+							$* OLD VIA
+                            . control
 								label schema
 								select
 									id selectedSchema
@@ -69,22 +87,37 @@ html
 							. control
 								# items-tree-view
 
+                            *$
+
+                            $foreach schema in opt.schemas
+                                . sh-bo-lsb-schema-button        
+                                    id id_${schema}
+                                    + ${schema}
+
 					. sh-bo-co
 
 						. sh-bo-co-ge
 						
 							. sh-bo-co-ge-ittf
+                                . sh-bo-co-title
+                                    + Ittf
 								# gen-ittf-editor
 
 							. sh-bo-co-ge-result
+                                . sh-bo-co-title
+                                    + Generated
 								# gen-result-editor
 
 						. sh-bo-co-wi
 
 							. sh-bo-co-wi-snippet
-								# snippet-source-editor
+                                . sh-bo-co-title
+								    + Snippet
+                                # snippet-source-editor
 
 							. sh-bo-co-wi-result
-								# snippet-result-editor
+                                . sh-bo-co-title
+								    + Wizzified
+                                # snippet-result-editor
 						
 				. sh-fo

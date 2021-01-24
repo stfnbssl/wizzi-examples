@@ -1,0 +1,94 @@
+h/root/empty_layout()
+
+	$append head-styles
+	    css /static/lib/font-awesome/css/font-awesome4.7.min.css
+		css ./styles.css.ittf
+        css https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css
+        css https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css
+
+    $append body-scripts
+        js https://cdn.jsdelivr.net/jquery/latest/jquery.min.js
+        js https://cdn.jsdelivr.net/momentjs/latest/moment.min.js
+        js https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js
+        js https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js
+        script
+            _ document.addEventListener
+                @ "DOMContentLoaded"
+                function
+                    $foreach tb in Object.keys(mpage)
+                        $ var item = mpage[tb]                    
+
+                        $if item.kind == 'table'
+                            $foreach fd in item.fields
+                                $if fd.type == 'date'
+                                    _ $('#${item.name}_${fd.name}').daterangepicker
+                                        {
+                                            @ singleDatePicker true
+                                            @ showDropdowns true
+                                $elif fd.type == 'select'
+                                    _ $('#${item.name}_${fd.name}').select2
+                                        {
+
+    . container
+        $foreach tb in Object.keys(mpage)
+            $ var item = mpage[tb]
+
+            $if item.kind == 'table'
+                . container-login100
+                    $*
+                    . login100-more
+                        style background-image: url('/static/images/ttech/books.jpg'); background-size: 500px;
+                    *$
+                    . wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50
+                        form 
+                            class login100-form validate-form
+                            span ${item.label}
+                                class login100-form-title p-b-59
+                            $foreach fd in item.fields
+                                . wrap-input100 validate-input ${fd.type != 'select' ? ' wrap-input100-border' : ''}
+                                    data-validate Name is required
+                                    span ${fd.label}
+                                        class label-input100
+                                    $if fd.type == 'select'
+                                        $include fd_select_h
+                                    $else
+                                        input 
+                                            class input100
+                                            type text
+                                            id ${item.name}_${fd.name}
+                                            name ${fd.name}
+                                            placeholder ${fd.label}...
+                                    span 
+                                        class focus-input100
+                            
+                            $if item.agreeTermOfUser
+                                . flex-m w-full p-b-33
+                                    . contact100-form-checkbox
+                                        input 
+                                            class input-checkbox100
+                                            id ckb1
+                                            type checkbox
+                                            name remember-me
+                                        label 
+                                            class label-checkbox100
+                                            for ckb1
+                                            span I agree to the
+                                                class txt1
+                                                a Terms of User
+                                                    href #
+                                                    class txt2 hov1
+                            
+                            . container-login100-form-btn
+                                . wrap-login100-form-btn
+                                    . login100-form-bgbtn
+                                    button Add
+                                        class login100-form-btn
+                                a Cancel
+                                    href #
+                                    class dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30
+                                    $*
+                                    i 
+                                        class fa fa-long-arrow-right m-l-5
+                                    *$
+                . wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50     
+                    $include listview           

@@ -1,9 +1,9 @@
-﻿$group
+$group
 
 	{ navRight
 		fixed true
 		fullHeight true
-		width 200
+		width 400
 		backgroundColor "${l_colors[11]}"
 		padding "0.5rem 1rem"
 		[ groups
@@ -53,6 +53,11 @@
 			{
 				title 'In evidence'
 				[ items
+				
+					{
+						label "Treeview editor, filemanager like"
+						icon ""
+						href "/ittf/demo/ttech/javascript/controls/treeview/step_1/index.html.ittf#"
 					{
 						label "Html node editor"
 						icon ""

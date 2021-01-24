@@ -1,0 +1,62 @@
+$group
+    
+        . border bd-light p-4
+            ul 
+                class listview-head
+                $foreach fd in item.fields
+                    li ${fd.label}
+                        $if fd_index == 0
+                            class listview-th list-column-first
+                        $else
+                            class listview-th
+            ul 
+                data-role listview
+                data-view table
+                id listview-1
+                data-select-node true
+                data-structure data-role-listview=true 
+                class listview view-table
+                $foreach row in ['first','second','third']
+                    li 
+                        data-icon <span class='mif-folder fg-orange'>
+                        data-caption Video
+                        data-content <div class='mt-1' data-role='progress' data-value='35' data-small='true'>
+                        data-date 12/21/2017
+                        data-name Video library
+                        class node
+                        div
+                            label 
+                                class checkbox transition-on
+                                input 
+                                    type checkbox
+                                    data-role checkbox
+                                    data-style 1
+                                    data-role-checkbox true
+                                    class 
+                                span 
+                                    class check
+                                span 
+                                    class caption
+                            span 
+                                class icon
+                                span 
+                                    class mif-folder fg-orange
+                            $foreach fd in item.fields
+                                $if fd_index == 0
+                                    . data
+                                        div ${row} ${fd.label}
+                                            class caption
+                                        . content
+                                            . mt-1 progress small
+                                                data-role progress
+                                                data-value 35
+                                                data-small true
+                                                data-role-progress true
+                                                . bar
+                                                    style width: 35%;
+                                                span 35%
+                                                    class value
+                                                    style display: none; left: 35%;
+                                $else
+                                    div ${row} ${fd.label}
+                                        class node-data item-data-date

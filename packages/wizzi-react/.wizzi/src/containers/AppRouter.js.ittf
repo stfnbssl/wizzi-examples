@@ -7,6 +7,10 @@ module
         @ Route
         @ Link
         from "react-router-dom"
+    import
+        @ Items 
+        from '../components/dataui/items'        
+    
     function AppRouter
         return 
             < Router 
@@ -22,14 +26,18 @@ module
                     < Route 
                         @ path "/topics"
                         @ component {Topics}
+                    < Route 
+                        @ path "/items"
+                        @ component {RoutedComponent(Items)}
     function Home
         return 
-            h2 
-                + Home
+            . mainRoute
+                h2 
+                    + Home
     function About
         param props
         return 
-            div
+            . mainRoute
                 h2 
                     + About
                 pre
@@ -42,7 +50,7 @@ module
             @ location
 
         return 
-            div
+            . mainRoute
                 h3 
                     + Requested Param: \b
                     + {match.params.id}
@@ -60,7 +68,7 @@ module
         { 
             @ match
         return 
-            div 
+            . mainRoute
                 h2 
                     + Topics
                 ul 
@@ -94,33 +102,36 @@ module
                         => 
                             h3 
                                 + Please select a topic.
+
+    function RoutedComponent
+        param Comp
+        return
+            =>
+                return
+                    . mainRoute
+                        < Comp
+    
     function Header
         return 
-            ul 
-                li 
-                    < Link 
-                        @ to "/"
-                        + Home
-                li 
-                    < Link 
-                        @ to "/about"
-                        + About
-                li 
-                    < Link 
-                        @ to "/topics"
-                        + Topics
-                $*
-                li 
-                    < Link 
-                        @ to "/form"
-                        + Form
-                li 
-                    < Link 
-                        @ to "/muiform"
-                        + Material Ui Form
-                li 
-                    < Link 
-                        @ to "/agimages"
-                        + A G Images
-                *$
+            div
+                @ id header
+                ul 
+                    li 
+                        < Link 
+                            @ to "/"
+                            + Home
+                    li 
+                        < Link 
+                            @ to "/about"
+                            + About
+                    li 
+                        < Link 
+                            @ to "/topics"
+                            + Topics
+                    li 
+                        < Link 
+                            @ to "/items"
+                            + Items
+                . clear
+
     export-default AppRouter

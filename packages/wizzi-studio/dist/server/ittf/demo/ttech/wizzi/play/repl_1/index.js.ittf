@@ -38,7 +38,8 @@ module
                 set text.useRejections = true
                 return Swal(text)
 
-	function initHandlers
+	$* not used VIA
+    function initHandlers
 		set currentSchema = store.get('lastSchema')
 		_ wz.value('selectedSchema', currentSchema)
 		set currentEditContent
@@ -63,9 +64,8 @@ module
 				_ editor.value
 					@ currentEditContent
 				_ wizzify
+    *$
 
-
-	
 	var app
 		new AppManager
 			{
