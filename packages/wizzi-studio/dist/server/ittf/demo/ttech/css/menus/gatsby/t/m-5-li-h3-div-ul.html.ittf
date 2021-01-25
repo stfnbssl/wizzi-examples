@@ -1,0 +1,164 @@
+$group
+    li 
+        class css-1wgu51w
+        @style 
+            data-emotion-css 1clvfi2
+            css
+                . css-1clvfi2
+                    padding 0.25rem 2rem
+                media (min-width: 1000px)
+                    . css-1clvfi2
+                        padding 0
+        . css-1clvfi2
+            @style 
+                data-emotion-css 1hrzjy2
+                css
+                    . css-1hrzjy2
+                        color var(--theme-ui-colors-grey-50,#78757a)
+                        font-family -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+                        font-size 0.75rem
+                        margin-bottom 1rem
+                        text-transform uppercase
+                        text-decoration none
+                        display block
+                    . css-1hrzjy2:hover
+                        + .css-1hrzjy2:focus
+                        -webkit-text-decoration none
+                        text-decoration none
+                    media (min-width: 1000px)
+                        . css-1hrzjy2
+                            display none
+            @style 
+                data-emotion-css 1enu353
+                css
+                    . css-1enu353
+                        margin 0
+                        line-height 1.25
+                        color #232129
+                        font-weight 700
+                        font-family Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+                        color var(--theme-ui-colors-grey-50,#78757a)
+                        font-family -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+                        font-size 0.75rem
+                        margin-bottom 1rem
+                        text-transform uppercase
+                        text-decoration none
+                        display block
+                    . css-1enu353:hover
+                        + .css-1enu353:focus
+                        text-decoration none
+                    media (min-width: 1000px)
+                        . css-1enu353
+                            display none
+            h3 Docs
+                class css-1enu353
+            @style 
+                data-emotion-css 3q8779 animation-5yo8zs
+                css
+                    . css-3q8779
+                        align-items center
+                        border var(--theme-ui-colors-grey-60,#635e69)
+                        border-radius 4px
+                        box-sizing border-box
+                        cursor pointer
+                        display inline-flex
+                        font-family -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+                        -webkit-box-pack center
+                        -ms-flex-pack center
+                        justify-content center
+                        transition background 250ms,border 250ms,color 250ms
+                        line-height 1
+                        text-decoration none
+                        background transparent
+                        border 1px solid transparent
+                        color #663399
+                        font-size 0.875rem
+                        min-height 2rem
+                        min-width 2rem
+                        padding 0.25rem 0.75rem
+                        color var(--theme-ui-colors-grey-70,#48434f)
+                        display none
+                    . css-3q8779[disabled]
+                        + .css-3q8779[disabled]:hover
+                        cursor not-allowed
+                        opacity 0.5
+                    . css-3q8779 svg
+                        flex-shrink 0
+                        margin 0 0.25rem
+                        transform scale(1)
+                        margin-right -0.25rem
+                    . css-3q8779:hover:not([disabled]) svg
+                        + .css-3q8779:focus:not([disabled]) svg
+                        animation animation-5yo8zs 1s linear infinite
+                    . css-3q8779:hover
+                        background #fcfaff
+                        color #362066
+                    media (min-width: 1000px)
+                        . css-3q8779
+                            display inline-flex
+                    keyframes animation-5yo8zs
+                        vendor -webkit-
+                        keyframe 33%
+                            transform scale(1)
+                        keyframe 66%
+                            transform scale(0.8)
+                    keyframes animation-5yo8zs
+                        vendor
+                        keyframe 33%
+                            transform scale(1)
+                        keyframe 66%
+                            transform scale(0.8)
+            button Docs
+                type button
+                aria-expanded false
+                aria-controls Docs-dropdown
+                class css-3q8779
+                svg 
+                    stroke currentColor
+                    fill currentColor
+                    @ stroke-width 0
+                    viewBox 0 0 24 24
+                    height 1em
+                    width 1em
+                    xmlns http://www.w3.org/2000/svg
+                    path 
+                        d M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z
+            @style 
+                data-emotion-css 1sg6jvm
+                css
+                    media (min-width: 1000px)
+                        . css-1sg6jvm
+                            display none
+                            left 50%
+                            padding-top 0.75rem
+                            position absolute
+                            top 100%
+                            visibility visible
+                            z-index 10
+                            transform translateX(calc(-50% + 0px))
+                        . css-1sg6jvm:after
+                            position absolute
+                            top 0.25rem
+                            left 50%
+                            width 1rem
+                            height 1rem
+                            content " "
+                            transform translateX(calc(-50% - 0px)) rotate(45deg)
+                            border-top-left-radius 4px
+                            background var(--theme-ui-colors-white,#ffffff)
+                            will-change transform
+                            transition-property transform
+            . css-1sg6jvm
+                id Docs-dropdown
+                @style 
+                    data-emotion-css y86b6k
+                    css
+                        media (min-width: 1000px)
+                            . css-y86b6k
+                                background var(--theme-ui-colors-white,#ffffff)
+                                border-radius 8px
+                                box-shadow 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16)
+                                width 32.5rem
+                ul 
+                    class css-y86b6k
+                    $hook

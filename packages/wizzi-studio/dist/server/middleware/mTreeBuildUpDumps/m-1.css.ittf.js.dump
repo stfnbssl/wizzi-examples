@@ -1,0 +1,123 @@
+// 25/1/2021:18:21:9  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
+$.n(); // set the context state to NodeContext
+var $0 = {}; // the root node of the MTree buildup
+var $1 = { n: "css", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //4
+$.a($0, $1, 5);
+var $2 = { n: "-", v: "data-emotion-css ocmoim", r: 2, c: 5, s: "f1", u: "f2",  }; //26
+$.a($1, $2, 7);
+var $3 = { n: ".", v: "css-ocmoim", r: 3, c: 5, s: "f1", u: "f2",  }; //27
+$.a($1, $3, 9);
+var $4 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 4, c: 9, s: "f1", u: "f2",  }; //28
+$.a($3, $4, 11);
+var $5 = { n: "font-size", v: "0.75rem", r: 5, c: 9, s: "f1", u: "f2",  }; //29
+$.a($3, $5, 13);
+var $6 = { n: "color", v: "var(--theme-ui-colors-blackFade-80,rgba(35,33,41,0.8))", r: 6, c: 9, s: "f1", u: "f2",  }; //30
+$.a($3, $6, 15);
+var $7 = { n: "text-transform", v: "uppercase", r: 7, c: 9, s: "f1", u: "f2",  }; //31
+$.a($3, $7, 17);
+var $8 = { n: "font-weight", v: "600", r: 8, c: 9, s: "f1", u: "f2",  }; //32
+$.a($3, $8, 19);
+var $9 = { n: "letter-spacing", v: "0.1em", r: 9, c: 9, s: "f1", u: "f2",  }; //33
+$.a($3, $9, 21);
+var $10 = { n: "margin", v: "0", r: 10, c: 9, s: "f1", u: "f2",  }; //34
+$.a($3, $10, 23);
+var $11 = { n: "margin-bottom", v: "0.5rem", r: 11, c: 9, s: "f1", u: "f2",  }; //35
+$.a($3, $11, 25);
+var $12 = { n: "-", v: "data-emotion-css j7qwjs", r: 12, c: 5, s: "f1", u: "f2",  }; //36
+$.a($1, $12, 27);
+var $13 = { n: ".", v: "css-j7qwjs", r: 13, c: 5, s: "f1", u: "f2",  }; //37
+$.a($1, $13, 29);
+var $14 = { n: "display", v: "flex", r: 14, c: 9, s: "f1", u: "f2",  }; //38
+$.a($13, $14, 31);
+var $15 = { n: "flex-direction", v: "column", r: 15, c: 9, s: "f1", u: "f2",  }; //39
+$.a($13, $15, 33);
+var $16 = { n: "-", v: "data-emotion-css 1uk1gs8", r: 16, c: 5, s: "f1", u: "f2",  }; //40
+$.a($1, $16, 35);
+var $17 = { n: ".", v: "css-1uk1gs8", r: 17, c: 5, s: "f1", u: "f2",  }; //41
+$.a($1, $17, 37);
+var $18 = { n: "margin", v: "0", r: 18, c: 9, s: "f1", u: "f2",  }; //42
+$.a($17, $18, 39);
+var $19 = { n: "-", v: "data-emotion-css 1o1w4xb", r: 2, c: 5, s: "f1", u: "f3",  }; //87
+$.a($1, $19, 41);
+var $20 = { n: ".", v: "css-1o1w4xb", r: 3, c: 5, s: "f1", u: "f3",  }; //88
+$.a($1, $20, 43);
+var $21 = { n: "color", v: "var(--theme-ui-colors-blackFade-70,rgba(35,33,41,0.7))", r: 4, c: 9, s: "f1", u: "f3",  }; //89
+$.a($20, $21, 45);
+var $22 = { n: "display", v: "inline-block", r: 5, c: 9, s: "f1", u: "f3",  }; //90
+$.a($20, $22, 47);
+var $23 = { n: "padding", v: "2px 4px", r: 6, c: 9, s: "f1", u: "f3",  }; //91
+$.a($20, $23, 49);
+var $24 = { n: "transform", v: "translateX(-4px)", r: 7, c: 9, s: "f1", u: "f3",  }; //92
+$.a($20, $24, 51);
+var $25 = { n: "font-size", v: "0.875rem", r: 8, c: 9, s: "f1", u: "f3",  }; //93
+$.a($20, $25, 53);
+var $26 = { n: "text-decoration", v: "none", r: 9, c: 9, s: "f1", u: "f3",  }; //94
+$.a($20, $26, 55);
+var $27 = { n: ".", v: "css-1o1w4xb:hover", r: 10, c: 5, s: "f1", u: "f3",  }; //95
+$.a($1, $27, 57);
+var $28 = { n: "+", v: ".css-1o1w4xb:focus", r: 11, c: 9, s: "f1", u: "f3",  }; //96
+$.a($27, $28, 59);
+var $29 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 12, c: 9, s: "f1", u: "f3",  }; //97
+$.a($27, $29, 61);
+var $30 = { n: "transition", v: "all 250ms cubic-bezier(0.4,0,0.2,1)", r: 13, c: 9, s: "f1", u: "f3",  }; //98
+$.a($27, $30, 63);
+var $31 = { n: "text-decoration", v: "none", r: 14, c: 9, s: "f1", u: "f3",  }; //99
+$.a($27, $31, 65);
+var $32 = { n: ".", v: "css-1o1w4xb:after", r: 15, c: 5, s: "f1", u: "f3",  }; //100
+$.a($1, $32, 67);
+var $33 = { n: "content", v: "\"›\"", r: 16, c: 9, s: "f1", u: "f3",  }; //101
+$.a($32, $33, 69);
+var $34 = { n: "color", v: "var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))", r: 17, c: 9, s: "f1", u: "f3",  }; //102
+$.a($32, $34, 71);
+var $35 = { n: "margin-left", v: "0.25rem", r: 18, c: 9, s: "f1", u: "f3",  }; //103
+$.a($32, $35, 73);
+var $36 = { n: "-", v: "data-emotion-css 17mmtw1", r: 19, c: 5, s: "f1", u: "f3",  }; //104
+$.a($1, $36, 75);
+var $37 = { n: ".", v: "css-17mmtw1", r: 20, c: 5, s: "f1", u: "f3",  }; //105
+$.a($1, $37, 77);
+var $38 = { n: "align-items", v: "center", r: 21, c: 9, s: "f1", u: "f3",  }; //106
+$.a($37, $38, 79);
+var $39 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 22, c: 9, s: "f1", u: "f3",  }; //107
+$.a($37, $39, 81);
+var $40 = { n: "display", v: "inline-flex", r: 23, c: 9, s: "f1", u: "f3",  }; //108
+$.a($37, $40, 83);
+var $41 = { n: "text-decoration", v: "none", r: 24, c: 9, s: "f1", u: "f3",  }; //109
+$.a($37, $41, 85);
+var $42 = { n: "color", v: "var(--theme-ui-colors-blackFade-70,rgba(35,33,41,0.7))", r: 25, c: 9, s: "f1", u: "f3",  }; //110
+$.a($37, $42, 87);
+var $43 = { n: "display", v: "inline-block", r: 26, c: 9, s: "f1", u: "f3",  }; //111
+$.a($37, $43, 89);
+var $44 = { n: "padding", v: "2px 4px", r: 27, c: 9, s: "f1", u: "f3",  }; //112
+$.a($37, $44, 91);
+var $45 = { n: "transform", v: "translateX(-4px)", r: 28, c: 9, s: "f1", u: "f3",  }; //113
+$.a($37, $45, 93);
+var $46 = { n: "font-size", v: "0.875rem", r: 29, c: 9, s: "f1", u: "f3",  }; //114
+$.a($37, $46, 95);
+var $47 = { n: "text-decoration", v: "none", r: 30, c: 9, s: "f1", u: "f3",  }; //115
+$.a($37, $47, 97);
+var $48 = { n: ".", v: "css-17mmtw1:focus", r: 31, c: 5, s: "f1", u: "f3",  }; //116
+$.a($1, $48, 99);
+var $49 = { n: "+", v: ".css-17mmtw1:hover", r: 32, c: 9, s: "f1", u: "f3",  }; //117
+$.a($48, $49, 101);
+var $50 = { n: "color", v: "var(--theme-ui-colors-purple-40,#b17acc)", r: 33, c: 9, s: "f1", u: "f3",  }; //118
+$.a($48, $50, 103);
+var $51 = { n: "text-decoration", v: "underline", r: 34, c: 9, s: "f1", u: "f3",  }; //119
+$.a($48, $51, 105);
+var $52 = { n: ".", v: "css-17mmtw1:hover", r: 35, c: 5, s: "f1", u: "f3",  }; //120
+$.a($1, $52, 107);
+var $53 = { n: "+", v: ".css-17mmtw1:focus", r: 36, c: 9, s: "f1", u: "f3",  }; //121
+$.a($52, $53, 109);
+var $54 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 37, c: 9, s: "f1", u: "f3",  }; //122
+$.a($52, $54, 111);
+var $55 = { n: "transition", v: "all 250ms cubic-bezier(0.4,0,0.2,1)", r: 38, c: 9, s: "f1", u: "f3",  }; //123
+$.a($52, $55, 113);
+var $56 = { n: "text-decoration", v: "none", r: 39, c: 9, s: "f1", u: "f3",  }; //124
+$.a($52, $56, 115);
+var $57 = { n: ".", v: "css-17mmtw1:after", r: 40, c: 5, s: "f1", u: "f3",  }; //125
+$.a($1, $57, 117);
+var $58 = { n: "content", v: "\"›\"", r: 41, c: 9, s: "f1", u: "f3",  }; //126
+$.a($57, $58, 119);
+var $59 = { n: "color", v: "var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))", r: 42, c: 9, s: "f1", u: "f3",  }; //127
+$.a($57, $59, 121);
+var $60 = { n: "margin-left", v: "0.25rem", r: 43, c: 9, s: "f1", u: "f3",  }; //128
+$.a($57, $60, 123);

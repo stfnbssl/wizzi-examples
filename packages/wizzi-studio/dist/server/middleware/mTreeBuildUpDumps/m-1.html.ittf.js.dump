@@ -1,0 +1,2306 @@
+// 25/1/2021:22:48:14  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
+$.n(); // set the context state to NodeContext
+var $0 = {}; // the root node of the MTree buildup
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //26
+$.a($0, $1, 5);
+$.s("f1");
+var opt = { //28
+mainCss: 'm-1.css.ittf' //29
+}  //30
+$.n();
+var $3 = { n: "head", v: "", r: 4, c: 5, s: "f2", u: "f2",  }; //80
+$.a($1, $3, 12);
+var $4 = { n: "@title", v: $.ip("f2", "${opt.title}", "string", 13, false), r: 5, c: 9, s: "f2", u: "f2",  }; //81
+$.a($3, $4, 14);
+var $5 = { n: "meta", v: "", r: 6, c: 9, s: "f2", u: "f2",  }; //82
+$.a($3, $5, 16);
+var $6 = { n: "charset", v: "utf-8", r: 7, c: 13, s: "f2", u: "f2",  }; //83
+$.a($5, $6, 18);
+var $7 = { n: "meta", v: "", r: 8, c: 9, s: "f2", u: "f2",  }; //84
+$.a($3, $7, 20);
+var $8 = { n: "name", v: "viewport", r: 9, c: 13, s: "f2", u: "f2",  }; //85
+$.a($7, $8, 22);
+var $9 = { n: "content", v: "width=device-width, initial-scale=1", r: 10, c: 13, s: "f2", u: "f2",  }; //86
+$.a($7, $9, 24);
+$.s("f2");
+if (opt.useGoogleFonts) { //139
+    var item_count = opt.googleFonts.length; //140
+    for (var i11=0; i11<item_count; i11++) { //140
+        var item = opt.googleFonts[i11]; //140
+        var item_index = i11; //140
+        $.n();
+        var $12 = { n: "css", v: $.ip("f2", "https://fonts.googleapis.com/css?family=${item}", "string", 32, false), r: 5, c: 13, s: "f2", u: "f3",  }; //141
+        $.a($3, $12, 33);
+    }
+}
+$.s("f2");
+if (opt.useReact) { //142
+    $.n();
+    var $14 = { n: "link", v: "", r: 8, c: 9, s: "f2", u: "f3",  }; //143
+    $.a($3, $14, 40);
+    var $15 = { n: "rel", v: "stylesheet", r: 9, c: 13, s: "f2", u: "f3",  }; //144
+    $.a($14, $15, 42);
+    var $16 = { n: "href", v: "https://fonts.googleapis.com/icon?family=Material+Icons", r: 10, c: 13, s: "f2", u: "f3",  }; //145
+    $.a($14, $16, 44);
+}
+$.s("f2");
+if (opt.useBootstrap) { //146
+    $.n();
+    var $18 = { n: "css", v: "/static/lib/bootstrap/dist/css/bootstrap.min.css", r: 13, c: 9, s: "f2", u: "f3",  }; //147
+    $.a($3, $18, 50);
+}
+$.s("f2");
+if (opt.usePrism) { //148
+    if (isWizziStudio) { //149
+        $.n();
+        var $21 = { n: "css", v: "/static/lib/prism/prism.css", r: 17, c: 13, s: "f2", u: "f3",  }; //150
+        $.a($3, $21, 57);
+    }
+    else {
+        $.n();
+        var $23 = { n: "css", v: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css", r: 19, c: 13, s: "f2", u: "f3",  }; //152
+        $.a($3, $23, 62);
+    }
+}
+$.s("f2");
+if (opt.useHighlight) { //153
+    $.n();
+    var $25 = { n: "link", v: "", r: 27, c: 9, s: "f2", u: "f3",  }; //154
+    $.a($3, $25, 69);
+    var $26 = { n: "rel", v: "stylesheet", r: 28, c: 13, s: "f2", u: "f3",  }; //155
+    $.a($25, $26, 71);
+    var $27 = { n: "href", v: "/static/lib/highlightjs-master/dracula.css", r: 29, c: 13, s: "f2", u: "f3",  }; //156
+    $.a($25, $27, 73);
+}
+$.s("f2");
+if (opt.useCodemirror) { //157
+    $.n();
+    var $29 = { n: "css", v: "/static/lib/codemirror/lib/codemirror.css", r: 32, c: 9, s: "f2", u: "f3",  }; //158
+    $.a($3, $29, 79);
+    var $30 = { n: "css", v: "/static/lib/codemirror/addon/display/fullscreen.css", r: 33, c: 9, s: "f2", u: "f3",  }; //159
+    $.a($3, $30, 81);
+}
+$.s("f2");
+if (opt.mainCss && opt.mainCss.length > 0) { //160
+    $.n();
+    var $32 = { n: "link", v: "", r: 36, c: 9, s: "f2", u: "f3",  }; //161
+    $.a($3, $32, 87);
+    var $33 = { n: "rel", v: "stylesheet", r: 37, c: 13, s: "f2", u: "f3",  }; //162
+    $.a($32, $33, 89);
+    var $34 = { n: "href", v: $.ip("f2", "${opt.mainCss}", "string", 90, false), r: 38, c: 13, s: "f2", u: "f3",  }; //163
+    $.a($32, $34, 91);
+}
+$.s("f2");
+if (opt.useFontAwesome) { //164
+    var fontAwesomeKey = 'eab461efef'; //166
+    $.n();
+    var $37 = { n: "script", v: "", r: 43, c: 9, s: "f2", u: "f3",  }; //167
+    $.a($3, $37, 98);
+    var $38 = { n: "src", v: $.ip("f2", "https://kit.fontawesome.com/${fontAwesomeKey}.js", "string", 99, false), r: 44, c: 13, s: "f2", u: "f3",  }; //168
+    $.a($37, $38, 100);
+    var $39 = { n: "crossorigin", v: "anonymous", r: 45, c: 13, s: "f2", u: "f3",  }; //169
+    $.a($37, $39, 102);
+}
+$.s("f2");
+if (opt.mainCss) { //90
+    $.n();
+    var $41 = { n: "css", v: $.ip("f2", "${opt.mainCss}", "string", 107, false), r: 19, c: 13, s: "f2", u: "f2",  }; //91
+    $.a($3, $41, 108);
+}
+else {
+    $.n();
+    var $43 = { n: "-", v: "default", r: 21, c: 13, s: "f2", u: "f2",  }; //93
+    $.a($3, $43, 113);
+    var $44 = { n: "css", v: "./styles.css.ittf", r: 22, c: 13, s: "f2", u: "f2",  }; //94
+    $.a($3, $44, 115);
+}
+$.n();
+var $45 = { n: "body", v: "", r: 24, c: 5, s: "f2", u: "f2",  }; //95
+$.a($1, $45, 119);
+var $46 = { n: "header", v: "", r: 2, c: 5, s: "f3", u: "f6",  }; //311
+$.a($45, $46, 121);
+var $47 = { n: "class", v: "page-header css-1wue1ai", r: 3, c: 9, s: "f3", u: "f6",  }; //312
+$.a($46, $47, 123);
+var $48 = { n: "@style", v: "", r: 3, c: 5, s: "f4", u: "f7",  }; //347
+$.a($46, $48, 125);
+var $49 = { n: "data-emotion-css", v: "jlxowz", r: 4, c: 9, s: "f4", u: "f7",  }; //348
+$.a($48, $49, 127);
+var $50 = { n: "css", v: "", r: 5, c: 9, s: "f4", u: "f7",  }; //349
+$.a($48, $50, 129);
+var $51 = { n: ".", v: "css-jlxowz", r: 6, c: 13, s: "f4", u: "f7",  }; //350
+$.a($50, $51, 131);
+var $52 = { n: "display", v: "-webkit-box", r: 7, c: 17, s: "f4", u: "f7",  }; //351
+$.a($51, $52, 133);
+var $53 = { n: "display", v: "-webkit-flex", r: 8, c: 17, s: "f4", u: "f7",  }; //352
+$.a($51, $53, 135);
+var $54 = { n: "display", v: "-ms-flexbox", r: 9, c: 17, s: "f4", u: "f7",  }; //353
+$.a($51, $54, 137);
+var $55 = { n: "display", v: "flex", r: 10, c: 17, s: "f4", u: "f7",  }; //354
+$.a($51, $55, 139);
+var $56 = { n: "width", v: "100%", r: 11, c: 17, s: "f4", u: "f7",  }; //355
+$.a($51, $56, 141);
+var $57 = { n: "-webkit-box-pack", v: "justify", r: 12, c: 17, s: "f4", u: "f7",  }; //356
+$.a($51, $57, 143);
+var $58 = { n: "-webkit-justify-content", v: "space-between", r: 13, c: 17, s: "f4", u: "f7",  }; //357
+$.a($51, $58, 145);
+var $59 = { n: "-ms-flex-pack", v: "justify", r: 14, c: 17, s: "f4", u: "f7",  }; //358
+$.a($51, $59, 147);
+var $60 = { n: "justify-content", v: "space-between", r: 15, c: 17, s: "f4", u: "f7",  }; //359
+$.a($51, $60, 149);
+var $61 = { n: ".", v: "css-jlxowz ul", r: 16, c: 13, s: "f4", u: "f7",  }; //360
+$.a($50, $61, 151);
+var $62 = { n: "margin", v: "0", r: 17, c: 17, s: "f4", u: "f7",  }; //361
+$.a($61, $62, 153);
+var $63 = { n: "list-style", v: "none", r: 18, c: 17, s: "f4", u: "f7",  }; //362
+$.a($61, $63, 155);
+var $64 = { n: ".", v: "css-jlxowz li", r: 19, c: 13, s: "f4", u: "f7",  }; //363
+$.a($50, $64, 157);
+var $65 = { n: "margin", v: "0", r: 20, c: 17, s: "f4", u: "f7",  }; //364
+$.a($64, $65, 159);
+var $66 = { n: "nav", v: "", r: 21, c: 5, s: "f4", u: "f7",  }; //365
+$.a($46, $66, 161);
+var $67 = { n: "class", v: "navigation css-jlxowz", r: 22, c: 9, s: "f4", u: "f7",  }; //366
+$.a($66, $67, 163);
+var $68 = { n: "@style", v: "", r: 23, c: 9, s: "f4", u: "f7",  }; //367
+$.a($66, $68, 165);
+var $69 = { n: "data-emotion-css", v: "wo6pb2", r: 24, c: 13, s: "f4", u: "f7",  }; //368
+$.a($68, $69, 167);
+var $70 = { n: "@style", v: "", r: 25, c: 9, s: "f4", u: "f7",  }; //369
+$.a($66, $70, 169);
+var $71 = { n: "data-emotion-css", v: "k008qs", r: 26, c: 13, s: "f4", u: "f7",  }; //370
+$.a($70, $71, 171);
+var $72 = { n: "css", v: "", r: 27, c: 13, s: "f4", u: "f7",  }; //371
+$.a($70, $72, 173);
+var $73 = { n: ".", v: "css-k008qs", r: 28, c: 17, s: "f4", u: "f7",  }; //372
+$.a($72, $73, 175);
+var $74 = { n: "display", v: "-webkit-box", r: 29, c: 21, s: "f4", u: "f7",  }; //373
+$.a($73, $74, 177);
+var $75 = { n: "display", v: "-webkit-flex", r: 30, c: 21, s: "f4", u: "f7",  }; //374
+$.a($73, $75, 179);
+var $76 = { n: "display", v: "-ms-flexbox", r: 31, c: 21, s: "f4", u: "f7",  }; //375
+$.a($73, $76, 181);
+var $77 = { n: "display", v: "flex", r: 32, c: 21, s: "f4", u: "f7",  }; //376
+$.a($73, $77, 183);
+var $78 = { n: ".", v: "css-k008qs", r: 2, c: 5, s: "f5", u: "f8",  }; //417
+$.a($66, $78, 185);
+var $79 = { n: "@style", v: "", r: 3, c: 9, s: "f5", u: "f8",  }; //418
+$.a($78, $79, 187);
+var $80 = { n: "data-emotion-css", v: "1g15vhe", r: 4, c: 13, s: "f5", u: "f8",  }; //419
+$.a($79, $80, 189);
+var $81 = { n: "css", v: "", r: 5, c: 13, s: "f5", u: "f8",  }; //420
+$.a($79, $81, 191);
+var $82 = { n: ".", v: "css-1g15vhe", r: 6, c: 17, s: "f5", u: "f8",  }; //421
+$.a($81, $82, 193);
+var $83 = { n: "-webkit-align-self", v: "flex-start", r: 7, c: 21, s: "f5", u: "f8",  }; //422
+$.a($82, $83, 195);
+var $84 = { n: "-ms-flex-item-align", v: "start", r: 8, c: 21, s: "f5", u: "f8",  }; //423
+$.a($82, $84, 197);
+var $85 = { n: "align-self", v: "flex-start", r: 9, c: 21, s: "f5", u: "f8",  }; //424
+$.a($82, $85, 199);
+var $86 = { n: "display", v: "-webkit-box", r: 10, c: 21, s: "f5", u: "f8",  }; //425
+$.a($82, $86, 201);
+var $87 = { n: "display", v: "-webkit-flex", r: 11, c: 21, s: "f5", u: "f8",  }; //426
+$.a($82, $87, 203);
+var $88 = { n: "display", v: "-ms-flexbox", r: 12, c: 21, s: "f5", u: "f8",  }; //427
+$.a($82, $88, 205);
+var $89 = { n: "display", v: "flex", r: 13, c: 21, s: "f5", u: "f8",  }; //428
+$.a($82, $89, 207);
+var $90 = { n: "-webkit-flex-shrink", v: "0", r: 14, c: 21, s: "f5", u: "f8",  }; //429
+$.a($82, $90, 209);
+var $91 = { n: "-ms-flex-negative", v: "0", r: 15, c: 21, s: "f5", u: "f8",  }; //430
+$.a($82, $91, 211);
+var $92 = { n: "flex-shrink", v: "0", r: 16, c: 21, s: "f5", u: "f8",  }; //431
+$.a($82, $92, 213);
+var $93 = { n: "padding", v: "0.5rem 0.375rem", r: 17, c: 21, s: "f5", u: "f8",  }; //432
+$.a($82, $93, 215);
+var $94 = { n: "-webkit-transform", v: "translateX(-0.375rem)", r: 18, c: 21, s: "f5", u: "f8",  }; //433
+$.a($82, $94, 217);
+var $95 = { n: "-ms-transform", v: "translateX(-0.375rem)", r: 19, c: 21, s: "f5", u: "f8",  }; //434
+$.a($82, $95, 219);
+var $96 = { n: "transform", v: "translateX(-0.375rem)", r: 20, c: 21, s: "f5", u: "f8",  }; //435
+$.a($82, $96, 221);
+var $97 = { n: "-webkit-text-decoration", v: "none", r: 21, c: 21, s: "f5", u: "f8",  }; //436
+$.a($82, $97, 223);
+var $98 = { n: "text-decoration", v: "none", r: 22, c: 21, s: "f5", u: "f8",  }; //437
+$.a($82, $98, 225);
+var $99 = { n: "font-weight", v: "600", r: 23, c: 21, s: "f5", u: "f8",  }; //438
+$.a($82, $99, 227);
+var $100 = { n: "-webkit-align-items", v: "center", r: 24, c: 21, s: "f5", u: "f8",  }; //439
+$.a($82, $100, 229);
+var $101 = { n: "-webkit-box-align", v: "center", r: 25, c: 21, s: "f5", u: "f8",  }; //440
+$.a($82, $101, 231);
+var $102 = { n: "-ms-flex-align", v: "center", r: 26, c: 21, s: "f5", u: "f8",  }; //441
+$.a($82, $102, 233);
+var $103 = { n: "align-items", v: "center", r: 27, c: 21, s: "f5", u: "f8",  }; //442
+$.a($82, $103, 235);
+var $104 = { n: "margin-right", v: "1.25rem", r: 28, c: 21, s: "f5", u: "f8",  }; //443
+$.a($82, $104, 237);
+var $105 = { n: "a", v: "", r: 29, c: 9, s: "f5", u: "f8",  }; //444
+$.a($78, $105, 239);
+var $106 = { n: "aria-label", v: "Link to home", r: 30, c: 13, s: "f5", u: "f8",  }; //445
+$.a($105, $106, 241);
+var $107 = { n: "class", v: "css-1g15vhe", r: 31, c: 13, s: "f5", u: "f8",  }; //446
+$.a($105, $107, 243);
+var $108 = { n: "href", v: "/", r: 32, c: 13, s: "f5", u: "f8",  }; //447
+$.a($105, $108, 245);
+var $109 = { n: "@style", v: "", r: 33, c: 13, s: "f5", u: "f8",  }; //448
+$.a($105, $109, 247);
+var $110 = { n: "data-emotion-css", v: "etwj4y", r: 34, c: 17, s: "f5", u: "f8",  }; //449
+$.a($109, $110, 249);
+var $111 = { n: "css", v: "", r: 35, c: 17, s: "f5", u: "f8",  }; //450
+$.a($109, $111, 251);
+var $112 = { n: ".", v: "css-etwj4y", r: 36, c: 21, s: "f5", u: "f8",  }; //451
+$.a($111, $112, 253);
+var $113 = { n: "fill", v: "black", r: 37, c: 25, s: "f5", u: "f8",  }; //452
+$.a($112, $113, 255);
+$.s("f6");
+var ratio = svg_width / 660; //492
+var opt = {}; //493
+opt.y0 = 10 * ratio; //494
+opt.y1 = 10 * ratio; //495
+opt.y1a = 90 * ratio; //496
+opt.y2 = 210 * ratio; //497
+opt.ybottom = 250 * ratio; //498
+opt.stroke = '#01579b'; //499
+opt.fill = '#01579b'; //500
+opt.ratio = ratio; //501
+$.n();
+var $115 = { n: "svg", v: "", r: 17, c: 5, s: "f6", u: "f9",  }; //502
+$.a($105, $115, 269);
+var $116 = { n: "width", v: $.ip("f6", "${660 * ratio}", "string", 270, false), r: 19, c: 9, s: "f6", u: "f9",  }; //503
+$.a($115, $116, 271);
+var $117 = { n: "height", v: $.ip("f6", "${260 * ratio}", "string", 272, false), r: 20, c: 9, s: "f6", u: "f9",  }; //504
+$.a($115, $117, 273);
+var $118 = { n: "rect", v: "", r: 26, c: 9, s: "f6", u: "f9",  }; //505
+$.a($115, $118, 275);
+var $119 = { n: "x", v: "0", r: 27, c: 13, s: "f6", u: "f9",  }; //506
+$.a($118, $119, 277);
+var $120 = { n: "y", v: "0", r: 28, c: 13, s: "f6", u: "f9",  }; //507
+$.a($118, $120, 279);
+var $121 = { n: "width", v: "660", r: 29, c: 13, s: "f6", u: "f9",  }; //508
+$.a($118, $121, 281);
+var $122 = { n: "height", v: "280", r: 30, c: 13, s: "f6", u: "f9",  }; //509
+$.a($118, $122, 283);
+var $123 = { n: "fill", v: "none", r: 31, c: 13, s: "f6", u: "f9",  }; //510
+$.a($118, $123, 285);
+var $124 = { n: "stroke", v: "none", r: 32, c: 13, s: "f6", u: "f9",  }; //511
+$.a($118, $124, 287);
+var $125 = { n: "polyline", v: "", r: 34, c: 9, s: "f6", u: "f9",  }; //512
+$.a($115, $125, 289);
+var $126 = { n: "stroke", v: $.ip("f6", "${opt.stroke}", "string", 290, false), r: 35, c: 13, s: "f6", u: "f9",  }; //513
+$.a($125, $126, 291);
+var $127 = { n: "fill", v: $.ip("f6", "${opt.fill}", "string", 292, false), r: 36, c: 13, s: "f6", u: "f9",  }; //514
+$.a($125, $127, 293);
+var $128 = { n: "stroke-width", v: "2", r: 37, c: 13, s: "f6", u: "f9",  }; //515
+$.a($125, $128, 295);
+var $129 = { n: "points", v: $.ip("f6", "${10 * ratio} ${opt.ybottom} ${45 * ratio} ${opt.y0} ${60 * ratio} ${opt.y0} ${75 * ratio} ${opt.y1a + (40*ratio)} ${120 * ratio} ${opt.y2} ${120 * ratio} ${opt.y1a + (40*ratio)} ${175 * ratio} ${opt.y2} ${175 * ratio} ${opt.y1a + (20*ratio)} ${230 * ratio} ${opt.y2} ${230 * ratio} ${opt.ybottom}", "string", 296, false), r: 38, c: 13, s: "f6", u: "f9",  }; //516
+$.a($125, $129, 297);
+var $130 = { n: "polyline", v: "", r: 4, c: 5, s: "f7", u: "f10",  }; //540
+$.a($115, $130, 299);
+var $131 = { n: "stroke", v: $.ip("f7", "${opt.stroke}", "string", 300, false), r: 5, c: 9, s: "f7", u: "f10",  }; //541
+$.a($130, $131, 301);
+var $132 = { n: "fill", v: $.ip("f7", "${opt.fill}", "string", 302, false), r: 6, c: 9, s: "f7", u: "f10",  }; //542
+$.a($130, $132, 303);
+var $133 = { n: "stroke-width", v: "2", r: 7, c: 9, s: "f7", u: "f10",  }; //543
+$.a($130, $133, 305);
+var $134 = { n: "points", v: $.ip("f7", "${l} ${opt.ybottom} ${l+10*opt.ratio} ${opt.y1+80*opt.ratio} ${l+40*opt.ratio} ${opt.y1+80*opt.ratio} ${l+50*opt.ratio} ${opt.ybottom}", "string", 306, false), r: 8, c: 9, s: "f7", u: "f10",  }; //544
+$.a($130, $134, 307);
+var $135 = { n: "path", v: "", r: 13, c: 5, s: "f7", u: "f10",  }; //545
+$.a($115, $135, 309);
+var $136 = { n: "stroke", v: "white", r: 14, c: 9, s: "f7", u: "f10",  }; //546
+$.a($135, $136, 311);
+var $137 = { n: "fill", v: $.ip("f7", "${opt.fill}", "string", 312, false), r: 15, c: 9, s: "f7", u: "f10",  }; //547
+$.a($135, $137, 313);
+var $138 = { n: "stroke-width", v: "2", r: 16, c: 9, s: "f7", u: "f10",  }; //548
+$.a($135, $138, 315);
+var $139 = { n: "d", v: $.ip("f7", "M${l+30*ratio}, ${opt.y1+20*ratio} C${l+60*ratio},${opt.y1+40*ratio} ${l+0*ratio},${opt.y1+60*ratio} ${l+30*ratio}, ${opt.y1+74*ratio}", "string", 316, false), r: 17, c: 9, s: "f7", u: "f10",  }; //549
+$.a($135, $139, 317);
+var $140 = { n: "polyline", v: "", r: 4, c: 5, s: "f8", u: "f11",  }; //566
+$.a($115, $140, 319);
+var $141 = { n: "stroke", v: $.ip("f8", "${opt.stroke}", "string", 320, false), r: 5, c: 9, s: "f8", u: "f11",  }; //567
+$.a($140, $141, 321);
+var $142 = { n: "fill", v: $.ip("f8", "${opt.fill}", "string", 322, false), r: 6, c: 9, s: "f8", u: "f11",  }; //568
+$.a($140, $142, 323);
+var $143 = { n: "stroke-width", v: "2", r: 7, c: 9, s: "f8", u: "f11",  }; //569
+$.a($140, $143, 325);
+var $144 = { n: "points", v: $.ip("f8", "${l} ${opt.ybottom} ${l} ${opt.ybottom - 20*opt.ratio} ${l+100*opt.ratio} ${opt.y1a+40*opt.ratio} ${l+80*opt.ratio} ${opt.y1a+20*opt.ratio} ${l+80*opt.ratio} ${opt.y1a} ${l+130*opt.ratio} ${opt.y1a} ${l+100*opt.ratio} ${opt.ybottom - 20*opt.ratio} ${l+120*opt.ratio} ${opt.ybottom - 20*opt.ratio} ${l+120*opt.ratio} ${opt.ybottom}", "string", 326, false), r: 9, c: 9, s: "f8", u: "f11",  }; //570
+$.a($140, $144, 327);
+var $145 = { n: "polyline", v: "", r: 4, c: 5, s: "f9", u: "f11",  }; //572
+$.a($115, $145, 329);
+var $146 = { n: "stroke", v: $.ip("f9", "${opt.stroke}", "string", 330, false), r: 5, c: 9, s: "f9", u: "f11",  }; //573
+$.a($145, $146, 331);
+var $147 = { n: "fill", v: $.ip("f9", "${opt.fill}", "string", 332, false), r: 6, c: 9, s: "f9", u: "f11",  }; //574
+$.a($145, $147, 333);
+var $148 = { n: "stroke-width", v: "2", r: 7, c: 9, s: "f9", u: "f11",  }; //575
+$.a($145, $148, 335);
+var $149 = { n: "points", v: $.ip("f9", "${l} ${opt.ybottom} ${l} ${opt.ybottom - 20*opt.ratio} ${l+100*opt.ratio} ${opt.y1a+40*opt.ratio} ${l+80*opt.ratio} ${opt.y1a+20*opt.ratio} ${l+80*opt.ratio} ${opt.y1a} ${l+130*opt.ratio} ${opt.y1a} ${l+100*opt.ratio} ${opt.ybottom - 20*opt.ratio} ${l+120*opt.ratio} ${opt.ybottom - 20*opt.ratio} ${l+120*opt.ratio} ${opt.ybottom}", "string", 336, false), r: 9, c: 9, s: "f9", u: "f11",  }; //576
+$.a($145, $149, 337);
+var $150 = { n: "polyline", v: "", r: 4, c: 5, s: "f10", u: "f10",  }; //578
+$.a($115, $150, 339);
+var $151 = { n: "stroke", v: $.ip("f10", "${opt.stroke}", "string", 340, false), r: 5, c: 9, s: "f10", u: "f10",  }; //579
+$.a($150, $151, 341);
+var $152 = { n: "fill", v: $.ip("f10", "${opt.fill}", "string", 342, false), r: 6, c: 9, s: "f10", u: "f10",  }; //580
+$.a($150, $152, 343);
+var $153 = { n: "stroke-width", v: "2", r: 7, c: 9, s: "f10", u: "f10",  }; //581
+$.a($150, $153, 345);
+var $154 = { n: "points", v: $.ip("f10", "${l} ${opt.ybottom} ${l+10*opt.ratio} ${opt.y1+80*opt.ratio} ${l+40*opt.ratio} ${opt.y1+80*opt.ratio} ${l+50*opt.ratio} ${opt.ybottom}", "string", 346, false), r: 8, c: 9, s: "f10", u: "f10",  }; //582
+$.a($150, $154, 347);
+var $155 = { n: "path", v: "", r: 13, c: 5, s: "f10", u: "f10",  }; //583
+$.a($115, $155, 349);
+var $156 = { n: "stroke", v: "white", r: 14, c: 9, s: "f10", u: "f10",  }; //584
+$.a($155, $156, 351);
+var $157 = { n: "fill", v: $.ip("f10", "${opt.fill}", "string", 352, false), r: 15, c: 9, s: "f10", u: "f10",  }; //585
+$.a($155, $157, 353);
+var $158 = { n: "stroke-width", v: "2", r: 16, c: 9, s: "f10", u: "f10",  }; //586
+$.a($155, $158, 355);
+var $159 = { n: "d", v: $.ip("f10", "M${l+30*ratio}, ${opt.y1+20*ratio} C${l+60*ratio},${opt.y1+40*ratio} ${l+0*ratio},${opt.y1+60*ratio} ${l+30*ratio}, ${opt.y1+74*ratio}", "string", 356, false), r: 17, c: 9, s: "f10", u: "f10",  }; //587
+$.a($155, $159, 357);
+var $160 = { n: "@style", v: "", r: 2, c: 5, s: "f11", u: "f12",  }; //709
+$.a($66, $160, 359);
+var $161 = { n: "data-emotion-css", v: "ic43bx animation-5yo8zs", r: 3, c: 9, s: "f11", u: "f12",  }; //710
+$.a($160, $161, 361);
+var $162 = { n: "css", v: "", r: 4, c: 9, s: "f11", u: "f12",  }; //711
+$.a($160, $162, 363);
+var $163 = { n: ".", v: "css-ic43bx", r: 5, c: 13, s: "f11", u: "f12",  }; //712
+$.a($162, $163, 365);
+var $164 = { n: "-webkit-align-items", v: "center", r: 6, c: 17, s: "f11", u: "f12",  }; //713
+$.a($163, $164, 367);
+var $165 = { n: "-webkit-box-align", v: "center", r: 7, c: 17, s: "f11", u: "f12",  }; //714
+$.a($163, $165, 369);
+var $166 = { n: "-ms-flex-align", v: "center", r: 8, c: 17, s: "f11", u: "f12",  }; //715
+$.a($163, $166, 371);
+var $167 = { n: "align-items", v: "center", r: 9, c: 17, s: "f11", u: "f12",  }; //716
+$.a($163, $167, 373);
+var $168 = { n: "border", v: "var(--theme-ui-colors-grey-60,#635e69)", r: 10, c: 17, s: "f11", u: "f12",  }; //717
+$.a($163, $168, 375);
+var $169 = { n: "border-radius", v: "4px", r: 11, c: 17, s: "f11", u: "f12",  }; //718
+$.a($163, $169, 377);
+var $170 = { n: "box-sizing", v: "border-box", r: 12, c: 17, s: "f11", u: "f12",  }; //719
+$.a($163, $170, 379);
+var $171 = { n: "cursor", v: "pointer", r: 13, c: 17, s: "f11", u: "f12",  }; //720
+$.a($163, $171, 381);
+var $172 = { n: "display", v: "-webkit-inline-box", r: 14, c: 17, s: "f11", u: "f12",  }; //721
+$.a($163, $172, 383);
+var $173 = { n: "display", v: "-webkit-inline-flex", r: 15, c: 17, s: "f11", u: "f12",  }; //722
+$.a($163, $173, 385);
+var $174 = { n: "display", v: "-ms-inline-flexbox", r: 16, c: 17, s: "f11", u: "f12",  }; //723
+$.a($163, $174, 387);
+var $175 = { n: "display", v: "inline-flex", r: 17, c: 17, s: "f11", u: "f12",  }; //724
+$.a($163, $175, 389);
+var $176 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 18, c: 17, s: "f11", u: "f12",  }; //725
+$.a($163, $176, 391);
+var $177 = { n: "-webkit-box-pack", v: "center", r: 19, c: 17, s: "f11", u: "f12",  }; //726
+$.a($163, $177, 393);
+var $178 = { n: "-webkit-justify-content", v: "center", r: 20, c: 17, s: "f11", u: "f12",  }; //727
+$.a($163, $178, 395);
+var $179 = { n: "-ms-flex-pack", v: "center", r: 21, c: 17, s: "f11", u: "f12",  }; //728
+$.a($163, $179, 397);
+var $180 = { n: "justify-content", v: "center", r: 22, c: 17, s: "f11", u: "f12",  }; //729
+$.a($163, $180, 399);
+var $181 = { n: "-webkit-transition", v: "background 250ms,border 250ms,color 250ms", r: 23, c: 17, s: "f11", u: "f12",  }; //730
+$.a($163, $181, 401);
+var $182 = { n: "transition", v: "background 250ms,border 250ms,color 250ms", r: 24, c: 17, s: "f11", u: "f12",  }; //731
+$.a($163, $182, 403);
+var $183 = { n: "line-height", v: "1", r: 25, c: 17, s: "f11", u: "f12",  }; //732
+$.a($163, $183, 405);
+var $184 = { n: "-webkit-text-decoration", v: "none", r: 26, c: 17, s: "f11", u: "f12",  }; //733
+$.a($163, $184, 407);
+var $185 = { n: "text-decoration", v: "none", r: 27, c: 17, s: "f11", u: "f12",  }; //734
+$.a($163, $185, 409);
+var $186 = { n: "background", v: "transparent", r: 28, c: 17, s: "f11", u: "f12",  }; //735
+$.a($163, $186, 411);
+var $187 = { n: "border", v: "1px solid transparent", r: 29, c: 17, s: "f11", u: "f12",  }; //736
+$.a($163, $187, 413);
+var $188 = { n: "color", v: "#663399", r: 30, c: 17, s: "f11", u: "f12",  }; //737
+$.a($163, $188, 415);
+var $189 = { n: "display", v: "-webkit-inline-box", r: 31, c: 17, s: "f11", u: "f12",  }; //738
+$.a($163, $189, 417);
+var $190 = { n: "display", v: "-webkit-inline-flex", r: 32, c: 17, s: "f11", u: "f12",  }; //739
+$.a($163, $190, 419);
+var $191 = { n: "display", v: "-ms-inline-flexbox", r: 33, c: 17, s: "f11", u: "f12",  }; //740
+$.a($163, $191, 421);
+var $192 = { n: "display", v: "inline-flex", r: 34, c: 17, s: "f11", u: "f12",  }; //741
+$.a($163, $192, 423);
+var $193 = { n: "width", v: "2.5rem", r: 35, c: 17, s: "f11", u: "f12",  }; //742
+$.a($163, $193, 425);
+var $194 = { n: "height", v: "2.5rem", r: 36, c: 17, s: "f11", u: "f12",  }; //743
+$.a($163, $194, 427);
+var $195 = { n: "position", v: "relative", r: 37, c: 17, s: "f11", u: "f12",  }; //744
+$.a($163, $195, 429);
+var $196 = { n: "z-index", v: "2", r: 38, c: 17, s: "f11", u: "f12",  }; //745
+$.a($163, $196, 431);
+var $197 = { n: "-webkit-transition", v: "-webkit-transform 500ms cubic-bezier(0.4,0,0.2,1)", r: 39, c: 17, s: "f11", u: "f12",  }; //746
+$.a($163, $197, 433);
+var $198 = { n: "-webkit-transition", v: "transform 500ms cubic-bezier(0.4,0,0.2,1)", r: 40, c: 17, s: "f11", u: "f12",  }; //747
+$.a($163, $198, 435);
+var $199 = { n: "transition", v: "transform 500ms cubic-bezier(0.4,0,0.2,1)", r: 41, c: 17, s: "f11", u: "f12",  }; //748
+$.a($163, $199, 437);
+var $200 = { n: ".", v: "css-ic43bx[disabled]", r: 42, c: 13, s: "f11", u: "f12",  }; //749
+$.a($162, $200, 439);
+var $201 = { n: "+", v: ".css-ic43bx[disabled]:hover", r: 43, c: 17, s: "f11", u: "f12",  }; //750
+$.a($200, $201, 441);
+var $202 = { n: "cursor", v: "not-allowed", r: 44, c: 17, s: "f11", u: "f12",  }; //751
+$.a($200, $202, 443);
+var $203 = { n: "opacity", v: "0.5", r: 45, c: 17, s: "f11", u: "f12",  }; //752
+$.a($200, $203, 445);
+var $204 = { n: ".", v: "css-ic43bx svg", r: 46, c: 13, s: "f11", u: "f12",  }; //753
+$.a($162, $204, 447);
+var $205 = { n: "-webkit-flex-shrink", v: "0", r: 47, c: 17, s: "f11", u: "f12",  }; //754
+$.a($204, $205, 449);
+var $206 = { n: "-ms-flex-negative", v: "0", r: 48, c: 17, s: "f11", u: "f12",  }; //755
+$.a($204, $206, 451);
+var $207 = { n: "flex-shrink", v: "0", r: 49, c: 17, s: "f11", u: "f12",  }; //756
+$.a($204, $207, 453);
+var $208 = { n: "margin", v: "0 0.25rem", r: 50, c: 17, s: "f11", u: "f12",  }; //757
+$.a($204, $208, 455);
+var $209 = { n: "-webkit-transform", v: "scale(1)", r: 51, c: 17, s: "f11", u: "f12",  }; //758
+$.a($204, $209, 457);
+var $210 = { n: "-ms-transform", v: "scale(1)", r: 52, c: 17, s: "f11", u: "f12",  }; //759
+$.a($204, $210, 459);
+var $211 = { n: "transform", v: "scale(1)", r: 53, c: 17, s: "f11", u: "f12",  }; //760
+$.a($204, $211, 461);
+var $212 = { n: ".", v: "css-ic43bx:hover:not([disabled]) svg", r: 54, c: 13, s: "f11", u: "f12",  }; //761
+$.a($162, $212, 463);
+var $213 = { n: "+", v: ".css-ic43bx:focus:not([disabled]) svg", r: 55, c: 17, s: "f11", u: "f12",  }; //762
+$.a($212, $213, 465);
+var $214 = { n: "-webkit-animation", v: "animation-5yo8zs 1s linear infinite", r: 56, c: 17, s: "f11", u: "f12",  }; //763
+$.a($212, $214, 467);
+var $215 = { n: "animation", v: "animation-5yo8zs 1s linear infinite", r: 57, c: 17, s: "f11", u: "f12",  }; //764
+$.a($212, $215, 469);
+var $216 = { n: ".", v: "css-ic43bx:hover", r: 58, c: 13, s: "f11", u: "f12",  }; //765
+$.a($162, $216, 471);
+var $217 = { n: "background", v: "#fcfaff", r: 59, c: 17, s: "f11", u: "f12",  }; //766
+$.a($216, $217, 473);
+var $218 = { n: "color", v: "#362066", r: 60, c: 17, s: "f11", u: "f12",  }; //767
+$.a($216, $218, 475);
+var $219 = { n: ".", v: "css-ic43bx:focus", r: 61, c: 13, s: "f11", u: "f12",  }; //768
+$.a($162, $219, 477);
+var $220 = { n: "background", v: "inherit", r: 62, c: 17, s: "f11", u: "f12",  }; //769
+$.a($219, $220, 479);
+var $221 = { n: "media", v: "(min-width: 1000px)", r: 63, c: 13, s: "f11", u: "f12",  }; //770
+$.a($162, $221, 481);
+var $222 = { n: ".", v: "css-ic43bx", r: 64, c: 17, s: "f11", u: "f12",  }; //771
+$.a($221, $222, 483);
+var $223 = { n: "display", v: "none", r: 65, c: 21, s: "f11", u: "f12",  }; //772
+$.a($222, $223, 485);
+var $224 = { n: "keyframes", v: "animation-5yo8zs", r: 66, c: 13, s: "f11", u: "f12",  }; //773
+$.a($162, $224, 487);
+var $225 = { n: "vendor", v: "-webkit-", r: 67, c: 17, s: "f11", u: "f12",  }; //774
+$.a($224, $225, 489);
+var $226 = { n: "keyframe", v: "33%", r: 68, c: 17, s: "f11", u: "f12",  }; //775
+$.a($224, $226, 491);
+var $227 = { n: "-webkit-transform", v: "scale(1)", r: 69, c: 21, s: "f11", u: "f12",  }; //776
+$.a($226, $227, 493);
+var $228 = { n: "-ms-transform", v: "scale(1)", r: 70, c: 21, s: "f11", u: "f12",  }; //777
+$.a($226, $228, 495);
+var $229 = { n: "transform", v: "scale(1)", r: 71, c: 21, s: "f11", u: "f12",  }; //778
+$.a($226, $229, 497);
+var $230 = { n: "keyframe", v: "66%", r: 72, c: 17, s: "f11", u: "f12",  }; //779
+$.a($224, $230, 499);
+var $231 = { n: "-webkit-transform", v: "scale(0.8)", r: 73, c: 21, s: "f11", u: "f12",  }; //780
+$.a($230, $231, 501);
+var $232 = { n: "-ms-transform", v: "scale(0.8)", r: 74, c: 21, s: "f11", u: "f12",  }; //781
+$.a($230, $232, 503);
+var $233 = { n: "transform", v: "scale(0.8)", r: 75, c: 21, s: "f11", u: "f12",  }; //782
+$.a($230, $233, 505);
+var $234 = { n: "keyframes", v: "animation-5yo8zs", r: 76, c: 13, s: "f11", u: "f12",  }; //783
+$.a($162, $234, 507);
+var $235 = { n: "vendor", v: "", r: 77, c: 17, s: "f11", u: "f12",  }; //784
+$.a($234, $235, 509);
+var $236 = { n: "keyframe", v: "33%", r: 78, c: 17, s: "f11", u: "f12",  }; //785
+$.a($234, $236, 511);
+var $237 = { n: "-webkit-transform", v: "scale(1)", r: 79, c: 21, s: "f11", u: "f12",  }; //786
+$.a($236, $237, 513);
+var $238 = { n: "-ms-transform", v: "scale(1)", r: 80, c: 21, s: "f11", u: "f12",  }; //787
+$.a($236, $238, 515);
+var $239 = { n: "transform", v: "scale(1)", r: 81, c: 21, s: "f11", u: "f12",  }; //788
+$.a($236, $239, 517);
+var $240 = { n: "keyframe", v: "66%", r: 82, c: 17, s: "f11", u: "f12",  }; //789
+$.a($234, $240, 519);
+var $241 = { n: "-webkit-transform", v: "scale(0.8)", r: 83, c: 21, s: "f11", u: "f12",  }; //790
+$.a($240, $241, 521);
+var $242 = { n: "-ms-transform", v: "scale(0.8)", r: 84, c: 21, s: "f11", u: "f12",  }; //791
+$.a($240, $242, 523);
+var $243 = { n: "transform", v: "scale(0.8)", r: 85, c: 21, s: "f11", u: "f12",  }; //792
+$.a($240, $243, 525);
+var $244 = { n: "button", v: "", r: 86, c: 5, s: "f11", u: "f12",  }; //793
+$.a($66, $244, 527);
+var $245 = { n: "type", v: "button", r: 87, c: 9, s: "f11", u: "f12",  }; //794
+$.a($244, $245, 529);
+var $246 = { n: "aria-expanded", v: "false", r: 88, c: 9, s: "f11", u: "f12",  }; //795
+$.a($244, $246, 531);
+var $247 = { n: "aria-label", v: "Open navigation", r: 89, c: 9, s: "f11", u: "f12",  }; //796
+$.a($244, $247, 533);
+var $248 = { n: "class", v: "css-ic43bx", r: 90, c: 9, s: "f11", u: "f12",  }; //797
+$.a($244, $248, 535);
+var $249 = { n: "@style", v: "", r: 91, c: 9, s: "f11", u: "f12",  }; //798
+$.a($244, $249, 537);
+var $250 = { n: "data-emotion-css", v: "1cgevyx", r: 92, c: 13, s: "f11", u: "f12",  }; //799
+$.a($249, $250, 539);
+var $251 = { n: "css", v: "", r: 93, c: 13, s: "f11", u: "f12",  }; //800
+$.a($249, $251, 541);
+var $252 = { n: ".", v: "css-1cgevyx", r: 94, c: 17, s: "f11", u: "f12",  }; //801
+$.a($251, $252, 543);
+var $253 = { n: "width", v: "24px", r: 95, c: 21, s: "f11", u: "f12",  }; //802
+$.a($252, $253, 545);
+var $254 = { n: "height", v: "3px", r: 96, c: 21, s: "f11", u: "f12",  }; //803
+$.a($252, $254, 547);
+var $255 = { n: "border-radius", v: "2px", r: 97, c: 21, s: "f11", u: "f12",  }; //804
+$.a($252, $255, 549);
+var $256 = { n: "background", v: "var(--theme-ui-colors-black,#000000)", r: 98, c: 21, s: "f11", u: "f12",  }; //805
+$.a($252, $256, 551);
+var $257 = { n: "margin", v: "10px 0", r: 99, c: 21, s: "f11", u: "f12",  }; //806
+$.a($252, $257, 553);
+var $258 = { n: "position", v: "relative", r: 100, c: 21, s: "f11", u: "f12",  }; //807
+$.a($252, $258, 555);
+var $259 = { n: "z-index", v: "1000", r: 101, c: 21, s: "f11", u: "f12",  }; //808
+$.a($252, $259, 557);
+var $260 = { n: ".", v: "css-1cgevyx:before", r: 102, c: 17, s: "f11", u: "f12",  }; //809
+$.a($251, $260, 559);
+var $261 = { n: "+", v: ".css-1cgevyx:after", r: 103, c: 21, s: "f11", u: "f12",  }; //810
+$.a($260, $261, 561);
+var $262 = { n: "border-radius", v: "2px", r: 104, c: 21, s: "f11", u: "f12",  }; //811
+$.a($260, $262, 563);
+var $263 = { n: "height", v: "3px", r: 105, c: 21, s: "f11", u: "f12",  }; //812
+$.a($260, $263, 565);
+var $264 = { n: "background", v: "var(--theme-ui-colors-black,#000000)", r: 106, c: 21, s: "f11", u: "f12",  }; //813
+$.a($260, $264, 567);
+var $265 = { n: "content", v: "\" \"", r: 107, c: 21, s: "f11", u: "f12",  }; //814
+$.a($260, $265, 569);
+var $266 = { n: "position", v: "absolute", r: 108, c: 21, s: "f11", u: "f12",  }; //815
+$.a($260, $266, 571);
+var $267 = { n: "right", v: "0", r: 109, c: 21, s: "f11", u: "f12",  }; //816
+$.a($260, $267, 573);
+var $268 = { n: "-webkit-transition", v: "-webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55)", r: 110, c: 21, s: "f11", u: "f12",  }; //817
+$.a($260, $268, 575);
+var $269 = { n: "-webkit-transition", v: "transform 250ms cubic-bezier(.68,-.55,.265,1.55)", r: 111, c: 21, s: "f11", u: "f12",  }; //818
+$.a($260, $269, 577);
+var $270 = { n: "transition", v: "transform 250ms cubic-bezier(.68,-.55,.265,1.55)", r: 112, c: 21, s: "f11", u: "f12",  }; //819
+$.a($260, $270, 579);
+var $271 = { n: ".", v: "css-1cgevyx:before", r: 113, c: 17, s: "f11", u: "f12",  }; //820
+$.a($251, $271, 581);
+var $272 = { n: "top", v: "-7px", r: 114, c: 21, s: "f11", u: "f12",  }; //821
+$.a($271, $272, 583);
+var $273 = { n: "width", v: "20px", r: 115, c: 21, s: "f11", u: "f12",  }; //822
+$.a($271, $273, 585);
+var $274 = { n: ".", v: "css-1cgevyx:after", r: 116, c: 17, s: "f11", u: "f12",  }; //823
+$.a($251, $274, 587);
+var $275 = { n: "top", v: "7px", r: 117, c: 21, s: "f11", u: "f12",  }; //824
+$.a($274, $275, 589);
+var $276 = { n: "width", v: "16px", r: 118, c: 21, s: "f11", u: "f12",  }; //825
+$.a($274, $276, 591);
+var $277 = { n: "span", v: "", r: 119, c: 9, s: "f11", u: "f12",  }; //826
+$.a($244, $277, 593);
+var $278 = { n: "class", v: "css-1cgevyx", r: 120, c: 13, s: "f11", u: "f12",  }; //827
+$.a($277, $278, 595);
+var $279 = { n: "@style", v: "", r: 2, c: 5, s: "f12", u: "f13",  }; //1037
+$.a($66, $279, 597);
+var $280 = { n: "data-emotion-css", v: "1i6uzar", r: 3, c: 9, s: "f12", u: "f13",  }; //1038
+$.a($279, $280, 599);
+var $281 = { n: "css", v: "", r: 4, c: 9, s: "f12", u: "f13",  }; //1039
+$.a($279, $281, 601);
+var $282 = { n: "-", v: "set left = 0 and opacity = 1 to show element", r: 5, c: 13, s: "f12", u: "f13",  }; //1040
+$.a($281, $282, 603);
+var $283 = { n: ".", v: "css-1i6uzar", r: 6, c: 13, s: "f12", u: "f13",  }; //1041
+$.a($281, $283, 605);
+var $284 = { n: "background", v: "var(--theme-ui-colors-white,#ffffff)", r: 7, c: 17, s: "f12", u: "f13",  }; //1042
+$.a($283, $284, 607);
+var $285 = { n: "border", v: "1px solid var(--theme-ui-colors-grey-30,#d9d7e0)", r: 8, c: 17, s: "f12", u: "f13",  }; //1043
+$.a($283, $285, 609);
+var $286 = { n: "left", v: "100%", r: 9, c: 17, s: "f12", u: "f13",  }; //1044
+$.a($283, $286, 611);
+var $287 = { n: "opacity", v: "0", r: 10, c: 17, s: "f12", u: "f13",  }; //1045
+$.a($283, $287, 613);
+var $288 = { n: "padding", v: "0.5rem 2rem", r: 11, c: 17, s: "f12", u: "f13",  }; //1046
+$.a($283, $288, 615);
+var $289 = { n: "position", v: "fixed", r: 12, c: 17, s: "f12", u: "f13",  }; //1047
+$.a($283, $289, 617);
+var $290 = { n: "top", v: "0", r: 13, c: 17, s: "f12", u: "f13",  }; //1048
+$.a($283, $290, 619);
+var $291 = { n: "-webkit-transform", v: "translateX(0)", r: 14, c: 17, s: "f12", u: "f13",  }; //1049
+$.a($283, $291, 621);
+var $292 = { n: "-ms-transform", v: "translateX(0)", r: 15, c: 17, s: "f12", u: "f13",  }; //1050
+$.a($283, $292, 623);
+var $293 = { n: "transform", v: "translateX(0)", r: 16, c: 17, s: "f12", u: "f13",  }; //1051
+$.a($283, $293, 625);
+var $294 = { n: "-webkit-transition", v: "-webkit-transform 500ms cubic-bezier(0.4,0,0.2,1),opacity 500ms cubic-bezier(0.4,0,1,1)", r: 17, c: 17, s: "f12", u: "f13",  }; //1052
+$.a($283, $294, 627);
+var $295 = { n: "-webkit-transition", v: "transform 500ms cubic-bezier(0.4,0,0.2,1),opacity 500ms cubic-bezier(0.4,0,1,1)", r: 18, c: 17, s: "f12", u: "f13",  }; //1053
+$.a($283, $295, 629);
+var $296 = { n: "transition", v: "transform 500ms cubic-bezier(0.4,0,0.2,1),opacity 500ms cubic-bezier(0.4,0,1,1)", r: 19, c: 17, s: "f12", u: "f13",  }; //1054
+$.a($283, $296, 631);
+var $297 = { n: "width", v: "100%", r: 20, c: 17, s: "f12", u: "f13",  }; //1055
+$.a($283, $297, 633);
+var $298 = { n: "z-index", v: "1", r: 21, c: 17, s: "f12", u: "f13",  }; //1056
+$.a($283, $298, 635);
+var $299 = { n: "display", v: "block", r: 22, c: 17, s: "f12", u: "f13",  }; //1057
+$.a($283, $299, 637);
+var $300 = { n: ".", v: "css-1i6uzar a", r: 23, c: 13, s: "f12", u: "f13",  }; //1058
+$.a($281, $300, 639);
+var $301 = { n: "margin-top", v: "0.5rem", r: 24, c: 17, s: "f12", u: "f13",  }; //1059
+$.a($300, $301, 641);
+var $302 = { n: "margin-bottom", v: "0.5rem", r: 25, c: 17, s: "f12", u: "f13",  }; //1060
+$.a($300, $302, 643);
+var $303 = { n: "media", v: "(min-width: 1000px)", r: 26, c: 13, s: "f12", u: "f13",  }; //1061
+$.a($281, $303, 645);
+var $304 = { n: ".", v: "css-1i6uzar", r: 27, c: 17, s: "f12", u: "f13",  }; //1062
+$.a($303, $304, 647);
+var $305 = { n: "display", v: "none", r: 28, c: 21, s: "f12", u: "f13",  }; //1063
+$.a($304, $305, 649);
+var $306 = { n: ".", v: "css-1i6uzar", r: 29, c: 5, s: "f12", u: "f13",  }; //1064
+$.a($66, $306, 651);
+var $307 = { n: "id", v: "mobile-nav-actions", r: 30, c: 9, s: "f12", u: "f13",  }; //1065
+$.a($306, $307, 653);
+var $308 = { n: "@style", v: "", r: 31, c: 9, s: "f12", u: "f13",  }; //1066
+$.a($306, $308, 655);
+var $309 = { n: "data-emotion-css", v: "130dhfb", r: 32, c: 13, s: "f12", u: "f13",  }; //1067
+$.a($308, $309, 657);
+var $310 = { n: "css", v: "", r: 33, c: 13, s: "f12", u: "f13",  }; //1068
+$.a($308, $310, 659);
+var $311 = { n: ".", v: "css-130dhfb", r: 34, c: 17, s: "f12", u: "f13",  }; //1069
+$.a($310, $311, 661);
+var $312 = { n: "margin-right", v: "0.75rem", r: 35, c: 21, s: "f12", u: "f13",  }; //1070
+$.a($311, $312, 663);
+var $313 = { n: "media", v: "(min-width: 550px)", r: 36, c: 17, s: "f12", u: "f13",  }; //1071
+$.a($310, $313, 665);
+var $314 = { n: ".", v: "css-130dhfb", r: 37, c: 21, s: "f12", u: "f13",  }; //1072
+$.a($313, $314, 667);
+var $315 = { n: "margin-right", v: "1.25rem", r: 38, c: 25, s: "f12", u: "f13",  }; //1073
+$.a($314, $315, 669);
+var $316 = { n: "@style", v: "", r: 39, c: 9, s: "f12", u: "f13",  }; //1074
+$.a($306, $316, 671);
+var $317 = { n: "data-emotion-css", v: "x2gyb8 animation-5yo8zs", r: 40, c: 13, s: "f12", u: "f13",  }; //1075
+$.a($316, $317, 673);
+var $318 = { n: "css", v: "", r: 41, c: 13, s: "f12", u: "f13",  }; //1076
+$.a($316, $318, 675);
+var $319 = { n: ".", v: "css-x2gyb8", r: 42, c: 17, s: "f12", u: "f13",  }; //1077
+$.a($318, $319, 677);
+var $320 = { n: "-webkit-align-items", v: "center", r: 43, c: 21, s: "f12", u: "f13",  }; //1078
+$.a($319, $320, 679);
+var $321 = { n: "-webkit-box-align", v: "center", r: 44, c: 21, s: "f12", u: "f13",  }; //1079
+$.a($319, $321, 681);
+var $322 = { n: "-ms-flex-align", v: "center", r: 45, c: 21, s: "f12", u: "f13",  }; //1080
+$.a($319, $322, 683);
+var $323 = { n: "align-items", v: "center", r: 46, c: 21, s: "f12", u: "f13",  }; //1081
+$.a($319, $323, 685);
+var $324 = { n: "border", v: "var(--theme-ui-colors-grey-60,#635e69)", r: 47, c: 21, s: "f12", u: "f13",  }; //1082
+$.a($319, $324, 687);
+var $325 = { n: "border-radius", v: "4px", r: 48, c: 21, s: "f12", u: "f13",  }; //1083
+$.a($319, $325, 689);
+var $326 = { n: "box-sizing", v: "border-box", r: 49, c: 21, s: "f12", u: "f13",  }; //1084
+$.a($319, $326, 691);
+var $327 = { n: "cursor", v: "pointer", r: 50, c: 21, s: "f12", u: "f13",  }; //1085
+$.a($319, $327, 693);
+var $328 = { n: "display", v: "-webkit-inline-box", r: 51, c: 21, s: "f12", u: "f13",  }; //1086
+$.a($319, $328, 695);
+var $329 = { n: "display", v: "-webkit-inline-flex", r: 52, c: 21, s: "f12", u: "f13",  }; //1087
+$.a($319, $329, 697);
+var $330 = { n: "display", v: "-ms-inline-flexbox", r: 53, c: 21, s: "f12", u: "f13",  }; //1088
+$.a($319, $330, 699);
+var $331 = { n: "display", v: "inline-flex", r: 54, c: 21, s: "f12", u: "f13",  }; //1089
+$.a($319, $331, 701);
+var $332 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 55, c: 21, s: "f12", u: "f13",  }; //1090
+$.a($319, $332, 703);
+var $333 = { n: "-webkit-box-pack", v: "center", r: 56, c: 21, s: "f12", u: "f13",  }; //1091
+$.a($319, $333, 705);
+var $334 = { n: "-webkit-justify-content", v: "center", r: 57, c: 21, s: "f12", u: "f13",  }; //1092
+$.a($319, $334, 707);
+var $335 = { n: "-ms-flex-pack", v: "center", r: 58, c: 21, s: "f12", u: "f13",  }; //1093
+$.a($319, $335, 709);
+var $336 = { n: "justify-content", v: "center", r: 59, c: 21, s: "f12", u: "f13",  }; //1094
+$.a($319, $336, 711);
+var $337 = { n: "-webkit-transition", v: "background 250ms,border 250ms,color 250ms", r: 60, c: 21, s: "f12", u: "f13",  }; //1095
+$.a($319, $337, 713);
+var $338 = { n: "transition", v: "background 250ms,border 250ms,color 250ms", r: 61, c: 21, s: "f12", u: "f13",  }; //1096
+$.a($319, $338, 715);
+var $339 = { n: "line-height", v: "1", r: 62, c: 21, s: "f12", u: "f13",  }; //1097
+$.a($319, $339, 717);
+var $340 = { n: "-webkit-text-decoration", v: "none", r: 63, c: 21, s: "f12", u: "f13",  }; //1098
+$.a($319, $340, 719);
+var $341 = { n: "text-decoration", v: "none", r: 64, c: 21, s: "f12", u: "f13",  }; //1099
+$.a($319, $341, 721);
+var $342 = { n: "background", v: "#663399", r: 65, c: 21, s: "f12", u: "f13",  }; //1100
+$.a($319, $342, 723);
+var $343 = { n: "border", v: "1px solid #663399", r: 66, c: 21, s: "f12", u: "f13",  }; //1101
+$.a($319, $343, 725);
+var $344 = { n: "color", v: "var(--theme-ui-colors-white,#ffffff)", r: 67, c: 21, s: "f12", u: "f13",  }; //1102
+$.a($319, $344, 727);
+var $345 = { n: "font-weight", v: "600", r: 68, c: 21, s: "f12", u: "f13",  }; //1103
+$.a($319, $345, 729);
+var $346 = { n: "font-size", v: "0.875rem", r: 69, c: 21, s: "f12", u: "f13",  }; //1104
+$.a($319, $346, 731);
+var $347 = { n: "min-height", v: "2rem", r: 70, c: 21, s: "f12", u: "f13",  }; //1105
+$.a($319, $347, 733);
+var $348 = { n: "min-width", v: "2rem", r: 71, c: 21, s: "f12", u: "f13",  }; //1106
+$.a($319, $348, 735);
+var $349 = { n: "padding", v: "0.25rem 0.75rem", r: 72, c: 21, s: "f12", u: "f13",  }; //1107
+$.a($319, $349, 737);
+var $350 = { n: "margin-right", v: "0.75rem", r: 73, c: 21, s: "f12", u: "f13",  }; //1108
+$.a($319, $350, 739);
+var $351 = { n: ".", v: "css-x2gyb8[disabled]", r: 74, c: 17, s: "f12", u: "f13",  }; //1109
+$.a($318, $351, 741);
+var $352 = { n: "+", v: ".css-x2gyb8[disabled]:hover", r: 75, c: 21, s: "f12", u: "f13",  }; //1110
+$.a($351, $352, 743);
+var $353 = { n: "cursor", v: "not-allowed", r: 76, c: 21, s: "f12", u: "f13",  }; //1111
+$.a($351, $353, 745);
+var $354 = { n: "opacity", v: "0.5", r: 77, c: 21, s: "f12", u: "f13",  }; //1112
+$.a($351, $354, 747);
+var $355 = { n: ".", v: "css-x2gyb8 svg", r: 78, c: 17, s: "f12", u: "f13",  }; //1113
+$.a($318, $355, 749);
+var $356 = { n: "-webkit-flex-shrink", v: "0", r: 79, c: 21, s: "f12", u: "f13",  }; //1114
+$.a($355, $356, 751);
+var $357 = { n: "-ms-flex-negative", v: "0", r: 80, c: 21, s: "f12", u: "f13",  }; //1115
+$.a($355, $357, 753);
+var $358 = { n: "flex-shrink", v: "0", r: 81, c: 21, s: "f12", u: "f13",  }; //1116
+$.a($355, $358, 755);
+var $359 = { n: "margin", v: "0 0.25rem", r: 82, c: 21, s: "f12", u: "f13",  }; //1117
+$.a($355, $359, 757);
+var $360 = { n: "-webkit-transform", v: "scale(1)", r: 83, c: 21, s: "f12", u: "f13",  }; //1118
+$.a($355, $360, 759);
+var $361 = { n: "-ms-transform", v: "scale(1)", r: 84, c: 21, s: "f12", u: "f13",  }; //1119
+$.a($355, $361, 761);
+var $362 = { n: "transform", v: "scale(1)", r: 85, c: 21, s: "f12", u: "f13",  }; //1120
+$.a($355, $362, 763);
+var $363 = { n: ".", v: "css-x2gyb8:hover:not([disabled]) svg", r: 86, c: 17, s: "f12", u: "f13",  }; //1121
+$.a($318, $363, 765);
+var $364 = { n: "+", v: ".css-x2gyb8:focus:not([disabled]) svg", r: 87, c: 21, s: "f12", u: "f13",  }; //1122
+$.a($363, $364, 767);
+var $365 = { n: "-webkit-animation", v: "animation-5yo8zs 1s linear infinite", r: 88, c: 21, s: "f12", u: "f13",  }; //1123
+$.a($363, $365, 769);
+var $366 = { n: "animation", v: "animation-5yo8zs 1s linear infinite", r: 89, c: 21, s: "f12", u: "f13",  }; //1124
+$.a($363, $366, 771);
+var $367 = { n: ".", v: "css-x2gyb8:hover", r: 90, c: 17, s: "f12", u: "f13",  }; //1125
+$.a($318, $367, 773);
+var $368 = { n: "background", v: "#542c85", r: 91, c: 21, s: "f12", u: "f13",  }; //1126
+$.a($367, $368, 775);
+var $369 = { n: "border", v: "1px solid #542c85", r: 92, c: 21, s: "f12", u: "f13",  }; //1127
+$.a($367, $369, 777);
+var $370 = { n: "media", v: "(min-width: 550px)", r: 93, c: 17, s: "f12", u: "f13",  }; //1128
+$.a($318, $370, 779);
+var $371 = { n: ".", v: "css-x2gyb8", r: 94, c: 21, s: "f12", u: "f13",  }; //1129
+$.a($370, $371, 781);
+var $372 = { n: "margin-right", v: "1.25rem", r: 95, c: 25, s: "f12", u: "f13",  }; //1130
+$.a($371, $372, 783);
+var $373 = { n: "keyframes", v: "animation-5yo8zs", r: 96, c: 17, s: "f12", u: "f13",  }; //1131
+$.a($318, $373, 785);
+var $374 = { n: "vendor", v: "-webkit-", r: 97, c: 21, s: "f12", u: "f13",  }; //1132
+$.a($373, $374, 787);
+var $375 = { n: "keyframe", v: "33%", r: 98, c: 21, s: "f12", u: "f13",  }; //1133
+$.a($373, $375, 789);
+var $376 = { n: "-webkit-transform", v: "scale(1)", r: 99, c: 25, s: "f12", u: "f13",  }; //1134
+$.a($375, $376, 791);
+var $377 = { n: "-ms-transform", v: "scale(1)", r: 100, c: 25, s: "f12", u: "f13",  }; //1135
+$.a($375, $377, 793);
+var $378 = { n: "transform", v: "scale(1)", r: 101, c: 25, s: "f12", u: "f13",  }; //1136
+$.a($375, $378, 795);
+var $379 = { n: "keyframe", v: "66%", r: 102, c: 21, s: "f12", u: "f13",  }; //1137
+$.a($373, $379, 797);
+var $380 = { n: "-webkit-transform", v: "scale(0.8)", r: 103, c: 25, s: "f12", u: "f13",  }; //1138
+$.a($379, $380, 799);
+var $381 = { n: "-ms-transform", v: "scale(0.8)", r: 104, c: 25, s: "f12", u: "f13",  }; //1139
+$.a($379, $381, 801);
+var $382 = { n: "transform", v: "scale(0.8)", r: 105, c: 25, s: "f12", u: "f13",  }; //1140
+$.a($379, $382, 803);
+var $383 = { n: "keyframes", v: "animation-5yo8zs", r: 106, c: 17, s: "f12", u: "f13",  }; //1141
+$.a($318, $383, 805);
+var $384 = { n: "vendor", v: "", r: 107, c: 21, s: "f12", u: "f13",  }; //1142
+$.a($383, $384, 807);
+var $385 = { n: "keyframe", v: "33%", r: 108, c: 21, s: "f12", u: "f13",  }; //1143
+$.a($383, $385, 809);
+var $386 = { n: "-webkit-transform", v: "scale(1)", r: 109, c: 25, s: "f12", u: "f13",  }; //1144
+$.a($385, $386, 811);
+var $387 = { n: "-ms-transform", v: "scale(1)", r: 110, c: 25, s: "f12", u: "f13",  }; //1145
+$.a($385, $387, 813);
+var $388 = { n: "transform", v: "scale(1)", r: 111, c: 25, s: "f12", u: "f13",  }; //1146
+$.a($385, $388, 815);
+var $389 = { n: "keyframe", v: "66%", r: 112, c: 21, s: "f12", u: "f13",  }; //1147
+$.a($383, $389, 817);
+var $390 = { n: "-webkit-transform", v: "scale(0.8)", r: 113, c: 25, s: "f12", u: "f13",  }; //1148
+$.a($389, $390, 819);
+var $391 = { n: "-ms-transform", v: "scale(0.8)", r: 114, c: 25, s: "f12", u: "f13",  }; //1149
+$.a($389, $391, 821);
+var $392 = { n: "transform", v: "scale(0.8)", r: 115, c: 25, s: "f12", u: "f13",  }; //1150
+$.a($389, $392, 823);
+var $393 = { n: "a", v: "Get Started", r: 116, c: 9, s: "f12", u: "f13",  }; //1151
+$.a($306, $393, 825);
+var $394 = { n: "class", v: "css-x2gyb8", r: 117, c: 13, s: "f12", u: "f13",  }; //1152
+$.a($393, $394, 827);
+var $395 = { n: "href", v: "/get-started/", r: 118, c: 13, s: "f12", u: "f13",  }; //1153
+$.a($393, $395, 829);
+var $396 = { n: "@style", v: "", r: 119, c: 9, s: "f12", u: "f13",  }; //1154
+$.a($306, $396, 831);
+var $397 = { n: "data-emotion-css", v: "hb58a6", r: 120, c: 13, s: "f12", u: "f13",  }; //1155
+$.a($396, $397, 833);
+var $398 = { n: "css", v: "", r: 121, c: 13, s: "f12", u: "f13",  }; //1156
+$.a($396, $398, 835);
+var $399 = { n: ".", v: "css-hb58a6", r: 122, c: 17, s: "f12", u: "f13",  }; //1157
+$.a($398, $399, 837);
+var $400 = { n: "margin-right", v: "0", r: 123, c: 21, s: "f12", u: "f13",  }; //1158
+$.a($399, $400, 839);
+var $401 = { n: "media", v: "(min-width: 550px)", r: 124, c: 17, s: "f12", u: "f13",  }; //1159
+$.a($398, $401, 841);
+var $402 = { n: ".", v: "css-hb58a6", r: 125, c: 21, s: "f12", u: "f13",  }; //1160
+$.a($401, $402, 843);
+var $403 = { n: "margin-right", v: "1.25rem", r: 126, c: 25, s: "f12", u: "f13",  }; //1161
+$.a($402, $403, 845);
+var $404 = { n: "@style", v: "", r: 127, c: 9, s: "f12", u: "f13",  }; //1162
+$.a($306, $404, 847);
+var $405 = { n: "data-emotion-css", v: "1epto2j animation-5yo8zs", r: 128, c: 13, s: "f12", u: "f13",  }; //1163
+$.a($404, $405, 849);
+var $406 = { n: "css", v: "", r: 129, c: 13, s: "f12", u: "f13",  }; //1164
+$.a($404, $406, 851);
+var $407 = { n: ".", v: "css-1epto2j", r: 130, c: 17, s: "f12", u: "f13",  }; //1165
+$.a($406, $407, 853);
+var $408 = { n: "-webkit-align-items", v: "center", r: 131, c: 21, s: "f12", u: "f13",  }; //1166
+$.a($407, $408, 855);
+var $409 = { n: "-webkit-box-align", v: "center", r: 132, c: 21, s: "f12", u: "f13",  }; //1167
+$.a($407, $409, 857);
+var $410 = { n: "-ms-flex-align", v: "center", r: 133, c: 21, s: "f12", u: "f13",  }; //1168
+$.a($407, $410, 859);
+var $411 = { n: "align-items", v: "center", r: 134, c: 21, s: "f12", u: "f13",  }; //1169
+$.a($407, $411, 861);
+var $412 = { n: "border", v: "var(--theme-ui-colors-grey-60,#635e69)", r: 135, c: 21, s: "f12", u: "f13",  }; //1170
+$.a($407, $412, 863);
+var $413 = { n: "border-radius", v: "4px", r: 136, c: 21, s: "f12", u: "f13",  }; //1171
+$.a($407, $413, 865);
+var $414 = { n: "box-sizing", v: "border-box", r: 137, c: 21, s: "f12", u: "f13",  }; //1172
+$.a($407, $414, 867);
+var $415 = { n: "cursor", v: "pointer", r: 138, c: 21, s: "f12", u: "f13",  }; //1173
+$.a($407, $415, 869);
+var $416 = { n: "display", v: "-webkit-inline-box", r: 139, c: 21, s: "f12", u: "f13",  }; //1174
+$.a($407, $416, 871);
+var $417 = { n: "display", v: "-webkit-inline-flex", r: 140, c: 21, s: "f12", u: "f13",  }; //1175
+$.a($407, $417, 873);
+var $418 = { n: "display", v: "-ms-inline-flexbox", r: 141, c: 21, s: "f12", u: "f13",  }; //1176
+$.a($407, $418, 875);
+var $419 = { n: "display", v: "inline-flex", r: 142, c: 21, s: "f12", u: "f13",  }; //1177
+$.a($407, $419, 877);
+var $420 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 143, c: 21, s: "f12", u: "f13",  }; //1178
+$.a($407, $420, 879);
+var $421 = { n: "-webkit-box-pack", v: "center", r: 144, c: 21, s: "f12", u: "f13",  }; //1179
+$.a($407, $421, 881);
+var $422 = { n: "-webkit-justify-content", v: "center", r: 145, c: 21, s: "f12", u: "f13",  }; //1180
+$.a($407, $422, 883);
+var $423 = { n: "-ms-flex-pack", v: "center", r: 146, c: 21, s: "f12", u: "f13",  }; //1181
+$.a($407, $423, 885);
+var $424 = { n: "justify-content", v: "center", r: 147, c: 21, s: "f12", u: "f13",  }; //1182
+$.a($407, $424, 887);
+var $425 = { n: "-webkit-transition", v: "background 250ms,border 250ms,color 250ms", r: 148, c: 21, s: "f12", u: "f13",  }; //1183
+$.a($407, $425, 889);
+var $426 = { n: "transition", v: "background 250ms,border 250ms,color 250ms", r: 149, c: 21, s: "f12", u: "f13",  }; //1184
+$.a($407, $426, 891);
+var $427 = { n: "line-height", v: "1", r: 150, c: 21, s: "f12", u: "f13",  }; //1185
+$.a($407, $427, 893);
+var $428 = { n: "-webkit-text-decoration", v: "none", r: 151, c: 21, s: "f12", u: "f13",  }; //1186
+$.a($407, $428, 895);
+var $429 = { n: "text-decoration", v: "none", r: 152, c: 21, s: "f12", u: "f13",  }; //1187
+$.a($407, $429, 897);
+var $430 = { n: "background", v: "transparent", r: 153, c: 21, s: "f12", u: "f13",  }; //1188
+$.a($407, $430, 899);
+var $431 = { n: "border", v: "1px solid transparent", r: 154, c: 21, s: "f12", u: "f13",  }; //1189
+$.a($407, $431, 901);
+var $432 = { n: "color", v: "#663399", r: 155, c: 21, s: "f12", u: "f13",  }; //1190
+$.a($407, $432, 903);
+var $433 = { n: "font-size", v: "0.875rem", r: 156, c: 21, s: "f12", u: "f13",  }; //1191
+$.a($407, $433, 905);
+var $434 = { n: "min-height", v: "2rem", r: 157, c: 21, s: "f12", u: "f13",  }; //1192
+$.a($407, $434, 907);
+var $435 = { n: "min-width", v: "2rem", r: 158, c: 21, s: "f12", u: "f13",  }; //1193
+$.a($407, $435, 909);
+var $436 = { n: "padding", v: "0.25rem 0.75rem", r: 159, c: 21, s: "f12", u: "f13",  }; //1194
+$.a($407, $436, 911);
+var $437 = { n: "margin-right", v: "0", r: 160, c: 21, s: "f12", u: "f13",  }; //1195
+$.a($407, $437, 913);
+var $438 = { n: ".", v: "css-1epto2j[disabled]", r: 161, c: 17, s: "f12", u: "f13",  }; //1196
+$.a($406, $438, 915);
+var $439 = { n: "+", v: ".css-1epto2j[disabled]:hover", r: 162, c: 21, s: "f12", u: "f13",  }; //1197
+$.a($438, $439, 917);
+var $440 = { n: "cursor", v: "not-allowed", r: 163, c: 21, s: "f12", u: "f13",  }; //1198
+$.a($438, $440, 919);
+var $441 = { n: "opacity", v: "0.5", r: 164, c: 21, s: "f12", u: "f13",  }; //1199
+$.a($438, $441, 921);
+var $442 = { n: ".", v: "css-1epto2j svg", r: 165, c: 17, s: "f12", u: "f13",  }; //1200
+$.a($406, $442, 923);
+var $443 = { n: "-webkit-flex-shrink", v: "0", r: 166, c: 21, s: "f12", u: "f13",  }; //1201
+$.a($442, $443, 925);
+var $444 = { n: "-ms-flex-negative", v: "0", r: 167, c: 21, s: "f12", u: "f13",  }; //1202
+$.a($442, $444, 927);
+var $445 = { n: "flex-shrink", v: "0", r: 168, c: 21, s: "f12", u: "f13",  }; //1203
+$.a($442, $445, 929);
+var $446 = { n: "margin", v: "0 0.25rem", r: 169, c: 21, s: "f12", u: "f13",  }; //1204
+$.a($442, $446, 931);
+var $447 = { n: "-webkit-transform", v: "scale(1)", r: 170, c: 21, s: "f12", u: "f13",  }; //1205
+$.a($442, $447, 933);
+var $448 = { n: "-ms-transform", v: "scale(1)", r: 171, c: 21, s: "f12", u: "f13",  }; //1206
+$.a($442, $448, 935);
+var $449 = { n: "transform", v: "scale(1)", r: 172, c: 21, s: "f12", u: "f13",  }; //1207
+$.a($442, $449, 937);
+var $450 = { n: ".", v: "css-1epto2j:hover:not([disabled]) svg", r: 173, c: 17, s: "f12", u: "f13",  }; //1208
+$.a($406, $450, 939);
+var $451 = { n: "+", v: ".css-1epto2j:focus:not([disabled]) svg", r: 174, c: 21, s: "f12", u: "f13",  }; //1209
+$.a($450, $451, 941);
+var $452 = { n: "-webkit-animation", v: "animation-5yo8zs 1s linear infinite", r: 175, c: 21, s: "f12", u: "f13",  }; //1210
+$.a($450, $452, 943);
+var $453 = { n: "animation", v: "animation-5yo8zs 1s linear infinite", r: 176, c: 21, s: "f12", u: "f13",  }; //1211
+$.a($450, $453, 945);
+var $454 = { n: ".", v: "css-1epto2j:hover", r: 177, c: 17, s: "f12", u: "f13",  }; //1212
+$.a($406, $454, 947);
+var $455 = { n: "background", v: "#fcfaff", r: 178, c: 21, s: "f12", u: "f13",  }; //1213
+$.a($454, $455, 949);
+var $456 = { n: "color", v: "#362066", r: 179, c: 21, s: "f12", u: "f13",  }; //1214
+$.a($454, $456, 951);
+var $457 = { n: "media", v: "(min-width: 550px)", r: 180, c: 17, s: "f12", u: "f13",  }; //1215
+$.a($406, $457, 953);
+var $458 = { n: ".", v: "css-1epto2j", r: 181, c: 21, s: "f12", u: "f13",  }; //1216
+$.a($457, $458, 955);
+var $459 = { n: "margin-right", v: "1.25rem", r: 182, c: 25, s: "f12", u: "f13",  }; //1217
+$.a($458, $459, 957);
+var $460 = { n: "keyframes", v: "animation-5yo8zs", r: 183, c: 17, s: "f12", u: "f13",  }; //1218
+$.a($406, $460, 959);
+var $461 = { n: "vendor", v: "-webkit-", r: 184, c: 21, s: "f12", u: "f13",  }; //1219
+$.a($460, $461, 961);
+var $462 = { n: "keyframe", v: "33%", r: 185, c: 21, s: "f12", u: "f13",  }; //1220
+$.a($460, $462, 963);
+var $463 = { n: "-webkit-transform", v: "scale(1)", r: 186, c: 25, s: "f12", u: "f13",  }; //1221
+$.a($462, $463, 965);
+var $464 = { n: "-ms-transform", v: "scale(1)", r: 187, c: 25, s: "f12", u: "f13",  }; //1222
+$.a($462, $464, 967);
+var $465 = { n: "transform", v: "scale(1)", r: 188, c: 25, s: "f12", u: "f13",  }; //1223
+$.a($462, $465, 969);
+var $466 = { n: "keyframe", v: "66%", r: 189, c: 21, s: "f12", u: "f13",  }; //1224
+$.a($460, $466, 971);
+var $467 = { n: "-webkit-transform", v: "scale(0.8)", r: 190, c: 25, s: "f12", u: "f13",  }; //1225
+$.a($466, $467, 973);
+var $468 = { n: "-ms-transform", v: "scale(0.8)", r: 191, c: 25, s: "f12", u: "f13",  }; //1226
+$.a($466, $468, 975);
+var $469 = { n: "transform", v: "scale(0.8)", r: 192, c: 25, s: "f12", u: "f13",  }; //1227
+$.a($466, $469, 977);
+var $470 = { n: "keyframes", v: "animation-5yo8zs", r: 193, c: 17, s: "f12", u: "f13",  }; //1228
+$.a($406, $470, 979);
+var $471 = { n: "vendor", v: "", r: 194, c: 21, s: "f12", u: "f13",  }; //1229
+$.a($470, $471, 981);
+var $472 = { n: "keyframe", v: "33%", r: 195, c: 21, s: "f12", u: "f13",  }; //1230
+$.a($470, $472, 983);
+var $473 = { n: "-webkit-transform", v: "scale(1)", r: 196, c: 25, s: "f12", u: "f13",  }; //1231
+$.a($472, $473, 985);
+var $474 = { n: "-ms-transform", v: "scale(1)", r: 197, c: 25, s: "f12", u: "f13",  }; //1232
+$.a($472, $474, 987);
+var $475 = { n: "transform", v: "scale(1)", r: 198, c: 25, s: "f12", u: "f13",  }; //1233
+$.a($472, $475, 989);
+var $476 = { n: "keyframe", v: "66%", r: 199, c: 21, s: "f12", u: "f13",  }; //1234
+$.a($470, $476, 991);
+var $477 = { n: "-webkit-transform", v: "scale(0.8)", r: 200, c: 25, s: "f12", u: "f13",  }; //1235
+$.a($476, $477, 993);
+var $478 = { n: "-ms-transform", v: "scale(0.8)", r: 201, c: 25, s: "f12", u: "f13",  }; //1236
+$.a($476, $478, 995);
+var $479 = { n: "transform", v: "scale(0.8)", r: 202, c: 25, s: "f12", u: "f13",  }; //1237
+$.a($476, $479, 997);
+var $480 = { n: "a", v: "Contact", r: 203, c: 9, s: "f12", u: "f13",  }; //1238
+$.a($306, $480, 999);
+var $481 = { n: "class", v: "css-1epto2j", r: 204, c: 13, s: "f12", u: "f13",  }; //1239
+$.a($480, $481, 1001);
+var $482 = { n: "href", v: "/contact-us/", r: 205, c: 13, s: "f12", u: "f13",  }; //1240
+$.a($480, $482, 1003);
+var $483 = { n: "a", v: "Log in", r: 206, c: 9, s: "f12", u: "f13",  }; //1241
+$.a($306, $483, 1005);
+var $484 = { n: "class", v: "css-1epto2j", r: 207, c: 13, s: "f12", u: "f13",  }; //1242
+$.a($483, $484, 1007);
+var $485 = { n: "href", v: "/dashboard/login/", r: 208, c: 13, s: "f12", u: "f13",  }; //1243
+$.a($483, $485, 1009);
+var $486 = { n: "@style", v: "", r: 2, c: 5, s: "f13", u: "f14",  }; //1299
+$.a($66, $486, 1011);
+var $487 = { n: "data-emotion-css", v: "et18we", r: 3, c: 9, s: "f13", u: "f14",  }; //1300
+$.a($486, $487, 1013);
+var $488 = { n: "css", v: "", r: 4, c: 9, s: "f13", u: "f14",  }; //1301
+$.a($486, $488, 1015);
+var $489 = { n: ".", v: "css-et18we", r: 5, c: 13, s: "f13", u: "f14",  }; //1302
+$.a($488, $489, 1017);
+var $490 = { n: "bottom", v: "0", r: 7, c: 17, s: "f13", u: "f14",  }; //1303
+$.a($489, $490, 1019);
+var $491 = { n: "display", v: "flex", r: 8, c: 17, s: "f13", u: "f14",  }; //1304
+$.a($489, $491, 1021);
+var $492 = { n: "-webkit-box-flex", v: "1", r: 9, c: 17, s: "f13", u: "f14",  }; //1305
+$.a($489, $492, 1023);
+var $493 = { n: "-webkit-flex-grow", v: "1", r: 10, c: 17, s: "f13", u: "f14",  }; //1306
+$.a($489, $493, 1025);
+var $494 = { n: "-ms-flex-positive", v: "1", r: 11, c: 17, s: "f13", u: "f14",  }; //1307
+$.a($489, $494, 1027);
+var $495 = { n: "flex-grow", v: "1", r: 12, c: 17, s: "f13", u: "f14",  }; //1308
+$.a($489, $495, 1029);
+var $496 = { n: "padding-top", v: "7rem", r: 14, c: 17, s: "f13", u: "f14",  }; //1309
+$.a($489, $496, 1031);
+var $497 = { n: "padding-bottom", v: "3rem", r: 15, c: 17, s: "f13", u: "f14",  }; //1310
+$.a($489, $497, 1033);
+var $498 = { n: "position", v: "fixed", r: 16, c: 17, s: "f13", u: "f14",  }; //1311
+$.a($489, $498, 1035);
+var $499 = { n: "top", v: "0", r: 17, c: 17, s: "f13", u: "f14",  }; //1312
+$.a($489, $499, 1037);
+var $500 = { n: "transform", v: "translateX(0)", r: 18, c: 17, s: "f13", u: "f14",  }; //1313
+$.a($489, $500, 1039);
+var $501 = { n: "transition", v: "transform 500ms cubic-bezier(0.4,0,0.2,1)", r: 19, c: 17, s: "f13", u: "f14",  }; //1314
+$.a($489, $501, 1041);
+var $502 = { n: "width", v: "100%", r: 20, c: 17, s: "f13", u: "f14",  }; //1315
+$.a($489, $502, 1043);
+var $503 = { n: "overflow-y", v: "auto", r: 21, c: 17, s: "f13", u: "f14",  }; //1316
+$.a($489, $503, 1045);
+var $504 = { n: "media", v: "(min-width: 1000px)", r: 22, c: 13, s: "f13", u: "f14",  }; //1317
+$.a($488, $504, 1047);
+var $505 = { n: ".", v: "css-et18we", r: 23, c: 17, s: "f13", u: "f14",  }; //1318
+$.a($504, $505, 1049);
+var $506 = { n: "background", v: "none", r: 24, c: 21, s: "f13", u: "f14",  }; //1319
+$.a($505, $506, 1051);
+var $507 = { n: "display", v: "flex", r: 25, c: 21, s: "f13", u: "f14",  }; //1320
+$.a($505, $507, 1053);
+var $508 = { n: "justify-content", v: "flex-start", r: 26, c: 21, s: "f13", u: "f14",  }; //1321
+$.a($505, $508, 1055);
+var $509 = { n: "position", v: "relative", r: 27, c: 21, s: "f13", u: "f14",  }; //1322
+$.a($505, $509, 1057);
+var $510 = { n: "bottom", v: "auto", r: 28, c: 21, s: "f13", u: "f14",  }; //1323
+$.a($505, $510, 1059);
+var $511 = { n: "top", v: "0.25rem", r: 29, c: 21, s: "f13", u: "f14",  }; //1324
+$.a($505, $511, 1061);
+var $512 = { n: "left", v: "auto", r: 30, c: 21, s: "f13", u: "f14",  }; //1325
+$.a($505, $512, 1063);
+var $513 = { n: "padding", v: "0", r: 31, c: 21, s: "f13", u: "f14",  }; //1326
+$.a($505, $513, 1065);
+var $514 = { n: "transform", v: "none", r: 32, c: 21, s: "f13", u: "f14",  }; //1327
+$.a($505, $514, 1067);
+var $515 = { n: "transition", v: "none", r: 33, c: 21, s: "f13", u: "f14",  }; //1328
+$.a($505, $515, 1069);
+var $516 = { n: "overflow-y", v: "visible", r: 34, c: 21, s: "f13", u: "f14",  }; //1329
+$.a($505, $516, 1071);
+var $517 = { n: ".", v: "css-et18we", r: 35, c: 5, s: "f13", u: "f14",  }; //1330
+$.a($66, $517, 1073);
+var $518 = { n: "@style", v: "", r: 36, c: 9, s: "f13", u: "f14",  }; //1331
+$.a($517, $518, 1075);
+var $519 = { n: "data-emotion-css", v: "pucg4a", r: 37, c: 13, s: "f13", u: "f14",  }; //1332
+$.a($518, $519, 1077);
+var $520 = { n: "css", v: "", r: 38, c: 13, s: "f13", u: "f14",  }; //1333
+$.a($518, $520, 1079);
+var $521 = { n: ".", v: "css-pucg4a", r: 39, c: 17, s: "f13", u: "f14",  }; //1334
+$.a($520, $521, 1081);
+var $522 = { n: "display", v: "flex", r: 40, c: 21, s: "f13", u: "f14",  }; //1335
+$.a($521, $522, 1083);
+var $523 = { n: "flex-direction", v: "column", r: 41, c: 21, s: "f13", u: "f14",  }; //1336
+$.a($521, $523, 1085);
+var $524 = { n: "width", v: "100%", r: 42, c: 21, s: "f13", u: "f14",  }; //1337
+$.a($521, $524, 1087);
+var $525 = { n: "position", v: "relative", r: 43, c: 21, s: "f13", u: "f14",  }; //1338
+$.a($521, $525, 1089);
+var $526 = { n: "transition", v: "opacity 500ms cubic-bezier(0.4,0,1,1)", r: 44, c: 21, s: "f13", u: "f14",  }; //1339
+$.a($521, $526, 1091);
+var $527 = { n: "media", v: "(min-width: 1000px)", r: 46, c: 17, s: "f13", u: "f14",  }; //1340
+$.a($520, $527, 1093);
+var $528 = { n: ".", v: "css-pucg4a", r: 47, c: 21, s: "f13", u: "f14",  }; //1341
+$.a($527, $528, 1095);
+var $529 = { n: "flex-wrap", v: "wrap", r: 48, c: 25, s: "f13", u: "f14",  }; //1342
+$.a($528, $529, 1097);
+var $530 = { n: "flex-direction", v: "row", r: 49, c: 25, s: "f13", u: "f14",  }; //1343
+$.a($528, $530, 1099);
+var $531 = { n: "justify-content", v: "flex-end", r: 50, c: 25, s: "f13", u: "f14",  }; //1344
+$.a($528, $531, 1101);
+var $532 = { n: "align-items", v: "center", r: 51, c: 25, s: "f13", u: "f14",  }; //1345
+$.a($528, $532, 1103);
+var $533 = { n: "opacity", v: "1", r: 52, c: 25, s: "f13", u: "f14",  }; //1346
+$.a($528, $533, 1105);
+var $534 = { n: ".", v: "css-pucg4a > li:last-of-type", r: 53, c: 21, s: "f13", u: "f14",  }; //1347
+$.a($527, $534, 1107);
+var $535 = { n: "margin-left", v: "auto", r: 54, c: 25, s: "f13", u: "f14",  }; //1348
+$.a($534, $535, 1109);
+var $536 = { n: "ul", v: "", r: 55, c: 9, s: "f13", u: "f14",  }; //1349
+$.a($517, $536, 1111);
+var $537 = { n: "class", v: "css-pucg4a", r: 56, c: 13, s: "f13", u: "f14",  }; //1350
+$.a($536, $537, 1113);
+var $538 = { n: "@style", v: "", r: 2, c: 5, s: "f14", u: "f15",  }; //1377
+$.a($536, $538, 1115);
+var $539 = { n: "data-emotion-css", v: "uh3ivc", r: 3, c: 9, s: "f14", u: "f15",  }; //1378
+$.a($538, $539, 1117);
+var $540 = { n: "css", v: "", r: 4, c: 9, s: "f14", u: "f15",  }; //1379
+$.a($538, $540, 1119);
+var $541 = { n: "media", v: "(min-width: 1000px)", r: 5, c: 13, s: "f14", u: "f15",  }; //1380
+$.a($540, $541, 1121);
+var $542 = { n: ".", v: "css-uh3ivc", r: 6, c: 17, s: "f14", u: "f15",  }; //1381
+$.a($541, $542, 1123);
+var $543 = { n: "padding-bottom", v: "0.25rem", r: 7, c: 21, s: "f14", u: "f15",  }; //1382
+$.a($542, $543, 1125);
+var $544 = { n: ".", v: "css-uh3ivc:last-of-type", r: 8, c: 17, s: "f14", u: "f15",  }; //1383
+$.a($541, $544, 1127);
+var $545 = { n: "padding-right", v: "3rem", r: 9, c: 21, s: "f14", u: "f15",  }; //1384
+$.a($544, $545, 1129);
+var $546 = { n: "li", v: "", r: 10, c: 5, s: "f14", u: "f15",  }; //1385
+$.a($536, $546, 1131);
+var $547 = { n: "class", v: "css-uh3ivc", r: 11, c: 9, s: "f14", u: "f15",  }; //1386
+$.a($546, $547, 1133);
+var $548 = { n: "@style", v: "", r: 12, c: 9, s: "f14", u: "f15",  }; //1387
+$.a($546, $548, 1135);
+var $549 = { n: "data-emotion-css", v: "qg23q3", r: 13, c: 13, s: "f14", u: "f15",  }; //1388
+$.a($548, $549, 1137);
+var $550 = { n: "css", v: "", r: 14, c: 13, s: "f14", u: "f15",  }; //1389
+$.a($548, $550, 1139);
+var $551 = { n: ".", v: "css-qg23q3", r: 15, c: 17, s: "f14", u: "f15",  }; //1390
+$.a($550, $551, 1141);
+var $552 = { n: "display", v: "flex", r: 16, c: 21, s: "f14", u: "f15",  }; //1391
+$.a($551, $552, 1143);
+var $553 = { n: "flex-direction", v: "column", r: 17, c: 21, s: "f14", u: "f15",  }; //1392
+$.a($551, $553, 1145);
+var $554 = { n: "media", v: "(min-width: 1000px)", r: 18, c: 17, s: "f14", u: "f15",  }; //1393
+$.a($550, $554, 1147);
+var $555 = { n: ".", v: "css-qg23q3", r: 19, c: 21, s: "f14", u: "f15",  }; //1394
+$.a($554, $555, 1149);
+var $556 = { n: "flex-direction", v: "row", r: 20, c: 25, s: "f14", u: "f15",  }; //1395
+$.a($555, $556, 1151);
+var $557 = { n: "align-items", v: "center", r: 21, c: 25, s: "f14", u: "f15",  }; //1396
+$.a($555, $557, 1153);
+var $558 = { n: "ul", v: "", r: 22, c: 9, s: "f14", u: "f15",  }; //1397
+$.a($546, $558, 1155);
+var $559 = { n: "class", v: "css-qg23q3", r: 23, c: 13, s: "f14", u: "f15",  }; //1398
+$.a($558, $559, 1157);
+var $560 = { n: "li", v: "", r: 2, c: 5, s: "f15", u: "f16",  }; //1565
+$.a($558, $560, 1159);
+var $561 = { n: "class", v: "css-1wgu51w", r: 3, c: 9, s: "f15", u: "f16",  }; //1566
+$.a($560, $561, 1161);
+var $562 = { n: "@style", v: "", r: 4, c: 9, s: "f15", u: "f16",  }; //1567
+$.a($560, $562, 1163);
+var $563 = { n: "data-emotion-css", v: "1clvfi2", r: 5, c: 13, s: "f15", u: "f16",  }; //1568
+$.a($562, $563, 1165);
+var $564 = { n: "css", v: "", r: 6, c: 13, s: "f15", u: "f16",  }; //1569
+$.a($562, $564, 1167);
+var $565 = { n: ".", v: "css-1clvfi2", r: 7, c: 17, s: "f15", u: "f16",  }; //1570
+$.a($564, $565, 1169);
+var $566 = { n: "padding", v: "0.25rem 2rem", r: 8, c: 21, s: "f15", u: "f16",  }; //1571
+$.a($565, $566, 1171);
+var $567 = { n: "media", v: "(min-width: 1000px)", r: 9, c: 17, s: "f15", u: "f16",  }; //1572
+$.a($564, $567, 1173);
+var $568 = { n: ".", v: "css-1clvfi2", r: 10, c: 21, s: "f15", u: "f16",  }; //1573
+$.a($567, $568, 1175);
+var $569 = { n: "padding", v: "0", r: 11, c: 25, s: "f15", u: "f16",  }; //1574
+$.a($568, $569, 1177);
+var $570 = { n: ".", v: "css-1clvfi2", r: 12, c: 9, s: "f15", u: "f16",  }; //1575
+$.a($560, $570, 1179);
+var $571 = { n: "@style", v: "", r: 13, c: 13, s: "f15", u: "f16",  }; //1576
+$.a($570, $571, 1181);
+var $572 = { n: "data-emotion-css", v: "1hrzjy2", r: 14, c: 17, s: "f15", u: "f16",  }; //1577
+$.a($571, $572, 1183);
+var $573 = { n: "css", v: "", r: 15, c: 17, s: "f15", u: "f16",  }; //1578
+$.a($571, $573, 1185);
+var $574 = { n: ".", v: "css-1hrzjy2", r: 16, c: 21, s: "f15", u: "f16",  }; //1579
+$.a($573, $574, 1187);
+var $575 = { n: "color", v: "var(--theme-ui-colors-grey-50,#78757a)", r: 17, c: 25, s: "f15", u: "f16",  }; //1580
+$.a($574, $575, 1189);
+var $576 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 18, c: 25, s: "f15", u: "f16",  }; //1581
+$.a($574, $576, 1191);
+var $577 = { n: "font-size", v: "0.75rem", r: 19, c: 25, s: "f15", u: "f16",  }; //1582
+$.a($574, $577, 1193);
+var $578 = { n: "margin-bottom", v: "1rem", r: 20, c: 25, s: "f15", u: "f16",  }; //1583
+$.a($574, $578, 1195);
+var $579 = { n: "text-transform", v: "uppercase", r: 21, c: 25, s: "f15", u: "f16",  }; //1584
+$.a($574, $579, 1197);
+var $580 = { n: "text-decoration", v: "none", r: 22, c: 25, s: "f15", u: "f16",  }; //1585
+$.a($574, $580, 1199);
+var $581 = { n: "display", v: "block", r: 23, c: 25, s: "f15", u: "f16",  }; //1586
+$.a($574, $581, 1201);
+var $582 = { n: ".", v: "css-1hrzjy2:hover", r: 24, c: 21, s: "f15", u: "f16",  }; //1587
+$.a($573, $582, 1203);
+var $583 = { n: "+", v: ".css-1hrzjy2:focus", r: 25, c: 25, s: "f15", u: "f16",  }; //1588
+$.a($582, $583, 1205);
+var $584 = { n: "-webkit-text-decoration", v: "none", r: 26, c: 25, s: "f15", u: "f16",  }; //1589
+$.a($582, $584, 1207);
+var $585 = { n: "text-decoration", v: "none", r: 27, c: 25, s: "f15", u: "f16",  }; //1590
+$.a($582, $585, 1209);
+var $586 = { n: "media", v: "(min-width: 1000px)", r: 28, c: 21, s: "f15", u: "f16",  }; //1591
+$.a($573, $586, 1211);
+var $587 = { n: ".", v: "css-1hrzjy2", r: 29, c: 25, s: "f15", u: "f16",  }; //1592
+$.a($586, $587, 1213);
+var $588 = { n: "display", v: "none", r: 30, c: 29, s: "f15", u: "f16",  }; //1593
+$.a($587, $588, 1215);
+var $589 = { n: "@style", v: "", r: 31, c: 13, s: "f15", u: "f16",  }; //1594
+$.a($570, $589, 1217);
+var $590 = { n: "data-emotion-css", v: "1enu353", r: 32, c: 17, s: "f15", u: "f16",  }; //1595
+$.a($589, $590, 1219);
+var $591 = { n: "css", v: "", r: 33, c: 17, s: "f15", u: "f16",  }; //1596
+$.a($589, $591, 1221);
+var $592 = { n: ".", v: "css-1enu353", r: 34, c: 21, s: "f15", u: "f16",  }; //1597
+$.a($591, $592, 1223);
+var $593 = { n: "margin", v: "0", r: 35, c: 25, s: "f15", u: "f16",  }; //1598
+$.a($592, $593, 1225);
+var $594 = { n: "line-height", v: "1.25", r: 36, c: 25, s: "f15", u: "f16",  }; //1599
+$.a($592, $594, 1227);
+var $595 = { n: "color", v: "#232129", r: 37, c: 25, s: "f15", u: "f16",  }; //1600
+$.a($592, $595, 1229);
+var $596 = { n: "font-weight", v: "700", r: 38, c: 25, s: "f15", u: "f16",  }; //1601
+$.a($592, $596, 1231);
+var $597 = { n: "font-family", v: "Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 39, c: 25, s: "f15", u: "f16",  }; //1602
+$.a($592, $597, 1233);
+var $598 = { n: "color", v: "var(--theme-ui-colors-grey-50,#78757a)", r: 40, c: 25, s: "f15", u: "f16",  }; //1603
+$.a($592, $598, 1235);
+var $599 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 41, c: 25, s: "f15", u: "f16",  }; //1604
+$.a($592, $599, 1237);
+var $600 = { n: "font-size", v: "0.75rem", r: 42, c: 25, s: "f15", u: "f16",  }; //1605
+$.a($592, $600, 1239);
+var $601 = { n: "margin-bottom", v: "1rem", r: 43, c: 25, s: "f15", u: "f16",  }; //1606
+$.a($592, $601, 1241);
+var $602 = { n: "text-transform", v: "uppercase", r: 44, c: 25, s: "f15", u: "f16",  }; //1607
+$.a($592, $602, 1243);
+var $603 = { n: "text-decoration", v: "none", r: 45, c: 25, s: "f15", u: "f16",  }; //1608
+$.a($592, $603, 1245);
+var $604 = { n: "display", v: "block", r: 46, c: 25, s: "f15", u: "f16",  }; //1609
+$.a($592, $604, 1247);
+var $605 = { n: ".", v: "css-1enu353:hover", r: 47, c: 21, s: "f15", u: "f16",  }; //1610
+$.a($591, $605, 1249);
+var $606 = { n: "+", v: ".css-1enu353:focus", r: 48, c: 25, s: "f15", u: "f16",  }; //1611
+$.a($605, $606, 1251);
+var $607 = { n: "text-decoration", v: "none", r: 49, c: 25, s: "f15", u: "f16",  }; //1612
+$.a($605, $607, 1253);
+var $608 = { n: "media", v: "(min-width: 1000px)", r: 50, c: 21, s: "f15", u: "f16",  }; //1613
+$.a($591, $608, 1255);
+var $609 = { n: ".", v: "css-1enu353", r: 51, c: 25, s: "f15", u: "f16",  }; //1614
+$.a($608, $609, 1257);
+var $610 = { n: "display", v: "none", r: 52, c: 29, s: "f15", u: "f16",  }; //1615
+$.a($609, $610, 1259);
+var $611 = { n: "h3", v: "Docs", r: 53, c: 13, s: "f15", u: "f16",  }; //1616
+$.a($570, $611, 1261);
+var $612 = { n: "class", v: "css-1enu353", r: 54, c: 17, s: "f15", u: "f16",  }; //1617
+$.a($611, $612, 1263);
+var $613 = { n: "@style", v: "", r: 55, c: 13, s: "f15", u: "f16",  }; //1618
+$.a($570, $613, 1265);
+var $614 = { n: "data-emotion-css", v: "3q8779 animation-5yo8zs", r: 56, c: 17, s: "f15", u: "f16",  }; //1619
+$.a($613, $614, 1267);
+var $615 = { n: "css", v: "", r: 57, c: 17, s: "f15", u: "f16",  }; //1620
+$.a($613, $615, 1269);
+var $616 = { n: ".", v: "css-3q8779", r: 58, c: 21, s: "f15", u: "f16",  }; //1621
+$.a($615, $616, 1271);
+var $617 = { n: "align-items", v: "center", r: 59, c: 25, s: "f15", u: "f16",  }; //1622
+$.a($616, $617, 1273);
+var $618 = { n: "border", v: "var(--theme-ui-colors-grey-60,#635e69)", r: 60, c: 25, s: "f15", u: "f16",  }; //1623
+$.a($616, $618, 1275);
+var $619 = { n: "border-radius", v: "4px", r: 61, c: 25, s: "f15", u: "f16",  }; //1624
+$.a($616, $619, 1277);
+var $620 = { n: "box-sizing", v: "border-box", r: 62, c: 25, s: "f15", u: "f16",  }; //1625
+$.a($616, $620, 1279);
+var $621 = { n: "cursor", v: "pointer", r: 63, c: 25, s: "f15", u: "f16",  }; //1626
+$.a($616, $621, 1281);
+var $622 = { n: "display", v: "inline-flex", r: 64, c: 25, s: "f15", u: "f16",  }; //1627
+$.a($616, $622, 1283);
+var $623 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 65, c: 25, s: "f15", u: "f16",  }; //1628
+$.a($616, $623, 1285);
+var $624 = { n: "-webkit-box-pack", v: "center", r: 66, c: 25, s: "f15", u: "f16",  }; //1629
+$.a($616, $624, 1287);
+var $625 = { n: "-ms-flex-pack", v: "center", r: 67, c: 25, s: "f15", u: "f16",  }; //1630
+$.a($616, $625, 1289);
+var $626 = { n: "justify-content", v: "center", r: 68, c: 25, s: "f15", u: "f16",  }; //1631
+$.a($616, $626, 1291);
+var $627 = { n: "transition", v: "background 250ms,border 250ms,color 250ms", r: 69, c: 25, s: "f15", u: "f16",  }; //1632
+$.a($616, $627, 1293);
+var $628 = { n: "line-height", v: "1", r: 70, c: 25, s: "f15", u: "f16",  }; //1633
+$.a($616, $628, 1295);
+var $629 = { n: "text-decoration", v: "none", r: 71, c: 25, s: "f15", u: "f16",  }; //1634
+$.a($616, $629, 1297);
+var $630 = { n: "background", v: "transparent", r: 72, c: 25, s: "f15", u: "f16",  }; //1635
+$.a($616, $630, 1299);
+var $631 = { n: "border", v: "1px solid transparent", r: 73, c: 25, s: "f15", u: "f16",  }; //1636
+$.a($616, $631, 1301);
+var $632 = { n: "color", v: "#663399", r: 74, c: 25, s: "f15", u: "f16",  }; //1637
+$.a($616, $632, 1303);
+var $633 = { n: "font-size", v: "0.875rem", r: 75, c: 25, s: "f15", u: "f16",  }; //1638
+$.a($616, $633, 1305);
+var $634 = { n: "min-height", v: "2rem", r: 76, c: 25, s: "f15", u: "f16",  }; //1639
+$.a($616, $634, 1307);
+var $635 = { n: "min-width", v: "2rem", r: 77, c: 25, s: "f15", u: "f16",  }; //1640
+$.a($616, $635, 1309);
+var $636 = { n: "padding", v: "0.25rem 0.75rem", r: 78, c: 25, s: "f15", u: "f16",  }; //1641
+$.a($616, $636, 1311);
+var $637 = { n: "color", v: "var(--theme-ui-colors-grey-70,#48434f)", r: 79, c: 25, s: "f15", u: "f16",  }; //1642
+$.a($616, $637, 1313);
+var $638 = { n: "display", v: "none", r: 80, c: 25, s: "f15", u: "f16",  }; //1643
+$.a($616, $638, 1315);
+var $639 = { n: ".", v: "css-3q8779[disabled]", r: 81, c: 21, s: "f15", u: "f16",  }; //1644
+$.a($615, $639, 1317);
+var $640 = { n: "+", v: ".css-3q8779[disabled]:hover", r: 82, c: 25, s: "f15", u: "f16",  }; //1645
+$.a($639, $640, 1319);
+var $641 = { n: "cursor", v: "not-allowed", r: 83, c: 25, s: "f15", u: "f16",  }; //1646
+$.a($639, $641, 1321);
+var $642 = { n: "opacity", v: "0.5", r: 84, c: 25, s: "f15", u: "f16",  }; //1647
+$.a($639, $642, 1323);
+var $643 = { n: ".", v: "css-3q8779 svg", r: 85, c: 21, s: "f15", u: "f16",  }; //1648
+$.a($615, $643, 1325);
+var $644 = { n: "flex-shrink", v: "0", r: 86, c: 25, s: "f15", u: "f16",  }; //1649
+$.a($643, $644, 1327);
+var $645 = { n: "margin", v: "0 0.25rem", r: 87, c: 25, s: "f15", u: "f16",  }; //1650
+$.a($643, $645, 1329);
+var $646 = { n: "transform", v: "scale(1)", r: 88, c: 25, s: "f15", u: "f16",  }; //1651
+$.a($643, $646, 1331);
+var $647 = { n: "margin-right", v: "-0.25rem", r: 89, c: 25, s: "f15", u: "f16",  }; //1652
+$.a($643, $647, 1333);
+var $648 = { n: ".", v: "css-3q8779:hover:not([disabled]) svg", r: 90, c: 21, s: "f15", u: "f16",  }; //1653
+$.a($615, $648, 1335);
+var $649 = { n: "+", v: ".css-3q8779:focus:not([disabled]) svg", r: 91, c: 25, s: "f15", u: "f16",  }; //1654
+$.a($648, $649, 1337);
+var $650 = { n: "animation", v: "animation-5yo8zs 1s linear infinite", r: 92, c: 25, s: "f15", u: "f16",  }; //1655
+$.a($648, $650, 1339);
+var $651 = { n: ".", v: "css-3q8779:hover", r: 93, c: 21, s: "f15", u: "f16",  }; //1656
+$.a($615, $651, 1341);
+var $652 = { n: "background", v: "#fcfaff", r: 94, c: 25, s: "f15", u: "f16",  }; //1657
+$.a($651, $652, 1343);
+var $653 = { n: "color", v: "#362066", r: 95, c: 25, s: "f15", u: "f16",  }; //1658
+$.a($651, $653, 1345);
+var $654 = { n: "media", v: "(min-width: 1000px)", r: 96, c: 21, s: "f15", u: "f16",  }; //1659
+$.a($615, $654, 1347);
+var $655 = { n: ".", v: "css-3q8779", r: 97, c: 25, s: "f15", u: "f16",  }; //1660
+$.a($654, $655, 1349);
+var $656 = { n: "display", v: "inline-flex", r: 98, c: 29, s: "f15", u: "f16",  }; //1661
+$.a($655, $656, 1351);
+var $657 = { n: "keyframes", v: "animation-5yo8zs", r: 99, c: 21, s: "f15", u: "f16",  }; //1662
+$.a($615, $657, 1353);
+var $658 = { n: "vendor", v: "-webkit-", r: 100, c: 25, s: "f15", u: "f16",  }; //1663
+$.a($657, $658, 1355);
+var $659 = { n: "keyframe", v: "33%", r: 101, c: 25, s: "f15", u: "f16",  }; //1664
+$.a($657, $659, 1357);
+var $660 = { n: "transform", v: "scale(1)", r: 102, c: 29, s: "f15", u: "f16",  }; //1665
+$.a($659, $660, 1359);
+var $661 = { n: "keyframe", v: "66%", r: 103, c: 25, s: "f15", u: "f16",  }; //1666
+$.a($657, $661, 1361);
+var $662 = { n: "transform", v: "scale(0.8)", r: 104, c: 29, s: "f15", u: "f16",  }; //1667
+$.a($661, $662, 1363);
+var $663 = { n: "keyframes", v: "animation-5yo8zs", r: 105, c: 21, s: "f15", u: "f16",  }; //1668
+$.a($615, $663, 1365);
+var $664 = { n: "vendor", v: "", r: 106, c: 25, s: "f15", u: "f16",  }; //1669
+$.a($663, $664, 1367);
+var $665 = { n: "keyframe", v: "33%", r: 107, c: 25, s: "f15", u: "f16",  }; //1670
+$.a($663, $665, 1369);
+var $666 = { n: "transform", v: "scale(1)", r: 108, c: 29, s: "f15", u: "f16",  }; //1671
+$.a($665, $666, 1371);
+var $667 = { n: "keyframe", v: "66%", r: 109, c: 25, s: "f15", u: "f16",  }; //1672
+$.a($663, $667, 1373);
+var $668 = { n: "transform", v: "scale(0.8)", r: 110, c: 29, s: "f15", u: "f16",  }; //1673
+$.a($667, $668, 1375);
+var $669 = { n: "button", v: "Docs", r: 111, c: 13, s: "f15", u: "f16",  }; //1674
+$.a($570, $669, 1377);
+var $670 = { n: "type", v: "button", r: 112, c: 17, s: "f15", u: "f16",  }; //1675
+$.a($669, $670, 1379);
+var $671 = { n: "aria-expanded", v: "false", r: 113, c: 17, s: "f15", u: "f16",  }; //1676
+$.a($669, $671, 1381);
+var $672 = { n: "aria-controls", v: "Docs-dropdown", r: 114, c: 17, s: "f15", u: "f16",  }; //1677
+$.a($669, $672, 1383);
+var $673 = { n: "class", v: "css-3q8779", r: 115, c: 17, s: "f15", u: "f16",  }; //1678
+$.a($669, $673, 1385);
+var $674 = { n: "svg", v: "", r: 116, c: 17, s: "f15", u: "f16",  }; //1679
+$.a($669, $674, 1387);
+var $675 = { n: "stroke", v: "currentColor", r: 117, c: 21, s: "f15", u: "f16",  }; //1680
+$.a($674, $675, 1389);
+var $676 = { n: "fill", v: "currentColor", r: 118, c: 21, s: "f15", u: "f16",  }; //1681
+$.a($674, $676, 1391);
+var $677 = { n: "@", v: "stroke-width 0", r: 119, c: 21, s: "f15", u: "f16",  }; //1682
+$.a($674, $677, 1393);
+var $678 = { n: "viewBox", v: "0 0 24 24", r: 120, c: 21, s: "f15", u: "f16",  }; //1683
+$.a($674, $678, 1395);
+var $679 = { n: "height", v: "1em", r: 121, c: 21, s: "f15", u: "f16",  }; //1684
+$.a($674, $679, 1397);
+var $680 = { n: "width", v: "1em", r: 122, c: 21, s: "f15", u: "f16",  }; //1685
+$.a($674, $680, 1399);
+var $681 = { n: "xmlns", v: "http://www.w3.org/2000/svg", r: 123, c: 21, s: "f15", u: "f16",  }; //1686
+$.a($674, $681, 1401);
+var $682 = { n: "path", v: "", r: 124, c: 21, s: "f15", u: "f16",  }; //1687
+$.a($674, $682, 1403);
+var $683 = { n: "d", v: "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z", r: 125, c: 25, s: "f15", u: "f16",  }; //1688
+$.a($682, $683, 1405);
+var $684 = { n: "@style", v: "", r: 126, c: 13, s: "f15", u: "f16",  }; //1689
+$.a($570, $684, 1407);
+var $685 = { n: "data-emotion-css", v: "1sg6jvm", r: 127, c: 17, s: "f15", u: "f16",  }; //1690
+$.a($684, $685, 1409);
+var $686 = { n: "css", v: "", r: 128, c: 17, s: "f15", u: "f16",  }; //1691
+$.a($684, $686, 1411);
+var $687 = { n: "media", v: "(min-width: 1000px)", r: 129, c: 21, s: "f15", u: "f16",  }; //1692
+$.a($686, $687, 1413);
+var $688 = { n: ".", v: "css-1sg6jvm", r: 130, c: 25, s: "f15", u: "f16",  }; //1693
+$.a($687, $688, 1415);
+var $689 = { n: "display", v: "none", r: 131, c: 29, s: "f15", u: "f16",  }; //1694
+$.a($688, $689, 1417);
+var $690 = { n: "left", v: "50%", r: 132, c: 29, s: "f15", u: "f16",  }; //1695
+$.a($688, $690, 1419);
+var $691 = { n: "padding-top", v: "0.75rem", r: 133, c: 29, s: "f15", u: "f16",  }; //1696
+$.a($688, $691, 1421);
+var $692 = { n: "position", v: "absolute", r: 134, c: 29, s: "f15", u: "f16",  }; //1697
+$.a($688, $692, 1423);
+var $693 = { n: "top", v: "100%", r: 135, c: 29, s: "f15", u: "f16",  }; //1698
+$.a($688, $693, 1425);
+var $694 = { n: "visibility", v: "visible", r: 136, c: 29, s: "f15", u: "f16",  }; //1699
+$.a($688, $694, 1427);
+var $695 = { n: "z-index", v: "10", r: 137, c: 29, s: "f15", u: "f16",  }; //1700
+$.a($688, $695, 1429);
+var $696 = { n: "transform", v: "translateX(calc(-50% + 0px))", r: 138, c: 29, s: "f15", u: "f16",  }; //1701
+$.a($688, $696, 1431);
+var $697 = { n: ".", v: "css-1sg6jvm:after", r: 139, c: 25, s: "f15", u: "f16",  }; //1702
+$.a($687, $697, 1433);
+var $698 = { n: "position", v: "absolute", r: 140, c: 29, s: "f15", u: "f16",  }; //1703
+$.a($697, $698, 1435);
+var $699 = { n: "top", v: "0.25rem", r: 141, c: 29, s: "f15", u: "f16",  }; //1704
+$.a($697, $699, 1437);
+var $700 = { n: "left", v: "50%", r: 142, c: 29, s: "f15", u: "f16",  }; //1705
+$.a($697, $700, 1439);
+var $701 = { n: "width", v: "1rem", r: 143, c: 29, s: "f15", u: "f16",  }; //1706
+$.a($697, $701, 1441);
+var $702 = { n: "height", v: "1rem", r: 144, c: 29, s: "f15", u: "f16",  }; //1707
+$.a($697, $702, 1443);
+var $703 = { n: "content", v: "\" \"", r: 145, c: 29, s: "f15", u: "f16",  }; //1708
+$.a($697, $703, 1445);
+var $704 = { n: "transform", v: "translateX(calc(-50% - 0px)) rotate(45deg)", r: 146, c: 29, s: "f15", u: "f16",  }; //1709
+$.a($697, $704, 1447);
+var $705 = { n: "border-top-left-radius", v: "4px", r: 147, c: 29, s: "f15", u: "f16",  }; //1710
+$.a($697, $705, 1449);
+var $706 = { n: "background", v: "var(--theme-ui-colors-white,#ffffff)", r: 148, c: 29, s: "f15", u: "f16",  }; //1711
+$.a($697, $706, 1451);
+var $707 = { n: "will-change", v: "transform", r: 149, c: 29, s: "f15", u: "f16",  }; //1712
+$.a($697, $707, 1453);
+var $708 = { n: "transition-property", v: "transform", r: 150, c: 29, s: "f15", u: "f16",  }; //1713
+$.a($697, $708, 1455);
+var $709 = { n: ".", v: "css-1sg6jvm", r: 151, c: 13, s: "f15", u: "f16",  }; //1714
+$.a($570, $709, 1457);
+var $710 = { n: "id", v: "Docs-dropdown", r: 152, c: 17, s: "f15", u: "f16",  }; //1715
+$.a($709, $710, 1459);
+var $711 = { n: "@style", v: "", r: 153, c: 17, s: "f15", u: "f16",  }; //1716
+$.a($709, $711, 1461);
+var $712 = { n: "data-emotion-css", v: "y86b6k", r: 154, c: 21, s: "f15", u: "f16",  }; //1717
+$.a($711, $712, 1463);
+var $713 = { n: "css", v: "", r: 155, c: 21, s: "f15", u: "f16",  }; //1718
+$.a($711, $713, 1465);
+var $714 = { n: "media", v: "(min-width: 1000px)", r: 156, c: 25, s: "f15", u: "f16",  }; //1719
+$.a($713, $714, 1467);
+var $715 = { n: ".", v: "css-y86b6k", r: 157, c: 29, s: "f15", u: "f16",  }; //1720
+$.a($714, $715, 1469);
+var $716 = { n: "background", v: "var(--theme-ui-colors-white,#ffffff)", r: 158, c: 33, s: "f15", u: "f16",  }; //1721
+$.a($715, $716, 1471);
+var $717 = { n: "border-radius", v: "8px", r: 159, c: 33, s: "f15", u: "f16",  }; //1722
+$.a($715, $717, 1473);
+var $718 = { n: "box-shadow", v: "0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16)", r: 160, c: 33, s: "f15", u: "f16",  }; //1723
+$.a($715, $718, 1475);
+var $719 = { n: "width", v: "32.5rem", r: 161, c: 33, s: "f15", u: "f16",  }; //1724
+$.a($715, $719, 1477);
+var $720 = { n: "ul", v: "", r: 162, c: 17, s: "f15", u: "f16",  }; //1725
+$.a($709, $720, 1479);
+var $721 = { n: "class", v: "css-y86b6k", r: 163, c: 21, s: "f15", u: "f16",  }; //1726
+$.a($720, $721, 1481);
+var $722 = { n: "@style", v: "", r: 2, c: 5, s: "f16", u: "f17",  }; //1955
+$.a($720, $722, 1483);
+var $723 = { n: "data-emotion-css", v: "1szfju1", r: 3, c: 9, s: "f16", u: "f17",  }; //1956
+$.a($722, $723, 1485);
+var $724 = { n: "css", v: "", r: 4, c: 9, s: "f16", u: "f17",  }; //1957
+$.a($722, $724, 1487);
+var $725 = { n: "media", v: "(min-width: 1000px)", r: 5, c: 13, s: "f16", u: "f17",  }; //1958
+$.a($724, $725, 1489);
+var $726 = { n: ".", v: "css-1szfju1", r: 6, c: 17, s: "f16", u: "f17",  }; //1959
+$.a($725, $726, 1491);
+var $727 = { n: "padding", v: "0 0.75rem", r: 7, c: 21, s: "f16", u: "f17",  }; //1960
+$.a($726, $727, 1493);
+var $728 = { n: "media", v: "(min-width: 1000px)", r: 8, c: 13, s: "f16", u: "f17",  }; //1961
+$.a($724, $728, 1495);
+var $729 = { n: ".", v: "css-1szfju1", r: 9, c: 17, s: "f16", u: "f17",  }; //1962
+$.a($728, $729, 1497);
+var $730 = { n: "padding-top", v: "0.75rem", r: 10, c: 21, s: "f16", u: "f17",  }; //1963
+$.a($729, $730, 1499);
+var $731 = { n: "media", v: "(min-width: 1000px)", r: 11, c: 13, s: "f16", u: "f17",  }; //1964
+$.a($724, $731, 1501);
+var $732 = { n: ".", v: "css-1szfju1", r: 12, c: 17, s: "f16", u: "f17",  }; //1965
+$.a($731, $732, 1503);
+var $733 = { n: "padding-bottom", v: "0.75rem", r: 13, c: 21, s: "f16", u: "f17",  }; //1966
+$.a($732, $733, 1505);
+var $734 = { n: "border-radius", v: "0 0 8px 8px", r: 14, c: 21, s: "f16", u: "f17",  }; //1967
+$.a($732, $734, 1507);
+var $735 = { n: "li", v: "", r: 15, c: 5, s: "f16", u: "f17",  }; //1968
+$.a($720, $735, 1509);
+var $736 = { n: "class", v: "css-1szfju1", r: 16, c: 9, s: "f16", u: "f17",  }; //1969
+$.a($735, $736, 1511);
+var $737 = { n: "@style", v: "", r: 17, c: 9, s: "f16", u: "f17",  }; //1970
+$.a($735, $737, 1513);
+var $738 = { n: "data-emotion-css", v: "jcgwc3", r: 18, c: 13, s: "f16", u: "f17",  }; //1971
+$.a($737, $738, 1515);
+var $739 = { n: "css", v: "", r: 19, c: 13, s: "f16", u: "f17",  }; //1972
+$.a($737, $739, 1517);
+var $740 = { n: ".", v: "css-jcgwc3", r: 20, c: 17, s: "f16", u: "f17",  }; //1973
+$.a($739, $740, 1519);
+var $741 = { n: "color", v: "var(--theme-ui-colors-blackFade-70,rgba(35,33,41,0.7))", r: 21, c: 21, s: "f16", u: "f17",  }; //1974
+$.a($740, $741, 1521);
+var $742 = { n: "display", v: "inline-block", r: 22, c: 21, s: "f16", u: "f17",  }; //1975
+$.a($740, $742, 1523);
+var $743 = { n: "padding", v: "2px 4px", r: 23, c: 21, s: "f16", u: "f17",  }; //1976
+$.a($740, $743, 1525);
+var $744 = { n: "transform", v: "translateX(-4px)", r: 24, c: 21, s: "f16", u: "f17",  }; //1977
+$.a($740, $744, 1527);
+var $745 = { n: "font-size", v: "0.875rem", r: 25, c: 21, s: "f16", u: "f17",  }; //1978
+$.a($740, $745, 1529);
+var $746 = { n: "text-decoration", v: "none", r: 26, c: 21, s: "f16", u: "f17",  }; //1979
+$.a($740, $746, 1531);
+var $747 = { n: "display", v: "inline-flex", r: 27, c: 21, s: "f16", u: "f17",  }; //1980
+$.a($740, $747, 1533);
+var $748 = { n: "text-decoration", v: "none", r: 28, c: 21, s: "f16", u: "f17",  }; //1981
+$.a($740, $748, 1535);
+var $749 = { n: "cursor", v: "pointer", r: 29, c: 21, s: "f16", u: "f17",  }; //1982
+$.a($740, $749, 1537);
+var $750 = { n: "font-size", v: "1rem", r: 30, c: 21, s: "f16", u: "f17",  }; //1983
+$.a($740, $750, 1539);
+var $751 = { n: ".", v: "css-jcgwc3:hover", r: 31, c: 17, s: "f16", u: "f17",  }; //1984
+$.a($739, $751, 1541);
+var $752 = { n: "+", v: ".css-jcgwc3:focus", r: 32, c: 21, s: "f16", u: "f17",  }; //1985
+$.a($751, $752, 1543);
+var $753 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 33, c: 21, s: "f16", u: "f17",  }; //1986
+$.a($751, $753, 1545);
+var $754 = { n: "transition", v: "all 250ms cubic-bezier(0.4,0,0.2,1)", r: 34, c: 21, s: "f16", u: "f17",  }; //1987
+$.a($751, $754, 1547);
+var $755 = { n: "text-decoration", v: "none", r: 35, c: 21, s: "f16", u: "f17",  }; //1988
+$.a($751, $755, 1549);
+var $756 = { n: ".", v: "css-jcgwc3:after", r: 36, c: 17, s: "f16", u: "f17",  }; //1989
+$.a($739, $756, 1551);
+var $757 = { n: "content", v: "\"›\"", r: 37, c: 21, s: "f16", u: "f17",  }; //1990
+$.a($756, $757, 1553);
+var $758 = { n: "color", v: "var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))", r: 38, c: 21, s: "f16", u: "f17",  }; //1991
+$.a($756, $758, 1555);
+var $759 = { n: "margin-left", v: "0.25rem", r: 39, c: 21, s: "f16", u: "f17",  }; //1992
+$.a($756, $759, 1557);
+var $760 = { n: ".", v: "css-jcgwc3:hover", r: 40, c: 17, s: "f16", u: "f17",  }; //1993
+$.a($739, $760, 1559);
+var $761 = { n: "+", v: ".css-jcgwc3:focus", r: 41, c: 21, s: "f16", u: "f17",  }; //1994
+$.a($760, $761, 1561);
+var $762 = { n: "-webkit-text-decoration", v: "none", r: 42, c: 21, s: "f16", u: "f17",  }; //1995
+$.a($760, $762, 1563);
+var $763 = { n: "text-decoration", v: "none", r: 43, c: 21, s: "f16", u: "f17",  }; //1996
+$.a($760, $763, 1565);
+var $764 = { n: "media", v: "(min-width: 1000px)", r: 44, c: 17, s: "f16", u: "f17",  }; //1997
+$.a($739, $764, 1567);
+var $765 = { n: ".", v: "css-jcgwc3", r: 45, c: 21, s: "f16", u: "f17",  }; //1998
+$.a($764, $765, 1569);
+var $766 = { n: "display", v: "flex", r: 46, c: 25, s: "f16", u: "f17",  }; //1999
+$.a($765, $766, 1571);
+var $767 = { n: "position", v: "relative", r: 47, c: 25, s: "f16", u: "f17",  }; //2000
+$.a($765, $767, 1573);
+var $768 = { n: "flex-direction", v: "column", r: 48, c: 25, s: "f16", u: "f17",  }; //2001
+$.a($765, $768, 1575);
+var $769 = { n: "font-size", v: "0.875rem", r: 49, c: 25, s: "f16", u: "f17",  }; //2002
+$.a($765, $769, 1577);
+var $770 = { n: "align-items", v: "flex-start", r: 50, c: 25, s: "f16", u: "f17",  }; //2003
+$.a($765, $770, 1579);
+var $771 = { n: "padding", v: "0.75rem", r: 51, c: 25, s: "f16", u: "f17",  }; //2004
+$.a($765, $771, 1581);
+var $772 = { n: "padding-left", v: "3.5rem", r: 52, c: 25, s: "f16", u: "f17",  }; //2005
+$.a($765, $772, 1583);
+var $773 = { n: "transition", v: "background 500ms cubic-bezier(0.4,0,0.2,1)", r: 53, c: 25, s: "f16", u: "f17",  }; //2006
+$.a($765, $773, 1585);
+var $774 = { n: "transform", v: "none", r: 55, c: 25, s: "f16", u: "f17",  }; //2007
+$.a($765, $774, 1587);
+var $775 = { n: ".", v: "css-jcgwc3:hover", r: 56, c: 21, s: "f16", u: "f17",  }; //2008
+$.a($764, $775, 1589);
+var $776 = { n: "+", v: ".css-jcgwc3:focus", r: 57, c: 25, s: "f16", u: "f17",  }; //2009
+$.a($775, $776, 1591);
+var $777 = { n: "background", v: "var(--theme-ui-colors-purple-10,#f6edfa)", r: 58, c: 25, s: "f16", u: "f17",  }; //2010
+$.a($775, $777, 1593);
+var $778 = { n: "border-radius", v: "4px", r: 59, c: 25, s: "f16", u: "f17",  }; //2011
+$.a($775, $778, 1595);
+var $779 = { n: ".", v: "css-jcgwc3:after", r: 60, c: 21, s: "f16", u: "f17",  }; //2012
+$.a($764, $779, 1597);
+var $780 = { n: "content", v: "none", r: 61, c: 25, s: "f16", u: "f17",  }; //2013
+$.a($779, $780, 1599);
+var $781 = { n: "@style", v: "", r: 62, c: 9, s: "f16", u: "f17",  }; //2014
+$.a($735, $781, 1601);
+var $782 = { n: "data-emotion-css", v: "5w7k2g", r: 63, c: 13, s: "f16", u: "f17",  }; //2015
+$.a($781, $782, 1603);
+var $783 = { n: "css", v: "", r: 64, c: 13, s: "f16", u: "f17",  }; //2016
+$.a($781, $783, 1605);
+var $784 = { n: ".", v: "css-5w7k2g", r: 65, c: 17, s: "f16", u: "f17",  }; //2017
+$.a($783, $784, 1607);
+var $785 = { n: "align-items", v: "center", r: 66, c: 21, s: "f16", u: "f17",  }; //2018
+$.a($784, $785, 1609);
+var $786 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 67, c: 21, s: "f16", u: "f17",  }; //2019
+$.a($784, $786, 1611);
+var $787 = { n: "display", v: "inline-flex", r: 68, c: 21, s: "f16", u: "f17",  }; //2020
+$.a($784, $787, 1613);
+var $788 = { n: "text-decoration", v: "underline", r: 69, c: 21, s: "f16", u: "f17",  }; //2021
+$.a($784, $788, 1615);
+var $789 = { n: "color", v: "var(--theme-ui-colors-blackFade-70,rgba(35,33,41,0.7))", r: 70, c: 21, s: "f16", u: "f17",  }; //2022
+$.a($784, $789, 1617);
+var $790 = { n: "display", v: "inline-block", r: 71, c: 21, s: "f16", u: "f17",  }; //2023
+$.a($784, $790, 1619);
+var $791 = { n: "padding", v: "2px 4px", r: 72, c: 21, s: "f16", u: "f17",  }; //2024
+$.a($784, $791, 1621);
+var $792 = { n: "transform", v: "translateX(-4px)", r: 73, c: 21, s: "f16", u: "f17",  }; //2025
+$.a($784, $792, 1623);
+var $793 = { n: "font-size", v: "0.875rem", r: 74, c: 21, s: "f16", u: "f17",  }; //2026
+$.a($784, $793, 1625);
+var $794 = { n: "text-decoration", v: "none", r: 75, c: 21, s: "f16", u: "f17",  }; //2027
+$.a($784, $794, 1627);
+var $795 = { n: "display", v: "inline-flex", r: 76, c: 21, s: "f16", u: "f17",  }; //2028
+$.a($784, $795, 1629);
+var $796 = { n: "cursor", v: "pointer", r: 77, c: 21, s: "f16", u: "f17",  }; //2029
+$.a($784, $796, 1631);
+var $797 = { n: "font-size", v: "1rem", r: 78, c: 21, s: "f16", u: "f17",  }; //2030
+$.a($784, $797, 1633);
+var $798 = { n: ".", v: "css-5w7k2g:focus", r: 79, c: 17, s: "f16", u: "f17",  }; //2031
+$.a($783, $798, 1635);
+var $799 = { n: "+", v: ".css-5w7k2g:hover", r: 80, c: 21, s: "f16", u: "f17",  }; //2032
+$.a($798, $799, 1637);
+var $800 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 81, c: 21, s: "f16", u: "f17",  }; //2033
+$.a($798, $800, 1639);
+var $801 = { n: "text-decoration", v: "underline", r: 82, c: 21, s: "f16", u: "f17",  }; //2034
+$.a($798, $801, 1641);
+var $802 = { n: ".", v: "css-5w7k2g:hover", r: 83, c: 17, s: "f16", u: "f17",  }; //2035
+$.a($783, $802, 1643);
+var $803 = { n: "+", v: ".css-5w7k2g:focus", r: 84, c: 21, s: "f16", u: "f17",  }; //2036
+$.a($802, $803, 1645);
+var $804 = { n: "color", v: "var(--theme-ui-colors-purple-60,#663399)", r: 85, c: 21, s: "f16", u: "f17",  }; //2037
+$.a($802, $804, 1647);
+var $805 = { n: "transition", v: "all 250ms cubic-bezier(0.4,0,0.2,1)", r: 86, c: 21, s: "f16", u: "f17",  }; //2038
+$.a($802, $805, 1649);
+var $806 = { n: "text-decoration", v: "none", r: 87, c: 21, s: "f16", u: "f17",  }; //2039
+$.a($802, $806, 1651);
+var $807 = { n: ".", v: "css-5w7k2g:after", r: 88, c: 17, s: "f16", u: "f17",  }; //2040
+$.a($783, $807, 1653);
+var $808 = { n: "content", v: "\"›\"", r: 89, c: 21, s: "f16", u: "f17",  }; //2041
+$.a($807, $808, 1655);
+var $809 = { n: "color", v: "var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))", r: 90, c: 21, s: "f16", u: "f17",  }; //2042
+$.a($807, $809, 1657);
+var $810 = { n: "margin-left", v: "0.25rem", r: 91, c: 21, s: "f16", u: "f17",  }; //2043
+$.a($807, $810, 1659);
+var $811 = { n: ".", v: "css-5w7k2g:hover", r: 92, c: 17, s: "f16", u: "f17",  }; //2044
+$.a($783, $811, 1661);
+var $812 = { n: "+", v: ".css-5w7k2g:focus", r: 93, c: 21, s: "f16", u: "f17",  }; //2045
+$.a($811, $812, 1663);
+var $813 = { n: "text-decoration", v: "none", r: 94, c: 21, s: "f16", u: "f17",  }; //2046
+$.a($811, $813, 1665);
+var $814 = { n: "media", v: "(min-width: 1000px)", r: 95, c: 17, s: "f16", u: "f17",  }; //2047
+$.a($783, $814, 1667);
+var $815 = { n: ".", v: "css-5w7k2g", r: 96, c: 21, s: "f16", u: "f17",  }; //2048
+$.a($814, $815, 1669);
+var $816 = { n: "display", v: "flex", r: 97, c: 25, s: "f16", u: "f17",  }; //2049
+$.a($815, $816, 1671);
+var $817 = { n: "position", v: "relative", r: 98, c: 25, s: "f16", u: "f17",  }; //2050
+$.a($815, $817, 1673);
+var $818 = { n: "flex-direction", v: "column", r: 99, c: 25, s: "f16", u: "f17",  }; //2051
+$.a($815, $818, 1675);
+var $819 = { n: "font-size", v: "0.875rem", r: 100, c: 25, s: "f16", u: "f17",  }; //2052
+$.a($815, $819, 1677);
+var $820 = { n: "align-items", v: "flex-start", r: 101, c: 25, s: "f16", u: "f17",  }; //2053
+$.a($815, $820, 1679);
+var $821 = { n: "padding", v: "0.75rem", r: 102, c: 25, s: "f16", u: "f17",  }; //2054
+$.a($815, $821, 1681);
+var $822 = { n: "padding-left", v: "3.5rem", r: 103, c: 25, s: "f16", u: "f17",  }; //2055
+$.a($815, $822, 1683);
+var $823 = { n: "transition", v: "background 500ms cubic-bezier(0.4,0,0.2,1)", r: 104, c: 25, s: "f16", u: "f17",  }; //2056
+$.a($815, $823, 1685);
+var $824 = { n: "transform", v: "none", r: 105, c: 25, s: "f16", u: "f17",  }; //2057
+$.a($815, $824, 1687);
+var $825 = { n: ".", v: "css-5w7k2g:hover", r: 106, c: 21, s: "f16", u: "f17",  }; //2058
+$.a($814, $825, 1689);
+var $826 = { n: "+", v: ".css-5w7k2g:focus", r: 107, c: 25, s: "f16", u: "f17",  }; //2059
+$.a($825, $826, 1691);
+var $827 = { n: "background", v: "var(--theme-ui-colors-purple-10,#f6edfa)", r: 108, c: 25, s: "f16", u: "f17",  }; //2060
+$.a($825, $827, 1693);
+var $828 = { n: "border-radius", v: "4px", r: 109, c: 25, s: "f16", u: "f17",  }; //2061
+$.a($825, $828, 1695);
+var $829 = { n: ".", v: "css-5w7k2g:after", r: 110, c: 21, s: "f16", u: "f17",  }; //2062
+$.a($814, $829, 1697);
+var $830 = { n: "content", v: "none", r: 111, c: 25, s: "f16", u: "f17",  }; //2063
+$.a($829, $830, 1699);
+var $831 = { n: "a", v: "", r: 112, c: 9, s: "f16", u: "f17",  }; //2064
+$.a($735, $831, 1701);
+var $832 = { n: "class", v: "css-5w7k2g", r: 113, c: 13, s: "f16", u: "f17",  }; //2065
+$.a($831, $832, 1703);
+var $833 = { n: "href", v: "/docs/", r: 114, c: 13, s: "f16", u: "f17",  }; //2066
+$.a($831, $833, 1705);
+var $834 = { n: "@style", v: "", r: 115, c: 13, s: "f16", u: "f17",  }; //2067
+$.a($831, $834, 1707);
+var $835 = { n: "data-emotion-css", v: "1ppz169", r: 116, c: 17, s: "f16", u: "f17",  }; //2068
+$.a($834, $835, 1709);
+var $836 = { n: "css", v: "", r: 117, c: 17, s: "f16", u: "f17",  }; //2069
+$.a($834, $836, 1711);
+var $837 = { n: ".", v: "css-1ppz169", r: 118, c: 21, s: "f16", u: "f17",  }; //2070
+$.a($836, $837, 1713);
+var $838 = { n: "margin-right", v: "0.5rem", r: 119, c: 25, s: "f16", u: "f17",  }; //2071
+$.a($837, $838, 1715);
+var $839 = { n: "height", v: "1.5rem", r: 120, c: 25, s: "f16", u: "f17",  }; //2072
+$.a($837, $839, 1717);
+var $840 = { n: "width", v: "1.5rem", r: 121, c: 25, s: "f16", u: "f17",  }; //2073
+$.a($837, $840, 1719);
+var $841 = { n: "media", v: "(min-width: 1000px)", r: 122, c: 21, s: "f16", u: "f17",  }; //2074
+$.a($836, $841, 1721);
+var $842 = { n: ".", v: "css-1ppz169", r: 123, c: 25, s: "f16", u: "f17",  }; //2075
+$.a($841, $842, 1723);
+var $843 = { n: "height", v: "2rem", r: 124, c: 29, s: "f16", u: "f17",  }; //2076
+$.a($842, $843, 1725);
+var $844 = { n: "left", v: "0.75rem", r: 125, c: 29, s: "f16", u: "f17",  }; //2077
+$.a($842, $844, 1727);
+var $845 = { n: "position", v: "absolute", r: 126, c: 29, s: "f16", u: "f17",  }; //2078
+$.a($842, $845, 1729);
+var $846 = { n: "top", v: ".3rem", r: 127, c: 29, s: "f16", u: "f17",  }; //2079
+$.a($842, $846, 1731);
+var $847 = { n: "width", v: "2rem", r: 128, c: 29, s: "f16", u: "f17",  }; //2080
+$.a($842, $847, 1733);
+var $848 = { n: "svg", v: "", r: 129, c: 13, s: "f16", u: "f17",  }; //2081
+$.a($831, $848, 1735);
+var $849 = { n: "width", v: "32", r: 130, c: 17, s: "f16", u: "f17",  }; //2082
+$.a($848, $849, 1737);
+var $850 = { n: "height", v: "32", r: 131, c: 17, s: "f16", u: "f17",  }; //2083
+$.a($848, $850, 1739);
+var $851 = { n: "viewBox", v: "0 0 32 32", r: 132, c: 17, s: "f16", u: "f17",  }; //2084
+$.a($848, $851, 1741);
+var $852 = { n: "fill", v: "none", r: 133, c: 17, s: "f16", u: "f17",  }; //2085
+$.a($848, $852, 1743);
+var $853 = { n: "xmlns", v: "http://www.w3.org/2000/svg", r: 134, c: 17, s: "f16", u: "f17",  }; //2086
+$.a($848, $853, 1745);
+var $854 = { n: "class", v: "css-1ppz169", r: 135, c: 17, s: "f16", u: "f17",  }; //2087
+$.a($848, $854, 1747);
+var $855 = { n: "path", v: "", r: 136, c: 17, s: "f16", u: "f17",  }; //2088
+$.a($848, $855, 1749);
+var $856 = { n: "d", v: "M6 10C6 8.4 7.4 7 9 7H12V12H6V10Z", r: 137, c: 21, s: "f16", u: "f17",  }; //2089
+$.a($855, $856, 1751);
+var $857 = { n: "fill", v: "#F67300", r: 138, c: 21, s: "f16", u: "f17",  }; //2090
+$.a($855, $857, 1753);
+var $858 = { n: "stroke", v: "#663399", r: 139, c: 21, s: "f16", u: "f17",  }; //2091
+$.a($855, $858, 1755);
+var $859 = { n: "@", v: "stroke-width 1.5", r: 140, c: 21, s: "f16", u: "f17",  }; //2092
+$.a($855, $859, 1757);
+var $860 = { n: "path", v: "", r: 141, c: 17, s: "f16", u: "f17",  }; //2093
+$.a($848, $860, 1759);
+var $861 = { n: "d", v: "M9 7C10.6 7 12 8.4 12 10V22C12 23.6 13.3 25 15 25C16.7 25 18 23.6 18 22H24V10C24 8.4 22.6 7 21 7H9Z", r: 142, c: 21, s: "f16", u: "f17",  }; //2094
+$.a($860, $861, 1761);
+var $862 = { n: "fill", v: "white", r: 143, c: 21, s: "f16", u: "f17",  }; //2095
+$.a($860, $862, 1763);
+var $863 = { n: "path", v: "", r: 144, c: 17, s: "f16", u: "f17",  }; //2096
+$.a($848, $863, 1765);
+var $864 = { n: "d", v: "M9 7H21C22.6 7 24 8.4 24 10V22", r: 145, c: 21, s: "f16", u: "f17",  }; //2097
+$.a($863, $864, 1767);
+var $865 = { n: "stroke", v: "#663399", r: 146, c: 21, s: "f16", u: "f17",  }; //2098
+$.a($863, $865, 1769);
+var $866 = { n: "@", v: "stroke-width 1.5", r: 147, c: 21, s: "f16", u: "f17",  }; //2099
+$.a($863, $866, 1771);
+var $867 = { n: "path", v: "", r: 148, c: 17, s: "f16", u: "f17",  }; //2100
+$.a($848, $867, 1773);
+var $868 = { n: "d", v: "M15 25C13.3 25 12 23.6 12 22V10C12 8.4 10.6 7 9 7", r: 149, c: 21, s: "f16", u: "f17",  }; //2101
+$.a($867, $868, 1775);
+var $869 = { n: "stroke", v: "#663399", r: 150, c: 21, s: "f16", u: "f17",  }; //2102
+$.a($867, $869, 1777);
+var $870 = { n: "@", v: "stroke-width 1.5", r: 151, c: 21, s: "f16", u: "f17",  }; //2103
+$.a($867, $870, 1779);
+var $871 = { n: "path", v: "", r: 152, c: 17, s: "f16", u: "f17",  }; //2104
+$.a($848, $871, 1781);
+var $872 = { n: "d", v: "M15 25H24C25.6 25 27 23.6 27 22V21H18V22C18 23.6 16.6 25 15 25Z", r: 153, c: 21, s: "f16", u: "f17",  }; //2105
+$.a($871, $872, 1783);
+var $873 = { n: "fill", v: "#F1DEFA", r: 154, c: 21, s: "f16", u: "f17",  }; //2106
+$.a($871, $873, 1785);
+var $874 = { n: "stroke", v: "#663399", r: 155, c: 21, s: "f16", u: "f17",  }; //2107
+$.a($871, $874, 1787);
+var $875 = { n: "@", v: "stroke-width 1.5", r: 156, c: 21, s: "f16", u: "f17",  }; //2108
+$.a($871, $875, 1789);
+var $876 = { n: "circle", v: "", r: 157, c: 17, s: "f16", u: "f17",  }; //2109
+$.a($848, $876, 1791);
+var $877 = { n: "cx", v: "20.2002", r: 158, c: 21, s: "f16", u: "f17",  }; //2110
+$.a($876, $877, 1793);
+var $878 = { n: "cy", v: "11.6", r: 159, c: 21, s: "f16", u: "f17",  }; //2111
+$.a($876, $878, 1795);
+var $879 = { n: "r", v: "1", r: 160, c: 21, s: "f16", u: "f17",  }; //2112
+$.a($876, $879, 1797);
+var $880 = { n: "fill", v: "#663399", r: 161, c: 21, s: "f16", u: "f17",  }; //2113
+$.a($876, $880, 1799);
+var $881 = { n: "circle", v: "", r: 162, c: 17, s: "f16", u: "f17",  }; //2114
+$.a($848, $881, 1801);
+var $882 = { n: "cx", v: "16", r: 163, c: 21, s: "f16", u: "f17",  }; //2115
+$.a($881, $882, 1803);
+var $883 = { n: "cy", v: "11.6", r: 164, c: 21, s: "f16", u: "f17",  }; //2116
+$.a($881, $883, 1805);
+var $884 = { n: "r", v: "1", r: 165, c: 21, s: "f16", u: "f17",  }; //2117
+$.a($881, $884, 1807);
+var $885 = { n: "fill", v: "#663399", r: 166, c: 21, s: "f16", u: "f17",  }; //2118
+$.a($881, $885, 1809);
+var $886 = { n: "path", v: "", r: 167, c: 17, s: "f16", u: "f17",  }; //2119
+$.a($848, $886, 1811);
+var $887 = { n: "d", v: "M21.2002 14.5C21.2002 14.5 21.2002 15.6 21.2002 15.8C21.2002 16.4 20.9002 16.9 20.4002 17.4C19.9002 17.9 19.1002 18.3 18.2002 18.3C17.3002 18.3 16.5002 17.9 16.0002 17.4C15.5002 16.9 15.2002 16.4 15.2002 15.8C15.2002 15.5 15.2002 14.5 15.2002 14.5C16.9002 14.5 19.6002 14.5 21.2002 14.5Z", r: 168, c: 21, s: "f16", u: "f17",  }; //2120
+$.a($886, $887, 1813);
+var $888 = { n: "fill", v: "#663399", r: 169, c: 21, s: "f16", u: "f17",  }; //2121
+$.a($886, $888, 1815);
+var $889 = { n: "@style", v: "", r: 170, c: 13, s: "f16", u: "f17",  }; //2122
+$.a($831, $889, 1817);
+var $890 = { n: "data-emotion-css", v: "ovr08e", r: 171, c: 17, s: "f16", u: "f17",  }; //2123
+$.a($889, $890, 1819);
+var $891 = { n: "css", v: "", r: 172, c: 17, s: "f16", u: "f17",  }; //2124
+$.a($889, $891, 1821);
+var $892 = { n: ".", v: "css-ovr08e", r: 173, c: 21, s: "f16", u: "f17",  }; //2125
+$.a($891, $892, 1823);
+var $893 = { n: "display", v: "block", r: 174, c: 25, s: "f16", u: "f17",  }; //2126
+$.a($892, $893, 1825);
+var $894 = { n: "media", v: "(min-width: 1000px)", r: 175, c: 21, s: "f16", u: "f17",  }; //2127
+$.a($891, $894, 1827);
+var $895 = { n: ".", v: "css-ovr08e", r: 176, c: 25, s: "f16", u: "f17",  }; //2128
+$.a($894, $895, 1829);
+var $896 = { n: "display", v: "none", r: 177, c: 29, s: "f16", u: "f17",  }; //2129
+$.a($895, $896, 1831);
+var $897 = { n: "span", v: "Documentation", r: 178, c: 13, s: "f16", u: "f17",  }; //2130
+$.a($831, $897, 1833);
+var $898 = { n: "class", v: "css-ovr08e", r: 179, c: 17, s: "f16", u: "f17",  }; //2131
+$.a($897, $898, 1835);
+var $899 = { n: "@style", v: "", r: 180, c: 13, s: "f16", u: "f17",  }; //2132
+$.a($831, $899, 1837);
+var $900 = { n: "data-emotion-css", v: "a2l7qn", r: 181, c: 17, s: "f16", u: "f17",  }; //2133
+$.a($899, $900, 1839);
+var $901 = { n: "css", v: "", r: 182, c: 17, s: "f16", u: "f17",  }; //2134
+$.a($899, $901, 1841);
+var $902 = { n: ".", v: "css-a2l7qn", r: 183, c: 21, s: "f16", u: "f17",  }; //2135
+$.a($901, $902, 1843);
+var $903 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 184, c: 25, s: "f16", u: "f17",  }; //2136
+$.a($902, $903, 1845);
+var $904 = { n: "color", v: "var(--theme-ui-colors-blackFade-80,rgba(35,33,41,0.8))", r: 185, c: 25, s: "f16", u: "f17",  }; //2137
+$.a($902, $904, 1847);
+var $905 = { n: "font-size", v: "1rem", r: 186, c: 25, s: "f16", u: "f17",  }; //2138
+$.a($902, $905, 1849);
+var $906 = { n: "margin", v: "0", r: 187, c: 25, s: "f16", u: "f17",  }; //2139
+$.a($902, $906, 1851);
+var $907 = { n: "margin-bottom", v: "0.125rem", r: 188, c: 25, s: "f16", u: "f17",  }; //2140
+$.a($902, $907, 1853);
+var $908 = { n: "font-weight", v: "600", r: 189, c: 25, s: "f16", u: "f17",  }; //2141
+$.a($902, $908, 1855);
+var $909 = { n: "display", v: "none", r: 190, c: 25, s: "f16", u: "f17",  }; //2142
+$.a($902, $909, 1857);
+var $910 = { n: ".", v: "css-a2l7qn:after", r: 191, c: 21, s: "f16", u: "f17",  }; //2143
+$.a($901, $910, 1859);
+var $911 = { n: "content", v: "\"›\"", r: 192, c: 25, s: "f16", u: "f17",  }; //2144
+$.a($910, $911, 1861);
+var $912 = { n: "color", v: "var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))", r: 193, c: 25, s: "f16", u: "f17",  }; //2145
+$.a($910, $912, 1863);
+var $913 = { n: "margin-left", v: "0.25rem", r: 194, c: 25, s: "f16", u: "f17",  }; //2146
+$.a($910, $913, 1865);
+var $914 = { n: "media", v: "(min-width: 1000px)", r: 195, c: 21, s: "f16", u: "f17",  }; //2147
+$.a($901, $914, 1867);
+var $915 = { n: ".", v: "css-a2l7qn", r: 196, c: 25, s: "f16", u: "f17",  }; //2148
+$.a($914, $915, 1869);
+var $916 = { n: "display", v: "block", r: 197, c: 29, s: "f16", u: "f17",  }; //2149
+$.a($915, $916, 1871);
+var $917 = { n: "h2", v: "Documentation", r: 198, c: 13, s: "f16", u: "f17",  }; //2150
+$.a($831, $917, 1873);
+var $918 = { n: "class", v: "css-a2l7qn", r: 199, c: 17, s: "f16", u: "f17",  }; //2151
+$.a($917, $918, 1875);
+var $919 = { n: "@style", v: "", r: 200, c: 13, s: "f16", u: "f17",  }; //2152
+$.a($831, $919, 1877);
+var $920 = { n: "data-emotion-css", v: "9wr7tw", r: 201, c: 17, s: "f16", u: "f17",  }; //2153
+$.a($919, $920, 1879);
+var $921 = { n: "css", v: "", r: 202, c: 17, s: "f16", u: "f17",  }; //2154
+$.a($919, $921, 1881);
+var $922 = { n: ".", v: "css-9wr7tw", r: 203, c: 21, s: "f16", u: "f17",  }; //2155
+$.a($921, $922, 1883);
+var $923 = { n: "color", v: "var(--theme-ui-colors-blackFade-70,rgba(35,33,41,0.7))", r: 204, c: 25, s: "f16", u: "f17",  }; //2156
+$.a($922, $923, 1885);
+var $924 = { n: "font-size", v: "0.875rem", r: 205, c: 25, s: "f16", u: "f17",  }; //2157
+$.a($922, $924, 1887);
+var $925 = { n: "margin", v: "0", r: 206, c: 25, s: "f16", u: "f17",  }; //2158
+$.a($922, $925, 1889);
+var $926 = { n: "display", v: "none", r: 207, c: 25, s: "f16", u: "f17",  }; //2159
+$.a($922, $926, 1891);
+var $927 = { n: "media", v: "(min-width: 1000px)", r: 208, c: 21, s: "f16", u: "f17",  }; //2160
+$.a($921, $927, 1893);
+var $928 = { n: ".", v: "css-9wr7tw", r: 209, c: 25, s: "f16", u: "f17",  }; //2161
+$.a($927, $928, 1895);
+var $929 = { n: "display", v: "block", r: 210, c: 29, s: "f16", u: "f17",  }; //2162
+$.a($928, $929, 1897);
+var $930 = { n: "p", v: "Start building with Gatsby and its ecosystem tools", r: 211, c: 13, s: "f16", u: "f17",  }; //2163
+$.a($831, $930, 1899);
+var $931 = { n: "class", v: "css-9wr7tw", r: 212, c: 17, s: "f16", u: "f17",  }; //2164
+$.a($930, $931, 1901);
+var $932 = { n: "@style", v: "", r: 213, c: 9, s: "f16", u: "f17",  }; //2165
+$.a($735, $932, 1903);
+var $933 = { n: "data-emotion-css", v: "kqnhvk", r: 214, c: 13, s: "f16", u: "f17",  }; //2166
+$.a($932, $933, 1905);
+var $934 = { n: "css", v: "", r: 215, c: 13, s: "f16", u: "f17",  }; //2167
+$.a($932, $934, 1907);
+var $935 = { n: ".", v: "css-kqnhvk", r: 216, c: 17, s: "f16", u: "f17",  }; //2168
+$.a($934, $935, 1909);
+var $936 = { n: "padding-top", v: "0.75rem", r: 217, c: 21, s: "f16", u: "f17",  }; //2169
+$.a($935, $936, 1911);
+var $937 = { n: "padding-left", v: "3.5rem", r: 218, c: 21, s: "f16", u: "f17",  }; //2170
+$.a($935, $937, 1913);
+var $938 = { n: "padding-bottom", v: "1rem", r: 219, c: 21, s: "f16", u: "f17",  }; //2171
+$.a($935, $938, 1915);
+var $939 = { n: "-", v: "display none", r: 221, c: 21, s: "f16", u: "f17",  }; //2172
+$.a($935, $939, 1917);
+var $940 = { n: "@", v: "gap 1rem", r: 222, c: 21, s: "f16", u: "f17",  }; //2173
+$.a($935, $940, 1919);
+var $941 = { n: "media", v: "(min-width: 1000px)", r: 223, c: 17, s: "f16", u: "f17",  }; //2174
+$.a($934, $941, 1921);
+var $942 = { n: ".", v: "css-kqnhvk", r: 224, c: 21, s: "f16", u: "f17",  }; //2175
+$.a($941, $942, 1923);
+var $943 = { n: "display", v: "grid", r: 225, c: 25, s: "f16", u: "f17",  }; //2176
+$.a($942, $943, 1925);
+var $944 = { n: "ul", v: "", r: 226, c: 9, s: "f16", u: "f17",  }; //2177
+$.a($735, $944, 1927);
+var $945 = { n: "class", v: "css-kqnhvk", r: 227, c: 13, s: "f16", u: "f17",  }; //2178
+$.a($944, $945, 1929);
+var $946 = { n: "li", v: "", r: 2, c: 5, s: "f17", u: "f18",  }; //2192
+$.a($944, $946, 1931);
+var $947 = { n: "@style", v: "", r: 3, c: 9, s: "f17", u: "f18",  }; //2193
+$.a($946, $947, 1933);
+var $948 = { n: "data-emotion-css", v: "lqt4hu", r: 4, c: 13, s: "f17", u: "f18",  }; //2194
+$.a($947, $948, 1935);
+var $949 = { n: "css", v: "", r: 5, c: 13, s: "f17", u: "f18",  }; //2195
+$.a($947, $949, 1937);
+var $950 = { n: ".", v: "css-lqt4hu", r: 6, c: 17, s: "f17", u: "f18",  }; //2196
+$.a($949, $950, 1939);
+var $951 = { n: "display", v: "grid", r: 7, c: 21, s: "f17", u: "f18",  }; //2197
+$.a($950, $951, 1941);
+var $952 = { n: "grid-template-columns", v: "repeat(2,1fr)", r: 8, c: 21, s: "f17", u: "f18",  }; //2198
+$.a($950, $952, 1943);
+var $953 = { n: "ul", v: "", r: 9, c: 9, s: "f17", u: "f18",  }; //2199
+$.a($946, $953, 1945);
+var $954 = { n: "class", v: "css-lqt4hu", r: 10, c: 13, s: "f17", u: "f18",  }; //2200
+$.a($953, $954, 1947);
+var $955 = { n: "li", v: "", r: 2, c: 5, s: "f18", u: "f19",  }; //2233
+$.a($953, $955, 1949);
+var $956 = { n: "@style", v: "", r: 3, c: 9, s: "f18", u: "f19",  }; //2234
+$.a($955, $956, 1951);
+var $957 = { n: "data-emotion-css", v: "ocmoim", r: 4, c: 13, s: "f18", u: "f19",  }; //2235
+$.a($956, $957, 1953);
+var $958 = { n: "css", v: "", r: 5, c: 13, s: "f18", u: "f19",  }; //2236
+$.a($956, $958, 1955);
+var $959 = { n: ".", v: "css-ocmoim", r: 6, c: 17, s: "f18", u: "f19",  }; //2237
+$.a($958, $959, 1957);
+var $960 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 7, c: 21, s: "f18", u: "f19",  }; //2238
+$.a($959, $960, 1959);
+var $961 = { n: "font-size", v: "0.75rem", r: 8, c: 21, s: "f18", u: "f19",  }; //2239
+$.a($959, $961, 1961);
+var $962 = { n: "color", v: "var(--theme-ui-colors-blackFade-80,rgba(35,33,41,0.8))", r: 9, c: 21, s: "f18", u: "f19",  }; //2240
+$.a($959, $962, 1963);
+var $963 = { n: "text-transform", v: "uppercase", r: 10, c: 21, s: "f18", u: "f19",  }; //2241
+$.a($959, $963, 1965);
+var $964 = { n: "font-weight", v: "600", r: 11, c: 21, s: "f18", u: "f19",  }; //2242
+$.a($959, $964, 1967);
+var $965 = { n: "letter-spacing", v: "0.1em", r: 12, c: 21, s: "f18", u: "f19",  }; //2243
+$.a($959, $965, 1969);
+var $966 = { n: "margin", v: "0", r: 13, c: 21, s: "f18", u: "f19",  }; //2244
+$.a($959, $966, 1971);
+var $967 = { n: "margin-bottom", v: "0.5rem", r: 14, c: 21, s: "f18", u: "f19",  }; //2245
+$.a($959, $967, 1973);
+var $968 = { n: "h3", v: "Get Started", r: 15, c: 9, s: "f18", u: "f19",  }; //2246
+$.a($955, $968, 1975);
+var $969 = { n: "class", v: "css-ocmoim", r: 16, c: 13, s: "f18", u: "f19",  }; //2247
+$.a($968, $969, 1977);
+var $970 = { n: "@style", v: "", r: 17, c: 9, s: "f18", u: "f19",  }; //2248
+$.a($955, $970, 1979);
+var $971 = { n: "data-emotion-css", v: "j7qwjs", r: 18, c: 13, s: "f18", u: "f19",  }; //2249
+$.a($970, $971, 1981);
+var $972 = { n: "css", v: "", r: 19, c: 13, s: "f18", u: "f19",  }; //2250
+$.a($970, $972, 1983);
+var $973 = { n: ".", v: "css-j7qwjs", r: 20, c: 17, s: "f18", u: "f19",  }; //2251
+$.a($972, $973, 1985);
+var $974 = { n: "display", v: "flex", r: 21, c: 21, s: "f18", u: "f19",  }; //2252
+$.a($973, $974, 1987);
+var $975 = { n: "flex-direction", v: "column", r: 22, c: 21, s: "f18", u: "f19",  }; //2253
+$.a($973, $975, 1989);
+var $976 = { n: "ul", v: "", r: 23, c: 9, s: "f18", u: "f19",  }; //2254
+$.a($955, $976, 1991);
+var $977 = { n: "class", v: "css-j7qwjs", r: 24, c: 13, s: "f18", u: "f19",  }; //2255
+$.a($976, $977, 1993);
+var $978 = { n: "@style", v: "", r: 25, c: 13, s: "f18", u: "f19",  }; //2256
+$.a($976, $978, 1995);
+var $979 = { n: "data-emotion-css", v: "1uk1gs8", r: 26, c: 17, s: "f18", u: "f19",  }; //2257
+$.a($978, $979, 1997);
+var $980 = { n: "css", v: "", r: 27, c: 17, s: "f18", u: "f19",  }; //2258
+$.a($978, $980, 1999);
+var $981 = { n: ".", v: "css-1uk1gs8", r: 28, c: 21, s: "f18", u: "f19",  }; //2259
+$.a($980, $981, 2001);
+var $982 = { n: "margin", v: "0", r: 29, c: 25, s: "f18", u: "f19",  }; //2260
+$.a($981, $982, 2003);
+var $983 = { n: "li", v: "", r: 3, c: 5, s: "f19", u: "f20",  }; //2270
+$.a($976, $983, 2005);
+var $984 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f19", u: "f20",  }; //2271
+$.a($983, $984, 2007);
+var $985 = { n: "a", v: $.ip("f19", "${title}", "string", 2008, false), r: 5, c: 9, s: "f19", u: "f20",  }; //2272
+$.a($983, $985, 2009);
+var $986 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f19", u: "f20",  }; //2273
+$.a($985, $986, 2011);
+var $987 = { n: "href", v: $.ip("f19", "${href}", "string", 2012, false), r: 7, c: 13, s: "f19", u: "f20",  }; //2274
+$.a($985, $987, 2013);
+var $988 = { n: "li", v: "", r: 3, c: 5, s: "f20", u: "f20",  }; //2276
+$.a($976, $988, 2015);
+var $989 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f20", u: "f20",  }; //2277
+$.a($988, $989, 2017);
+var $990 = { n: "a", v: $.ip("f20", "${title}", "string", 2018, false), r: 5, c: 9, s: "f20", u: "f20",  }; //2278
+$.a($988, $990, 2019);
+var $991 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f20", u: "f20",  }; //2279
+$.a($990, $991, 2021);
+var $992 = { n: "href", v: $.ip("f20", "${href}", "string", 2022, false), r: 7, c: 13, s: "f20", u: "f20",  }; //2280
+$.a($990, $992, 2023);
+var $993 = { n: "li", v: "", r: 3, c: 5, s: "f21", u: "f20",  }; //2282
+$.a($976, $993, 2025);
+var $994 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f21", u: "f20",  }; //2283
+$.a($993, $994, 2027);
+var $995 = { n: "a", v: $.ip("f21", "${title}", "string", 2028, false), r: 5, c: 9, s: "f21", u: "f20",  }; //2284
+$.a($993, $995, 2029);
+var $996 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f21", u: "f20",  }; //2285
+$.a($995, $996, 2031);
+var $997 = { n: "href", v: $.ip("f21", "${href}", "string", 2032, false), r: 7, c: 13, s: "f21", u: "f20",  }; //2286
+$.a($995, $997, 2033);
+var $998 = { n: "li", v: "", r: 3, c: 5, s: "f22", u: "f20",  }; //2288
+$.a($976, $998, 2035);
+var $999 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f22", u: "f20",  }; //2289
+$.a($998, $999, 2037);
+var $1000 = { n: "a", v: $.ip("f22", "${title}", "string", 2038, false), r: 5, c: 9, s: "f22", u: "f20",  }; //2290
+$.a($998, $1000, 2039);
+var $1001 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f22", u: "f20",  }; //2291
+$.a($1000, $1001, 2041);
+var $1002 = { n: "href", v: $.ip("f22", "${href}", "string", 2042, false), r: 7, c: 13, s: "f22", u: "f20",  }; //2292
+$.a($1000, $1002, 2043);
+var $1003 = { n: "li", v: "", r: 2, c: 5, s: "f23", u: "f19",  }; //2294
+$.a($953, $1003, 2045);
+var $1004 = { n: "@style", v: "", r: 3, c: 9, s: "f23", u: "f19",  }; //2295
+$.a($1003, $1004, 2047);
+var $1005 = { n: "data-emotion-css", v: "ocmoim", r: 4, c: 13, s: "f23", u: "f19",  }; //2296
+$.a($1004, $1005, 2049);
+var $1006 = { n: "css", v: "", r: 5, c: 13, s: "f23", u: "f19",  }; //2297
+$.a($1004, $1006, 2051);
+var $1007 = { n: ".", v: "css-ocmoim", r: 6, c: 17, s: "f23", u: "f19",  }; //2298
+$.a($1006, $1007, 2053);
+var $1008 = { n: "font-family", v: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji", r: 7, c: 21, s: "f23", u: "f19",  }; //2299
+$.a($1007, $1008, 2055);
+var $1009 = { n: "font-size", v: "0.75rem", r: 8, c: 21, s: "f23", u: "f19",  }; //2300
+$.a($1007, $1009, 2057);
+var $1010 = { n: "color", v: "var(--theme-ui-colors-blackFade-80,rgba(35,33,41,0.8))", r: 9, c: 21, s: "f23", u: "f19",  }; //2301
+$.a($1007, $1010, 2059);
+var $1011 = { n: "text-transform", v: "uppercase", r: 10, c: 21, s: "f23", u: "f19",  }; //2302
+$.a($1007, $1011, 2061);
+var $1012 = { n: "font-weight", v: "600", r: 11, c: 21, s: "f23", u: "f19",  }; //2303
+$.a($1007, $1012, 2063);
+var $1013 = { n: "letter-spacing", v: "0.1em", r: 12, c: 21, s: "f23", u: "f19",  }; //2304
+$.a($1007, $1013, 2065);
+var $1014 = { n: "margin", v: "0", r: 13, c: 21, s: "f23", u: "f19",  }; //2305
+$.a($1007, $1014, 2067);
+var $1015 = { n: "margin-bottom", v: "0.5rem", r: 14, c: 21, s: "f23", u: "f19",  }; //2306
+$.a($1007, $1015, 2069);
+var $1016 = { n: "h3", v: "Get Started", r: 15, c: 9, s: "f23", u: "f19",  }; //2307
+$.a($1003, $1016, 2071);
+var $1017 = { n: "class", v: "css-ocmoim", r: 16, c: 13, s: "f23", u: "f19",  }; //2308
+$.a($1016, $1017, 2073);
+var $1018 = { n: "@style", v: "", r: 17, c: 9, s: "f23", u: "f19",  }; //2309
+$.a($1003, $1018, 2075);
+var $1019 = { n: "data-emotion-css", v: "j7qwjs", r: 18, c: 13, s: "f23", u: "f19",  }; //2310
+$.a($1018, $1019, 2077);
+var $1020 = { n: "css", v: "", r: 19, c: 13, s: "f23", u: "f19",  }; //2311
+$.a($1018, $1020, 2079);
+var $1021 = { n: ".", v: "css-j7qwjs", r: 20, c: 17, s: "f23", u: "f19",  }; //2312
+$.a($1020, $1021, 2081);
+var $1022 = { n: "display", v: "flex", r: 21, c: 21, s: "f23", u: "f19",  }; //2313
+$.a($1021, $1022, 2083);
+var $1023 = { n: "flex-direction", v: "column", r: 22, c: 21, s: "f23", u: "f19",  }; //2314
+$.a($1021, $1023, 2085);
+var $1024 = { n: "ul", v: "", r: 23, c: 9, s: "f23", u: "f19",  }; //2315
+$.a($1003, $1024, 2087);
+var $1025 = { n: "class", v: "css-j7qwjs", r: 24, c: 13, s: "f23", u: "f19",  }; //2316
+$.a($1024, $1025, 2089);
+var $1026 = { n: "@style", v: "", r: 25, c: 13, s: "f23", u: "f19",  }; //2317
+$.a($1024, $1026, 2091);
+var $1027 = { n: "data-emotion-css", v: "1uk1gs8", r: 26, c: 17, s: "f23", u: "f19",  }; //2318
+$.a($1026, $1027, 2093);
+var $1028 = { n: "css", v: "", r: 27, c: 17, s: "f23", u: "f19",  }; //2319
+$.a($1026, $1028, 2095);
+var $1029 = { n: ".", v: "css-1uk1gs8", r: 28, c: 21, s: "f23", u: "f19",  }; //2320
+$.a($1028, $1029, 2097);
+var $1030 = { n: "margin", v: "0", r: 29, c: 25, s: "f23", u: "f19",  }; //2321
+$.a($1029, $1030, 2099);
+var $1031 = { n: "li", v: "", r: 3, c: 5, s: "f24", u: "f20",  }; //2324
+$.a($1024, $1031, 2101);
+var $1032 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f24", u: "f20",  }; //2325
+$.a($1031, $1032, 2103);
+var $1033 = { n: "a", v: $.ip("f24", "${title}", "string", 2104, false), r: 5, c: 9, s: "f24", u: "f20",  }; //2326
+$.a($1031, $1033, 2105);
+var $1034 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f24", u: "f20",  }; //2327
+$.a($1033, $1034, 2107);
+var $1035 = { n: "href", v: $.ip("f24", "${href}", "string", 2108, false), r: 7, c: 13, s: "f24", u: "f20",  }; //2328
+$.a($1033, $1035, 2109);
+var $1036 = { n: "li", v: "", r: 3, c: 5, s: "f25", u: "f20",  }; //2330
+$.a($1024, $1036, 2111);
+var $1037 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f25", u: "f20",  }; //2331
+$.a($1036, $1037, 2113);
+var $1038 = { n: "a", v: $.ip("f25", "${title}", "string", 2114, false), r: 5, c: 9, s: "f25", u: "f20",  }; //2332
+$.a($1036, $1038, 2115);
+var $1039 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f25", u: "f20",  }; //2333
+$.a($1038, $1039, 2117);
+var $1040 = { n: "href", v: $.ip("f25", "${href}", "string", 2118, false), r: 7, c: 13, s: "f25", u: "f20",  }; //2334
+$.a($1038, $1040, 2119);
+var $1041 = { n: "li", v: "", r: 3, c: 5, s: "f26", u: "f20",  }; //2336
+$.a($1024, $1041, 2121);
+var $1042 = { n: "class", v: "css-1uk1gs8", r: 4, c: 9, s: "f26", u: "f20",  }; //2337
+$.a($1041, $1042, 2123);
+var $1043 = { n: "a", v: $.ip("f26", "${title}", "string", 2124, false), r: 5, c: 9, s: "f26", u: "f20",  }; //2338
+$.a($1041, $1043, 2125);
+var $1044 = { n: "class", v: "css-17mmtw1", r: 6, c: 13, s: "f26", u: "f20",  }; //2339
+$.a($1043, $1044, 2127);
+var $1045 = { n: "href", v: $.ip("f26", "${href}", "string", 2128, false), r: 7, c: 13, s: "f26", u: "f20",  }; //2340
+$.a($1043, $1045, 2129);
+$.s("f2");
+if (isWizziStudio) { //196
+    $.n();
+    var $1047 = { n: "script", v: "", r: 4, c: 9, s: "f2", u: "f4",  }; //197
+    $.a($1, $1047, 2134);
+    var $1048 = { n: "module", v: "", r: 5, c: 13, s: "f2", u: "f4",  }; //198
+    $.a($1047, $1048, 2136);
+    var $1049 = { n: "_", v: "document.addEventListener", r: 6, c: 17, s: "f2", u: "f4",  }; //199
+    $.a($1048, $1049, 2138);
+    var $1050 = { n: "@", v: "'keydown'", r: 7, c: 21, s: "f2", u: "f4",  }; //200
+    $.a($1049, $1050, 2140);
+    var $1051 = { n: "=>", v: "", r: 8, c: 21, s: "f2", u: "f4",  }; //201
+    $.a($1049, $1051, 2142);
+    var $1052 = { n: "param", v: "event", r: 9, c: 25, s: "f2", u: "f4",  }; //202
+    $.a($1051, $1052, 2144);
+    var $1053 = { n: "var", v: "keyName = event.key", r: 10, c: 25, s: "f2", u: "f4",  }; //203
+    $.a($1051, $1053, 2146);
+    var $1054 = { n: "if", v: "keyName === 'Control'", r: 11, c: 25, s: "f2", u: "f4",  }; //204
+    $.a($1051, $1054, 2148);
+    var $1055 = { n: "#", v: "do not alert when only Control key is pressed.", r: 12, c: 29, s: "f2", u: "f4",  }; //205
+    $.a($1054, $1055, 2150);
+    var $1056 = { n: "return", v: "", r: 13, c: 29, s: "f2", u: "f4",  }; //206
+    $.a($1054, $1056, 2152);
+    var $1057 = { n: "if", v: "event.ctrlKey && keyName === 'j'", r: 15, c: 25, s: "f2", u: "f4",  }; //207
+    $.a($1051, $1057, 2154);
+    var $1058 = { n: "set", v: "location.href= location.pathname + '?meta=json'", r: 16, c: 29, s: "f2", u: "f4",  }; //208
+    $.a($1057, $1058, 2156);
+    var $1059 = { n: "_", v: "event.preventDefault", r: 17, c: 29, s: "f2", u: "f4",  }; //209
+    $.a($1057, $1059, 2158);
+    var $1060 = { n: "_", v: "event.stopPropagation", r: 18, c: 29, s: "f2", u: "f4",  }; //210
+    $.a($1057, $1060, 2160);
+    var $1061 = { n: "if", v: "event.ctrlKey && keyName === 'h'", r: 20, c: 25, s: "f2", u: "f4",  }; //211
+    $.a($1051, $1061, 2162);
+    var $1062 = { n: "set", v: "location.href= location.pathname + '?meta=html'", r: 21, c: 29, s: "f2", u: "f4",  }; //212
+    $.a($1061, $1062, 2164);
+    var $1063 = { n: "_", v: "event.preventDefault", r: 22, c: 29, s: "f2", u: "f4",  }; //213
+    $.a($1061, $1063, 2166);
+    var $1064 = { n: "_", v: "event.stopPropagation", r: 23, c: 29, s: "f2", u: "f4",  }; //214
+    $.a($1061, $1064, 2168);
+    var $1065 = { n: "if", v: "event.ctrlKey && keyName === 'b'", r: 25, c: 25, s: "f2", u: "f4",  }; //215
+    $.a($1051, $1065, 2170);
+    var $1066 = { n: "var", v: "i = location.pathname.lastIndexOf('/')", r: 26, c: 29, s: "f2", u: "f4",  }; //216
+    $.a($1065, $1066, 2172);
+    var $1067 = { n: "set", v: "location.href= location.pathname.substr(0, i) + '?meta=html'", r: 27, c: 29, s: "f2", u: "f4",  }; //217
+    $.a($1065, $1067, 2174);
+    var $1068 = { n: "_", v: "event.preventDefault", r: 28, c: 29, s: "f2", u: "f4",  }; //218
+    $.a($1065, $1068, 2176);
+    var $1069 = { n: "_", v: "event.stopPropagation", r: 29, c: 29, s: "f2", u: "f4",  }; //219
+    $.a($1065, $1069, 2178);
+}
+$.s("f2");
+if (opt.useReact) { //264
+    $.n();
+    var $1071 = { n: "js", v: "https://unpkg.com/react@latest/umd/react.development.js", r: 4, c: 9, s: "f2", u: "f5",  }; //265
+    $.a($1, $1071, 2184);
+    var $1072 = { n: "js", v: "https://unpkg.com/react-dom@latest/umd/react-dom.development.js", r: 5, c: 9, s: "f2", u: "f5",  }; //266
+    $.a($1, $1072, 2186);
+    var $1073 = { n: "js", v: "https://unpkg.com/prop-types@latest/prop-types.min.js", r: 6, c: 9, s: "f2", u: "f5",  }; //267
+    $.a($1, $1073, 2188);
+    var $1074 = { n: "js", v: "https://unpkg.com/@material-ui/core/umd/material-ui.development.js", r: 7, c: 9, s: "f2", u: "f5",  }; //268
+    $.a($1, $1074, 2190);
+    var $1075 = { n: "js", v: "https://unpkg.com/babel-standalone@latest/babel.min.js", r: 8, c: 9, s: "f2", u: "f5",  }; //269
+    $.a($1, $1075, 2192);
+    $.s("f2");
+    if (opt.react.useRouter) { //270
+        $.n();
+        var $1077 = { n: "js", v: "https://unpkg.com/react-router-dom/umd/react-router-dom.min.js", r: 10, c: 13, s: "f2", u: "f5",  }; //271
+        $.a($1, $1077, 2197);
+    }
+    $.n();
+    var $1078 = { n: "js", v: "/static/lib/classnames/classnames@2.2.5.js", r: 11, c: 9, s: "f2", u: "f5",  }; //272
+    $.a($1, $1078, 2201);
+}
+$.s("f2");
+if (opt.useJQuery || opt.useBootstrap) { //273
+    $.n();
+    var $1080 = { n: "js", v: "/static/lib/jquery/dist/jquery.js", r: 14, c: 9, s: "f2", u: "f5",  }; //274
+    $.a($1, $1080, 2207);
+}
+$.s("f2");
+if (opt.useBootstrap) { //275
+    $.n();
+    var $1082 = { n: "js", v: "/static/lib/bootstrap/dist/js/bootstrap.min.js", r: 17, c: 9, s: "f2", u: "f5",  }; //276
+    $.a($1, $1082, 2213);
+}
+$.s("f2");
+if (opt.useUnderscore) { //277
+    $.n();
+    var $1084 = { n: "js", v: "/static/lib/underscore/underscore.js", r: 20, c: 9, s: "f2", u: "f5",  }; //278
+    $.a($1, $1084, 2219);
+}
+$.s("f2");
+if (opt.usePrism) { //279
+    if (isWizziStudio) { //280
+        $.n();
+        var $1087 = { n: "js", v: "/static/lib/prism/prism.js", r: 24, c: 13, s: "f2", u: "f5",  }; //281
+        $.a($1, $1087, 2226);
+    }
+    else {
+        $.n();
+        var $1089 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js", r: 26, c: 13, s: "f2", u: "f5",  }; //283
+        $.a($1, $1089, 2231);
+    }
+}
+$.s("f2");
+if (opt.useSplit) { //284
+    $.n();
+    var $1091 = { n: "js", v: "/static/lib/controls/split.js", r: 29, c: 9, s: "f2", u: "f5",  }; //285
+    $.a($1, $1091, 2238);
+}
+$.s("f2");
+if (opt.useAce) { //286
+    $.n();
+    var $1093 = { n: "js", v: "/static/lib/ace/src-noconflict/ace.js", r: 32, c: 9, s: "f2", u: "f5",  }; //287
+    $.a($1, $1093, 2244);
+}
+$.s("f2");
+if (opt.useHighlight) { //288
+    $.n();
+    var $1095 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js", r: 35, c: 9, s: "f2", u: "f5",  }; //289
+    $.a($1, $1095, 2250);
+}
+$.s("f2");
+if (opt.useCodemirror) { //290
+    $.n();
+    var $1097 = { n: "js", v: "/static/lib/codemirror/lib/codemirror.js", r: 38, c: 9, s: "f2", u: "f5",  }; //291
+    $.a($1, $1097, 2256);
+    var $1098 = { n: "js", v: "/static/lib/codemirror/mode/javascript/javascript.js", r: 39, c: 9, s: "f2", u: "f5",  }; //292
+    $.a($1, $1098, 2258);
+    var $1099 = { n: "js", v: "/static/lib/codemirror/mode/yaml/yaml.js", r: 40, c: 9, s: "f2", u: "f5",  }; //293
+    $.a($1, $1099, 2260);
+    var $1100 = { n: "js", v: "/static/lib/codemirror/addon/display/fullscreen.js", r: 41, c: 9, s: "f2", u: "f5",  }; //294
+    $.a($1, $1100, 2262);
+}
+$.s("f2");
+if (opt.usePubSub) { //295
+    $.n();
+    var $1102 = { n: "js", v: "/static/lib/pubsub/pubsub.js", r: 44, c: 9, s: "f2", u: "f5",  }; //296
+    $.a($1, $1102, 2268);
+}
+$.s("f2");
+if (opt.useAxios) { //297
+    $.n();
+    var $1104 = { n: "js", v: "/static/lib/axios/axios.js", r: 47, c: 9, s: "f2", u: "f5",  }; //298
+    $.a($1, $1104, 2274);
+}
+$.s("f2");
+if (opt.useJss) { //299
+    $.n();
+    var $1106 = { n: "js", v: "/static/lib/jss/jss.js", r: 50, c: 9, s: "f2", u: "f5",  }; //300
+    $.a($1, $1106, 2280);
+    var $1107 = { n: "js", v: "/static/lib/jss/jss-preset-default.js", r: 51, c: 9, s: "f2", u: "f5",  }; //301
+    $.a($1, $1107, 2282);
+}
+$.s("f2");
+if (opt.mainJs && opt.mainJs.length > 0) { //302
+    $.n();
+    var $1109 = { n: "script", v: "", r: 54, c: 9, s: "f2", u: "f5",  }; //303
+    $.a($1, $1109, 2288);
+    var $1110 = { n: "src", v: $.ip("f2", "${opt.mainJs}", "string", 2289, false), r: 55, c: 13, s: "f2", u: "f5",  }; //304
+    $.a($1109, $1110, 2290);
+    var $1111 = { n: "type", v: "text/babel", r: 56, c: 13, s: "f2", u: "f5",  }; //305
+    $.a($1109, $1111, 2292);
+}
+$.s("f2");
+if (opt.mainJs) { //101
+    $.n();
+    var $1113 = { n: "js", v: $.ip("f2", "${opt.mainJs}", "string", 2297, false), r: 36, c: 13, s: "f2", u: "f2",  }; //102
+    $.a($1, $1113, 2298);
+}
+else {
+    $.n();
+    var $1115 = { n: "-", v: "default", r: 38, c: 13, s: "f2", u: "f2",  }; //104
+    $.a($1, $1115, 2303);
+    var $1116 = { n: "js", v: "./script.js.ittf", r: 39, c: 13, s: "f2", u: "f2",  }; //105
+    $.a($1, $1116, 2305);
+}

@@ -1,0 +1,27 @@
+html
+    $
+        var opt = {
+            mainCss: 'm-1.css.ittf'
+        }
+
+    h/layouts/basic-layout(&opt)
+        
+        m-1-header()
+            m-2-nav()
+                m-3-div-logo()
+                m-3-button()
+                m-3-div-mobile()
+                m-3-div-ul()
+                    m-4-li-ul()
+                        m-5-li-h3-div-ul()
+                            m-6-li-a-ul()
+                                m-7-li-ul-grid()
+                                    m-8-li-h3-ul( Get Started
+                                        m-9-li-a( Documentation, /docs/
+                                        m-9-li-a( Quick Start, /docs/quick-start/
+                                        m-9-li-a( Tutorial, /docs/tutorial/
+                                        m-9-li-a( Cheat Sheet, /docs/cheat-sheet/
+                                    m-8-li-h3-ul( Guides
+                                        m-9-li-a( How-To Guides, /docs/how-to/
+                                        m-9-li-a( Reference Guides, /docs/reference/
+                                        m-9-li-a( Conceptual Guides, /docs/conceptual/

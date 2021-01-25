@@ -1,0 +1,7 @@
+$group
+    $params title, href
+    li 
+        class m-7-li 
+        a ${title}
+            class m-7-li-a
+            href ${href}

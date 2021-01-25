@@ -255,7 +255,8 @@ $group
     . css-lqt4hu
         display grid
         grid-template-columns repeat(2,1fr)
-    . css-ocmoim
+    
+    . m-6-li-h3 /* css-ocmoim */
         font-family -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
         font-size 0.75rem
         color var(--theme-ui-colors-blackFade-80,rgba(35,33,41,0.8))
@@ -267,7 +268,8 @@ $group
         letter-spacing 0.1em
         margin 0
         margin-bottom 0.5rem
-    . css-j7qwjs
+    
+    . m-6-li-ul /* css-j7qwjs */
         display -webkit-box
         display -webkit-flex
         display -ms-flexbox
@@ -276,7 +278,7 @@ $group
         -ms-flex-direction column
         flex-direction column
 
-    . css-1uk1gs8
+    . m-7-li
         margin 0
 
     . css-jlxowz
@@ -314,7 +316,7 @@ $group
     media (min-width: 1000px)
         . css-a2l7qn
             display block
-    . css-17mmtw1
+    . m-7-li-a
         -webkit-align-items center
         -webkit-box-align center
         -ms-flex-align center
@@ -335,19 +337,19 @@ $group
         font-size 0.875rem
         -webkit-text-decoration none
         text-decoration none
-    . css-17mmtw1:focus
-        + .css-17mmtw1:hover
+    . m-7-li-a:focus
+        + .m-7-li-a:hover
         color var(--theme-ui-colors-purple-40,#b17acc)
         -webkit-text-decoration underline
         text-decoration underline
-    . css-17mmtw1:hover
-        + .css-17mmtw1:focus
+    . m-7-li-a:hover
+        + .m-7-li-a:focus
         color var(--theme-ui-colors-purple-60,#663399)
         -webkit-transition all 250ms cubic-bezier(0.4,0,0.2,1)
         transition all 250ms cubic-bezier(0.4,0,0.2,1)
         -webkit-text-decoration none
         text-decoration none
-    . css-17mmtw1:after
+    . m-7-li-a:after
         content "›"
         color var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))
         margin-left 0.25rem

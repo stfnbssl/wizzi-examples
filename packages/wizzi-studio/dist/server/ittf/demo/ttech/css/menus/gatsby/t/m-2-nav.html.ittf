@@ -1,0 +1,33 @@
+$group
+
+    @style 
+        data-emotion-css jlxowz
+        css
+            . css-jlxowz
+                display -webkit-box
+                display -webkit-flex
+                display -ms-flexbox
+                display flex
+                width 100%
+                -webkit-box-pack justify
+                -webkit-justify-content space-between
+                -ms-flex-pack justify
+                justify-content space-between
+            . css-jlxowz ul
+                margin 0
+                list-style none
+            . css-jlxowz li
+                margin 0
+    nav 
+        class navigation css-jlxowz
+        @style 
+            data-emotion-css wo6pb2
+        @style 
+            data-emotion-css k008qs
+            css
+                . css-k008qs
+                    display -webkit-box
+                    display -webkit-flex
+                    display -ms-flexbox
+                    display flex
+        $hook

@@ -1,7 +1,43 @@
-﻿../_layout( Basic shapes)
+html
+    $
+        var opt = {
+        }
 
-	div
-		img
-			src images/shapes.svg.ittf
-
+    h/layouts/basic-layout(&opt)
+   
+        h3 Refereng in 'src' attribute of 'img' tag
+        div
+            img
+                src images/shapes.svg.ittf
+        
+        h3 Html embedded in 'a' tag
+        div 
+            a
+                href #
+                svg
+                
+                    width 200
+                    height 250
+                    
+                    rect
+                        x 10
+                        y 10
+                        width 30
+                        height 30
+                        stroke black
+                        fill transparent
+                        stroke-width 5
+                        
+                    rect
+                        x 60
+                        y 10
+                        rx 10
+                        ry 10
+                        width 30
+                        height 30
+                
+                
+                        stroke black
+                        fill transparent
+                        stroke-width 5
 

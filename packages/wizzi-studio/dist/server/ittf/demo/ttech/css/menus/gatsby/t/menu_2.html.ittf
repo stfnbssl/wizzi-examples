@@ -19,14 +19,8 @@ $group
                     list-style none
                 . css-jlxowz li
                     margin 0
-        nav 
-            class navigation css-jlxowz
-            ul 
-                class css-qg23q3
                 li 
                     class css-1wgu51w
-                    @style 
-                        data-emotion-css 1clvfi2
                     . css-1clvfi2
                         ul
                             li 
@@ -53,6 +47,7 @@ $group
                                         id Docs-dropdown
                                         ul 
                                             class css-y86b6k
+                                            m-4-li-ul
                                             li 
                                                 class css-1szfju1
                                                 a 
@@ -107,51 +102,16 @@ $group
                                                         class css-9wr7tw
                                                 ul 
                                                     class css-kqnhvk
+                                                    m-5-li-ul
                                                     li 
                                                         ul 
                                                             class css-lqt4hu
-                                                            li 
-                                                                h3 Get Started
-                                                                    class css-ocmoim
-                                                                ul 
-                                                                    class css-j7qwjs
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a Documentation
-                                                                            class css-17mmtw1
-                                                                            href /docs/
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a Quick Start
-                                                                            class css-17mmtw1
-                                                                            href /docs/quick-start/
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a Tutorial
-                                                                            class css-17mmtw1
-                                                                            href /docs/tutorial/
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a Cheat Sheet
-                                                                            class css-17mmtw1
-                                                                            href /docs/cheat-sheet/
-                                                            li 
-                                                                h3 Guides
-                                                                    class css-ocmoim
-                                                                ul 
-                                                                    class css-j7qwjs
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a How-To Guides
-                                                                            class css-17mmtw1
-                                                                            href /docs/how-to/
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a Reference Guides
-                                                                            class css-17mmtw1
-                                                                            href /docs/reference/
-                                                                    li 
-                                                                        class css-1uk1gs8
-                                                                        a Conceptual Guides
-                                                                            class css-17mmtw1
-                                                                            href /docs/conceptual/
+                                                            m2-2-li-ul( Get Started
+                                                                m2-3-li-a( Documentation, /docs/
+                                                                m2-3-li-a( Quick Start, /docs/quick-start/
+                                                                m2-3-li-a( Tutorial, /docs/tutorial/
+                                                                m2-3-li-a( Cheat Sheet, /docs/cheat-sheet/
+                                                            m2-2-li-ul( Guides
+                                                                m2-3-li-a( How-To Guides, /docs/how-to/
+                                                                m2-3-li-a( Reference Guides, /docs/reference/
+                                                                m2-3-li-a( Conceptual Guides, /docs/conceptual/

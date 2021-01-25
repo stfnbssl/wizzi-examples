@@ -1,0 +1,29 @@
+{
+    { Menu-1
+        [ l1
+            {
+                label 'Get started'
+                [ items
+                    {
+                        label "Documentation"
+                        href "/docs/"
+                    {
+                        label "Quick Start"
+                        href "/docs/quick-start/"
+                    {
+                        label "Tutorial"
+                        href "/docs/tutorial/"
+                    {
+                        label "Cheat Sheet"
+                        href "/docs/cheat-sheet/"
+            { label Guides
+                [ items
+                    {
+                        label "How-To Guides"
+                        href "/docs/how-to/"
+                    {
+                        Reference "Guides"
+                        href "/docs/reference/"
+                    {
+                        label "Conceptual Guides"
+                        href "/docs/conceptual/"
