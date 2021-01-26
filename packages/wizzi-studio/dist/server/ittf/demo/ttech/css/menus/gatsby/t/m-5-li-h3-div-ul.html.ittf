@@ -148,6 +148,22 @@ $group
                             background var(--theme-ui-colors-white,#ffffff)
                             will-change transform
                             transition-property transform
+                            @media (min-width: 1000px)
+            @style 
+                data-emotion-css i6otxs
+                css
+                    . css-i6otxs
+                        display grid
+                    @media (min-width: 1000px)
+                        . css-i6otxs
+                            display none
+                            left 50%
+                            padding-top 0.75rem
+                            position absolute
+                            top 100%
+                            visibility visible
+                            z-index 10
+                            transform translateX(calc(-50% + 0px))
             . css-1sg6jvm
                 id Docs-dropdown
                 @style 

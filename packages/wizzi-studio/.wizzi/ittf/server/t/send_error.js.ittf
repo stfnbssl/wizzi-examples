@@ -5,6 +5,8 @@
 		param err
 		param options
 
+        # log 'sendError', err, Object.keys(err), err.toString()
+
 		set options = options || {}
 		var code = options.code || 999
 

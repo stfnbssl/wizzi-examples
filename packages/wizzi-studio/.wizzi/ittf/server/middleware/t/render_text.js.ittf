@@ -24,9 +24,8 @@
 							@ wizzi.config.get('meta-html-ittf-path')
 							{
 								{ modelRequestContext
-									{ mTreeBuildUpContext
-										@ path filePath
-										@ ds documentState
+                                    @ path filePath
+                                    @ ds documentState
 							@ 'html/document'
 							f_cb_send_err( rendered, json )
 								return res.send(rendered)

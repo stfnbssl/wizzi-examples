@@ -15,6 +15,7 @@ $group
     li 
         class css-1szfju1
         @style 
+            - NOT USED YET
             data-emotion-css jcgwc3
             css
                 . css-jcgwc3
@@ -51,7 +52,6 @@ $group
                         padding 0.75rem
                         padding-left 3.5rem
                         transition background 500ms cubic-bezier(0.4,0,0.2,1)
-
                         transform none
                     . css-jcgwc3:hover
                         + .css-jcgwc3:focus
@@ -210,7 +210,7 @@ $group
                             display block
             p Start building with Gatsby and its ecosystem tools
                 class css-9wr7tw
-        @style 
+        @style
             data-emotion-css kqnhvk
             css
                 . css-kqnhvk

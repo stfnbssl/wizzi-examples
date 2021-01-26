@@ -1,0 +1,32 @@
+html
+    $
+        var opt = {
+        }
+    h/layouts/basic-layout(&opt)
+    
+        @style
+            . main
+                width 70%
+                margin 100px auto
+            . item
+                padding 20px
+                border 1px solid #dedede
+    
+        . main
+            . item 
+                h2 Try ?meta=json
+                p get json format of this page
+                a /ittf/home/helpers/index.html.ittf?meta=json
+                    href /ittf/home/helpers/index.html.ittf?meta=json
+        
+            . item 
+                h2 Try ?meta=html
+                p get editable ittf document sources of this html page
+                a /ittf/home/helpers/index.html.ittf?meta=html
+                    href /ittf/home/helpers/index.html.ittf?meta=html
+                    
+            . item
+                h2 Try [path].webpack.js.ittf
+                p get a webpack bundle compiled on the fly
+                a /ittf/demo/ttech/javascript/bundlers/webpack/step_1/js/main.webpack.js.ittf
+                    href /ittf/demo/ttech/javascript/bundlers/webpack/step_1/js/main.webpack.js.ittf

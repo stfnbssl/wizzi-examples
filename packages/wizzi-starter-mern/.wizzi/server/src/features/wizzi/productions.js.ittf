@@ -65,13 +65,10 @@ module
                             const wf
                                 await 
                                     _ createFilesystemFactory
-                            const generationContext
-                                { 
-                                    { modelRequestContext
-                                        @ mTreeBuildUpContext context || {}
                             _ wf.loadModelAndGenerateArtifact
                                 @ filePath
-                                @ generationContext
+                                { 
+                                    { modelRequestContext context || {}
                                 @ generator
                                 => 
                                     param err

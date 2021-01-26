@@ -1,4 +1,5 @@
 $group
+    $params title
     li 
         @style 
             data-emotion-css ocmoim
@@ -12,7 +13,7 @@ $group
                     letter-spacing 0.1em
                     margin 0
                     margin-bottom 0.5rem
-        h3 Get Started
+        h3 ${title}
             class css-ocmoim
         @style 
             data-emotion-css j7qwjs

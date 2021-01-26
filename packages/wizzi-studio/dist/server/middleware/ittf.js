@@ -66,7 +66,28 @@ module.exports = function(root, routePath, options) {
             var ext5 = filePath.substr(-5, 5);
             // log 'ext4', ext4
             try {
-                if (filePath.substr(-10, 10) === '.html.ittf') {
+                if (ext5 == '.ittf' && req.query.meta == 'debug') {
+                    createWizziFactory('stefi', 'admin', {}, function(err, wf) {
+                        if (err) {
+                            return sendError(res, err, {
+                                    format: 'json'
+                                });
+                        }
+                        wf.loadMTreeDebugInfo(filePath, {
+                            req: req, 
+                            __data: {}
+                        }, function(err, debugInfo) {
+                            if (err) {
+                                return sendError(res, err, {
+                                        format: 'json'
+                                    });
+                            }
+                            res.setHeader('content-type', 'text/plain');
+                            return res.send(debugInfo.mTreeBuildUpScript);
+                        });
+                    });
+                }
+                else if (filePath.substr(-10, 10) === '.html.ittf') {
                     if (req.query.meta && req.query.meta === 'json') {
                         ittfDocumentScanner.scan(filePath, {
                             rootFolder: path.dirname(root)
@@ -96,12 +117,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -131,9 +150,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -177,12 +194,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -212,9 +227,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'css/document', function(err, rendered) {
                                     if (err) {
@@ -259,12 +272,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -294,9 +305,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'scss/document', function(err, rendered) {
                                     if (err) {
@@ -341,12 +350,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -376,9 +383,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'json/document', function(err, rendered) {
                                     if (err) {
@@ -423,12 +428,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -458,9 +461,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'svg/document', function(err, rendered) {
                                     if (err) {
@@ -505,12 +506,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -540,9 +539,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'vtt/document', function(err, rendered) {
                                     if (err) {
@@ -587,10 +584,8 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            path: filePath, 
-                                            ds: documentState
-                                        }
+                                        path: filePath, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -687,12 +682,10 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            wizzischema: 'html', 
-                                            path: filePath, 
-                                            req: req, 
-                                            ds: documentState
-                                        }
+                                        wizzischema: 'html', 
+                                        path: filePath, 
+                                        req: req, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -722,9 +715,7 @@ module.exports = function(root, routePath, options) {
                                 }
                                 // log 'wizzi-studio/middleware/ittf created wizzi factory for ' + filePath
                                 wf.loadModelAndGenerateArtifact(filePath, {
-                                    modelRequestContext: {
-                                        mTreeBuildUpContext: modelContext
-                                    }, 
+                                    modelRequestContext: modelContext, 
                                     artifactRequestContext: {}
                                 }, 'js/module', function(err, rendered) {
                                     if (err) {
@@ -871,10 +862,8 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            path: filePath, 
-                                            ds: documentState
-                                        }
+                                        path: filePath, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -923,10 +912,8 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            path: filePath, 
-                                            ds: documentState
-                                        }
+                                        path: filePath, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -975,10 +962,8 @@ module.exports = function(root, routePath, options) {
                                 }
                                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-html-ittf-path'), {
                                     modelRequestContext: {
-                                        mTreeBuildUpContext: {
-                                            path: filePath, 
-                                            ds: documentState
-                                        }
+                                        path: filePath, 
+                                        ds: documentState
                                     }
                                 }, 'html/document', function(err, rendered) {
                                     if (err) {
@@ -1002,7 +987,10 @@ module.exports = function(root, routePath, options) {
                 }
             } 
             catch (ex) {
-                return sendError(res, ex, {
+                return sendError(res, {
+                        message: ex.toString(), 
+                        trace: ex.stack
+                    }, {
                         format: 'json'
                     });
             } 
@@ -1029,9 +1017,7 @@ function sendFolderScan(folderPath, root, meta, res) {
                 }
                 wf.loadModelAndGenerateArtifact(wizzi.config.get('meta-folder-ittf-path'), {
                     modelRequestContext: {
-                        mTreeBuildUpContext: {
-                            fs: folderState
-                        }
+                        fs: folderState
                     }
                 }, 'html/document', function(err, rendered) {
                     if (err) {
@@ -1123,6 +1109,7 @@ function cleanCircular(obj, stock) {
     return obj;
 }
 function sendError(res, err, options) {
+    // log 'sendError', err, Object.keys(err), err.toString()
     options = options || {};
     var code = options.code || 999;
     var errEmit = err;

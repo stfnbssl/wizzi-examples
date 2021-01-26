@@ -83,7 +83,26 @@ module
 					# log 'ext4', ext4
 
 					try
-						if filePath.substr(-10, 10) === '.html.ittf'
+                        if ext5 == '.ittf' && req.query.meta == 'debug'
+							_ createWizziFactory
+								@ 'stefi'
+								@ 'admin'
+								{
+								f_cb_send_err( wf, json )
+									_ wf.loadMTreeDebugInfo
+										@ filePath
+										{
+											@ req req
+											@ __data  $$ becomes -> genWriter.options.data
+												{
+										f_cb_send_err( debugInfo, json )
+											_ res.setHeader('content-type', 'text/plain')
+											return 
+                                                _ res.send
+                                                    @ debugInfo.mTreeBuildUpScript
+
+
+						elif filePath.substr(-10, 10) === '.html.ittf'
 							render_ittf( html/document )
 
 						elif filePath.substr(-9, 9) === '.css.ittf'
@@ -248,7 +267,9 @@ module
 						return
 							_ sendError
 								@ res
-								@ ex
+                                {
+								    @ message ex.toString()
+                                    @ trace ex.stack
 								{
 									@ format 'json'
 
@@ -275,8 +296,7 @@ module
 								@ wizzi.config.get('meta-folder-ittf-path')
 								{
 									{ modelRequestContext
-										{ mTreeBuildUpContext
-											@ fs folderState
+                                        @ fs folderState
 								@ 'html/document'
 								f_cb_send_err( rendered, json )
 									return res.send(rendered)

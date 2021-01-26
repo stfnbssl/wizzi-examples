@@ -55,6 +55,13 @@
 						subtitle "Wizzi project repo"
 						backgroundColor "${l_colors[1]}"
 					{
+						key "wizzi-studio"
+						teaser ""
+						title "Wizzi studio"
+						href "/ittf/home/helpers/index.html.ittf"
+						subtitle "Wizzi studio helper"
+						backgroundColor "${l_colors[3]}"
+					{
 						key "cheatsheets"
 						teaser "Cheat sheets"
 						title "Documentation"
