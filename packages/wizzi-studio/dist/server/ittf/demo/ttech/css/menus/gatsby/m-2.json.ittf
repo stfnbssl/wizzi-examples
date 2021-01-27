@@ -2,7 +2,7 @@
     { Banner
         { promotion
             title "The Future Web is Here:"
-            subtitle "Join us at GatsbyConf!&nbsp;"
+            subtitle "Join us at WizziConf!&nbsp;"
             { link
                 label "Register for free now."
                 href "https://wizziconf.com/"
@@ -19,12 +19,15 @@
     { Nav1
         [ menus
             {
-                title "Documentation"
+                title "Docs"
                 [ panels
                     {
                         kind "grid"
-                        [ groups
+                        title "Documentation"
+                        subtitle "Start building with Wizzi and its ecosystem tools"
+                        [ griditems
                             {
+                                kind "list"
                                 title 'Get started'
                                 [ items
                                     {
@@ -40,6 +43,7 @@
                                         label "Cheat Sheet"
                                         href "/docs/cheat-sheet/"
                             { 
+                                kind "list"
                                 title "Guides"
                                 [ items
                                     {
@@ -59,40 +63,150 @@
                 [ panels
                     {
                         kind "grid"
+                        title "Feature Comparison"
+                        subtitle "See how Wizzi compares to other JAMstack frameworks and traditional content management systems (CMS)"
+
+
                         $
-                            var cgs = ['xx','yy','zz'];
+                            var cgs = ['Alpha','Beta'];
 
-                    
-                        $foreach cg in cgs
-                            
-                            $
-                                $.n();
-                                $60.n += '--';
-                            { tot
-                                num "${cg}"
-                                count "${cg_count}"
-                                index "${cg_index}"
-                            
-                        $ var ci = 1
-                        $while ci < 4
+                        [ griditems
+                            $foreach cg in cgs
+                                {
+                                    title "Group ${cg}"
+                                    kind "list"
+                                    [ items
+                                        $
+                                            var cis = ['Sigma','Tau'];
 
-                            { item
-                                label "Item ${ci}"
-                                href "/item${ci}/"
-                            
-                            $ ci++
+                                        $foreach ci in cis
+                                            { item
+                                                label "Item ${cg} ${ci}"
+                                                href "/item${cg}${ci}/"
 
-                        [ groups
-                            {
-                                title "Group ${cg}"
-                                [ items
+                    {
+                        kind "subgrid"
+                        $
+                            var cgs = ['Gamma','Lambda'];
+
+                        [ griditems
+                            $foreach cg in cgs
+                                {
+                                    title "Group ${cg}"
+                                    [ items
+                                        $
+                                            var cis = ['Delta'];
+
+                                        $foreach ci in cis
+                                            { item
+                                                label "Item ${cg} ${ci}"
+                                                href "/item${cg}${ci}/"
                                 
-                        $ var ci = 1
-                        $while ci < 4
+            {
+                title "Use cases"
+                [ panels
+                    {
+                        kind "grid"
+                        title "Use cases"
+                        subtitle "Explore the many ways to use Wizzi:"
+                        [ griditems
+                            {
+                                kind "list"
+                                title "By Industry"
+                                [ items
+                                    {
+                                        label "Software &amp;SaaS"
+                                        href "/use-cases/software-saas/"
+                                    {
+                                        label "Consumer Finance &amp;Insurance"
+                                        href "/use-cases/finance-insurance/"
+                                    {
+                                        label "E-commerce"
+                                        href "/use-cases/e-commerce/"
+                                    {
+                                        label "Public Interest Organizations"
+                                        href "/use-cases/public-interest-organization/"
+                                    {
+                                        label "Content &amp;Media"
+                                        href "/use-cases/content-media/"
+                            {
+                                kind "list"
+                                title "By Technology"
+                                [ items
+                                    {
+                                        label "Wordpress"
+                                        href "/use-cases/wordpress/"
+                                        svg "wordpress"
+                                    {
+                                        label "Contentful"
+                                        href "/use-cases/contentful/"
+                                        svg "contentful"
+                                    {
+                                        label "Drupal"
+                                        href "/use-cases/drupal/"
+                                        svg "drupal"
+                                    {
+                                        label "Shopify"
+                                        href "/use-cases/shopify/"
+                                        svg "shopify"
+                    {
+                        kind "list"
+                        title "Webinars"
+                        subtitle "Learn more with webinars on demand"
+                        [ listitems
+                            {
+                                title "Latest webinars"
+                                [ items
+                                    {
+                                        label "This Changes Everything: Incremental Builds in Wizzi"
+                                        href "/incrbuilds-webinar/"
+                                    {
+                                        label "Matter Supply: Just Do It 2.0"
+                                        href "/matter-supply-webinar"
 
-                            { item
-                                label "Item ${ci}"
-                                href "/item${ci}/"
-                            
-                            $ ci++
-
+            {
+                title "Community"
+                [ panels
+                    {
+                        kind "grid"
+                        [ griditems
+                            {
+                                kind "list"
+                                title 'Contributing'
+                                [ items
+                                    {
+                                        label "Why contribute"
+                                        href "/contributing/"
+                                    {
+                                        label "How to contribute"
+                                        href "/contributing/how-to-contribute/"
+                            {
+                                kind "list"
+                                [ items
+                                    {
+                                        label "Code of Conduct"
+                                        href "/contributing/code-of-conduct/"
+                                    {
+                                        label "Style Guide"
+                                        href "/contributing/gatsby-style-guide/"
+                    {
+                        kind "bar"
+                        [ items
+                            {
+                                label "Twitch"
+                                href "https://www.twitch.tv/gatsbyjs"
+                                { icon
+                                    svg "twitch-svg"
+                            {
+                                label "Discord"
+                                href "https://gatsby.dev/discord"
+                                { icon
+                                    svg "discors-svg"
+                            {
+                                label "Youtube"
+                                href "https://www.youtube.com/gatsbyjs"
+                                { icon
+                                    svg "youtube-svg"
+            {
+                title "Blog"
+                [ panels

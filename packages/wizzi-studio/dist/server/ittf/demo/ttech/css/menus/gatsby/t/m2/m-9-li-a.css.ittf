@@ -1,5 +1,4 @@
 $group
-    - data-emotion-css 1o1w4xb
     . css-1o1w4xb
         color var(--theme-ui-colors-blackFade-70,rgba(35,33,41,0.7))
         display inline-block
@@ -16,7 +15,6 @@ $group
         content "›"
         color var(--theme-ui-colors-blackFade-40,rgba(35,33,41,0.4))
         margin-left 0.25rem
-    - data-emotion-css 17mmtw1
     . css-17mmtw1
         align-items center
         color var(--theme-ui-colors-purple-60,#663399)

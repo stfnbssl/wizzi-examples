@@ -3,57 +3,35 @@ $group
         data-emotion-css ic43bx animation-5yo8zs
         css
             . css-ic43bx
-                -webkit-align-items center
-                -webkit-box-align center
-                -ms-flex-align center
                 align-items center
                 border var(--theme-ui-colors-grey-60,#635e69)
                 border-radius 4px
                 box-sizing border-box
                 cursor pointer
-                display -webkit-inline-box
-                display -webkit-inline-flex
-                display -ms-inline-flexbox
                 display inline-flex
                 font-family -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
-                -webkit-box-pack center
-                -webkit-justify-content center
-                -ms-flex-pack center
                 justify-content center
-                -webkit-transition background 250ms,border 250ms,color 250ms
                 transition background 250ms,border 250ms,color 250ms
                 line-height 1
-                -webkit-text-decoration none
                 text-decoration none
                 background transparent
                 border 1px solid transparent
                 color #663399
-                display -webkit-inline-box
-                display -webkit-inline-flex
-                display -ms-inline-flexbox
-                display inline-flex
                 width 2.5rem
                 height 2.5rem
                 position relative
                 z-index 2
-                -webkit-transition -webkit-transform 500ms cubic-bezier(0.4,0,0.2,1)
-                -webkit-transition transform 500ms cubic-bezier(0.4,0,0.2,1)
                 transition transform 500ms cubic-bezier(0.4,0,0.2,1)
             . css-ic43bx[disabled]
                 + .css-ic43bx[disabled]:hover
                 cursor not-allowed
                 opacity 0.5
             . css-ic43bx svg
-                -webkit-flex-shrink 0
-                -ms-flex-negative 0
                 flex-shrink 0
                 margin 0 0.25rem
-                -webkit-transform scale(1)
-                -ms-transform scale(1)
                 transform scale(1)
             . css-ic43bx:hover:not([disabled]) svg
                 + .css-ic43bx:focus:not([disabled]) svg
-                -webkit-animation animation-5yo8zs 1s linear infinite
                 animation animation-5yo8zs 1s linear infinite
             . css-ic43bx:hover
                 background #fcfaff
@@ -66,22 +44,14 @@ $group
             keyframes animation-5yo8zs
                 vendor -webkit-
                 keyframe 33%
-                    -webkit-transform scale(1)
-                    -ms-transform scale(1)
                     transform scale(1)
                 keyframe 66%
-                    -webkit-transform scale(0.8)
-                    -ms-transform scale(0.8)
                     transform scale(0.8)
             keyframes animation-5yo8zs
                 vendor
                 keyframe 33%
-                    -webkit-transform scale(1)
-                    -ms-transform scale(1)
                     transform scale(1)
                 keyframe 66%
-                    -webkit-transform scale(0.8)
-                    -ms-transform scale(0.8)
                     transform scale(0.8)
     button 
         type button
@@ -107,8 +77,6 @@ $group
                     content " "
                     position absolute
                     right 0
-                    -webkit-transition -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55)
-                    -webkit-transition transform 250ms cubic-bezier(.68,-.55,.265,1.55)
                     transition transform 250ms cubic-bezier(.68,-.55,.265,1.55)
                 . css-1cgevyx:before
                     top -7px

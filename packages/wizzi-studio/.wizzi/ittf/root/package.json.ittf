@@ -86,7 +86,7 @@
 			redux-thunk "^2.3.0"
 			scroll "^3.0.1"
 			temp "^0.9.4"
-			wizzi "^0.7.20"
+			wizzi "^0.7.21"
 			wizzi-tools "^0.7.3"
 			wizzi-git "^0.7.1"
 			wizzi-core "^0.7.1"

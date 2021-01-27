@@ -1,5 +1,4 @@
 $group
-    - data-emotion-css ocmoim
     . css-ocmoim
         font-family -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
         font-size 0.75rem
@@ -9,10 +8,8 @@ $group
         letter-spacing 0.1em
         margin 0
         margin-bottom 0.5rem
-    - data-emotion-css j7qwjs
     . css-j7qwjs
         display flex
         flex-direction column
-    - data-emotion-css 1uk1gs8
     . css-1uk1gs8
         margin 0

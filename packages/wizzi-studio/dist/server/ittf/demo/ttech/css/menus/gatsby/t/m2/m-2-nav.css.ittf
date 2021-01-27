@@ -1,0 +1,15 @@
+$group
+    . css-jlxowz
+        display flex
+        width 100%
+        -webkit-box-pack justify
+        -webkit-justify-content space-between
+        -ms-flex-pack justify
+        justify-content space-between
+    . css-jlxowz ul
+        margin 0
+        list-style none
+    . css-jlxowz li
+        margin 0
+    . css-k008qs
+        display flex

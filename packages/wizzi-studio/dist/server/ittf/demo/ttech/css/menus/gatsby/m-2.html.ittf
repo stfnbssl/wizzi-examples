@@ -1,7 +1,7 @@
 html
     $
         var opt = {
-            mainCss: 'm-1.css.ittf'
+            mainCss: 'm-2.css.ittf'
         }
 
     h/layouts/basic-layout(&opt)
@@ -40,28 +40,43 @@ html
                                         class css-ntw0hb
                                         href ${item.href} 
                                         + ${item.label} 
-            div
-                ul
-                    li
-                        m3-7-ul-grid()
-                            m-8-li-h3-ul( Get Started
-                                m-9-li-a( Documentation, /docs/
-                                m-9-li-a( Quick Start, /docs/quick-start/
-                                m-9-li-a( Tutorial, /docs/tutorial/
-                                m-9-li-a( Cheat Sheet, /docs/cheat-sheet/
-                            m-8-li-h3-ul( Guides
-                                m-9-li-a( How-To Guides, /docs/how-to/
-                                m-9-li-a( Reference Guides, /docs/reference/
-                                m-9-li-a( Conceptual Guides, /docs/conceptual/
-                    $foreach menu in mpage.Nav1.menus
-                        li ${menu.title}
-                            ul
-                                $foreach panel in menu.panels
-                                    li
-                                        $if panel.kind == 'grid'
-                                            m3-7-ul-grid()
-                                                $foreach group in panel.groups
-                                                    m-8-li-h3-ul( ${group.title}
-                                                        $foreach item in group.items
-                                                            m-9-li-a( ${item.label}, ${item.href}
+            m2/m-1-header()
+                m2/m-2-nav()
+                    m2/m-3-div-ul()
+                        m2/m-4-li-ul()
+                            $foreach menu in mpage.Nav1.menus
+                                m2/m-5-li-h3-div-ul(&menu)
+                                $$ li ${menu.title}
+                                    ul
+                                        $foreach panel in menu.panels
+                                            m2/m-6-li-a-ul(&panel)
+                                                $if panel.kind == 'grid'
+                                                    li
+                                                        m2/m-7-ul-grid()
+                                                            $foreach gritem in panel.griditems
+                                                                m2/m-8-li-h3-ul( ${gritem.title}
+                                                                    $foreach item in gritem.items
+                                                                        m2/m-9-li-a( ${item.label}, ${item.href}
+                                                $elif panel.kind == 'subgrid'
+                                                    li
+                                                        m2/m-7-ul-grid()
+                                                            $foreach gritem in panel.griditems
+                                                                m2/m-8-li-h3-ul( ${gritem.title}
+                                                                    $foreach item in gritem.items
+                                                                        m2/m-9-li-a( ${item.label}, ${item.href}
 
+                                                $elif panel.kind == 'bar'
+                                                    m2/m-7-ul-bar()
+                                                        $foreach item in panel.items
+                                                            m2/m-9-li-a-bar( ${item.label}, ${item.href}
+
+                                                $elif panel.kind == 'list'
+                                                    m2/m-7-ul-list( ${panel.title}, ${panel.subtitle}
+                                                        $foreach liitem in panel.listitems
+                                                            li 
+                                                                h3 ${liitem.title}
+                                                                    class css-ocmoim
+                                                                ul 
+                                                                    class css-j7qwjs
+                                                                    $foreach item in liitem.items
+                                                                        m2/m-9-li-a( ${item.label}, ${item.href}

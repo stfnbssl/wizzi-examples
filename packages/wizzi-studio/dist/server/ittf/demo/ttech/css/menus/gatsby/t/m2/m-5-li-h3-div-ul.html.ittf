@@ -1,0 +1,17 @@
+$group
+    $params &menu
+    li 
+        class css-1wgu51w
+        . css-1clvfi2
+            h3 ${menu.title}
+                class css-1enu353
+            button ${menu.title}
+                type button
+                aria-expanded false
+                aria-controls ${menu.title}-dropdown
+                class css-3q8779
+            . css-1sg6jvm
+                id Docs-dropdown
+                ul 
+                    class css-y86b6k
+                    $hook
