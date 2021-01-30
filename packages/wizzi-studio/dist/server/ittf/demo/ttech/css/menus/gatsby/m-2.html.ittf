@@ -1,7 +1,8 @@
 html
     $
         var opt = {
-            mainCss: 'm-2.css.ittf'
+            mainCss: 'm-2.css.ittf',
+            mainJs: 'm-2.js.ittf',
         }
 
     h/layouts/basic-layout(&opt)
@@ -19,64 +20,13 @@ html
                 < body
                     font-family raleway
 
-        m2/p-0-page()
-            aside
-                . css-1jx4yha
-                    . css-1orjk4a
-                        p
-                            strong ${mpage.Banner.promotion.title}
-                            + ${mpage.Banner.promotion.subtitle}
-                            a ${mpage.Banner.promotion.link.label} 
-                                href ${mpage.Banner.promotion.link.href}
-                nav
-                    class css-7jmlzq
-                    ul
-                        class css-c7ectl
-                        $foreach item in mpage.Banner.items
-                            li
-                                class css-1wgu51w
-                                . css-jebqk6
-                                    a
-                                        class css-ntw0hb
-                                        href ${item.href} 
-                                        + ${item.label} 
-            m2/m-1-header()
-                m2/m-2-nav()
-                    m2/m-3-div-ul()
-                        m2/m-4-li-ul()
-                            $foreach menu in mpage.Nav1.menus
-                                m2/m-5-li-h3-div-ul(&menu)
-                                $$ li ${menu.title}
-                                    ul
-                                        $foreach panel in menu.panels
-                                            m2/m-6-li-a-ul(&panel)
-                                                $if panel.kind == 'grid'
-                                                    li
-                                                        m2/m-7-ul-grid()
-                                                            $foreach gritem in panel.griditems
-                                                                m2/m-8-li-h3-ul( ${gritem.title}
-                                                                    $foreach item in gritem.items
-                                                                        m2/m-9-li-a( ${item.label}, ${item.href}
-                                                $elif panel.kind == 'subgrid'
-                                                    li
-                                                        m2/m-7-ul-grid()
-                                                            $foreach gritem in panel.griditems
-                                                                m2/m-8-li-h3-ul( ${gritem.title}
-                                                                    $foreach item in gritem.items
-                                                                        m2/m-9-li-a( ${item.label}, ${item.href}
-
-                                                $elif panel.kind == 'bar'
-                                                    m2/m-7-ul-bar()
-                                                        $foreach item in panel.items
-                                                            m2/m-9-li-a-bar( ${item.label}, ${item.href}
-
-                                                $elif panel.kind == 'list'
-                                                    m2/m-7-ul-list( ${panel.title}, ${panel.subtitle}
-                                                        $foreach liitem in panel.listitems
-                                                            li 
-                                                                h3 ${liitem.title}
-                                                                    class css-ocmoim
-                                                                ul 
-                                                                    class css-j7qwjs
-                                                                    $foreach item in liitem.items
-                                                                        m2/m-9-li-a( ${item.label}, ${item.href}
+        $include m2/index
+        $include c2/index
+        $include f2/index
+        
+        $*
+        $ var i=0
+        $while i < 200
+            div >
+            $ i++
+        *$

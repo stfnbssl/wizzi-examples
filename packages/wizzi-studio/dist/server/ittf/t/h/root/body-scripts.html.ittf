@@ -51,6 +51,9 @@ $group
 		js /static/lib/jss/jss-preset-default.js
 
     $if opt.mainJs && opt.mainJs.length > 0
-        script
-            src ${opt.mainJs}
-            type text/babel         
+        $if opt.useReact
+            script
+                src ${opt.mainJs}
+                type text/babel         
+        $else
+            js ${opt.mainJs}

@@ -1,0 +1,10 @@
+div 
+    id ___wizzi
+    div 
+        style outline:none
+        tabindex -1
+        id wizzi-focus-wrapper
+        . main-container
+            . main-header
+                $hook
+

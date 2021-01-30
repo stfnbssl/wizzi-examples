@@ -15,14 +15,8 @@ $group
 		
 		$hook head-styles
 
-        $if opt.mainCss
-            css ${opt.mainCss}
-        $else
-            - default
-            css ./styles.css.ittf
-		
     body 
-			$hook
+		$hook
 	
 		$include h/script_meta
 
@@ -32,8 +26,3 @@ $group
 		
 		$hook body-scripts
 
-        $if opt.mainJs
-            js ${opt.mainJs}
-        $else
-            - default
-            js ./script.js.ittf

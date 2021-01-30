@@ -4,7 +4,7 @@ $group
         css
             - set left = 0 and opacity = 1 to show element
             . css-1i6uzar
-                background var(--theme-ui-colors-white,#ffffff)
+                background var(--theme-ui-colors-${mpage.Colors.themeBack})
                 border 1px solid var(--theme-ui-colors-grey-30,#d9d7e0)
                 left 100%
                 opacity 0
@@ -62,9 +62,9 @@ $group
                     line-height 1
                     -webkit-text-decoration none
                     text-decoration none
-                    background #663399
-                    border 1px solid #663399
-                    color var(--theme-ui-colors-white,#ffffff)
+                    background ${mpage.Colors.primary2}
+                    border 1px solid ${mpage.Colors.primary2}
+                    color var(--theme-ui-colors-${mpage.Colors.themeBack})
                     font-weight 600
                     font-size 0.875rem
                     min-height 2rem
@@ -152,7 +152,7 @@ $group
                     text-decoration none
                     background transparent
                     border 1px solid transparent
-                    color #663399
+                    color ${mpage.Colors.primary2}
                     font-size 0.875rem
                     min-height 2rem
                     min-width 2rem

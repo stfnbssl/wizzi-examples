@@ -1,9 +1,0 @@
-$group
-    $params title
-    li 
-        h3 ${title}
-            class m-6-li-h3 
-        ul 
-            class m-6-li-ul
-            $hook
-                                                            li 

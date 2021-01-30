@@ -1,0 +1,20 @@
+﻿$group
+
+    $include m2/__reset
+    $include m2/a-0-page
+    $include m2/b-0-banner-aside
+    $include m2/b-1-promo
+    $include m2/b-2-nav-ul
+    $include m2/b-3-item-li
+    $include m2/m-1-header
+    $include m2/m-2-nav
+    $include m2/m-3-div-ul
+    $include m2/m-4-li-ul
+    $include m2/m-5-li-h3-div-ul
+    $include m2/m-6-li-a-ul
+    $include m2/m-7-ul-grid
+    $include m2/m-7-ul-list
+    $include m2/m-7-ul-bar
+    $include m2/m-8-li-h3-ul
+    $include m2/m-9-li-a
+    $include m2/m-9-li-a-bar

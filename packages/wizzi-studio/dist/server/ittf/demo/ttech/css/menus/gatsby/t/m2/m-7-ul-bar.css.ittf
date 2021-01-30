@@ -1,11 +1,6 @@
 $group
     . css-1xhj18k
-        display -webkit-box
-        display -webkit-flex
-        display -ms-flexbox
         display flex
-        -webkit-flex-direction row
-        -ms-flex-direction row
         flex-direction row
         . css-w6ak5y
             margin 0

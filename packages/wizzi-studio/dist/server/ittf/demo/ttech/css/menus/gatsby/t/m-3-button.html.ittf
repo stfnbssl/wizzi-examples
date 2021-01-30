@@ -16,7 +16,7 @@ $group
                 text-decoration none
                 background transparent
                 border 1px solid transparent
-                color #663399
+                color ${mpage.Colors.primary2}
                 width 2.5rem
                 height 2.5rem
                 position relative

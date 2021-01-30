@@ -1,8 +1,0 @@
-$group
-    nav 
-        class navigation css-jlxowz
-        ul 
-            class m-1-nav-ul css-qg23q3
-            $hook
-
-                                                            li 

@@ -1,4 +1,23 @@
 {
+    $include c2/index
+    $include f2/index
+    { Colors
+        xbackground "#ffffff"
+        background "#ECEAE4"
+        xscheme1Fade90 "whiteFade-90,rgba(255,255,255,0.9)"
+        scheme1Fade90 "scheme-1-90,rgba(235,233,228,0.9)"
+        xthemeBack "white,#ffffff"
+        themeBack "scheme-1,#ECEAE4"
+        xprimary "purple-60,#663399"
+        primary "scheme-3,#4D739E"
+        primary2 "#4D739E"
+        xgray70 "grey-70,#48434f"
+        gray70 "grey-70,#222B31"
+        xgrad1 "#f219aa"
+        grad1 "#81B6CF"
+        xgrad2 "#7026B9"
+        grad2 "#222B31"
+        $$ scheme ECEAE4 81B6CF 4D739E 7C8074 222B31
     { Banner
         { promotion
             title "The Future Web is Here:"
@@ -57,7 +76,7 @@
                                         href "/docs/conceptual/"
             {
                 title "Plugins"
-                [ panels
+                href "/plugins/"
             {
                 title "Features"
                 [ panels
@@ -86,6 +105,8 @@
 
                     {
                         kind "subgrid"
+                        title "Plugins"
+                        subtitle "RSS feed? SEO? Shopify integration? There’s a plugin for that!"
                         $
                             var cgs = ['Gamma','Lambda'];
 
@@ -103,11 +124,11 @@
                                                 href "/item${cg}${ci}/"
                                 
             {
-                title "Use cases"
+                title "Productions"
                 [ panels
                     {
                         kind "grid"
-                        title "Use cases"
+                        title "Productions"
                         subtitle "Explore the many ways to use Wizzi:"
                         [ griditems
                             {
@@ -169,6 +190,8 @@
                 [ panels
                     {
                         kind "grid"
+                        title "Community"
+                        subtitle "We’re so glad you want to help! Here’s how to get started:"
                         [ griditems
                             {
                                 kind "list"
@@ -207,6 +230,16 @@
                                 href "https://www.youtube.com/gatsbyjs"
                                 { icon
                                     svg "youtube-svg"
+                    {
+                        kind "singleitem"
+                        title "Showcase"
+                        subtitle "Check out what the community is building"
+                        href "/showcase/"
+                    {
+                        kind "singleitem"
+                        title "WizziConf"
+                        subtitle "Join us for WizziConf - March 2-3, 2021!"
+                        href "/wizziconf/"
             {
                 title "Blog"
-                [ panels
+                href "/blog/"

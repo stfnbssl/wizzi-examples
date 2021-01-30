@@ -28,7 +28,7 @@ $group
     						_ event.preventDefault
     						_ event.stopPropagation						
 
-    					if event.ctrlKey && keyName === 'c'
+    					if event.ctrlKey && keyName === 'e'
     						set location.href= '/ittf/docs/cheatsheets/index.html.ittf'
     						_ event.preventDefault
     						_ event.stopPropagation						                            
