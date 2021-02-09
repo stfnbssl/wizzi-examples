@@ -1,0 +1,25 @@
+html 
+    body
+        
+        js https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js
+        js ./scripts/${pkg.name}.js
+    
+        script 
+            module
+                kind react
+
+        script 
+            module
+                kind react
+                # ...
+                log 'webpackNumbers', webpackNumbers
+                log 'webpackNumbers.default', webpackNumbers.default
+                log 'webpackNumbers.default', webpackNumbers._default
+                log 'webpackNumbers.Module', webpackNumbers.Module
+                # Global variable
+                log 'Five', webpackNumbers.wordToNum('Five')
+                # Property in the window object
+                log 'Five', window.webpackNumbers.wordToNum('Five')
+                # ...
+                log 'open', window.webpackNumbers.open()
+                # ...                

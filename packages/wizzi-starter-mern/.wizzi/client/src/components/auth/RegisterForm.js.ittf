@@ -67,10 +67,10 @@ styled_react_f( RegisterForm )
                         then
                             < CircularProgress 
                                 @ size {20}
-                        else 'Sign up for ${app.name}'
+                        else 'Sign up for ${pkg.name}'
             p 
                 @ className {classes.little}
-                + By clicking “Sign up for ${app.name}”, you agree to our &nbsp;
+                + By clicking “Sign up for ${pkg.name}”, you agree to our &nbsp;
                 a terms of service
                     href /help/terms
                 span &nbsp; and &nbsp;

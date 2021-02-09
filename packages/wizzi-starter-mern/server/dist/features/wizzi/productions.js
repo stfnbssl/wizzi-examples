@@ -1,8 +1,11 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\features\wizzi\productions.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\features\wizzi\productions.js.ittf
 */
 'use strict';
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -26,7 +29,9 @@ var _config = require("../config");
 
 var _factory = require("./factory");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -39,19 +44,13 @@ function loadModelFs(_x, _x2) {
 }
 
 function _loadModelFs() {
-  _loadModelFs = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee2(filePath, context) {
+  _loadModelFs = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(filePath, context) {
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            return _context2.abrupt("return", new Promise(
-            /*#__PURE__*/
-            function () {
-              var _ref = _asyncToGenerator(
-              /*#__PURE__*/
-              regeneratorRuntime.mark(function _callee(resolve, reject) {
+            return _context2.abrupt("return", new Promise( /*#__PURE__*/function () {
+              var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {
                 var schemaName, wf;
                 return regeneratorRuntime.wrap(function _callee$(_context) {
                   while (1) {
@@ -111,20 +110,14 @@ function generateArtifactFs(_x3, _x4) {
 }
 
 function _generateArtifactFs() {
-  _generateArtifactFs = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee4(filePath, context) {
+  _generateArtifactFs = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(filePath, context) {
     return regeneratorRuntime.wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            return _context4.abrupt("return", new Promise(
-            /*#__PURE__*/
-            function () {
-              var _ref2 = _asyncToGenerator(
-              /*#__PURE__*/
-              regeneratorRuntime.mark(function _callee3(resolve, reject) {
-                var generator, wf, generationContext;
+            return _context4.abrupt("return", new Promise( /*#__PURE__*/function () {
+              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(resolve, reject) {
+                var generator, wf;
                 return regeneratorRuntime.wrap(function _callee3$(_context3) {
                   while (1) {
                     switch (_context3.prev = _context3.next) {
@@ -132,7 +125,7 @@ function _generateArtifactFs() {
                         generator = generatorFor(filePath);
 
                         if (!generator) {
-                          _context3.next = 10;
+                          _context3.next = 9;
                           break;
                         }
 
@@ -142,12 +135,9 @@ function _generateArtifactFs() {
 
                       case 5:
                         wf = _context3.sent;
-                        generationContext = {
-                          modelRequestContext: {
-                            mTreeBuildUpContext: context || {}
-                          }
-                        };
-                        wf.loadModelAndGenerateArtifact(filePath, generationContext, generator, function (err, result) {
+                        wf.loadModelAndGenerateArtifact(filePath, {
+                          modelRequestContext: context || {}
+                        }, generator, function (err, result) {
                           if (err) {
                             return reject(err);
                           }
@@ -159,13 +149,13 @@ function _generateArtifactFs() {
                             artifactGenerator: generator
                           });
                         });
-                        _context3.next = 11;
+                        _context3.next = 10;
                         break;
 
-                      case 10:
+                      case 9:
                         reject('No artifact generator available for document ' + filePath);
 
-                      case 11:
+                      case 10:
                       case "end":
                         return _context3.stop();
                     }
@@ -193,9 +183,7 @@ function scanIttfDocumentFs(_x5, _x6) {
 }
 
 function _scanIttfDocumentFs() {
-  _scanIttfDocumentFs = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee5(filePath, rootFolder) {
+  _scanIttfDocumentFs = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(filePath, rootFolder) {
     return regeneratorRuntime.wrap(function _callee5$(_context5) {
       while (1) {
         switch (_context5.prev = _context5.next) {
@@ -227,9 +215,7 @@ function scanIttfFolderFs(_x7, _x8) {
 }
 
 function _scanIttfFolderFs() {
-  _scanIttfFolderFs = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee6(filePath, rootFolder) {
+  _scanIttfFolderFs = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(filePath, rootFolder) {
     return regeneratorRuntime.wrap(function _callee6$(_context6) {
       while (1) {
         switch (_context6.prev = _context6.next) {
@@ -261,9 +247,7 @@ function inferAndLoadContextFs(_x9, _x10) {
 }
 
 function _inferAndLoadContextFs() {
-  _inferAndLoadContextFs = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee7(filePath, exportName) {
+  _inferAndLoadContextFs = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(filePath, exportName) {
     return regeneratorRuntime.wrap(function _callee7$(_context7) {
       while (1) {
         switch (_context7.prev = _context7.next) {

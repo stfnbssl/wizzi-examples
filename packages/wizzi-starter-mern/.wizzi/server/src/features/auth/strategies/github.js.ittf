@@ -2,22 +2,22 @@ module
     kind es6
     import { Strategy } from 'passport-github2'
     import { GetUserModel } from '../mongo/user'
-    $if app.Build.auth.passport.github.useService
+    $if pkg.Build.auth.passport.github.useService
         import { GetAccountModel } from '../mongo/account'
     import { config } from '../../config'
 
     let userModel = null
-    $if app.Build.auth.passport.github.useService
+    $if pkg.Build.auth.passport.github.useService
         let accountModel = null
 
     export
         function createStrategy
             set userModel = GetUserModel()
-            $if app.Build.auth.passport.github.useService
+            $if pkg.Build.auth.passport.github.useService
                 set accountModel = GetAccountModel()
             log 'features.auth.strategies.github.createStrategy'
             return
-                $if app.Build.auth.passport.github.useLogin
+                $if pkg.Build.auth.passport.github.useLogin
                     new Strategy
                         { 
                             @ clientID config.githubClientID
@@ -55,7 +55,7 @@ module
                                         log 'features.auth.strategies.github.userModel.findOneAndUpdate.user', user
                                         return done(null, user)
                 
-                $if app.Build.auth.passport.github.useService
+                $if pkg.Build.auth.passport.github.useService
                     new Strategy
                         { 
                             @ clientID config.githubClientID
@@ -86,4 +86,4 @@ module
                                     { attributes
                                         @ refreshToken refreshToken
                             _ account.tokens.push(t)
-                            return done(null, account)    
+                            return done(null, account)

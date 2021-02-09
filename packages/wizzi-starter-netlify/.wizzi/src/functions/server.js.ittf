@@ -1,0 +1,9 @@
+module
+    kind es6
+    
+    $
+        var opt = {
+        }
+
+    v08/app/express/App(&opt)
+    v08/app/express/index(&opt)

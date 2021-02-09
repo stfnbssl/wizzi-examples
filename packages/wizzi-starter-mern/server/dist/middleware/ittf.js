@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\middleware\ittf.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\middleware\ittf.js.ittf
 */
 'use strict';
 
@@ -29,7 +30,7 @@ var _wizzi2 = require("wizzi");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -72,178 +73,139 @@ function contentTypeFor(file) {
 }
 
 function ittfMiddleware(basePath, routePath) {
-  return (
-    /*#__PURE__*/
-    function () {
-      var _ref = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee(req, res, next) {
-        var parsedUrl, urlPathName, pathname, filePath, extname, contentType, documentState, generated;
-        return regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (!(req.method !== 'GET' && req.method !== 'HEAD')) {
-                  _context.next = 2;
-                  break;
-                }
+  return /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res, next) {
+      var parsedUrl, urlPathName, pathname, filePath, extname, contentType, documentState, generated;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (!(req.method !== 'GET' && req.method !== 'HEAD')) {
+                _context.next = 2;
+                break;
+              }
 
-                return _context.abrupt("return", next());
+              return _context.abrupt("return", next());
 
-              case 2:
-                parsedUrl = (0, _parseurl["default"])(req);
+            case 2:
+              parsedUrl = (0, _parseurl["default"])(req);
 
-                if (!(!parsedUrl || !parsedUrl.pathname)) {
-                  _context.next = 5;
-                  break;
-                }
+              if (!(!parsedUrl || !parsedUrl.pathname)) {
+                _context.next = 5;
+                break;
+              }
 
-                return _context.abrupt("return", next());
+              return _context.abrupt("return", next());
 
-              case 5:
-                urlPathName = decodeURIComponent(parsedUrl.pathname);
-                pathname = urlPathName;
-                filePath = _path["default"].join(basePath, pathname);
-                extname = _path["default"].extname(filePath);
-                console.log('ittf.pathname, pathname, filePath', urlPathName, pathname, filePath, _path["default"].extname(filePath));
+            case 5:
+              urlPathName = decodeURIComponent(parsedUrl.pathname);
+              pathname = urlPathName;
+              filePath = _path["default"].join(basePath, pathname);
+              extname = _path["default"].extname(filePath);
+              console.log('ittf.pathname, pathname, filePath', urlPathName, pathname, filePath, _path["default"].extname(filePath));
 
-                if (!(_fs["default"].existsSync(filePath) === false)) {
-                  _context.next = 13;
-                  break;
-                }
+              if (!(_fs["default"].existsSync(filePath) === false)) {
+                _context.next = 13;
+                break;
+              }
 
-                console.log('filePath do not exists', filePath);
-                return _context.abrupt("return", next());
+              console.log('filePath do not exists', filePath);
+              return _context.abrupt("return", next());
 
-              case 13:
-                console.log('fs.statSync(filePath).isDirectory()', _fs["default"].statSync(filePath).isDirectory());
+            case 13:
+              console.log('fs.statSync(filePath).isDirectory()', _fs["default"].statSync(filePath).isDirectory());
 
-                if (!_fs["default"].statSync(filePath).isDirectory()) {
-                  _context.next = 16;
-                  break;
-                }
+              if (!_fs["default"].statSync(filePath).isDirectory()) {
+                _context.next = 16;
+                break;
+              }
 
-                return _context.abrupt("return", sendFolderScan(filePath, basePath, req.query.meta, res));
+              return _context.abrupt("return", sendFolderScan(filePath, basePath, req.query.meta, res));
 
-              case 16:
-                contentType = contentTypeFor(filePath);
-                console.log('contentType', contentType);
+            case 16:
+              contentType = contentTypeFor(filePath);
+              console.log('contentType', contentType);
 
-                if (!contentType) {
-                  _context.next = 35;
-                  break;
-                }
+              if (!contentType) {
+                _context.next = 35;
+                break;
+              }
 
-                if (!(req.query.meta && req.query.meta === 'html')) {
-                  _context.next = 34;
-                  break;
-                }
-
-                _context.prev = 20;
-                _context.next = 23;
-                return _wizzi.wizziProds.scanIttfDocumentFs(filePath, _path["default"].dirname(basePath));
-
-              case 23:
-                documentState = _context.sent;
-                _context.next = 26;
-                return _wizzi.wizziProds.generateArtifactFs(_config.config.MetaHtmlIttfPath, {
-                  wizzischema: 'html',
-                  path: filePath,
-                  req: req,
-                  ds: documentState
-                });
-
-              case 26:
-                generated = _context.sent;
-                // console.log('generated.meta.document', generated.artifactContent);
-                res.writeHead(200, {
-                  'Content-Type': 'text/html',
-                  'Content-Length': generated.artifactContent.length
-                });
-                res.end(generated.artifactContent);
+              if (!(req.query.meta && req.query.meta === 'html')) {
                 _context.next = 34;
                 break;
+              }
 
-              case 31:
-                _context.prev = 31;
-                _context.t0 = _context["catch"](20);
-                sendError(res, _context.t0, {
-                  format: 'json'
-                });
+              _context.prev = 20;
+              _context.next = 23;
+              return _wizzi.wizziProds.scanIttfDocumentFs(filePath, _path["default"].dirname(basePath));
 
-              case 34:
-                return _context.abrupt("return", contextLoader(filePath, req, function (err, modelContext) {
-                  if (err) {
-                    sendError(res, err, {
-                      format: 'json'
-                    });
-                  }
+            case 23:
+              documentState = _context.sent;
+              _context.next = 26;
+              return _wizzi.wizziProds.generateArtifactFs(_config.config.MetaHtmlIttfPath, {
+                wizzischema: 'html',
+                path: filePath,
+                req: req,
+                ds: documentState
+              });
 
-                  _wizzi.wizziProds.generateArtifactFs(filePath, modelContext).then(function (generated) {
-                    console.log('generated.artifactContent', generated.artifactContent);
-                    res.writeHead(200, {
-                      'Content-Type': contentType,
-                      'Content-Length': generated.artifactContent.length
-                    });
-                    res.end(generated.artifactContent);
-                  })["catch"](function (err) {
-                    return sendError(res, err, {
-                      format: 'json'
-                    });
+            case 26:
+              generated = _context.sent;
+              // console.log('generated.meta.document', generated.artifactContent);
+              res.writeHead(200, {
+                'Content-Type': 'text/html',
+                'Content-Length': generated.artifactContent.length
+              });
+              res.end(generated.artifactContent);
+              _context.next = 34;
+              break;
+
+            case 31:
+              _context.prev = 31;
+              _context.t0 = _context["catch"](20);
+              sendError(res, _context.t0, {
+                format: 'json'
+              });
+
+            case 34:
+              return _context.abrupt("return", contextLoader(filePath, req, function (err, modelContext) {
+                if (err) {
+                  sendError(res, err, {
+                    format: 'json'
                   });
-                }));
+                }
 
-              case 35:
-                next();
-                /**
-                    
-                     contentType = extContentTypeMap[extname];
-                     console.log('contentType', contentType);
-                     if (contentType) {
-                     var stat = fs.statSync(filePath);
-                     res.writeHead(200, {
-                     'Content-Type': contentType,
-                     'Content-Length': stat.size
-                     });
-                     const readStream = fs.createReadStream(filePath);
-                     return readStream.pipe(res);
-                     }
-                     next();
-                    
-                */
+                _wizzi.wizziProds.generateArtifactFs(filePath, modelContext).then(function (generated) {
+                  console.log('generated.artifactContent', generated.artifactContent);
+                  res.writeHead(200, {
+                    'Content-Type': contentType,
+                    'Content-Length': generated.artifactContent.length
+                  });
+                  res.end(generated.artifactContent);
+                })["catch"](function (err) {
+                  return sendError(res, err, {
+                    format: 'json'
+                  });
+                });
+              }));
 
-              case 36:
-              case "end":
-                return _context.stop();
-            }
+            case 35:
+              next(); //
+
+            case 36:
+            case "end":
+              return _context.stop();
           }
-        }, _callee, null, [[20, 31]]);
-      }));
+        }
+      }, _callee, null, [[20, 31]]);
+    }));
 
-      return function (_x, _x2, _x3) {
-        return _ref.apply(this, arguments);
-      };
-    }()
-  );
-}
-/**
-     *
-     req.query._context contains a semicolon separated list of context models export names.
-     For each <export-name> must exists a req.query._<export-name> parameter
-     with a type;path value pair.
-     The type is the model knwon type or a wizzi schema, the path is the
-     relative path of the ittf document of the model, relative to the
-     filepath of the requested resource.
-    
-     Example (two context models, export names: cs and info)
-     req.query._context = 'cs;info'
-     req.query._cs = 'cheatsheet;html'
-     req.query._info = 'json;../cslayout.json.ittf'
-    
-     If the path value is missing it defaults to ./index.<type>.ittf
-    
-    
-*/
+    return function (_x, _x2, _x3) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+} //
 
 
 function contextLoader(_x4, _x5, _x6) {
@@ -251,9 +213,7 @@ function contextLoader(_x4, _x5, _x6) {
 }
 
 function _contextLoader() {
-  _contextLoader = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee2(resourceFilePath, req, callback) {
+  _contextLoader = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(resourceFilePath, req, callback) {
     var contextRequest, ss, requests, resultContext, repeatCount, repeat, twinJsonContext;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
@@ -317,18 +277,7 @@ function _contextLoader() {
               var request = requests[index];
 
               if (request.type === 'cheatsheet') {
-                return callback('Context loader for cheatsheet type not implemented.');
-                /**
-                     NOT IMPLEMENTED YET
-                     return loadCheatsheet(request.name, function(err, model) {
-                     if (err) {
-                     return callback(err);
-                     }
-                     resultContext[request.exportName] = model;
-                     return callback(null);
-                     });
-                    
-                */
+                return callback('Context loader for cheatsheet type not implemented.'); //
               } else {
                 _wizzi.wizziProds.loadModelFs(request.fullPath, {}).then(function (model) {
                   resultContext[request.exportName] = model;
@@ -372,9 +321,7 @@ function sendFolderScan(_x7, _x8, _x9, _x10) {
 }
 
 function _sendFolderScan() {
-  _sendFolderScan = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee3(folderPath, root, meta, res) {
+  _sendFolderScan = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(folderPath, root, meta, res) {
     var folderState, generated;
     return regeneratorRuntime.wrap(function _callee3$(_context3) {
       while (1) {

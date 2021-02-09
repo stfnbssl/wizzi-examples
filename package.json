@@ -7,23 +7,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wizzifactory/wizzi-examples.git"
+    "url": "git+https://github.com/stfnbssl/wizzi-examples.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wizzifactory/wizzi-examples/issues"
+    "url": "https://github.com/stfnbssl/wizzi-examples/issues"
   },
-  "homepage": "https://github.com/wizzifactory/wizzi-examples#readme",
+  "homepage": "https://github.com/stfnbssl/wizzi-examples#readme",
   "devDependencies": {
     "del": "^2.2.2",
     "expect.js": "^0.3.1",
     "mocha": "^5.2.0",
-    "wizzi": "^0.7.9",
+    "wizzi": "^0.7.21",
     "wizzi-core": "^0.7.1",
-    "wizzi-js": "^0.7.3",
-    "wizzi-utils": "^0.7.5",
-    "wizzi-web": "^0.7.1"
+    "wizzi-js": "^0.7.7",
+    "wizzi-utils": "^0.7.12",
+    "wizzi-web": "^0.7.7"
   }
 }

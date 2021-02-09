@@ -1,12 +1,12 @@
 module
     kind es6
     import passport from 'passport'
-    $if app.Build.auth.passport.useLocal
+    $if pkg.Build.auth.passport.useLocal
         const jwt = require('express-jwt')
     import { GetUserModel } from './mongo/user'
-    $if app.Build.auth.passport.useLocal
+    $if pkg.Build.auth.passport.useLocal
         import { createStrategy as createLocalStrategy } from './strategies/local'
-    $if app.Build.auth.useGithub
+    $if pkg.Build.auth.useGithub
         import { createStrategy as createGithubStrategy} from './strategies/github'
     
     let initialized = false
@@ -15,11 +15,11 @@ module
 
         const userModel = GetUserModel()
         
-        $if app.Build.auth.passport.useLocal
+        $if pkg.Build.auth.passport.useLocal
             _ passport.use
                 _ createLocalStrategy
         
-        $if app.Build.auth.useGithub
+        $if pkg.Build.auth.useGithub
             _ passport.use
                 _ createGithubStrategy
 
@@ -73,7 +73,7 @@ module
                     @ options
                     @ callback
 
-    $if app.Build.auth.passport.useLocal
+    $if pkg.Build.auth.passport.useLocal
         export
             const jwtAuth
                 {
@@ -81,12 +81,16 @@ module
                         _ jwt
                             { 
                                 @ secret 'secret'
+                                [ algorithms
+                                    @ 'RS256'
                                 @ userProperty 'payload'
                                 @ getToken getTokenFromHeaders
                     @ optional
                         _ jwt
                             { 
                                 @ secret 'secret'
+                                [ algorithms
+                                    @ 'RS256'
                                 @ userProperty 'payload'
                                 @ getToken getTokenFromHeaders
                                 @ credentialsRequired false

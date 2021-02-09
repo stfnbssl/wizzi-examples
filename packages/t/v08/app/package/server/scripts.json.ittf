@@ -1,7 +1,0 @@
-$group
-
-    copy "cpx src/**/*.ittf dist"
-    build "babel src -d dist"
-    start "npm run build && npm run copy && nodemon dist/index.js"
-    serve "npm run build && npm run copy && node dist/index.js"
-    test "npm run build && mocha --require @babel/register"

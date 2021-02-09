@@ -1,0 +1,17 @@
+{
+    "name": "wizzi-production-mern-server-starter",
+    "version": "0.0.1",
+    "description": "Wizzi production for MERN (MongoDB, Express, React, and Node.js) server starter template",
+    "author": "Stefano Bassoli",
+    "license": "MIT",
+    "scripts": {
+        "start": "wizzi"
+    },
+    "devDependencies": {
+        "wizzi": "latest",
+        "wizzi-core": "latest",
+        "wizzi-js": "latest",
+        "wizzi-web": "latest",
+        "wizzi-meta": "latest"
+    }
+}

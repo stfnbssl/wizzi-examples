@@ -32,7 +32,6 @@ html
 				css style.css.ittf
 			$else
 				css style.css
-				
 
 		# mc-wrapper
 			class mc-wrapper-layout

@@ -1,0 +1,31 @@
+{
+    "name": "wizzi-starter-netlify",
+    "version": "0.0.1",
+    "description": "Wizzi starter template for Netlify packages",
+    "author": "Stefano Bassoli",
+    "license": "MIT",
+    "Params": {
+        "title": "Netlify starter by Wizzi",
+        "baseUrl": "http://localhost:8080"
+    },
+    "Build": {
+        "useNetlify": true,
+        "netlify": {
+            "functionsFolder": "src/functions"
+        },
+        "useExpress": true,
+        "express": {},
+        "useConfig": true,
+        "config": {
+            "useEnvalid": true
+        },
+        "useLocalServer": true,
+        "localServer": {
+            "port": 3000
+        },
+        "useBabel": true,
+        "babel": {
+            "useDinamicImport": true
+        }
+    }
+}

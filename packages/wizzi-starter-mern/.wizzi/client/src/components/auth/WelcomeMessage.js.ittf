@@ -33,7 +33,7 @@ module
                         @ variant "display1"
                         @ gutterBottom
                         @ className {classes.heading}
-                        + Sign in to ${app.name}
+                        + Sign in to ${pkg.name}
                     img 
                         @ src "/images/logo.png"
                         @ alt "app logo"

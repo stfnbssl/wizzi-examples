@@ -26,6 +26,7 @@
 		wfjob/any_json()
 		wfjob/any_md()
         wfjob/.env()
+        wfjob/.babelrc()
 
 	line src
 		cwd-folder ${ittf_src}

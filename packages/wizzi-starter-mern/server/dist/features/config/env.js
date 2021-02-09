@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\features\config\env.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\features\config\env.js.ittf
 */
 'use strict';
 
@@ -18,18 +19,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var config = null;
 
 function validateEnv() {
-  var checkedEnv = (0, _envalid.cleanEnv)(process.env, {
-    PORT: (0, _envalid.port)(),
-    SESSION_SECRET: (0, _envalid.str)(),
-    MONGO_PASSWORD: (0, _envalid.str)(),
-    MONGO_PATH: (0, _envalid.str)(),
-    MONGO_USER: (0, _envalid.str)(),
-    GITHUB_CLIENT_ID: (0, _envalid.str)(),
-    GITHUB_CLIENT_SECRET: (0, _envalid.str)(),
-    GITHUB_CALLBACK_URL: (0, _envalid.str)(),
-    CORS_CLIENT_ORIGIN: (0, _envalid.str)()
-  });
-  return checkedEnv;
+  return {
+    PORT: 5000,
+    SESSION_SECRET: "axr45hngmuoil9********0ofgt*kjj6767648%$£3f5&/4bnsa-----qq4)$35670qq4q",
+    MONGO_USER: "yanez",
+    MONGO_PASSWORD: "3zMsma2szSKDefi1",
+    MONGO_PATH: "@cluster0.idlk7.mongodb.net/wizzi?retryWrites=true&w=majority",
+    GITHUB_CLIENT_ID: "6a42cd4cb7247bb4e823",
+    GITHUB_CLIENT_SECRET: "dedced0ac262cae62557e4c3f567a6227b17bfb7",
+    GITHUB_CALLBACK_URL: "http://localhost:5000/auth/github/callback",
+    CORS_CLIENT_ORIGIN: "http://localhost:8080"
+  };
 }
 
 function create() {

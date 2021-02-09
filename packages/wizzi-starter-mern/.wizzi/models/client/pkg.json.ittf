@@ -42,5 +42,9 @@
         useBootstrap true
         { bootstrap
 
-        useSocketIO true
+        useSocketIO false
         { socketIO
+
+    { Code
+        useHighlight true
+        { highlight

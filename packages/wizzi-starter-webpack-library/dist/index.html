@@ -1,0 +1,29 @@
+<!--
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-web\lib\artifacts\html\document\gen\main.js
+    package: wizzi-web@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-webpack-library\.wizzi\root\index.html.ittf
+-->
+<!doctype html>
+<html>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
+    <script src="./scripts/wizzi-starter-webpack-library.js"></script>
+    <script>
+    </script>
+    <script>
+        // ...
+        console.log('webpackNumbers', webpackNumbers);
+        console.log('webpackNumbers.default', webpackNumbers.default);
+        console.log('webpackNumbers.default', webpackNumbers._default);
+        console.log('webpackNumbers.Module', webpackNumbers.Module);
+        // Global variable
+        console.log('Five', webpackNumbers.wordToNum('Five'));
+        // Property in the window object
+        console.log('Five', window.webpackNumbers.wordToNum('Five'));
+        // ...
+        console.log('open', window.webpackNumbers.open());
+        // ...
+    </script>
+</body>
+
+</html>

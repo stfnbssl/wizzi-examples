@@ -1,12 +1,14 @@
 styled_react( SocialLogin )
     $append imports
-        import io from 'socket.io-client'
+        $if pkg.Build.useSocketIO
+            import io from 'socket.io-client'
         import OAuthLogin from './OAuthLogin'
         import PageLoader from '../shared/PageLoader'
         import 
             @ config
             from '../../features/config'
-        const socket = io(config.SERVER_URL)
+        $if pkg.Build.useSocketIO
+            const socket = io(config.SERVER_URL)
         const providers
             [ 
                 @ 'twitter'
@@ -47,14 +49,16 @@ styled_react( SocialLogin )
         const buttons
             => 
                 param providers
-                param socket
+                $if pkg.Build.useSocketIO
+                    param socket
                 _ providers.map
                     => 
                         param provider
                         < OAuthLogin 
                             @ provider {provider}
                             @ key {provider}
-                            @ socket {socket}
+                            $if pkg.Build.useSocketIO
+                                @ socket {socket}
         
         return 
             div 
@@ -65,4 +69,7 @@ styled_react( SocialLogin )
                         iif this.state.loading
                             then
                                 < PageLoader 
-                            else buttons(providers, socket)
+                            $if pkg.Build.useSocketIO
+                                else buttons(providers, socket)
+                            $else
+                                else buttons(providers, socket)

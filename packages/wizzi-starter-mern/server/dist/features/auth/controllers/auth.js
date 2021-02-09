@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\features\auth\controllers\auth.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\features\auth\controllers\auth.js.ittf
 */
 'use strict';
 
@@ -23,9 +24,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var AuthController =
-/*#__PURE__*/
-function () {
+var AuthController = /*#__PURE__*/function () {
   function AuthController() {
     _classCallCheck(this, AuthController);
 
@@ -40,16 +39,6 @@ function () {
       console.log('Entering AuthController.initialize');
       this.userModel = (0, _user2.GetUserModel)();
       this.router.get("".concat(this.path, "/login"), this.login.bind(this));
-      this.router.use(function (req, res, next) {
-        if (req.query.socketId) {
-          console.log('features.auth.controllers.auth.middleware.req.originalUrl,query', req.originalUrl, req.query);
-          console.log('features.auth.controllers.auth.middleware.req.sessionID, session', req.sessionID, req.session);
-          req.session.socketId = req.query.socketId;
-          req.session.socketUserId = req.query.socketUserId;
-        }
-
-        next();
-      });
       this.router.post("".concat(this.path, "/local/register"), _manager.jwtAuth.optional, this.localRegister.bind(this));
       this.router.post("".concat(this.path, "/local/login"), _manager.jwtAuth.optional, this.localLogin.bind(this));
       this.router.get("".concat(this.path, "/local/profile"), _manager.jwtAuth.required, this.localProfile.bind(this));

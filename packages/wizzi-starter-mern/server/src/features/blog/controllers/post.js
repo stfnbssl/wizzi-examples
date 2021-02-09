@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\features\blog\controllers\post.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\features\blog\controllers\post.js.ittf
 */
 'use strict';
 import { Router, Request, Response } from 'express';
@@ -31,9 +32,9 @@ export class PostController {
                 console.log('getPosts.posts', posts);
                 sendSuccess(res, {
                     posts: posts
-                });
+                })
             }
-        });
+        })
     }
     createPost(req, res) {
         console.log('Entering PostController.createPost', this);
@@ -55,8 +56,8 @@ export class PostController {
             }
             sendSuccess(res, {
                 post: post
-            });
-        });
+            })
+        })
     }
     updatePost(req, res) {
         const id = req.params.id;
@@ -82,7 +83,7 @@ export class PostController {
                         err
                     }, 400))
             }
-        });
+        })
     }
     deletePost(req, res) {
         const id = req.params.id;
@@ -95,8 +96,8 @@ export class PostController {
             else {
                 sendSuccess(res, {
                     message: 'Post successfully removed'
-                });
+                })
             }
-        });
+        })
     }
 }

@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\client\src\components\auth\RegisterForm.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\client\src\components\auth\RegisterForm.js.ittf
 */
 'use strict';
 import React, {Component} from 'react';
@@ -52,11 +53,11 @@ const RegisterForm = ({values, errors, isLoading, onChange, onSubmit, classes}) 
                             <CircularProgress size={20}>
                             </CircularProgress>
                         )
-                     : 'Sign up for mern-client-starter'
+                     : 'Sign up for wizzi-starter-mern-client'
                 }</Button>
             
                 <p className={classes.little}>
-                By clicking “Sign up for mern-client-starter”, you agree to our &nbsp;<a href="/help/terms">
+                By clicking “Sign up for wizzi-starter-mern-client”, you agree to our &nbsp;<a href="/help/terms">
                     terms of service
                     </a>
                 

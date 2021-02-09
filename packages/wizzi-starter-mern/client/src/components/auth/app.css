@@ -1,11 +1,18 @@
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-web\lib\artifacts\css\document\gen\main.js
+    package: wizzi-web@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\client\src\components\auth\app.css.ittf
+*/
 body {
     font-family: Roboto, sans-serif;
     background: #F2F2F2;
 }
 .fadein-slow {
+    -webkit-animation: fadein 4s;
     animation: fadein 4s;
 }
 .fadein-fast {
+    -webkit-animation: fadein 2s;
     animation: fadein 2s;
 }
 @keyframes fadein {
@@ -16,16 +23,32 @@ body {
 }
 .wrapper {
     display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .container {
     display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
     -webkit-justify-content: space-around;
     justify-content: space-around;
     height: 87vh;
@@ -33,13 +56,17 @@ body {
 }
 @media screen and (max-width: 900px) {
     .container {
+        -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 }
 @media screen and (max-width: 480px) {
     .container {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
         height: 200vh;
@@ -111,10 +138,19 @@ h4 {
 }
 .loading-wrapper, .loading {
     display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .loading {
@@ -136,6 +172,7 @@ h4 {
     width: 200px;
     height: 200px;
     box-sizing: border-box;
+    -webkit-animation: pulse-colors 2s infinite alternate linear;
     animation: pulse-colors 2s infinite alternate linear;
 }
 .loading i {
@@ -143,6 +180,7 @@ h4 {
     float: left;
     font-size: 10em !important;
     color: #fff;
+    -webkit-animation: pulse-icon 2s infinite alternate linear;
     animation: pulse-icon 2s infinite alternate linear;
 }
 @keyframes pulse-icon {
@@ -187,6 +225,8 @@ button {
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    -webkit-transform: scale(0.7);
+    -ms-transition: scale(0.7);
     transform: scale(0.7);
 }
 button:hover {
@@ -219,6 +259,8 @@ button span {
 }
 button:hover span {
     text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(-1.1deg);
+    -ms-transition: rotate(-1.1deg);
     transform: rotate(-1.1deg);
 }
 button.twitter {
@@ -251,7 +293,11 @@ button.github:hover {
 }
 footer {
     display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     width: 87vw;

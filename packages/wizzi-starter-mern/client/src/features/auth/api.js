@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\client\src\features\auth\api.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\client\src\features\auth\api.js.ittf
 */
 'use strict';
 import { config } from '../config';
@@ -81,7 +82,7 @@ async function callApi(path, options) {
                     // Stop doing things, and
                     console.log('features.auth.api.callApi.aborted');
                     reject(new DOMException('Aborted', 'AbortError'));
-                });
+                })
             }
             console.log('callApi request', AUTH_URL, path, options);
             const headers = {

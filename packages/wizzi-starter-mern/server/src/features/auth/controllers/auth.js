@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\features\auth\controllers\auth.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\features\auth\controllers\auth.js.ittf
 */
 'use strict';
 import { Router, Request, Response } from 'express';
@@ -17,18 +18,9 @@ export class AuthController {
         console.log('Entering AuthController.initialize');
         this.userModel = GetUserModel();
         this.router.get(`${this.path}/login`, this.login.bind(this));
-        this.router.use((req, res, next) => {
-            if (req.query.socketId) {
-                console.log('features.auth.controllers.auth.middleware.req.originalUrl,query', req.originalUrl, req.query);
-                console.log('features.auth.controllers.auth.middleware.req.sessionID, session', req.sessionID, req.session);
-                req.session.socketId = req.query.socketId;
-                req.session.socketUserId = req.query.socketUserId;
-            }
-            next();
-        });
-        this.router.post(`${this.path}/local/register`, jwtAuth.optional, this.localRegister.bind(this));
-        this.router.post(`${this.path}/local/login`, jwtAuth.optional, this.localLogin.bind(this));
-        this.router.get(`${this.path}/local/profile`, jwtAuth.required, this.localProfile.bind(this));
+        this.router.post(`${this.path}/local/register`, jwtAuth.optional, this.localRegister.bind(this))
+        this.router.post(`${this.path}/local/login`, jwtAuth.optional, this.localLogin.bind(this))
+        this.router.get(`${this.path}/local/profile`, jwtAuth.required, this.localProfile.bind(this))
     }
     login(req, res, next) {
         res.send('Go back and register!');
@@ -124,7 +116,7 @@ export class AuthController {
                 if (!user) {
                     sendBadRequest(res, {
                         message: 'User not found'
-                    });
+                    })
                 }
                 return sendSuccess(res, {
                         user: user.toAuthJSON()

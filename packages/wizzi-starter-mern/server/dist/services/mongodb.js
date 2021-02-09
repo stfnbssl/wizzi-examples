@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\services\mongodb.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\services\mongodb.js.ittf
 */
 'use strict';
 
@@ -10,7 +11,7 @@ module.exports = function start(config, modelBuilders) {
   var mongoUser = config.mongoUser,
       mongoPassword = config.mongoPassword,
       mongoPath = config.mongoPath;
-  var connectUrl = "mongodb://".concat(mongoUser, ":").concat(mongoPassword).concat(mongoPath);
+  var connectUrl = "mongodb+srv://".concat(mongoUser, ":").concat(mongoPassword).concat(mongoPath);
   mongoose.Promise = global.Promise;
   return mongoose.connect(connectUrl, {
     useNewUrlParser: true
@@ -21,6 +22,6 @@ module.exports = function start(config, modelBuilders) {
     });
     return 'Connected';
   }, function (err) {
-    throw new Error('Mongodb. Can not connect to the database. ' + err.message);
+    throw new Error('\n\nMongodb. \nCan not connect to \n"' + connectUrl + '". \n\n' + err.message + '\n\n');
   });
 };

@@ -1,0 +1,64 @@
+module
+    kind react
+    const express = require('express')
+    const path = require('path')
+    const serverless = require('serverless-http')
+    const app
+        _ express
+    const bodyParser = require('body-parser')
+    
+    const router
+        _ express.Router
+    
+    _ router.get
+        @ '/'
+        => 
+            param req
+            param res
+            _ res.writeHead
+                @ 200
+                { 
+                    @ 'Content-Type' 'text/html'
+            _ res.write('<h1>Hello from Express.js!</h1><div><a href="/.netlify/functions/server/another">Another</a></div>')
+            _ res.end
+    
+    _ router.get
+        @ '/another'
+        => 
+            param req
+            param res
+            _ res.json
+                { 
+                    @ route req.originalUrl
+    
+    _ router.post
+        @ '/'
+        => 
+            param req
+            param res
+            _ res.json
+                { 
+                    @ postBody req.body
+    
+    _ app.use
+        _ bodyParser.json
+    _ app.use('/.netlify/functions/server', router)
+
+    _ app.use
+        => 
+            param req
+            param res
+            param next
+            _ res.set('Cache-Control', 'no-store')
+            _ next
+    
+    # path must route to lambda
+    _ app.use
+        @ '/'
+        => 
+            param req
+            param res
+            _ res.sendFile(path.join(__dirname, '../index.html'))
+
+    set module.exports = app
+    set module.exports.handler = serverless(app)

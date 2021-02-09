@@ -1,4 +1,0 @@
-﻿$group
-	$params &app
-
-	$if app.useJest

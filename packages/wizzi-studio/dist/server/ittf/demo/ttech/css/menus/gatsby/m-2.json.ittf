@@ -2,12 +2,12 @@
     $include c2/index
     $include f2/index
     { Colors
-        xbackground "#ffffff"
-        background "#ECEAE4"
-        xscheme1Fade90 "whiteFade-90,rgba(255,255,255,0.9)"
-        scheme1Fade90 "scheme-1-90,rgba(235,233,228,0.9)"
-        xthemeBack "white,#ffffff"
-        themeBack "scheme-1,#ECEAE4"
+        background "#ffffff"
+        xbackground "#ECEAE4"
+        scheme1Fade90 "whiteFade-90,rgba(255,255,255,0.9)"
+        xscheme1Fade90 "scheme-1-90,rgba(235,233,228,0.9)"
+        themeBack "white,#ffffff"
+        xthemeBack "scheme-1,#ECEAE4"
         xprimary "purple-60,#663399"
         primary "scheme-3,#4D739E"
         primary2 "#4D739E"

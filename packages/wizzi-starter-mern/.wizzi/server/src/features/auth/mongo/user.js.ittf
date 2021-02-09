@@ -1,7 +1,7 @@
 module
     kind es6
     import { Schema, model } from "mongoose"
-    $if app.Build.auth.passport.useLocal
+    $if pkg.Build.auth.passport.useLocal
         const crypto = require('crypto')
         const jwt = require('jsonwebtoken')
 
@@ -14,7 +14,7 @@ module
                     @ type String
                 { email
                     @ type String
-                $if app.Build.auth.passport.useLocal
+                $if pkg.Build.auth.passport.useLocal
                     { hash
                         @ type String
                     { salt
@@ -22,7 +22,7 @@ module
             { 
                 @ collection 'users'
 
-    $if app.Build.auth.passport.useLocal
+    $if pkg.Build.auth.passport.useLocal
         set UserSchema.methods.setPassword =
             function 
                 param password

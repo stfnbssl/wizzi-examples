@@ -6,7 +6,7 @@ module
     import { GetUserModel } from '../mongo/user'
     import
         @ authenticate
-        $if app.Build.auth.passport.useLocal
+        $if pkg.Build.auth.passport.useLocal
             @ jwtAuth
         from '../manager'
 
@@ -22,7 +22,7 @@ module
                 log 'Entering AuthController.initialize'
                 set this.userModel = GetUserModel()
                 _ this.router.get(`${this.path}/login`, this.login.bind(this))
-                $if app.Build.useSocketIO
+                $if pkg.Build.useSocketIO
                     _ this.router.use
                         =>
                             param req
@@ -34,9 +34,9 @@ module
                                 set req.session.socketId = req.query.socketId
                                 set req.session.socketUserId = req.query.socketUserId
                             _ next()
-                $if app.Build.auth.passport.useLocal
+                $if pkg.Build.auth.passport.useLocal
                     auth_local( routes )
-                $if app.Build.auth.useGithub
+                $if pkg.Build.auth.useGithub
                     auth_github( routes )
 
             m login
@@ -60,8 +60,8 @@ module
                 log 'features.auth.controllers.auth.githubCallback.req.user', req.user
                 _ res.json(req.user)
 
-            $if app.Build.auth.passport.useLocal
+            $if pkg.Build.auth.passport.useLocal
                 auth_local( actions )
 
-            $if app.Build.auth.useGithub
+            $if pkg.Build.auth.useGithub
                 auth_github( actions )

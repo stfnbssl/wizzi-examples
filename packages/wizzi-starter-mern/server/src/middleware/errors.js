@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\middleware\errors.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\middleware\errors.js.ittf
 */
 'use strict';
 export const ErrorsMiddleware = (app) => {
@@ -9,7 +10,7 @@ export const ErrorsMiddleware = (app) => {
         var err = new Error('Not Found');
         err.status = 404;
         next(err);
-    });
+    })
     // development error handler
     // will print stacktrace
     if (app.get('env') === 'development') {
@@ -18,8 +19,8 @@ export const ErrorsMiddleware = (app) => {
             res.render('error', {
                 message: err.message, 
                 error: err
-            });
-        });
+            })
+        })
     }
     // production error handler
     // no stacktraces leaked to user
@@ -28,6 +29,6 @@ export const ErrorsMiddleware = (app) => {
         res.render('error', {
             message: err.message, 
             error: {}
-        });
-    });
+        })
+    })
 };

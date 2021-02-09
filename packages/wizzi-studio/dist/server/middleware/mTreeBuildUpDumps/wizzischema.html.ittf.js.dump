@@ -1,0 +1,746 @@
+// 2/2/2021:6:15:38  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
+$.n(); // set the context state to NodeContext
+var $0 = {}; // the root node of the MTree buildup
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //82
+$.a($0, $1, 5);
+$.g("f1");
+var l_hasSubPages = false; //188
+var debug_css = false; //189
+var isIttf = false; //190
+var ittfSuffix = isIttf ? '.ittf' : ''; //191
+$.s("f1");
+var l_mc_top = 48; //193
+var l_mc_sub_top = 125; //194
+var l_mc_top_mobile = 7; // rem //195
+var l_mc_sub_top_mobile = 7;  // rem //196
+var c_bg_0 = "#fff"; //197
+var c_0 = "#000"; //198
+var c_tn_bg_0 = "#333"; //199
+var c_tn_bg_sub = "#666"; //200
+var c_tn_bg_logo_hover = "#066"; //201
+var c_tn_bg_li_mobile = "#999"; //202
+var c_tn_bg_bar = "#fff"; //203
+var c_tn_1 = "#fff"; //204
+var c_tn_2 = "#f44"; //205
+var c_tn_bg_f_0 = "#000"; //206
+var c_mc_bg_frame_bar = c_tn_bg_sub; //207
+var c_mc_frame_bar = c_tn_bg_bar; //208
+var opt = { //230
+resetMarginsPaddingsBorders: true, //231
+resetDisplayBlock: false, //232
+resetOlUl: true, //233
+resetBlockquote: false, //234
+resetTable: false, //235
+resetLinks: true, //236
+prettyprint: false, //237
+debug_css: false, //238
+c_0: '#000', //239
+c_bg_0: '#fff', //240
+fa_1: false, //241
+sidebar_1: false, //242
+sb_1_min_w: 0, //243
+logo_w: 70, //244
+logo_h: 35, //245
+};  //246
+opt.logo_w = 70; //86
+opt.logo_h = 30; //87
+opt.sidebar_1 = true; //88
+opt.sb_1_min_w = 80; //89
+opt.title = 'wzSchema <b>' + cs.schema.toUpperCase() + '</b> cheat sheet'; //90
+opt.usePrism = false; //91
+opt.useHighlight = true; //92
+if (opt.usePrism) { //93
+if (cs.schema === 'js') { //94
+opt.language = 'language-javascript'; //95
+} else { //96
+opt.language = 'language-' + cs.schema; //97
+}  //98
+} else { //99
+opt.language = cs.schema; //100
+}  //101
+var _schemas = ['ittf', 'js', 'jsx', 'ts', 'html', 'css', 'scss', 'svg', 'graphql', 'json', 'xml', 'text']; //102
+if (opt.sidebar_1) { //254
+opt.fa_1 = true; //255
+}  //256
+$.n();
+var $7 = { n: "head", v: "", r: 4, c: 5, s: "f2", u: "f5",  }; //314
+$.a($1, $7, 67);
+var $8 = { n: "@title", v: $.ip("f2", "${opt.title}", "string", 68, false), r: 5, c: 9, s: "f2", u: "f5",  }; //315
+$.a($7, $8, 69);
+var $9 = { n: "meta", v: "", r: 6, c: 9, s: "f2", u: "f5",  }; //316
+$.a($7, $9, 71);
+var $10 = { n: "charset", v: "utf-8", r: 7, c: 13, s: "f2", u: "f5",  }; //317
+$.a($9, $10, 73);
+var $11 = { n: "meta", v: "", r: 8, c: 9, s: "f2", u: "f5",  }; //318
+$.a($7, $11, 75);
+var $12 = { n: "name", v: "viewport", r: 9, c: 13, s: "f2", u: "f5",  }; //319
+$.a($11, $12, 77);
+var $13 = { n: "content", v: "width=device-width, initial-scale=1", r: 10, c: 13, s: "f2", u: "f5",  }; //320
+$.a($11, $13, 79);
+$.s("f2");
+if (opt.useGoogleFonts) { //401
+    var item_count = opt.googleFonts.length; //402
+    for (var i15=0; i15<item_count; i15++) { //402
+        var item = opt.googleFonts[i15]; //402
+        var item_index = i15; //402
+        $.n();
+        var $16 = { n: "css", v: $.ip("f2", "https://fonts.googleapis.com/css?family=${item}", "string", 87, false), r: 5, c: 13, s: "f2", u: "f6",  }; //403
+        $.a($7, $16, 88);
+    }
+}
+$.s("f2");
+if (opt.useReact) { //404
+    $.n();
+    var $18 = { n: "link", v: "", r: 8, c: 9, s: "f2", u: "f6",  }; //405
+    $.a($7, $18, 95);
+    var $19 = { n: "rel", v: "stylesheet", r: 9, c: 13, s: "f2", u: "f6",  }; //406
+    $.a($18, $19, 97);
+    var $20 = { n: "href", v: "https://fonts.googleapis.com/icon?family=Material+Icons", r: 10, c: 13, s: "f2", u: "f6",  }; //407
+    $.a($18, $20, 99);
+}
+$.s("f2");
+if (opt.useBootstrap) { //408
+    $.n();
+    var $22 = { n: "css", v: "/static/lib/bootstrap/dist/css/bootstrap.min.css", r: 13, c: 9, s: "f2", u: "f6",  }; //409
+    $.a($7, $22, 105);
+}
+$.s("f2");
+if (opt.usePrism) { //410
+    if (isWizziStudio) { //411
+        $.n();
+        var $25 = { n: "css", v: "/static/lib/prism/prism.css", r: 17, c: 13, s: "f2", u: "f6",  }; //412
+        $.a($7, $25, 112);
+    }
+    else {
+        $.n();
+        var $27 = { n: "css", v: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css", r: 19, c: 13, s: "f2", u: "f6",  }; //414
+        $.a($7, $27, 117);
+    }
+}
+$.s("f2");
+if (opt.useHighlight) { //415
+    $.n();
+    var $29 = { n: "link", v: "", r: 27, c: 9, s: "f2", u: "f6",  }; //416
+    $.a($7, $29, 124);
+    var $30 = { n: "rel", v: "stylesheet", r: 28, c: 13, s: "f2", u: "f6",  }; //417
+    $.a($29, $30, 126);
+    var $31 = { n: "href", v: "/static/lib/highlightjs-master/dracula.css", r: 29, c: 13, s: "f2", u: "f6",  }; //418
+    $.a($29, $31, 128);
+}
+$.s("f2");
+if (opt.useCodemirror) { //419
+    $.n();
+    var $33 = { n: "css", v: "/static/lib/codemirror/lib/codemirror.css", r: 32, c: 9, s: "f2", u: "f6",  }; //420
+    $.a($7, $33, 134);
+    var $34 = { n: "css", v: "/static/lib/codemirror/addon/display/fullscreen.css", r: 33, c: 9, s: "f2", u: "f6",  }; //421
+    $.a($7, $34, 136);
+}
+$.s("f2");
+if (opt.mainCss && opt.mainCss.length > 0) { //422
+    $.n();
+    var $36 = { n: "link", v: "", r: 36, c: 9, s: "f2", u: "f6",  }; //423
+    $.a($7, $36, 142);
+    var $37 = { n: "rel", v: "stylesheet", r: 37, c: 13, s: "f2", u: "f6",  }; //424
+    $.a($36, $37, 144);
+    var $38 = { n: "href", v: $.ip("f2", "${opt.mainCss}", "string", 145, false), r: 38, c: 13, s: "f2", u: "f6",  }; //425
+    $.a($36, $38, 146);
+}
+$.s("f2");
+if (opt.useFontAwesome) { //426
+    var fontAwesomeKey = 'eab461efef'; //428
+    $.n();
+    var $41 = { n: "script", v: "", r: 43, c: 9, s: "f2", u: "f6",  }; //429
+    $.a($7, $41, 153);
+    var $42 = { n: "src", v: $.ip("f2", "https://kit.fontawesome.com/${fontAwesomeKey}.js", "string", 154, false), r: 44, c: 13, s: "f2", u: "f6",  }; //430
+    $.a($41, $42, 155);
+    var $43 = { n: "crossorigin", v: "anonymous", r: 45, c: 13, s: "f2", u: "f6",  }; //431
+    $.a($41, $43, 157);
+}
+$.s("f1");
+if (isWizziStudio) { //106
+    $.n();
+    var $45 = { n: "css", v: "style.css.ittf", r: 32, c: 17, s: "f1", u: "f1",  }; //107
+    $.a($7, $45, 163);
+}
+else {
+    $.n();
+    var $47 = { n: "css", v: "style.css", r: 34, c: 17, s: "f1", u: "f1",  }; //109
+    $.a($7, $47, 168);
+}
+$.n();
+var $48 = { n: "body", v: "", r: 18, c: 5, s: "f2", u: "f5",  }; //324
+$.a($1, $48, 172);
+$.s("f2");
+if (isWizziStudio) { //325
+    $.n();
+    var $50 = { n: "nav", v: "", r: 20, c: 13, s: "f2", u: "f5",  }; //326
+    $.a($48, $50, 177);
+    var $51 = { n: "class", v: "wz-sb-1", r: 21, c: 17, s: "f2", u: "f5",  }; //327
+    $.a($50, $51, 179);
+    var $52 = { n: "ul", v: "", r: 22, c: 17, s: "f2", u: "f5",  }; //328
+    $.a($50, $52, 181);
+    var $53 = { n: "li", v: "", r: 3, c: 5, s: "f3", u: "f10",  }; //620
+    $.a($52, $53, 183);
+    var $54 = { n: "a", v: "", r: 4, c: 9, s: "f3", u: "f10",  }; //621
+    $.a($53, $54, 185);
+    var $55 = { n: "href", v: $.ip("f3", "${href}", "string", 186, false), r: 5, c: 13, s: "f3", u: "f10",  }; //622
+    $.a($54, $55, 187);
+    var $56 = { n: "i", v: "", r: 6, c: 13, s: "f3", u: "f10",  }; //623
+    $.a($54, $56, 189);
+    var $57 = { n: "class", v: $.ip("f3", "fa fa-${icon} fa-2x", "string", 190, false), r: 7, c: 17, s: "f3", u: "f10",  }; //624
+    $.a($56, $57, 191);
+    var $58 = { n: "span", v: $.ip("f3", "${text}", "string", 192, false), r: 8, c: 13, s: "f3", u: "f10",  }; //625
+    $.a($54, $58, 193);
+    var $59 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f3", u: "f10",  }; //626
+    $.a($58, $59, 195);
+    var $60 = { n: "li", v: "", r: 3, c: 5, s: "f4", u: "f10",  }; //628
+    $.a($52, $60, 197);
+    var $61 = { n: "a", v: "", r: 4, c: 9, s: "f4", u: "f10",  }; //629
+    $.a($60, $61, 199);
+    var $62 = { n: "href", v: $.ip("f4", "${href}", "string", 200, false), r: 5, c: 13, s: "f4", u: "f10",  }; //630
+    $.a($61, $62, 201);
+    var $63 = { n: "i", v: "", r: 6, c: 13, s: "f4", u: "f10",  }; //631
+    $.a($61, $63, 203);
+    var $64 = { n: "class", v: $.ip("f4", "fa fa-${icon} fa-2x", "string", 204, false), r: 7, c: 17, s: "f4", u: "f10",  }; //632
+    $.a($63, $64, 205);
+    var $65 = { n: "span", v: $.ip("f4", "${text}", "string", 206, false), r: 8, c: 13, s: "f4", u: "f10",  }; //633
+    $.a($61, $65, 207);
+    var $66 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f4", u: "f10",  }; //634
+    $.a($65, $66, 209);
+    var $67 = { n: "li", v: "", r: 3, c: 5, s: "f5", u: "f10",  }; //636
+    $.a($52, $67, 211);
+    var $68 = { n: "a", v: "", r: 4, c: 9, s: "f5", u: "f10",  }; //637
+    $.a($67, $68, 213);
+    var $69 = { n: "href", v: $.ip("f5", "${href}", "string", 214, false), r: 5, c: 13, s: "f5", u: "f10",  }; //638
+    $.a($68, $69, 215);
+    var $70 = { n: "i", v: "", r: 6, c: 13, s: "f5", u: "f10",  }; //639
+    $.a($68, $70, 217);
+    var $71 = { n: "class", v: $.ip("f5", "fa fa-${icon} fa-2x", "string", 218, false), r: 7, c: 17, s: "f5", u: "f10",  }; //640
+    $.a($70, $71, 219);
+    var $72 = { n: "span", v: $.ip("f5", "${text}", "string", 220, false), r: 8, c: 13, s: "f5", u: "f10",  }; //641
+    $.a($68, $72, 221);
+    var $73 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f5", u: "f10",  }; //642
+    $.a($72, $73, 223);
+    var $74 = { n: "li", v: "", r: 3, c: 5, s: "f6", u: "f10",  }; //644
+    $.a($52, $74, 225);
+    var $75 = { n: "a", v: "", r: 4, c: 9, s: "f6", u: "f10",  }; //645
+    $.a($74, $75, 227);
+    var $76 = { n: "href", v: $.ip("f6", "${href}", "string", 228, false), r: 5, c: 13, s: "f6", u: "f10",  }; //646
+    $.a($75, $76, 229);
+    var $77 = { n: "i", v: "", r: 6, c: 13, s: "f6", u: "f10",  }; //647
+    $.a($75, $77, 231);
+    var $78 = { n: "class", v: $.ip("f6", "fa fa-${icon} fa-2x", "string", 232, false), r: 7, c: 17, s: "f6", u: "f10",  }; //648
+    $.a($77, $78, 233);
+    var $79 = { n: "span", v: $.ip("f6", "${text}", "string", 234, false), r: 8, c: 13, s: "f6", u: "f10",  }; //649
+    $.a($75, $79, 235);
+    var $80 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f6", u: "f10",  }; //650
+    $.a($79, $80, 237);
+    var $81 = { n: "li", v: "", r: 3, c: 5, s: "f7", u: "f10",  }; //652
+    $.a($52, $81, 239);
+    var $82 = { n: "a", v: "", r: 4, c: 9, s: "f7", u: "f10",  }; //653
+    $.a($81, $82, 241);
+    var $83 = { n: "href", v: $.ip("f7", "${href}", "string", 242, false), r: 5, c: 13, s: "f7", u: "f10",  }; //654
+    $.a($82, $83, 243);
+    var $84 = { n: "i", v: "", r: 6, c: 13, s: "f7", u: "f10",  }; //655
+    $.a($82, $84, 245);
+    var $85 = { n: "class", v: $.ip("f7", "fa fa-${icon} fa-2x", "string", 246, false), r: 7, c: 17, s: "f7", u: "f10",  }; //656
+    $.a($84, $85, 247);
+    var $86 = { n: "span", v: $.ip("f7", "${text}", "string", 248, false), r: 8, c: 13, s: "f7", u: "f10",  }; //657
+    $.a($82, $86, 249);
+    var $87 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f7", u: "f10",  }; //658
+    $.a($86, $87, 251);
+    var $88 = { n: "li", v: "", r: 3, c: 5, s: "f8", u: "f10",  }; //660
+    $.a($52, $88, 253);
+    var $89 = { n: "a", v: "", r: 4, c: 9, s: "f8", u: "f10",  }; //661
+    $.a($88, $89, 255);
+    var $90 = { n: "href", v: $.ip("f8", "${href}", "string", 256, false), r: 5, c: 13, s: "f8", u: "f10",  }; //662
+    $.a($89, $90, 257);
+    var $91 = { n: "i", v: "", r: 6, c: 13, s: "f8", u: "f10",  }; //663
+    $.a($89, $91, 259);
+    var $92 = { n: "class", v: $.ip("f8", "fa fa-${icon} fa-2x", "string", 260, false), r: 7, c: 17, s: "f8", u: "f10",  }; //664
+    $.a($91, $92, 261);
+    var $93 = { n: "span", v: $.ip("f8", "${text}", "string", 262, false), r: 8, c: 13, s: "f8", u: "f10",  }; //665
+    $.a($89, $93, 263);
+    var $94 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f8", u: "f10",  }; //666
+    $.a($93, $94, 265);
+    var $95 = { n: "li", v: "", r: 3, c: 5, s: "f9", u: "f10",  }; //668
+    $.a($52, $95, 267);
+    var $96 = { n: "a", v: "", r: 4, c: 9, s: "f9", u: "f10",  }; //669
+    $.a($95, $96, 269);
+    var $97 = { n: "href", v: $.ip("f9", "${href}", "string", 270, false), r: 5, c: 13, s: "f9", u: "f10",  }; //670
+    $.a($96, $97, 271);
+    var $98 = { n: "i", v: "", r: 6, c: 13, s: "f9", u: "f10",  }; //671
+    $.a($96, $98, 273);
+    var $99 = { n: "class", v: $.ip("f9", "fa fa-${icon} fa-2x", "string", 274, false), r: 7, c: 17, s: "f9", u: "f10",  }; //672
+    $.a($98, $99, 275);
+    var $100 = { n: "span", v: $.ip("f9", "${text}", "string", 276, false), r: 8, c: 13, s: "f9", u: "f10",  }; //673
+    $.a($96, $100, 277);
+    var $101 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f9", u: "f10",  }; //674
+    $.a($100, $101, 279);
+    var $102 = { n: "li", v: "", r: 3, c: 5, s: "f10", u: "f10",  }; //676
+    $.a($52, $102, 281);
+    var $103 = { n: "a", v: "", r: 4, c: 9, s: "f10", u: "f10",  }; //677
+    $.a($102, $103, 283);
+    var $104 = { n: "href", v: $.ip("f10", "${href}", "string", 284, false), r: 5, c: 13, s: "f10", u: "f10",  }; //678
+    $.a($103, $104, 285);
+    var $105 = { n: "i", v: "", r: 6, c: 13, s: "f10", u: "f10",  }; //679
+    $.a($103, $105, 287);
+    var $106 = { n: "class", v: $.ip("f10", "fa fa-${icon} fa-2x", "string", 288, false), r: 7, c: 17, s: "f10", u: "f10",  }; //680
+    $.a($105, $106, 289);
+    var $107 = { n: "span", v: $.ip("f10", "${text}", "string", 290, false), r: 8, c: 13, s: "f10", u: "f10",  }; //681
+    $.a($103, $107, 291);
+    var $108 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f10", u: "f10",  }; //682
+    $.a($107, $108, 293);
+    var $109 = { n: "li", v: "", r: 3, c: 5, s: "f11", u: "f10",  }; //684
+    $.a($52, $109, 295);
+    var $110 = { n: "a", v: "", r: 4, c: 9, s: "f11", u: "f10",  }; //685
+    $.a($109, $110, 297);
+    var $111 = { n: "href", v: $.ip("f11", "${href}", "string", 298, false), r: 5, c: 13, s: "f11", u: "f10",  }; //686
+    $.a($110, $111, 299);
+    var $112 = { n: "i", v: "", r: 6, c: 13, s: "f11", u: "f10",  }; //687
+    $.a($110, $112, 301);
+    var $113 = { n: "class", v: $.ip("f11", "fa fa-${icon} fa-2x", "string", 302, false), r: 7, c: 17, s: "f11", u: "f10",  }; //688
+    $.a($112, $113, 303);
+    var $114 = { n: "span", v: $.ip("f11", "${text}", "string", 304, false), r: 8, c: 13, s: "f11", u: "f10",  }; //689
+    $.a($110, $114, 305);
+    var $115 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f11", u: "f10",  }; //690
+    $.a($114, $115, 307);
+    var $116 = { n: "li", v: "", r: 3, c: 5, s: "f12", u: "f10",  }; //692
+    $.a($52, $116, 309);
+    var $117 = { n: "a", v: "", r: 4, c: 9, s: "f12", u: "f10",  }; //693
+    $.a($116, $117, 311);
+    var $118 = { n: "href", v: $.ip("f12", "${href}", "string", 312, false), r: 5, c: 13, s: "f12", u: "f10",  }; //694
+    $.a($117, $118, 313);
+    var $119 = { n: "i", v: "", r: 6, c: 13, s: "f12", u: "f10",  }; //695
+    $.a($117, $119, 315);
+    var $120 = { n: "class", v: $.ip("f12", "fa fa-${icon} fa-2x", "string", 316, false), r: 7, c: 17, s: "f12", u: "f10",  }; //696
+    $.a($119, $120, 317);
+    var $121 = { n: "span", v: $.ip("f12", "${text}", "string", 318, false), r: 8, c: 13, s: "f12", u: "f10",  }; //697
+    $.a($117, $121, 319);
+    var $122 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f12", u: "f10",  }; //698
+    $.a($121, $122, 321);
+    var $123 = { n: "li", v: "", r: 3, c: 5, s: "f13", u: "f10",  }; //700
+    $.a($52, $123, 323);
+    var $124 = { n: "a", v: "", r: 4, c: 9, s: "f13", u: "f10",  }; //701
+    $.a($123, $124, 325);
+    var $125 = { n: "href", v: $.ip("f13", "${href}", "string", 326, false), r: 5, c: 13, s: "f13", u: "f10",  }; //702
+    $.a($124, $125, 327);
+    var $126 = { n: "i", v: "", r: 6, c: 13, s: "f13", u: "f10",  }; //703
+    $.a($124, $126, 329);
+    var $127 = { n: "class", v: $.ip("f13", "fa fa-${icon} fa-2x", "string", 330, false), r: 7, c: 17, s: "f13", u: "f10",  }; //704
+    $.a($126, $127, 331);
+    var $128 = { n: "span", v: $.ip("f13", "${text}", "string", 332, false), r: 8, c: 13, s: "f13", u: "f10",  }; //705
+    $.a($124, $128, 333);
+    var $129 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f13", u: "f10",  }; //706
+    $.a($128, $129, 335);
+    var $130 = { n: "li", v: "", r: 3, c: 5, s: "f14", u: "f10",  }; //708
+    $.a($52, $130, 337);
+    var $131 = { n: "a", v: "", r: 4, c: 9, s: "f14", u: "f10",  }; //709
+    $.a($130, $131, 339);
+    var $132 = { n: "href", v: $.ip("f14", "${href}", "string", 340, false), r: 5, c: 13, s: "f14", u: "f10",  }; //710
+    $.a($131, $132, 341);
+    var $133 = { n: "i", v: "", r: 6, c: 13, s: "f14", u: "f10",  }; //711
+    $.a($131, $133, 343);
+    var $134 = { n: "class", v: $.ip("f14", "fa fa-${icon} fa-2x", "string", 344, false), r: 7, c: 17, s: "f14", u: "f10",  }; //712
+    $.a($133, $134, 345);
+    var $135 = { n: "span", v: $.ip("f14", "${text}", "string", 346, false), r: 8, c: 13, s: "f14", u: "f10",  }; //713
+    $.a($131, $135, 347);
+    var $136 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f14", u: "f10",  }; //714
+    $.a($135, $136, 349);
+    var $137 = { n: "li", v: "", r: 3, c: 5, s: "f15", u: "f10",  }; //716
+    $.a($52, $137, 351);
+    var $138 = { n: "a", v: "", r: 4, c: 9, s: "f15", u: "f10",  }; //717
+    $.a($137, $138, 353);
+    var $139 = { n: "href", v: $.ip("f15", "${href}", "string", 354, false), r: 5, c: 13, s: "f15", u: "f10",  }; //718
+    $.a($138, $139, 355);
+    var $140 = { n: "i", v: "", r: 6, c: 13, s: "f15", u: "f10",  }; //719
+    $.a($138, $140, 357);
+    var $141 = { n: "class", v: $.ip("f15", "fa fa-${icon} fa-2x", "string", 358, false), r: 7, c: 17, s: "f15", u: "f10",  }; //720
+    $.a($140, $141, 359);
+    var $142 = { n: "span", v: $.ip("f15", "${text}", "string", 360, false), r: 8, c: 13, s: "f15", u: "f10",  }; //721
+    $.a($138, $142, 361);
+    var $143 = { n: "class", v: "nav-text", r: 9, c: 17, s: "f15", u: "f10",  }; //722
+    $.a($142, $143, 363);
+    var $144 = { n: "ul", v: "", r: 24, c: 17, s: "f2", u: "f5",  }; //330
+    $.a($50, $144, 365);
+    var $145 = { n: "class", v: "logout", r: 25, c: 21, s: "f2", u: "f5",  }; //331
+    $.a($144, $145, 367);
+    var $146 = { n: "li", v: "", r: 26, c: 21, s: "f2", u: "f5",  }; //332
+    $.a($144, $146, 369);
+    var $147 = { n: "a", v: "", r: 27, c: 25, s: "f2", u: "f5",  }; //333
+    $.a($146, $147, 371);
+    var $148 = { n: "href", v: "#", r: 28, c: 29, s: "f2", u: "f5",  }; //334
+    $.a($147, $148, 373);
+    var $149 = { n: "i", v: "", r: 29, c: 29, s: "f2", u: "f5",  }; //335
+    $.a($147, $149, 375);
+    var $150 = { n: "class", v: "fa fa-power-off fa-2x", r: 30, c: 33, s: "f2", u: "f5",  }; //336
+    $.a($149, $150, 377);
+    var $151 = { n: "span", v: "Logout", r: 31, c: 29, s: "f2", u: "f5",  }; //337
+    $.a($147, $151, 379);
+    var $152 = { n: "class", v: "nav-text", r: 32, c: 33, s: "f2", u: "f5",  }; //338
+    $.a($151, $152, 381);
+}
+$.n();
+var $153 = { n: ".", v: "wz-content-1", r: 33, c: 9, s: "f2", u: "f5",  }; //339
+$.a($48, $153, 385);
+var $154 = { n: "nav", v: "", r: 34, c: 13, s: "f2", u: "f5",  }; //340
+$.a($153, $154, 387);
+var $155 = { n: "class", v: "tn-bar", r: 35, c: 17, s: "f2", u: "f5",  }; //341
+$.a($154, $155, 389);
+var $156 = { n: "style", v: "display: flex; margin: 0.5rem;", r: 36, c: 17, s: "f2", u: "f5",  }; //342
+$.a($154, $156, 391);
+var $157 = { n: ".", v: "logo", r: 37, c: 17, s: "f2", u: "f5",  }; //343
+$.a($154, $157, 393);
+var $158 = { n: "img", v: "", r: 38, c: 21, s: "f2", u: "f5",  }; //344
+$.a($157, $158, 395);
+$.s("f2");
+if (isWizziStudio) { //345
+    $.n();
+    var $160 = { n: "src", v: "/ittf/images/logo.svg.ittf", r: 40, c: 29, s: "f2", u: "f5",  }; //346
+    $.a($158, $160, 400);
+}
+else {
+    $.n();
+    var $162 = { n: "src", v: "/images/logo.svg", r: 42, c: 29, s: "f2", u: "f5",  }; //348
+    $.a($158, $162, 405);
+}
+$.n();
+var $163 = { n: "width", v: $.ip("f2", "${opt.logo_w}px", "string", 408, false), r: 43, c: 25, s: "f2", u: "f5",  }; //349
+$.a($158, $163, 409);
+var $164 = { n: "height", v: $.ip("f2", "${opt.logo_h}px", "string", 410, false), r: 44, c: 25, s: "f2", u: "f5",  }; //350
+$.a($158, $164, 411);
+var $165 = { n: "#", v: "mc-wrapper", r: 37, c: 9, s: "f1", u: "f1",  }; //110
+$.a($153, $165, 413);
+var $166 = { n: "class", v: "mc-wrapper-layout", r: 38, c: 13, s: "f1", u: "f1",  }; //111
+$.a($165, $166, 415);
+var $167 = { n: ".", v: "mc-frame-bar", r: 39, c: 13, s: "f1", u: "f1",  }; //112
+$.a($165, $167, 417);
+var $168 = { n: "div", v: $.ip("f1", "${opt.title}", "string", 418, false), r: 40, c: 17, s: "f1", u: "f1",  }; //113
+$.a($167, $168, 419);
+var $169 = { n: "class", v: "mc-frame-bar-item", r: 41, c: 21, s: "f1", u: "f1",  }; //114
+$.a($168, $169, 421);
+var $170 = { n: ".", v: "mc-frame", r: 42, c: 13, s: "f1", u: "f1",  }; //115
+$.a($165, $170, 423);
+var $171 = { n: ".", v: "mc-sidebar-left", r: 43, c: 17, s: "f1", u: "f1",  }; //116
+$.a($170, $171, 425);
+var $172 = { n: "ul", v: "", r: 44, c: 21, s: "f1", u: "f1",  }; //117
+$.a($171, $172, 427);
+$.s("f1");
+var e_count = cs.elements.length; //118
+for (var i173=0; i173<e_count; i173++) { //118
+    var e = cs.elements[i173]; //118
+    var e_index = i173; //118
+    $.n();
+    var $174 = { n: "li", v: "", r: 46, c: 29, s: "f1", u: "f1",  }; //119
+    $.a($172, $174, 435);
+    var $175 = { n: "a", v: $.ip("f1", "${e.name}", "string", 436, false), r: 47, c: 33, s: "f1", u: "f1",  }; //120
+    $.a($174, $175, 437);
+    var $176 = { n: "href", v: $.ip("f1", "#${e.name}", "string", 438, false), r: 48, c: 37, s: "f1", u: "f1",  }; //121
+    $.a($175, $176, 439);
+    var $177 = { n: "ul", v: "", r: 49, c: 33, s: "f1", u: "f1",  }; //122
+    $.a($174, $177, 441);
+    $.s("f1");
+    var item_count = e.items.length; //123
+    for (var i178=0; i178<item_count; i178++) { //123
+        var item = e.items[i178]; //123
+        var item_index = i178; //123
+        $.n();
+        var $179 = { n: "li", v: "", r: 51, c: 41, s: "f1", u: "f1",  }; //124
+        $.a($177, $179, 449);
+        var $180 = { n: "a", v: $.ip("f1", "${item.title}", "string", 450, false), r: 52, c: 45, s: "f1", u: "f1",  }; //125
+        $.a($179, $180, 451);
+        var $181 = { n: "href", v: $.ip("f1", "#${item.title}", "string", 452, false), r: 53, c: 49, s: "f1", u: "f1",  }; //126
+        $.a($180, $181, 453);
+    }
+}
+$.n();
+var $182 = { n: ".", v: "mc-content", r: 54, c: 17, s: "f1", u: "f1",  }; //127
+$.a($170, $182, 458);
+var $183 = { n: "div", v: "", r: 55, c: 21, s: "f1", u: "f1",  }; //128
+$.a($182, $183, 460);
+$.s("f1");
+var item_count = _schemas.length; //129
+for (var i184=0; i184<item_count; i184++) { //129
+    var item = _schemas[i184]; //129
+    var item_index = i184; //129
+    if (item != cs.schema) { //130
+        $.n();
+        var $186 = { n: "span", v: "", r: 58, c: 33, s: "f1", u: "f1",  }; //131
+        $.a($183, $186, 469);
+        var $187 = { n: "style", v: "margin: 3px; padding:10px; background-color: #333; cursor: pointer;", r: 59, c: 37, s: "f1", u: "f1",  }; //132
+        $.a($186, $187, 471);
+        var $188 = { n: "a", v: $.ip("f1", "${item}", "string", 472, false), r: 60, c: 37, s: "f1", u: "f1",  }; //133
+        $.a($186, $188, 473);
+        var $189 = { n: "style", v: "color: #0ff;", r: 61, c: 41, s: "f1", u: "f1",  }; //134
+        $.a($188, $189, 475);
+        var $190 = { n: "href", v: $.ip("f1", "/ittf/docs/cheatsheets/wizzischema.html.ittf?_context=cs&_cs=cheatsheet;${item}", "string", 476, false), r: 62, c: 41, s: "f1", u: "f1",  }; //135
+        $.a($188, $190, 477);
+    }
+}
+$.s("f1");
+var e_count = cs.elements.length; //136
+for (var i191=0; i191<e_count; i191++) { //136
+    var e = cs.elements[i191]; //136
+    var e_index = i191; //136
+    var item_count = e.items.length; //137
+    for (var i192=0; i192<item_count; i192++) { //137
+        var item = e.items[i192]; //137
+        var item_index = i192; //137
+        $.n();
+        var $193 = { n: "h3", v: $.ip("f1", "${item.title}", "string", 490, false), r: 75, c: 29, s: "f1", u: "f1",  }; //138
+        $.a($182, $193, 491);
+        var $194 = { n: "class", v: "code-title", r: 76, c: 33, s: "f1", u: "f1",  }; //139
+        $.a($193, $194, 493);
+        var $195 = { n: "style", v: "margin: 30px 0; padding-top:10px; border-top: 1px solid hsl(0, 0%, 87%);", r: 77, c: 33, s: "f1", u: "f1",  }; //140
+        $.a($193, $195, 495);
+        var $196 = { n: "id", v: $.ip("f1", "${item.title}", "string", 496, false), r: 78, c: 33, s: "f1", u: "f1",  }; //141
+        $.a($193, $196, 497);
+        var $197 = { n: "div", v: "", r: 79, c: 29, s: "f1", u: "f1",  }; //142
+        $.a($182, $197, 499);
+        $.s("f1");
+        if (item.expected && item.expected.length > 0) { //143
+            $.n();
+            var $199 = { n: "div", v: "", r: 81, c: 37, s: "f1", u: "f1",  }; //144
+            $.a($197, $199, 504);
+            var $200 = { n: "style", v: "display: flex;", r: 82, c: 41, s: "f1", u: "f1",  }; //145
+            $.a($199, $200, 506);
+            var $201 = { n: "pre", v: "", r: 83, c: 41, s: "f1", u: "f1",  }; //146
+            $.a($199, $201, 508);
+            var $202 = { n: "style", v: "width: 100%;", r: 84, c: 45, s: "f1", u: "f1",  }; //147
+            $.a($201, $202, 510);
+            var $203 = { n: "code", v: "", r: 85, c: 45, s: "f1", u: "f1",  }; //148
+            $.a($201, $203, 512);
+            var $204 = { n: "class", v: $.ip("f1", "${opt.language}", "string", 513, false), r: 86, c: 49, s: "f1", u: "f1",  }; //149
+            $.a($203, $204, 514);
+            var $205 = { n: "+", v: $.ip("f1", "${item.expected}", "string", 515, false), r: 87, c: 49, s: "f1", u: "f1",  }; //150
+            $.a($203, $205, 516);
+        }
+        $.n();
+        var $206 = { n: "div", v: "", r: 88, c: 33, s: "f1", u: "f1",  }; //151
+        $.a($197, $206, 520);
+        var $207 = { n: "style", v: "display: flex;", r: 89, c: 37, s: "f1", u: "f1",  }; //152
+        $.a($206, $207, 522);
+        var $208 = { n: "pre", v: "", r: 90, c: 37, s: "f1", u: "f1",  }; //153
+        $.a($206, $208, 524);
+        var $209 = { n: "style", v: "width: 50%; margin-right: 5px; padding: 15px;", r: 91, c: 41, s: "f1", u: "f1",  }; //154
+        $.a($208, $209, 526);
+        var $210 = { n: "class", v: "code-prettyprint prettyprint source", r: 92, c: 41, s: "f1", u: "f1",  }; //155
+        $.a($208, $210, 528);
+        var $211 = { n: "+", v: $.ip("f1", "${item.ittfPretty}", "string", 529, false), r: 93, c: 41, s: "f1", u: "f1",  }; //156
+        $.a($208, $211, 530);
+        var $212 = { n: "pre", v: "", r: 94, c: 37, s: "f1", u: "f1",  }; //157
+        $.a($206, $212, 532);
+        var $213 = { n: "style", v: "width: 50%; margin-left: 5px;", r: 95, c: 41, s: "f1", u: "f1",  }; //158
+        $.a($212, $213, 534);
+        var $214 = { n: "class", v: "code-prettyprint prettyprint source", r: 96, c: 41, s: "f1", u: "f1",  }; //159
+        $.a($212, $214, 536);
+        var $215 = { n: "code", v: "", r: 97, c: 41, s: "f1", u: "f1",  }; //160
+        $.a($212, $215, 538);
+        var $216 = { n: "class", v: $.ip("f1", "${opt.language}", "string", 539, false), r: 98, c: 45, s: "f1", u: "f1",  }; //161
+        $.a($215, $216, 540);
+        var $217 = { n: "+", v: $.ip("f1", "${item.generated}", "string", 541, false), r: 99, c: 45, s: "f1", u: "f1",  }; //162
+        $.a($215, $217, 542);
+    }
+}
+$.s("f2");
+if (isWizziStudio) { //490
+    $.n();
+    var $219 = { n: "script", v: "", r: 4, c: 9, s: "f2", u: "f8",  }; //491
+    $.a($48, $219, 549);
+    var $220 = { n: "module", v: "", r: 5, c: 13, s: "f2", u: "f8",  }; //492
+    $.a($219, $220, 551);
+    var $221 = { n: "_", v: "document.addEventListener", r: 6, c: 17, s: "f2", u: "f8",  }; //493
+    $.a($220, $221, 553);
+    var $222 = { n: "@", v: "'keydown'", r: 7, c: 21, s: "f2", u: "f8",  }; //494
+    $.a($221, $222, 555);
+    var $223 = { n: "=>", v: "", r: 8, c: 21, s: "f2", u: "f8",  }; //495
+    $.a($221, $223, 557);
+    var $224 = { n: "param", v: "event", r: 9, c: 25, s: "f2", u: "f8",  }; //496
+    $.a($223, $224, 559);
+    var $225 = { n: "var", v: "keyName = event.key", r: 10, c: 25, s: "f2", u: "f8",  }; //497
+    $.a($223, $225, 561);
+    var $226 = { n: "if", v: "keyName === 'Control'", r: 11, c: 25, s: "f2", u: "f8",  }; //498
+    $.a($223, $226, 563);
+    var $227 = { n: "#", v: "do not alert when only Control key is pressed.", r: 12, c: 29, s: "f2", u: "f8",  }; //499
+    $.a($226, $227, 565);
+    var $228 = { n: "return", v: "", r: 13, c: 29, s: "f2", u: "f8",  }; //500
+    $.a($226, $228, 567);
+    var $229 = { n: "if", v: "event.ctrlKey && keyName === 'j'", r: 15, c: 25, s: "f2", u: "f8",  }; //501
+    $.a($223, $229, 569);
+    var $230 = { n: "set", v: "location.href= location.pathname + '?meta=json'", r: 16, c: 29, s: "f2", u: "f8",  }; //502
+    $.a($229, $230, 571);
+    var $231 = { n: "_", v: "event.preventDefault", r: 17, c: 29, s: "f2", u: "f8",  }; //503
+    $.a($229, $231, 573);
+    var $232 = { n: "_", v: "event.stopPropagation", r: 18, c: 29, s: "f2", u: "f8",  }; //504
+    $.a($229, $232, 575);
+    var $233 = { n: "if", v: "event.ctrlKey && keyName === 'h'", r: 20, c: 25, s: "f2", u: "f8",  }; //505
+    $.a($223, $233, 577);
+    var $234 = { n: "set", v: "location.href= location.pathname + '?meta=html'", r: 21, c: 29, s: "f2", u: "f8",  }; //506
+    $.a($233, $234, 579);
+    var $235 = { n: "_", v: "event.preventDefault", r: 22, c: 29, s: "f2", u: "f8",  }; //507
+    $.a($233, $235, 581);
+    var $236 = { n: "_", v: "event.stopPropagation", r: 23, c: 29, s: "f2", u: "f8",  }; //508
+    $.a($233, $236, 583);
+    var $237 = { n: "if", v: "event.ctrlKey && keyName === 'b'", r: 25, c: 25, s: "f2", u: "f8",  }; //509
+    $.a($223, $237, 585);
+    var $238 = { n: "var", v: "i = location.pathname.lastIndexOf('/')", r: 26, c: 29, s: "f2", u: "f8",  }; //510
+    $.a($237, $238, 587);
+    var $239 = { n: "set", v: "location.href= location.pathname.substr(0, i) + '?meta=html'", r: 27, c: 29, s: "f2", u: "f8",  }; //511
+    $.a($237, $239, 589);
+    var $240 = { n: "_", v: "event.preventDefault", r: 28, c: 29, s: "f2", u: "f8",  }; //512
+    $.a($237, $240, 591);
+    var $241 = { n: "_", v: "event.stopPropagation", r: 29, c: 29, s: "f2", u: "f8",  }; //513
+    $.a($237, $241, 593);
+    var $242 = { n: "if", v: "event.ctrlKey && keyName === 'e'", r: 31, c: 25, s: "f2", u: "f8",  }; //514
+    $.a($223, $242, 595);
+    var $243 = { n: "set", v: "location.href= '/ittf/docs/cheatsheets/index.html.ittf'", r: 32, c: 29, s: "f2", u: "f8",  }; //515
+    $.a($242, $243, 597);
+    var $244 = { n: "_", v: "event.preventDefault", r: 33, c: 29, s: "f2", u: "f8",  }; //516
+    $.a($242, $244, 599);
+    var $245 = { n: "_", v: "event.stopPropagation", r: 34, c: 29, s: "f2", u: "f8",  }; //517
+    $.a($242, $245, 601);
+}
+$.s("f2");
+if (opt.useReact) { //565
+    $.n();
+    var $247 = { n: "js", v: "https://unpkg.com/react@latest/umd/react.development.js", r: 4, c: 9, s: "f2", u: "f9",  }; //566
+    $.a($48, $247, 607);
+    var $248 = { n: "js", v: "https://unpkg.com/react-dom@latest/umd/react-dom.development.js", r: 5, c: 9, s: "f2", u: "f9",  }; //567
+    $.a($48, $248, 609);
+    var $249 = { n: "js", v: "https://unpkg.com/prop-types@latest/prop-types.min.js", r: 6, c: 9, s: "f2", u: "f9",  }; //568
+    $.a($48, $249, 611);
+    var $250 = { n: "js", v: "https://unpkg.com/@material-ui/core/umd/material-ui.development.js", r: 7, c: 9, s: "f2", u: "f9",  }; //569
+    $.a($48, $250, 613);
+    var $251 = { n: "js", v: "https://unpkg.com/babel-standalone@latest/babel.min.js", r: 8, c: 9, s: "f2", u: "f9",  }; //570
+    $.a($48, $251, 615);
+    $.s("f2");
+    if (opt.react.useRouter) { //571
+        $.n();
+        var $253 = { n: "js", v: "https://unpkg.com/react-router-dom/umd/react-router-dom.min.js", r: 10, c: 13, s: "f2", u: "f9",  }; //572
+        $.a($48, $253, 620);
+    }
+    $.n();
+    var $254 = { n: "js", v: "/static/lib/classnames/classnames@2.2.5.js", r: 11, c: 9, s: "f2", u: "f9",  }; //573
+    $.a($48, $254, 624);
+}
+$.s("f2");
+if (opt.useJQuery || opt.useBootstrap) { //574
+    $.n();
+    var $256 = { n: "js", v: "/static/lib/jquery/dist/jquery.js", r: 14, c: 9, s: "f2", u: "f9",  }; //575
+    $.a($48, $256, 630);
+}
+$.s("f2");
+if (opt.useBootstrap) { //576
+    $.n();
+    var $258 = { n: "js", v: "/static/lib/bootstrap/dist/js/bootstrap.min.js", r: 17, c: 9, s: "f2", u: "f9",  }; //577
+    $.a($48, $258, 636);
+}
+$.s("f2");
+if (opt.useUnderscore) { //578
+    $.n();
+    var $260 = { n: "js", v: "/static/lib/underscore/underscore.js", r: 20, c: 9, s: "f2", u: "f9",  }; //579
+    $.a($48, $260, 642);
+}
+$.s("f2");
+if (opt.usePrism) { //580
+    if (isWizziStudio) { //581
+        $.n();
+        var $263 = { n: "js", v: "/static/lib/prism/prism.js", r: 24, c: 13, s: "f2", u: "f9",  }; //582
+        $.a($48, $263, 649);
+    }
+    else {
+        $.n();
+        var $265 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js", r: 26, c: 13, s: "f2", u: "f9",  }; //584
+        $.a($48, $265, 654);
+    }
+}
+$.s("f2");
+if (opt.useSplit) { //585
+    $.n();
+    var $267 = { n: "js", v: "/static/lib/controls/split.js", r: 29, c: 9, s: "f2", u: "f9",  }; //586
+    $.a($48, $267, 661);
+}
+$.s("f2");
+if (opt.useAce) { //587
+    $.n();
+    var $269 = { n: "js", v: "/static/lib/ace/src-noconflict/ace.js", r: 32, c: 9, s: "f2", u: "f9",  }; //588
+    $.a($48, $269, 667);
+}
+$.s("f2");
+if (opt.useHighlight) { //589
+    $.n();
+    var $271 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js", r: 35, c: 9, s: "f2", u: "f9",  }; //590
+    $.a($48, $271, 673);
+}
+$.s("f2");
+if (opt.useCodemirror) { //591
+    $.n();
+    var $273 = { n: "js", v: "/static/lib/codemirror/lib/codemirror.js", r: 38, c: 9, s: "f2", u: "f9",  }; //592
+    $.a($48, $273, 679);
+    var $274 = { n: "js", v: "/static/lib/codemirror/mode/javascript/javascript.js", r: 39, c: 9, s: "f2", u: "f9",  }; //593
+    $.a($48, $274, 681);
+    var $275 = { n: "js", v: "/static/lib/codemirror/mode/yaml/yaml.js", r: 40, c: 9, s: "f2", u: "f9",  }; //594
+    $.a($48, $275, 683);
+    var $276 = { n: "js", v: "/static/lib/codemirror/addon/display/fullscreen.js", r: 41, c: 9, s: "f2", u: "f9",  }; //595
+    $.a($48, $276, 685);
+}
+$.s("f2");
+if (opt.usePubSub) { //596
+    $.n();
+    var $278 = { n: "js", v: "/static/lib/pubsub/pubsub.js", r: 44, c: 9, s: "f2", u: "f9",  }; //597
+    $.a($48, $278, 691);
+}
+$.s("f2");
+if (opt.useAxios) { //598
+    $.n();
+    var $280 = { n: "js", v: "/static/lib/axios/axios.js", r: 47, c: 9, s: "f2", u: "f9",  }; //599
+    $.a($48, $280, 697);
+}
+$.s("f2");
+if (opt.useJss) { //600
+    $.n();
+    var $282 = { n: "js", v: "/static/lib/jss/jss.js", r: 50, c: 9, s: "f2", u: "f9",  }; //601
+    $.a($48, $282, 703);
+    var $283 = { n: "js", v: "/static/lib/jss/jss-preset-default.js", r: 51, c: 9, s: "f2", u: "f9",  }; //602
+    $.a($48, $283, 705);
+}
+$.s("f2");
+if (opt.mainJs && opt.mainJs.length > 0) { //603
+    if (opt.useReact) { //604
+        $.n();
+        var $286 = { n: "script", v: "", r: 55, c: 13, s: "f2", u: "f9",  }; //605
+        $.a($48, $286, 712);
+        var $287 = { n: "src", v: $.ip("f2", "${opt.mainJs}", "string", 713, false), r: 56, c: 17, s: "f2", u: "f9",  }; //606
+        $.a($286, $287, 714);
+        var $288 = { n: "type", v: "text/babel", r: 57, c: 17, s: "f2", u: "f9",  }; //607
+        $.a($286, $288, 716);
+    }
+    else {
+        $.n();
+        var $290 = { n: "js", v: $.ip("f2", "${opt.mainJs}", "string", 720, false), r: 59, c: 13, s: "f2", u: "f9",  }; //609
+        $.a($48, $290, 721);
+    }
+}
+$.n();
+var $291 = { n: "script", v: "", r: 59, c: 9, s: "f2", u: "f5",  }; //358
+$.a($48, $291, 726);
+$.s("f2");
+if (opt.useHighlight) { //359
+    $.n();
+    var $293 = { n: "_", v: "document.addEventListener", r: 61, c: 17, s: "f2", u: "f5",  }; //360
+    $.a($291, $293, 731);
+    var $294 = { n: "@", v: "'DOMContentLoaded'", r: 62, c: 21, s: "f2", u: "f5",  }; //361
+    $.a($293, $294, 733);
+    var $295 = { n: "=>", v: "", r: 63, c: 21, s: "f2", u: "f5",  }; //362
+    $.a($293, $295, 735);
+    var $296 = { n: "param", v: "event", r: 64, c: 25, s: "f2", u: "f5",  }; //363
+    $.a($295, $296, 737);
+    var $297 = { n: "_", v: "document.querySelectorAll('pre code').forEach", r: 65, c: 25, s: "f2", u: "f5",  }; //364
+    $.a($295, $297, 739);
+    var $298 = { n: "=>", v: "", r: 66, c: 29, s: "f2", u: "f5",  }; //365
+    $.a($297, $298, 741);
+    var $299 = { n: "param", v: "block", r: 67, c: 33, s: "f2", u: "f5",  }; //366
+    $.a($298, $299, 743);
+    var $300 = { n: "_", v: "hljs.highlightBlock(block)", r: 68, c: 33, s: "f2", u: "f5",  }; //367
+    $.a($298, $300, 745);
+}

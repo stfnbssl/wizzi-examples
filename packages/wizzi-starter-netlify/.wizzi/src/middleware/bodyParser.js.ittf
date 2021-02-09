@@ -1,0 +1,8 @@
+module
+    kind es6
+    
+    $
+        var opt = {
+        }
+
+    v08/app/express/middlewares/bodyParser(&opt)

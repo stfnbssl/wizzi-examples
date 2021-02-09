@@ -33,6 +33,8 @@ module
                     { 
                         @ name '${pkg.name}.sid'
                         @ secret config.sessionSecret
+                        [ algorithms
+                            @ 'RS256'
                         @ store
                             new MongoStore
                                 { 

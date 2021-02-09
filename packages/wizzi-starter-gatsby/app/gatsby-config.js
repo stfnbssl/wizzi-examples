@@ -64,10 +64,6 @@ module.exports = {
                 }
             }
         }, 
-        'gatsby-plugin-top-layout', 
-        {
-            resolve: 'gatsby-plugin-material-ui'
-        }, 
         {
             resolve: 'gatsby-source-medium', 
             options: {

@@ -1,31 +1,8 @@
 module
     kind es6
-    import 
-        as path
-        from 'path'
-    import 
-        as wizzi
-        from 'wizzi'
-    export 
-        async-function createFilesystemFactory
-            param globalContext
-            const gc = {}
-            return 
-                new Promise
-                    => 
-                        param resolve
-                        param reject
-                        _ wizzi.fsFactory
-                            { 
-                                { plugins
-                                    [ items
-                                        @ 'wizzi-core'
-                                        @ 'wizzi-js'
-                                        @ 'wizzi-web'
-                                @ globalContext Object.assign({}, gc, globalContext || {})
-                            function 
-                                param err
-                                param wf
-                                if err
-                                    return reject(err)
-                                _ resolve(wf)
+    
+    $
+        var opt = {
+        }
+
+    v08/app/features/wizzi/factory(&opt)

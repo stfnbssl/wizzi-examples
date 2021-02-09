@@ -1,0 +1,40 @@
+module
+    kind react
+    import _ from 'lodash'
+    import numRef from './ref.json'
+
+    $$ var _md = exports = {}
+    set exports.open
+        => 
+            log 'opened'
+    
+    $*
+    export 
+        function numToWord
+            param num
+            return 
+                _ _.reduce
+                    @ numRef
+                    => 
+                        param accum
+                        param ref
+                        return 
+                            iif ref.num === num
+                                then ref.word
+                                else accum
+                    @ ''
+    export 
+        function wordToNum
+            param word
+            return 
+                _ _.reduce
+                    @ numRef
+                    => 
+                        param accum
+                        param ref
+                        return 
+                            iif ref.word === word && word.toLowerCase()
+                                then ref.num
+                                else accum
+                    @ -1
+    *$

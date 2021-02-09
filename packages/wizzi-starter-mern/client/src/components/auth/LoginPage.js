@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\client\src\components\auth\LoginPage.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\client\src\components\auth\LoginPage.js.ittf
 */
 'use strict';
 import React, {Component} from 'react';
@@ -42,7 +43,7 @@ class RegisterPage extends React.Component {
                 ...this.state.formValues, 
                 [event.target.name]: event.target.value
             }
-        });
+        })
     }
     _setFieldError = (name, errorInfo) => {
         this.setState({
@@ -50,20 +51,20 @@ class RegisterPage extends React.Component {
                 ...this.state.formErrors, 
                 [name]: errorInfo
             }
-        });
+        })
     }
     _validateForm = () => {
         const { formValues } = this.state;
         this.setState({
             formErrors: {}
-        });
+        })
         let isFormValid = true;
         if ((formValues.email && formValues.email.length > 0) == false) {
-            this._setFieldError('email', 'Required field');
+            this._setFieldError('email', 'Required field')
             isFormValid = false;
         }
         if ((formValues.password && formValues.password.length > 0) == false) {
-            this._setFieldError('password', 'Required field');
+            this._setFieldError('password', 'Required field')
             isFormValid = false;
         }
         return isFormValid;
@@ -82,7 +83,7 @@ class RegisterPage extends React.Component {
         try {
             this.setState({
                 isLoading: true
-            });
+            })
             const result = await authApis.localLogin({
                     email: formValues.email, 
                     password: formValues.password
@@ -91,7 +92,7 @@ class RegisterPage extends React.Component {
             this.setState({
                 isLoading: false, 
                 formErrors: {}
-            });
+            })
             history.push('/profile');
         } 
         catch (error) {
@@ -104,17 +105,17 @@ class RegisterPage extends React.Component {
             if (errorCode === '401') {
                 this._handleToggleSnackbar({
                     message
-                });
+                })
             }
             else if (errors) {
                 this._handleToggleSnackbar({
                     message: "Invalid parameters"
-                });
+                })
             }
             this.setState({
                 isLoading: false, 
                 formErrors: errors
-            });
+            })
         } 
     }
     _handleToggleSnackbar = ({message}) => {
@@ -123,7 +124,7 @@ class RegisterPage extends React.Component {
                     isSnackbarOpen: !state.isSnackbarOpen, 
                     snackbarMessage: message
                 };
-        });
+        })
     }
     render() {
         const { classes } = this.props;

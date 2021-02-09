@@ -1,6 +1,0 @@
-﻿$group
-
-	$if pkg.Build.useHotReplacement
-		
-			@ open true
-			@ hot true

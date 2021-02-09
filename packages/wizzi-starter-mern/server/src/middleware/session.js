@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\middleware\session.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\middleware\session.js.ittf
 */
 'use strict';
 import {Application, Request, Response, RequestHandler, CookieOptions} from 'express';
@@ -18,23 +19,20 @@ export const SessionMiddleware = (app) => {
         maxAge: 14 * 24 * 60 * 60 * 1000
     };
     const sessionOptions = {
-        name: 'mern-server-starter.sid', 
+        name: 'wizzi-starter-mern-server.sid', 
         secret: config.sessionSecret, 
+        algorithms: [
+            'RS256'
+        ], 
         store: new MongoStore({
             mongooseConnection: mongooseConnection, 
             // save session 14 days
             ttl: 14 * 24 * 60 * 60
         }), 
         cookie: cookieOptions, 
-        resave: true, 
-        saveUninitialized: true
+        resave: false, 
+        saveUninitialized: false
     };
-    /**
-        
-         if (!dev) {
-         server.set('trust proxy', 1); // trust first proxy
-         }
-        
-    */
-    app.use(session(sessionOptions));
+    //
+    app.use(session(sessionOptions))
 };

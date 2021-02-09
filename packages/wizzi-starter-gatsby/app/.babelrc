@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "@babel/proposal-class-properties",
+        "@babel/proposal-object-rest-spread",
+        "@babel/plugin-transform-regenerator",
+        "@babel/plugin-transform-classes"
+    ],
+    "presets": [
+        [
+            "babel-preset-gatsby",
+            {
+                "targets": {
+                    "browsers": [
+                        ">0.25%",
+                        "not dead"
+                    ]
+                }
+            }
+        ]
+    ],
+    "env": {}
+}

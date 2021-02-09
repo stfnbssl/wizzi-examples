@@ -9,6 +9,8 @@
         "baseUrl": "http://localhost:8080"
     },
     "Build": {
+        "useGatsby": true,
+        "gatsby": {},
         "useDotenv": true,
         "dotenv": {},
         "useModuleResolver": true,
@@ -44,8 +46,11 @@
             "useAphrodite": true,
             "aphrodite": {}
         },
-        "useMaterialUI": true,
-        "materialUI": {},
+        "useReact": true,
+        "react": {
+            "useMaterialUI": true,
+            "materialUI": {}
+        },
         "useContentful": true,
         "contentful": {},
         "useFilesystem": true,
@@ -74,7 +79,8 @@
         },
         "useWizzi": true,
         "wizzi": {
-            "src": "`${__dirname}/src/models/ittf/cheatsheets`"
+            "src": "`${__dirname}/src/models/ittf/cheatsheets`",
+            "useLatest": true
         },
         "usePrismJS": true,
         "prismJS": {}

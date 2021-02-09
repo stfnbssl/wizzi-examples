@@ -1,10 +1,18 @@
 ﻿$group
-    $params svg_width:float
+    $params svg_width:float, l:float|0, t:float|0
     
     $
         var ratio = svg_width / 660;
-        var opt = {};
         
+        
+        var l = l * 1.0;
+        var t = t * 1.0;
+        var x1 = 0;
+        var x2 = 270;
+        var x3 = 360;
+        var x4 = 510;
+        var x5 = 670;
+        var opt = {};
         opt.y0 = 10 * ratio;
         opt.y1 = 10 * ratio;
         opt.y1a = 90 * ratio;
@@ -14,37 +22,25 @@
         opt.fill = '#01579b';
         opt.ratio = ratio;
 
-    svg
-        
-        width ${660 * ratio}
-        height ${260 * ratio}
-        $$ width 5.6875rem
-        $$ height 1.5rem
-        $$ viewBox 0 0 106 28
-
-        $$ preserve-aspect-ratio xMidYMid meet
-        rect
-            x 0
-            y 0
-            width 660
-            height 280
-            fill none
-            stroke none
-        
-        polyline
-            stroke ${opt.stroke}
-            fill ${opt.fill}
-            stroke-width 2
-            points ${10 * ratio} ${opt.ybottom}
-                \b ${45 * ratio} ${opt.y0} ${60 * ratio} ${opt.y0} ${75 * ratio} ${opt.y1a + (40*ratio)} 
-                \b ${120 * ratio} ${opt.y2} ${120 * ratio} ${opt.y1a + (40*ratio)} 
-                \b ${175 * ratio} ${opt.y2} ${175 * ratio} ${opt.y1a + (20*ratio)} 
-                \b ${230 * ratio} ${opt.y2} ${230 * ratio} ${opt.ybottom}
-
-        
-        i( ${250 * ratio}, ${ratio}, &opt )
-        zeta( ${320 * ratio}, ${ratio}, &opt )
-        zeta( ${450 * ratio}, ${ratio}, &opt )
-        i( ${590 * ratio}, ${ratio}, &opt )	
-
-
+    $if l > 0
+        w( ${l + x1 * ratio}, ${t}, ${ratio}, &opt )
+        i( ${l + x2 * ratio}, ${t}, ${ratio}, &opt )
+        zeta( ${l + x3 * ratio}, ${t}, ${ratio}, &opt )
+        zeta( ${l + x4 * ratio}, ${t}, ${ratio}, &opt )
+        i( ${l + x5 * ratio}, ${t}, ${ratio}, &opt )	
+    $else
+        svg
+            width ${700 * ratio}
+            height ${260 * ratio}
+            rect
+                x 0
+                y 0
+                width 700
+                height 280
+                fill none
+                stroke none
+            w( ${l + x1 * ratio}, ${t}, ${ratio}, &opt )
+            i( ${l + x2 * ratio}, ${t}, ${ratio}, &opt )
+            zeta( ${l + x3 * ratio}, ${t}, ${ratio}, &opt )
+            zeta( ${l + x4 * ratio}, ${t}, ${ratio}, &opt )
+            i( ${l + x5 * ratio}, ${t}, ${ratio}, &opt )

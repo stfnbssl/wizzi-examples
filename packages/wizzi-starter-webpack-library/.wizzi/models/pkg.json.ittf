@@ -1,0 +1,30 @@
+{
+	
+    name "wizzi-starter-webpack-library"
+	version "0.0.1"
+	description "Wizzi starter template for Webpack library packages"
+	author "Stefano Bassoli"
+	license "MIT"
+
+    { Build
+        useWebpack true
+        { webpack
+            $$ externalType "script"
+            [ externals
+                {
+                    name "lodash"
+                    $$ src "https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"
+                    root "_"
+            $*
+                {
+                    name "lodash"
+                    root "_"
+            *$
+        useBabel true
+        { babel
+        isLibrary true
+        { library
+            name "webpackNumbers"
+            $$ target "var"
+            target "var"
+    { Code

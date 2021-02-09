@@ -1,0 +1,8 @@
+﻿$group
+
+	artifact any_toml
+		src ./**/*.toml.ittf
+		schema json
+		generator json/toml
+		extension toml
+		$hook

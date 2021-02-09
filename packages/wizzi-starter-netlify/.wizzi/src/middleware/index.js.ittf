@@ -1,0 +1,31 @@
+module
+    kind es6
+    $*
+    import { LoggerMiddleware } from './logger'
+    import { CorsMiddleware } from './cors'
+    
+    import { SessionMiddleware } from './session'
+    import { PassportMiddleware } from './passport'
+    import { IttfDocumentsMiddleware } from './ittf'
+    *$
+    import { BodyParserMiddleware } from './bodyParser'
+    import { CacheControlMiddleware } from './cacheControl'
+    import { NetlifyServerMiddleware } from './netlifyServer'
+    import { WizziViewEngineMiddleware } from './wizziViewEngine'
+    import { ErrorsMiddleware } from './errors'
+
+    export
+        const appMiddlewares
+            [ 
+                $*
+                @ LoggerMiddleware
+                @ CorsMiddleware
+                @ SessionMiddleware
+                @ PassportMiddleware
+                @ IttfDocumentsMiddleware
+                *$
+                @ BodyParserMiddleware
+                @ CacheControlMiddleware
+                @ NetlifyServerMiddleware
+                @ WizziViewEngineMiddleware
+                @ ErrorsMiddleware

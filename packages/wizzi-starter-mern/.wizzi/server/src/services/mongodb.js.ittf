@@ -8,7 +8,7 @@ module
             param modelBuilders
 
             const { mongoUser, mongoPassword, mongoPath } = config;
-            const connectUrl = `mongodb://${mongoUser}:${mongoPassword}${mongoPath}`;
+            const connectUrl = `mongodb+srv://${mongoUser}:${mongoPassword}${mongoPath}`;
             set mongoose.Promise = global.Promise
             return
                 _ mongoose.connect
@@ -25,4 +25,4 @@ module
                             return 'Connected'
                         => 
                             param err
-                            throw new Error('Mongodb. Can not connect to the database. ' + err.message)
+                            throw new Error('\n\nMongodb. \nCan not connect to \n"' + connectUrl + '". \n\n' + err.message + '\n\n')

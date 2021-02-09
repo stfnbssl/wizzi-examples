@@ -1,0 +1,7 @@
+module
+    kind es6
+    import create from './env'
+    const config
+        _ create
+    export 
+        @ config

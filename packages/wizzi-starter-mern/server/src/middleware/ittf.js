@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\middleware\ittf.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\middleware\ittf.js.ittf
 */
 'use strict';
 import stringify from 'json-stringify-safe';
@@ -80,27 +81,27 @@ function ittfMiddleware(basePath, routePath) {
                         res.writeHead(200, {
                             'Content-Type': 'text/html', 
                             'Content-Length': generated.artifactContent.length
-                        });
+                        })
                         res.end(generated.artifactContent);
                     } 
                     catch (ex) {
                         sendError(res, ex, {
                             format: 'json'
-                        });
+                        })
                     } 
                 }
                 return contextLoader(filePath, req, function(err, modelContext) {
                         if (err) {
                             sendError(res, err, {
                                 format: 'json'
-                            });
+                            })
                         }
                         wizziProds.generateArtifactFs(filePath, modelContext).then((generated) => {
                             console.log('generated.artifactContent', generated.artifactContent);
                             res.writeHead(200, {
                                 'Content-Type': contentType, 
                                 'Content-Length': generated.artifactContent.length
-                            });
+                            })
                             res.end(generated.artifactContent);
                         }).catch((err) =>
                             sendError(res, err, {
@@ -109,42 +110,10 @@ function ittfMiddleware(basePath, routePath) {
                     });
             }
             next();
-            /**
-                
-                 contentType = extContentTypeMap[extname];
-                 console.log('contentType', contentType);
-                 if (contentType) {
-                 var stat = fs.statSync(filePath);
-                 res.writeHead(200, {
-                 'Content-Type': contentType,
-                 'Content-Length': stat.size
-                 });
-                 const readStream = fs.createReadStream(filePath);
-                 return readStream.pipe(res);
-                 }
-                 next();
-                
-            */
+            //
         };
 }
-/**
-     *
-     req.query._context contains a semicolon separated list of context models export names.
-     For each <export-name> must exists a req.query._<export-name> parameter
-     with a type;path value pair.
-     The type is the model knwon type or a wizzi schema, the path is the
-     relative path of the ittf document of the model, relative to the
-     filepath of the requested resource.
-    
-     Example (two context models, export names: cs and info)
-     req.query._context = 'cs;info'
-     req.query._cs = 'cheatsheet;html'
-     req.query._info = 'json;../cslayout.json.ittf'
-    
-     If the path value is missing it defaults to ./index.<type>.ittf
-    
-    
-*/
+//
 async function contextLoader(resourceFilePath, req, callback) {
     const contextRequest = req.query._context;
     if (contextRequest && contextRequest.length > 0) {
@@ -182,7 +151,7 @@ async function contextLoader(resourceFilePath, req, callback) {
                 requests.push(request);
             }
             console.log('contextLoader request', request);
-        });
+        })
         console.log('contextLoader.requests', requests);
         const resultContext = {};
         const repeatCount = requests.length;
@@ -193,17 +162,7 @@ async function contextLoader(resourceFilePath, req, callback) {
             const request = requests[index];
             if (request.type === 'cheatsheet') {
                 return callback('Context loader for cheatsheet type not implemented.');
-                /**
-                     NOT IMPLEMENTED YET
-                     return loadCheatsheet(request.name, function(err, model) {
-                     if (err) {
-                     return callback(err);
-                     }
-                     resultContext[request.exportName] = model;
-                     return callback(null);
-                     });
-                    
-                */
+                //
             }
             else {
                 wizziProds.loadModelFs(request.fullPath, {}).then((model) => {
@@ -241,14 +200,14 @@ async function sendFolderScan(folderPath, root, meta, res) {
             res.writeHead(200, {
                 'Content-Type': 'text/html', 
                 'Content-Length': generated.artifactContent.length
-            });
+            })
             res.end(generated.artifactContent);
         }
     } 
     catch (ex) {
         sendError(res, ex, {
             format: 'json'
-        });
+        })
     } 
 }
 function sendJSONStringified(res, wizziModelInstance) {
@@ -267,7 +226,7 @@ function cleanCircular(obj, stock) {
     if (typeof obj === 'object') {
         if (obj.length) {
             obj.forEach((element) =>
-                cleanCircular(element, stock));
+                cleanCircular(element, stock))
             return ;
         }
         if (obj.parent) {
@@ -319,7 +278,7 @@ function sendError(res, err, options) {
         if (err.stack && err.stack.split) {
             const stackArray = [];
             err.stack.split('\n').forEach((element) =>
-                stackArray.push('    ' + element));
+                stackArray.push('    ' + element))
             errEmit.stack = stackArray;
         }
     }
@@ -327,5 +286,5 @@ function sendError(res, err, options) {
     res.send(stringify({
         code, 
         error: errEmit
-    }, null, 4));
+    }, null, 4))
 }

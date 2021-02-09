@@ -1,6 +1,7 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\server\src\features\wizzi\productions.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\server\src\features\wizzi\productions.js.ittf
 */
 'use strict';
 import * as path from 'path';
@@ -24,7 +25,7 @@ export async function loadModelFs(filePath, context) {
                 }
                 // console.log('Generated artifact', result);
                 resolve(result);
-            });
+            })
         });
 }
 export async function generateArtifactFs(filePath, context) {
@@ -33,12 +34,9 @@ export async function generateArtifactFs(filePath, context) {
             if (generator) {
                 console.log('using artifact generator', generator);
                 const wf = await createFilesystemFactory();
-                const generationContext = {
-                    modelRequestContext: {
-                        mTreeBuildUpContext: context || {}
-                    }
-                };
-                wf.loadModelAndGenerateArtifact(filePath, generationContext, generator, (err, result) => {
+                wf.loadModelAndGenerateArtifact(filePath, {
+                    modelRequestContext: context || {}
+                }, generator, (err, result) => {
                     if (err) {
                         return reject(err);
                     }
@@ -47,8 +45,8 @@ export async function generateArtifactFs(filePath, context) {
                         artifactContent: result, 
                         sourcePath: filePath, 
                         artifactGenerator: generator
-                    });
-                });
+                    })
+                })
             }
             else {
                 reject('No artifact generator available for document ' + filePath);

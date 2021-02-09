@@ -1,0 +1,8 @@
+module
+    kind es6
+    
+    $
+        var opt = {
+        }
+
+    v08/app/express/features/wizzi/factory(&opt)

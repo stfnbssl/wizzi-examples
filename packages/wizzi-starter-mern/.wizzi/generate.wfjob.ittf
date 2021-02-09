@@ -32,12 +32,11 @@
         line server-root
             cwd-folder ${ittf_server_root_folder}
             dest-folder ${dest_server_folder}
-
             wfjob/any_js()
             wfjob/any_json()
             wfjob/any_md()
             wfjob/.babelrc()
-            wfjob/.env()
+            
 
         line server-src
             cwd-folder ${ittf_server_src_folder}
@@ -46,6 +45,7 @@
             wfjob/any_js()
             wfjob/any_json()
             wfjob/any_md()
+            wfjob/.env()
             artifact any_ittf_inside___copy
                 src ${ittf_server_src_folder}/**/*__copy/**/*.ittf
                 extension ittf

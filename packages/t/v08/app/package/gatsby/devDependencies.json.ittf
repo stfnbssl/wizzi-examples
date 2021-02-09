@@ -1,4 +1,0 @@
-$group
-
-    $if pkg.Build.usePrettier
-        prettier "^1.12.0"

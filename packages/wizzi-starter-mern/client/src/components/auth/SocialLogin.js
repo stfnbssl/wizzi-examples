@@ -1,16 +1,15 @@
 /*
-    artifact generator: C:\My\wizzi\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
-    primary source IttfDocument: C:\My\wizzi\wizzi-examples\packages\mern-starter\.wizzi\client\src\components\auth\SocialLogin.js.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
+    package: wizzi-js@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-starter-mern\.wizzi\client\src\components\auth\SocialLogin.js.ittf
 */
 'use strict';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import io from 'socket.io-client';
 import OAuthLogin from './OAuthLogin';
 import PageLoader from '../shared/PageLoader';
 import {config} from '../../features/config';
-const socket = io(config.SERVER_URL);
 const providers = [
     'twitter', 
     'google', 
@@ -42,7 +41,7 @@ class SocialLogin extends React.Component {
             if (res.ok) {
                 this.setState({
                     loading: false
-                });
+                })
             }
         })
     }
@@ -50,9 +49,9 @@ class SocialLogin extends React.Component {
         const {
             classes
         } = this.props;
-        const buttons = (providers, socket) =>
+        const buttons = (providers) =>
             providers.map((provider) =>  (
-                    <OAuthLogin provider={provider} key={provider} socket={socket}>
+                    <OAuthLogin provider={provider} key={provider}>
                     </OAuthLogin>
                 )
             );

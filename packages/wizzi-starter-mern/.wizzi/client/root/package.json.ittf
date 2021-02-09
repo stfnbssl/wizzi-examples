@@ -7,13 +7,13 @@
 	
     { scripts
 		test "echo \"Error: no test specified\" && exit 1"
-    	$include v07/app/package/webpack/scripts
+    	$include v08/app/package/webpack/scripts
 	
     { dependencies
-		$include v07/app/package/webpack/dependencies
+		$include v08/app/package/webpack/dependencies
 
 	{ devDependencies
-		$include v07/app/package/webpack/devDependencies
+		$include v08/app/package/webpack/devDependencies
 
     $*
     name "${pkg.name}"

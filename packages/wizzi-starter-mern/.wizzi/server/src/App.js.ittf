@@ -45,7 +45,7 @@ module
                         _ res.send('👍')
 
         m listen
-            _ this.server.listen
+            _ ${pkg.Build.useSocketIO ? 'this.server' : 'this.app'}.listen
                 @ this.port
                 => 
                     _ console.log
