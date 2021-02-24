@@ -1,0 +1,142 @@
+﻿module
+    kind jsfile
+
+    $
+        var md = {
+            hasBorderedControls: true
+        }
+
+    const pageData
+        {
+            { form
+                @ id "myfirst"
+                @ title "Blog post"
+                [ controls
+                    {
+                        @ type "group"
+                        @ direction "row"
+                        [ controls
+                            {
+                                @ id "author"
+                                @ label "author"
+                                @ type "text"
+                                @ required true
+                            {
+                                @ id "title"
+                                @ label "title"
+                                @ type "text"
+                                @ required true
+                    {
+                        @ id "class"
+                        @ label "class"
+                        @ type "select"
+                        [ options
+                            {
+                                @ label "class 1"
+                                @ value 1
+                            {
+                                @ label "class 2"
+                                @ value 2
+                            {
+                                @ label "class 3"
+                                @ value 3
+                                @ selected true
+                    {
+                        @ id "birthday"
+                        @ label "birthday"
+                        @ type "date"
+                    {
+                        @ id "skin"
+                        @ label "skin"
+                        @ type "radio"
+                        [ options
+                            {
+                                @ label "skin 1"
+                                @ id 1
+                            {
+                                @ label "skin 2"
+                                @ id 2
+                            {
+                                @ label "skin 3"
+                                @ id 3
+                                @ selected true
+                    {
+                        @ id "ok"
+                        @ label "ok"
+                        @ type "checkbox"
+                    {
+                        @ id "margin"
+                        @ label "margin"
+                        @ type "slider"
+                        @ start 500
+                        @ step 10
+                        { range
+                            @ min 0 
+                            @ max 1000
+                    {
+                        @ id "wizzi"
+                        @ label "wizzi"
+                        @ type "code"
+
+    const jq2
+        _ jQuery.noConflict
+    _ jq2
+        function 
+            param $
+            
+            _ inject_page_styles
+            _ inject_form_styles
+
+            set document.getElementById("root").innerHTML
+                _ get_container
+                    @ pageData
+
+            var formOriginalValues = {}
+            var formValues = formOriginalValues
+
+            var context
+                {
+                    @ formValues formValues
+                    @ onChange
+                        function
+                            param id
+                            param value
+                            set formValues[id] = value
+                            log 'Changed formValues', formValues
+                    @ onSubmit
+                        function
+                            param id
+                            param value
+                            set formValues[id] = value
+                            log 'Submit formValues', formValues
+            
+            _ start_form
+                @ $
+                @ pageData.form
+                @ context
+
+            _ start_form_validation
+                @ $
+                @ pageData.form
+
+
+    html_f get_container
+        var temp = []    
+        _ get_form
+            @ temp
+            @ ctx.form
+        < div
+            id container
+            class page-wrapper bg-red p-t-30 p-b-100 font-robo
+            div
+                id content
+                + {{ temp.join('') }}
+            div
+                id footer
+
+    $include inject
+    $include page-styles
+    $include form-styles
+    $include form-controls
+    $include form-start
+    $include form-validation

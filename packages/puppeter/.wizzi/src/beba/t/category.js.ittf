@@ -1,0 +1,38 @@
+$group
+
+    const links
+        await 
+            _ page.${dollardollar}('a.read-more')
+    
+    log "links", links.length
+    
+    await 
+        _ links[2].click
+    
+    await 
+        _ page.waitForNavigation
+    
+    # we are in the guide/news search page
+    
+    await 
+        _ page.type('select[name="categoria"', category)
+    
+    await 
+        _ page.click('#btn_cerca_mappe')
+
+    const articles = await page.${dollardollar}('#risultati_ricerca a')
+
+    log "articles", articles.length
+
+    const urls
+        await 
+            _ page.evaluate
+                => 
+                    _ Array.from
+                        _ document.querySelectorAll('#risultati_ricerca a')
+                        => 
+                            param element
+                            + element.href
+
+    log "urls", urls.length, urls
+

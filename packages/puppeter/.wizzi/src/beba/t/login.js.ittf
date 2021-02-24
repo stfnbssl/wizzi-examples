@@ -1,0 +1,16 @@
+$group
+
+    const page
+        await
+            _ browser.newPage
+    await 
+        _ page.goto(loginUrl)
+    await 
+        _ page.type('#username', username)
+    await 
+        _ page.type('#password', psw)
+    await 
+        _ page.click('button[type="submit"]')
+    await 
+        _ page.waitForNavigation
+    log 'logged in'

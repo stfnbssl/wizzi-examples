@@ -11,14 +11,17 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _print_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./print.js */ "./src/print.js");
 /* harmony import */ var _print_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_print_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _highlight_default_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./highlight.default.min.css */ "./src/highlight.default.min.css");
+/* harmony import */ var _highlight_default_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_highlight_default_min_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi-examples\node_modules\wizzi-js\lib\artifacts\js\module\gen\main.js
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-webpack\.wizzi\src\index.js.ittf
 */
  // for module hotReplacement
 // see https://nativescript.org/blog/deep-dive-into-hot-module-replacement-with-webpack-part-two-handling-updates/
+
 
 
 
@@ -35,6 +38,8 @@ function page() {
   element.appendChild(hello_panel);
   var jsCode = _print_js__WEBPACK_IMPORTED_MODULE_0___default()(['function alpha(a, b) {', '    return a + b;', '}'].join('\n'), 'js');
   element.appendChild(codePanel(jsCode));
+  var htmlCode = _print_js__WEBPACK_IMPORTED_MODULE_0___default()(['<div class="main">', '    <span>return a + b;</span>', '</div>'].join('\n'), 'html');
+  element.appendChild(codePanel(htmlCode));
   return element;
 }
 
@@ -58,8 +63,9 @@ function icon(name) {
 function codePanel(innerHTML) {
   var element = document.createElement('div');
   element.className = 'code-panel';
-  e_pre = document.createElement('pre');
-  e_code = document.createElement('code');
+  var e_pre = document.createElement('pre');
+  e_pre.className = 'prettyprint source';
+  var e_code = document.createElement('code');
   e_code.innerHTML = innerHTML;
   e_pre.appendChild(e_code);
   element.appendChild(e_pre);
@@ -110,7 +116,25 @@ function hjsMe(code, lang) {
   return highlightedCode;
 }
 
-module.exports = print;
+module.exports = hjsMe;
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./src/highlight.default.min.css":
+/*!**************************************************************************!*\
+  !*** ./node_modules/css-loader/index.js!./src/highlight.default.min.css ***!
+  \**************************************************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, ".hljs{display:block;overflow-x:auto;padding:.5em;background:#f0f0f0}.hljs,.hljs-subst{color:#444}.hljs-comment{color:#888}.hljs-attribute,.hljs-doctag,.hljs-keyword,.hljs-meta-keyword,.hljs-name,.hljs-selector-tag{font-weight:700}.hljs-deletion,.hljs-number,.hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type{color:#800}.hljs-section,.hljs-title{color:#800;font-weight:700}.hljs-link,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#bc6060}.hljs-literal{color:#78a960}.hljs-addition,.hljs-built_in,.hljs-bullet,.hljs-code{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta-string{color:#4d99bf}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}", ""]);
+
+// exports
+
 
 /***/ }),
 
@@ -125,7 +149,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.id, "body {\n    background-color: #e3f7b2;\n}\n.main {\n    margin: 50px;\n}\n\n", ""]);
+exports.push([module.id, "body {\n    background-color: #e3f7b2;\n}\n.main {\n    margin: 50px;\n}\n.code-panel {\n    margin-bottom: 1em;\n    margin-top: 1em;\n}\n.prettyprint {\n    font-size: 13px;\n    border: 1px solid #ddd;\n    -webkit-border-radius: 3px;\n    -khtml-border-radius: 3px;\n    -moz-border-radius: 3px;\n    -o-border-radius: 3px;\n    border-radius: 3px;\n    -webkit-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);\n    -moz-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);\n    -o-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);\n    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.05);\n    overflow: auto;\n}\n.prettyprint.source {\n    width: inherit;\n}\n.prettyprint > code {\n    padding: 15px;\n}\n.prettyprint code {\n    font-size: 100%;\n    line-height: 18px;\n    display: block;\n    background-color: #fff;\n    color: #4D4E53;\n}\npre {\n    background: #fff;\n    padding: 0px;\n}\npre code {\n    padding: 0;\n    font-size: inherit;\n    color: inherit;\n    white-space: pre-wrap;\n    background-color: transparent;\n    -webkit-border-radius: 0;\n    -khtml-border-radius: 0;\n    -moz-border-radius: 0;\n    -o-border-radius: 0;\n    border-radius: 0;\n}\n\n", ""]);
 
 // exports
 
@@ -3658,6 +3682,60 @@ module.exports = xml;
 
 /***/ }),
 
+/***/ "./src/highlight.default.min.css":
+/*!***************************************!*\
+  !*** ./src/highlight.default.min.css ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var content = __webpack_require__(/*! !!../node_modules/css-loader/index.js!./highlight.default.min.css */ "./node_modules/css-loader/index.js!./src/highlight.default.min.css");
+
+if(typeof content === 'string') content = [[module.id, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! !../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !!../node_modules/css-loader/index.js!./highlight.default.min.css */ "./node_modules/css-loader/index.js!./src/highlight.default.min.css", function() {
+		var newContent = __webpack_require__(/*! !!../node_modules/css-loader/index.js!./highlight.default.min.css */ "./node_modules/css-loader/index.js!./src/highlight.default.min.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./src/index.css":
 /*!***********************!*\
   !*** ./src/index.css ***!
@@ -4279,7 +4357,7 @@ module.exports = function (css) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "c48f6a8f23261450b174"
+/******/ 		__webpack_require__.h = () => "66d264fdf78fbe531e6e"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

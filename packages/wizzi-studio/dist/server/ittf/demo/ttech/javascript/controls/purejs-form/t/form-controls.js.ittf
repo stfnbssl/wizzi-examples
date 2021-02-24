@@ -1,0 +1,156 @@
+$group
+
+    function get_form
+        param __html
+        param ctx
+        
+        var temp = []
+        foreach item in ctx.controls
+            _ form_control
+                @ temp
+                @ item
+        
+        div
+            class card card-2
+            div
+                class card-heading
+            div
+                class card-body
+                h2 {{ ctx.title }}
+                    class title
+                div
+                    < form
+                        method post
+                        id {{ ctx.id }}
+                        div {{ temp.join('') }}
+                        div
+                            class form-submit
+                            input 
+                                type submit
+                                value Submit
+                                class submit
+                                id submit
+                                name submit
+                            input 
+                                type submit
+                                value Reset
+                                class submit
+                                id reset
+                                name reset
+
+    function form_control
+        param __html
+        param ctx
+
+        let options = []
+        if ctx.type == 'group'
+            var direction = ctx.direction || 'row'
+            foreach item in ctx.controls
+                var aOptions = []
+                _ form_control
+                    @ aOptions
+                    @ item
+                _ options.push
+                    _ aOptions.join('\n')
+            div {{ options.join('\n') }}
+                class control-group grid-{{ direction }}-{{ ctx.controls.length }}
+
+            return
+        elif ctx.type == 'select'
+            foreach item in ctx.options
+                var aOptions = []
+                _ select_option
+                    @ aOptions
+                    @ item
+                _ options.push
+                    _ aOptions.join('')
+        if ctx.type == 'radio'
+            foreach item in ctx.options
+                var aOptions = []
+                _ radio_option
+                    @ aOptions
+                    @ ctx
+                    @ item
+                _ options.push
+                    _ aOptions.join('')
+        
+        div
+            class single-control row row-space
+            label {{ ctx.label }}
+                @ for {{ ctx.id }}
+                class {{ (ctx.required ? 'required' : '') }} 
+            div
+                class input-group
+                if ctx.type == 'text'
+                    input
+                        class input--style-2
+                        type text
+                        placeholder {{ ctx.label }}
+                        name {{ ctx.id }}
+                elif ctx.type == 'select'
+                    div
+                        class rs-select2 js-select-simple select--no-search
+                        select {{ options.join('\n') }}
+                            name {{ ctx.id }}
+                        div
+                            id {{ ctx.id }}-dropdown
+                            class select-dropdown
+                elif ctx.type == 'date'
+                    input
+                        class input--style-2 js-datepicker
+                        type text
+                        placeholder {{ ctx.label }}
+                        name {{ ctx.id }}
+                    i
+                        class zmdi zmdi-calendar-note input-icon js-btn-calendar
+                elif ctx.type == 'checkbox'
+                    div
+                        class checkbox-item
+                        input
+                            class input--style-2
+                            type checkbox
+                            placeholder {{ ctx.label }}
+                            name {{ ctx.id }}
+                elif ctx.type == 'radio'
+                    div {{ options.join('\n') }}
+                        class radio-group
+                elif ctx.type == 'slider'
+                    div
+                        class slider-group ui-slider ui-slider-horizontal
+                        div
+                            class slider-item
+                            id {{ ctx.id }}
+                        span
+                            class donate-value
+                            id value-lower
+                elif ctx.type == 'code'
+                    div
+                        id {{ ctx.id }}
+
+    function select_option
+        param __html
+        param ctx
+        _ __html.push('<option')
+        _ __html.push(' value="' + ctx.value + '"')
+        if ctx.selected
+            _ __html.push(' selected="selected"')
+        _ __html.push('>')
+        _ __html.push(ctx.label)
+        _ __html.push('</option>')   
+
+    function radio_option
+        param __html
+        param radio
+        param ctx
+        div
+            class radio-item
+            input 
+                type radio
+                name {{ radio.id }}
+                id {{ ctx.id }}
+                checked 
+            label {{ ctx.label }}
+                @ for {{ ctx.id }}
+            span 
+                class check
+

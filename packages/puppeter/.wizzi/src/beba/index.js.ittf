@@ -1,0 +1,68 @@
+module
+    kind es6
+
+    $
+        var dollardollar = '$' + '$'
+
+    const fs = require('fs')
+    const puppeteer = require('puppeteer')
+    const stringify = require('json-stringify-safe') 
+
+    var loginUrl = "https://cosie.lepida.it/"
+    var guideSearchUrl = "https://cosie.lepida.it/backoffice/newssearch"
+    
+    var username = "annamaria.davoli@ausl.re.it"
+    var psw = "AS2rROFo"
+
+    $$ var category = "Bambino"
+    var category = "Tutti a tavola"
+
+    async-function start
+
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless true
+
+        $include login
+
+        await
+            _ page.setViewport({ width: 1280, height: 800 })
+        await
+            _ page.screenshot({ path: 'images/loggedin.png', fullPage: true })
+
+        $include category
+
+        const extractedData
+            {
+                @ category category
+                [ items
+
+        foreach url in urls
+            if url.indexOf('remove') < 0
+                if i < 1000
+                    log "Goto", url
+                    await 
+                        _ page.goto(url)
+                    const itemData
+                        await
+                            _ extractFormData
+                                @ page
+                    set itemData.url = url
+                    _ extractedData.items.push
+                        @ itemData
+
+        _ browser.close()
+
+        _ fs.writeFileSync
+            @ category + '_items'
+            _ stringify
+                @ extractedData
+                @ null
+                @ 4
+
+    + (async function() { await start(); console.log('DONE');}())
+
+    $include form-fields
+    $include tables

@@ -1,0 +1,45 @@
+h/root/empty_layout()
+    $append head-styles
+        css ./styles.css.ittf
+
+    div
+        id main-container
+        div
+            id header
+            div 
+                id logo
+                div Wizzi
+            nav 
+                id top-nav
+                ul
+                    li One
+                    li Two
+        div 
+            id middle-container
+            nav 
+                id left-nav
+                ul
+                    li Left 1
+                    li Left 2
+            div 
+                id content
+                h1 Hello world
+                $ var i = 0
+                $while i<30
+                    p
+                        lorem ${10 * i}
+                    $ i++
+
+            nav
+                id right-nav
+                ul
+                    li Left 1
+                    li Left 2
+        div
+            id footer
+            section
+                id features
+                div Features
+            section
+                id contact
+                div Contact

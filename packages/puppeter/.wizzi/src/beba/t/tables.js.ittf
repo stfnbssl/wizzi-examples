@@ -1,0 +1,186 @@
+$group
+
+    const Categorie
+        [
+            {
+                @ label "Bambino"
+                @ id "1"
+            {                
+                @ label "Famiglia"
+                @ id "2"
+            {                
+                @ label "Pediatra"
+                @ id "3"
+            {                
+                @ label "Tutti a tavola"
+                @ id "4"
+            {                
+                @ label "Temi caldi"
+                @ id "21"
+            {                
+                @ label "NpL-NpM"
+                @ id "22"
+            {                
+                @ label "Giochi-Movimento"
+                @ id "23"
+            {                
+                @ label "Vaccinazioni"
+                @ id "24"
+            {                
+                @ label "Cosa mangiamo oggi?"
+                @ id "25"
+
+    function CatById
+        param id
+        foreach item in Categorie
+            if item.id == id
+                return item.label
+        return "*** not found"
+
+    const Titoli
+        [
+            {
+                @ label "Nascita"
+                @ id "1"
+            {                
+                @ label "15 giorni"
+                @ id "2"
+            {                
+                @ label "1 mese"
+                @ id "3"
+            {                
+                @ label "2 mesi"
+                @ id "4"
+            {                
+                @ label "3 mesi"
+                @ id "5"
+            {                
+                @ label "4 mesi"
+                @ id "6"
+            {                
+                @ label "5 mesi"
+                @ id "7"
+            {                
+                @ label "6 mesi"
+                @ id "8"
+            {                
+                @ label "7 mesi"
+                @ id "9"
+            {                
+                @ label "8 mesi"
+                @ id "10"
+            {                
+                @ label "9 mesi"
+                @ id "11"
+            {                
+                @ label "10 mesi"
+                @ id "12"
+            {
+                @ label "11 mesi"
+                @ id "13"
+            {                
+                @ label "1 anno"
+                @ id "14"
+            {                
+                @ label "13 mesi"
+                @ id "15"
+            {                
+                @ label "14 mesi"
+                @ id "16"
+            {                
+                @ label "15 mesi"
+                @ id "17"
+            {                
+                @ label "16 mesi"
+                @ id "18"
+            {                
+                @ label "17 mesi"
+                @ id "19"
+            {                
+                @ label "18 mesi"
+                @ id "20"
+            {                
+                @ label "19 mesi"
+                @ id "21"
+            {                
+                @ label "20 mesi"
+                @ id "22"
+            {                
+                @ label "21 mesi"
+                @ id "23"
+            {                
+                @ label "22 mesi"
+                @ id "24"
+            {                
+                @ label "23 mesi"
+                @ id "25"
+            {                
+                @ label "2 anni"
+                @ id "50"
+            {                
+                @ label "2 anni e 2 mesi"
+                @ id "27"
+            {                
+                @ label "2 anni e 4 mesi"
+                @ id "29"
+            {                
+                @ label "2 anni e 6 mesi"
+                @ id "31"
+            {                
+                @ label "2 anni e 8 mesi"
+                @ id "32"
+            {                
+                @ label "2 anni e 10 mesi"
+                @ id "33"
+            {                
+                @ label "3 anni"
+                @ id "34"
+            {                
+                @ label "3 anni e 2 mesi"
+                @ id "35"
+            {                
+                @ label "3 anni e 4 mesi"
+                @ id "36"
+            {                
+                @ label "3 anni e 6 mesi"
+                @ id "37"
+            {                
+                @ label "3 anni e 8 mesi"
+                @ id "38"
+            {                
+                @ label "3 anni e 10 mesi"
+                @ id "39"
+            {                
+                @ label "4 anni"
+                @ id "40"
+            {                
+                @ label "4 anni e 3 mesi"
+                @ id "41"
+            {                
+                @ label "4 anni e 6 mesi"
+                @ id "42"
+            {                
+                @ label "4 anni e 9 mesi"
+                @ id "43"
+            {                
+                @ label "5 anni"
+                @ id "45"
+            {                
+                @ label "5 anni e 3 mesi"
+                @ id "46"
+            {                
+                @ label "5 anni e 6 mesi"
+                @ id "47"
+            {                
+                @ label "5 anni e 9 mesi"
+                @ id "48"
+            {                
+                @ label "6 anni"
+                @ id "49"
+
+    function TitById
+        param id
+        foreach item in Titoli
+            if item.id == id
+                return item.label
+        return "*** not found"

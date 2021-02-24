@@ -1,0 +1,77 @@
+$group
+
+    function getListHtml
+        param __html
+        param list
+        
+        var temp = []
+        _ listHeadHtml
+            @ temp
+            @ list.type
+
+        foreach item in list.data.items
+            _ listRowHtml
+                @ temp
+                @ item
+                @ list.type
+
+        div
+            class card card-2
+            div
+                class card-heading
+            div
+                class card-body
+                h2 {{ list.title }}
+                    class title
+                div
+                    id {{ list.type.id }}
+                    ul {{ temp.join('\n') }}
+        
+    function listHeadHtml
+        param __html
+        param type
+
+        var temp = []
+        foreach column in type.columns
+            _ listHeadCellHtml
+                @ temp
+                @ column
+
+        li {{ temp.join('\n') }}
+            class list-head
+
+    function listHeadCellHtml
+        param __html
+        param type
+
+        div
+            class list-head-cell
+            div {{ type.label || type.id }}
+                class list-head-cell-label
+
+    function listRowHtml
+        param __html
+        param item
+        param type
+
+        var temp = []
+        foreach column in type.columns
+            _ listCellHtml
+                @ temp
+                @ item[column.id]
+                @ column
+
+        li {{ temp.join('\n') }}
+            class list-row
+            
+    function listCellHtml
+        param __html
+        param value
+        param type
+
+        div
+            class list-cell
+            div {{ value }}
+                class list-cell
+
+

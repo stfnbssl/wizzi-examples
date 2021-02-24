@@ -1,833 +1,450 @@
-// 9/2/2021:9:48:53  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
+// 22/2/2021:17:25:23  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
 $.n(); // set the context state to NodeContext
 var $0 = {}; // the root node of the MTree buildup
-var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //80
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f2", u: "f2",  }; //58
 $.a($0, $1, 5);
-$.s("f1");
-var opt = {} //82
-opt.title = 'Wizzi repl 1'; //83
-opt.useWizzi = true; //84
-opt.useAce = true; //85
-opt.useSweetalert = true; //86
-opt.useEventEmitter = true; //87
-opt.schemas = [ //88
-'css',  //89
-'html',  //90
-'graphql',  //91
-'js',  //92
-'json',  //93
-'md',  //94
-'scss',  //95
-'svg',  //96
-'ts',  //97
-'vtt',  //98
-'vue',  //99
-'xml'  //100
-];  //101
-$.n();
-var $3 = { n: "html", v: "", r: 1, c: 1, s: "f2", u: "f2",  }; //235
-$.a($1, $3, 29);
-var $4 = { n: "head", v: "", r: 4, c: 5, s: "f2", u: "f2",  }; //236
-$.a($3, $4, 31);
+var $2 = { n: "head", v: "", r: 4, c: 5, s: "f2", u: "f2",  }; //59
+$.a($1, $2, 7);
 $.s("f2");
-if (opt.title) { //237
+if (title != null) { //60
     $.n();
-    var $6 = { n: "@title", v: $.ip("f2", "${opt.title}", "string", 35, false), r: 6, c: 13, s: "f2", u: "f2",  }; //238
-    $.a($4, $6, 36);
+    var $4 = { n: "@title", v: $.ip("f2", "${title}", "string", 11, false), r: 6, c: 13, s: "f2", u: "f2",  }; //61
+    $.a($2, $4, 12);
 }
 $.n();
-var $7 = { n: "meta", v: "", r: 7, c: 9, s: "f2", u: "f2",  }; //239
-$.a($4, $7, 40);
-var $8 = { n: "charset", v: "utf-8", r: 8, c: 13, s: "f2", u: "f2",  }; //240
-$.a($7, $8, 42);
-var $9 = { n: "meta", v: "", r: 9, c: 9, s: "f2", u: "f2",  }; //241
-$.a($4, $9, 44);
-var $10 = { n: "name", v: "viewport", r: 10, c: 13, s: "f2", u: "f2",  }; //242
-$.a($9, $10, 46);
-var $11 = { n: "content", v: "width=device-width, initial-scale=1", r: 11, c: 13, s: "f2", u: "f2",  }; //243
-$.a($9, $11, 48);
-var $12 = { n: "link", v: "", r: 12, c: 9, s: "f2", u: "f2",  }; //244
-$.a($4, $12, 50);
-var $13 = { n: "rel", v: "stylesheet", r: 13, c: 13, s: "f2", u: "f2",  }; //245
-$.a($12, $13, 52);
-var $14 = { n: "href", v: "https://fonts.googleapis.com/css?family=Roboto", r: 14, c: 13, s: "f2", u: "f2",  }; //246
-$.a($12, $14, 54);
+var $5 = { n: "meta", v: "", r: 7, c: 9, s: "f2", u: "f2",  }; //62
+$.a($2, $5, 16);
+var $6 = { n: "charset", v: "utf-8", r: 8, c: 13, s: "f2", u: "f2",  }; //63
+$.a($5, $6, 18);
+var $7 = { n: "meta", v: "", r: 9, c: 9, s: "f2", u: "f2",  }; //64
+$.a($2, $7, 20);
+var $8 = { n: "name", v: "viewport", r: 10, c: 13, s: "f2", u: "f2",  }; //65
+$.a($7, $8, 22);
+var $9 = { n: "content", v: "width=device-width, initial-scale=1", r: 11, c: 13, s: "f2", u: "f2",  }; //66
+$.a($7, $9, 24);
 $.s("f2");
-if (isWizziStudio && !opt.useFirebase) { //247
-    $.n();
-    var $16 = { n: "script", v: "", r: 17, c: 13, s: "f2", u: "f2",  }; //248
-    $.a($4, $16, 59);
-    var $17 = { n: "module", v: "", r: 18, c: 17, s: "f2", u: "f2",  }; //249
-    $.a($16, $17, 61);
-    var $18 = { n: "var", v: "WizziBrowser", r: 19, c: 21, s: "f2", u: "f2",  }; //250
-    $.a($17, $18, 63);
-    var $19 = { n: "{", v: "", r: 20, c: 25, s: "f2", u: "f2",  }; //251
-    $.a($18, $19, 65);
-    var $20 = { n: "@", v: "log", r: 21, c: 29, s: "f2", u: "f2",  }; //252
-    $.a($19, $20, 67);
-    var $21 = { n: "function", v: "", r: 22, c: 33, s: "f2", u: "f2",  }; //253
-    $.a($20, $21, 69);
-    var $22 = { n: "var", v: "line", r: 23, c: 37, s: "f2", u: "f2",  }; //254
-    $.a($21, $22, 71);
-    var $23 = { n: "_", v: "Array.prototype.slice.call(arguments).map", r: 24, c: 41, s: "f2", u: "f2",  }; //255
-    $.a($22, $23, 73);
-    var $24 = { n: "function", v: "", r: 25, c: 45, s: "f2", u: "f2",  }; //256
-    $.a($23, $24, 75);
-    var $25 = { n: "param", v: "argument", r: 26, c: 49, s: "f2", u: "f2",  }; //257
-    $.a($24, $25, 77);
-    var $26 = { n: "return", v: "", r: 27, c: 49, s: "f2", u: "f2",  }; //258
-    $.a($24, $26, 79);
-    var $27 = { n: "iif", v: "typeof argument === 'string'", r: 28, c: 53, s: "f2", u: "f2",  }; //259
-    $.a($26, $27, 81);
-    var $28 = { n: "then", v: "argument", r: 29, c: 57, s: "f2", u: "f2",  }; //260
-    $.a($27, $28, 83);
-    var $29 = { n: "else", v: "JSON.stringify(argument)", r: 30, c: 57, s: "f2", u: "f2",  }; //261
-    $.a($27, $29, 85);
-    var $30 = { n: "._", v: "join", r: 31, c: 45, s: "f2", u: "f2",  }; //262
-    $.a($23, $30, 87);
-    var $31 = { n: "@", v: "'\\n '", r: 32, c: 49, s: "f2", u: "f2",  }; //263
-    $.a($30, $31, 89);
-    var $32 = { n: "if", v: "arguments.length > 1 && arguments[arguments.length-1] === '-'", r: 33, c: 37, s: "f2", u: "f2",  }; //264
-    $.a($21, $32, 91);
-    var $33 = { n: "set", v: "line += new Array(50).join('-')", r: 34, c: 41, s: "f2", u: "f2",  }; //265
-    $.a($32, $33, 93);
-    var $34 = { n: "set", v: "document.querySelector('#wizzi-browser-log').textContent += line + '\\n'", r: 35, c: 37, s: "f2", u: "f2",  }; //266
-    $.a($21, $34, 95);
-    var $35 = { n: "@", v: "clearLog", r: 36, c: 29, s: "f2", u: "f2",  }; //267
-    $.a($19, $35, 97);
-    var $36 = { n: "function", v: "", r: 37, c: 33, s: "f2", u: "f2",  }; //268
-    $.a($35, $36, 99);
-    var $37 = { n: "set", v: "document.querySelector('#wizzi-browser-log').textContent = ''", r: 38, c: 37, s: "f2", u: "f2",  }; //269
-    $.a($36, $37, 101);
-    var $38 = { n: "@", v: "setStatus", r: 39, c: 29, s: "f2", u: "f2",  }; //270
-    $.a($19, $38, 103);
-    var $39 = { n: "function", v: "", r: 40, c: 33, s: "f2", u: "f2",  }; //271
-    $.a($38, $39, 105);
-    var $40 = { n: "param", v: "status", r: 41, c: 37, s: "f2", u: "f2",  }; //272
-    $.a($39, $40, 107);
-    var $41 = { n: "set", v: "document.querySelector('#wizzi-browser-status').textContent = status", r: 42, c: 37, s: "f2", u: "f2",  }; //273
-    $.a($39, $41, 109);
-    var $42 = { n: "@", v: "setContent", r: 43, c: 29, s: "f2", u: "f2",  }; //274
-    $.a($19, $42, 111);
-    var $43 = { n: "function", v: "", r: 44, c: 33, s: "f2", u: "f2",  }; //275
-    $.a($42, $43, 113);
-    var $44 = { n: "param", v: "newContent", r: 45, c: 37, s: "f2", u: "f2",  }; //276
-    $.a($43, $44, 115);
-    var $45 = { n: "var", v: "content = document.querySelector('#wizzi-browser-content')", r: 46, c: 37, s: "f2", u: "f2",  }; //277
-    $.a($43, $45, 117);
-    var $46 = { n: "while", v: "content.hasChildNodes()", r: 47, c: 37, s: "f2", u: "f2",  }; //278
-    $.a($43, $46, 119);
-    var $47 = { n: "_", v: "content.removeChild(content.lastChild)", r: 48, c: 41, s: "f2", u: "f2",  }; //279
-    $.a($46, $47, 121);
-    var $48 = { n: "_", v: "content.appendChild(newContent)", r: 49, c: 37, s: "f2", u: "f2",  }; //280
-    $.a($43, $48, 123);
-}
-$.s("f2");
-if (isWizziStudio && !opt.useFirebase) { //282
-    $.n();
-    var $50 = { n: "@style", v: "", r: 53, c: 13, s: "f2", u: "f2",  }; //283
-    $.a($4, $50, 129);
-    var $51 = { n: "css", v: "", r: 54, c: 17, s: "f2", u: "f2",  }; //284
-    $.a($50, $51, 131);
-    var $52 = { n: "#", v: "wizzi-browser-status", r: 55, c: 21, s: "f2", u: "f2",  }; //285
-    $.a($51, $52, 133);
-    var $53 = { n: "margin", v: ".5em 0", r: 56, c: 25, s: "f2", u: "f2",  }; //286
-    $.a($52, $53, 135);
-    var $54 = { n: "font-style", v: "italic", r: 57, c: 25, s: "f2", u: "f2",  }; //287
-    $.a($52, $54, 137);
-    var $55 = { n: "#", v: "wizzi-browser-log", r: 58, c: 21, s: "f2", u: "f2",  }; //288
-    $.a($51, $55, 139);
-    var $56 = { n: "margin", v: ".5em 0", r: 59, c: 25, s: "f2", u: "f2",  }; //289
-    $.a($55, $56, 141);
-    var $57 = { n: "white-space", v: "pre-wrap", r: 60, c: 25, s: "f2", u: "f2",  }; //290
-    $.a($55, $57, 143);
-    var $58 = { n: "#", v: "wizzi-browser-content", r: 61, c: 21, s: "f2", u: "f2",  }; //291
-    $.a($51, $58, 145);
-    var $59 = { n: "margin", v: ".5em 0", r: 62, c: 25, s: "f2", u: "f2",  }; //292
-    $.a($58, $59, 147);
-    var $60 = { n: "#", v: "status:empty, #log:empty, #content:empty", r: 63, c: 21, s: "f2", u: "f2",  }; //293
-    $.a($51, $60, 149);
-    var $61 = { n: "display", v: "none", r: 64, c: 25, s: "f2", u: "f2",  }; //294
-    $.a($60, $61, 151);
-}
-$.s("f3");
-if (opt.useCodemirror) { //392
-    $.n();
-    var $63 = { n: "link", v: "", r: 3, c: 5, s: "f4", u: "f5",  }; //419
-    $.a($4, $63, 157);
-    var $64 = { n: "href", v: $.ip("f4", "${url}", "string", 158, false), r: 4, c: 9, s: "f4", u: "f5",  }; //420
-    $.a($63, $64, 159);
-    var $65 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f4", u: "f5",  }; //421
-    $.a($63, $65, 161);
-    var $66 = { n: "link", v: "", r: 3, c: 5, s: "f5", u: "f5",  }; //423
-    $.a($4, $66, 163);
-    var $67 = { n: "href", v: $.ip("f5", "${url}", "string", 164, false), r: 4, c: 9, s: "f5", u: "f5",  }; //424
-    $.a($66, $67, 165);
-    var $68 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f5", u: "f5",  }; //425
-    $.a($66, $68, 167);
-    var $69 = { n: "link", v: "", r: 3, c: 5, s: "f6", u: "f5",  }; //427
-    $.a($4, $69, 169);
-    var $70 = { n: "href", v: $.ip("f6", "${url}", "string", 170, false), r: 4, c: 9, s: "f6", u: "f5",  }; //428
-    $.a($69, $70, 171);
-    var $71 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f6", u: "f5",  }; //429
-    $.a($69, $71, 173);
-}
-$.s("f3");
-if (opt.useHighlight) { //396
-    if (isWizziStudio) { //397
-        $.n();
-        var $74 = { n: "link", v: "", r: 3, c: 5, s: "f7", u: "f5",  }; //431
-        $.a($4, $74, 180);
-        var $75 = { n: "href", v: $.ip("f7", "${url}", "string", 181, false), r: 4, c: 9, s: "f7", u: "f5",  }; //432
-        $.a($74, $75, 182);
-        var $76 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f7", u: "f5",  }; //433
-        $.a($74, $76, 184);
-    }
-    else {
-        $.n();
-        var $78 = { n: "link", v: "", r: 3, c: 5, s: "f8", u: "f5",  }; //435
-        $.a($4, $78, 189);
-        var $79 = { n: "href", v: $.ip("f8", "${url}", "string", 190, false), r: 4, c: 9, s: "f8", u: "f5",  }; //436
-        $.a($78, $79, 191);
-        var $80 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f8", u: "f5",  }; //437
-        $.a($78, $80, 193);
-    }
-}
-$.s("f3");
-if (opt.useJsonFormatter) { //401
-    if (isWizziStudio) { //402
-        $.n();
-        var $83 = { n: "link", v: "", r: 3, c: 5, s: "f9", u: "f5",  }; //439
-        $.a($4, $83, 201);
-        var $84 = { n: "href", v: $.ip("f9", "${url}", "string", 202, false), r: 4, c: 9, s: "f9", u: "f5",  }; //440
-        $.a($83, $84, 203);
-        var $85 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f9", u: "f5",  }; //441
-        $.a($83, $85, 205);
-    }
-    else {
-        $.n();
-        var $87 = { n: "link", v: "", r: 3, c: 5, s: "f10", u: "f5",  }; //443
-        $.a($4, $87, 210);
-        var $88 = { n: "href", v: $.ip("f10", "${url}", "string", 211, false), r: 4, c: 9, s: "f10", u: "f5",  }; //444
-        $.a($87, $88, 212);
-        var $89 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f10", u: "f5",  }; //445
-        $.a($87, $89, 214);
-    }
-}
-$.s("f3");
-if (opt.useMonaco) { //406
-}
-$.s("f3");
-if (opt.useMaterialUI) { //407
-    $.n();
-    var $92 = { n: "link", v: "", r: 3, c: 5, s: "f11", u: "f5",  }; //447
-    $.a($4, $92, 224);
-    var $93 = { n: "href", v: $.ip("f11", "${url}", "string", 225, false), r: 4, c: 9, s: "f11", u: "f5",  }; //448
-    $.a($92, $93, 226);
-    var $94 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f11", u: "f5",  }; //449
-    $.a($92, $94, 228);
-}
-$.s("f3");
-if (opt.useRoboto) { //409
-    $.n();
-    var $96 = { n: "link", v: "", r: 3, c: 5, s: "f12", u: "f5",  }; //451
-    $.a($4, $96, 234);
-    var $97 = { n: "href", v: $.ip("f12", "${url}", "string", 235, false), r: 4, c: 9, s: "f12", u: "f5",  }; //452
-    $.a($96, $97, 236);
-    var $98 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f12", u: "f5",  }; //453
-    $.a($96, $98, 238);
-}
-$.s("f3");
-if (opt.useSweetalert) { //411
-    $.n();
-    var $100 = { n: "link", v: "", r: 3, c: 5, s: "f13", u: "f5",  }; //455
-    $.a($4, $100, 244);
-    var $101 = { n: "href", v: $.ip("f13", "${url}", "string", 245, false), r: 4, c: 9, s: "f13", u: "f5",  }; //456
-    $.a($100, $101, 246);
-    var $102 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f13", u: "f5",  }; //457
-    $.a($100, $102, 248);
-}
-$.s("f1");
-if (isWizziStudio) { //104
-    $.n();
-    var $104 = { n: "css", v: "./index.css.ittf", r: 29, c: 17, s: "f1", u: "f1",  }; //105
-    $.a($4, $104, 254);
-}
-else {
-    $.n();
-    var $106 = { n: "css", v: "./index.css", r: 31, c: 17, s: "f1", u: "f1",  }; //107
-    $.a($4, $106, 259);
-}
-$.n();
-var $107 = { n: "body", v: "", r: 69, c: 5, s: "f2", u: "f2",  }; //298
-$.a($3, $107, 263);
-var $108 = { n: "#", v: "root", r: 39, c: 9, s: "f1", u: "f1",  }; //113
-$.a($107, $108, 265);
-var $109 = { n: ".", v: "sh", r: 41, c: 13, s: "f1", u: "f1",  }; //114
-$.a($108, $109, 267);
-var $110 = { n: ".", v: "sh-he", r: 43, c: 17, s: "f1", u: "f1",  }; //115
-$.a($109, $110, 269);
-var $111 = { n: ".", v: "logo", r: 44, c: 21, s: "f1", u: "f1",  }; //116
-$.a($110, $111, 271);
-var $112 = { n: "a", v: "", r: 45, c: 25, s: "f1", u: "f1",  }; //117
-$.a($111, $112, 273);
-$.s("f1");
-if (isWizziStudio) { //118
-    $.n();
-    var $114 = { n: "href", v: "#", r: 47, c: 33, s: "f1", u: "f1",  }; //119
-    $.a($112, $114, 278);
-}
-else {
-    $.n();
-    var $116 = { n: "href", v: "/", r: 49, c: 33, s: "f1", u: "f1",  }; //121
-    $.a($112, $116, 283);
-}
-$.n();
-var $117 = { n: "img", v: "", r: 50, c: 29, s: "f1", u: "f1",  }; //122
-$.a($112, $117, 287);
-$.s("f1");
-if (isWizziStudio) { //123
-    $.n();
-    var $119 = { n: "src", v: "/ittf/images/logo.svg.ittf", r: 52, c: 37, s: "f1", u: "f1",  }; //124
-    $.a($117, $119, 292);
-}
-else {
-    $.n();
-    var $121 = { n: "src", v: "/images/logo.svg", r: 54, c: 37, s: "f1", u: "f1",  }; //126
-    $.a($117, $121, 297);
-}
-$.n();
-var $122 = { n: "width", v: "100px", r: 55, c: 33, s: "f1", u: "f1",  }; //127
-$.a($117, $122, 301);
-var $123 = { n: "height", v: "40px", r: 56, c: 33, s: "f1", u: "f1",  }; //128
-$.a($117, $123, 303);
-var $124 = { n: ".", v: "m2", r: 57, c: 21, s: "f1", u: "f1",  }; //129
-$.a($110, $124, 305);
-var $125 = { n: "ul", v: "", r: 58, c: 25, s: "f1", u: "f1",  }; //130
-$.a($124, $125, 307);
-var $126 = { n: ".", v: "sh-bo", r: 61, c: 17, s: "f1", u: "f1",  }; //131
-$.a($109, $126, 309);
-var $127 = { n: ".", v: "sh-bo-lsb", r: 63, c: 21, s: "f1", u: "f1",  }; //132
-$.a($126, $127, 311);
-var $128 = { n: ".", v: "control-panel", r: 65, c: 25, s: "f1", u: "f1",  }; //133
-$.a($127, $128, 313);
-var $129 = { n: "style", v: "display: flex; flex-direction: column;", r: 66, c: 29, s: "f1", u: "f1",  }; //134
-$.a($128, $129, 315);
-$.s("f1");
-var schema_count = opt.schemas.length; //135
-for (var i130=0; i130<schema_count; i130++) { //135
-    var schema = opt.schemas[i130]; //135
-    var schema_index = i130; //135
-    $.n();
-    var $131 = { n: ".", v: "sh-bo-lsb-schema-button", r: 93, c: 33, s: "f1", u: "f1",  }; //136
-    $.a($128, $131, 323);
-    var $132 = { n: "id", v: $.ip("f1", "id_${schema}", "string", 324, false), r: 94, c: 37, s: "f1", u: "f1",  }; //137
-    $.a($131, $132, 325);
-    var $133 = { n: "+", v: $.ip("f1", "${schema}", "string", 326, false), r: 95, c: 37, s: "f1", u: "f1",  }; //138
-    $.a($131, $133, 327);
-}
-$.n();
-var $134 = { n: ".", v: "sh-bo-co", r: 97, c: 21, s: "f1", u: "f1",  }; //139
-$.a($126, $134, 331);
-var $135 = { n: ".", v: "sh-bo-co-ge", r: 99, c: 25, s: "f1", u: "f1",  }; //140
-$.a($134, $135, 333);
-var $136 = { n: ".", v: "sh-bo-co-ge-ittf", r: 101, c: 29, s: "f1", u: "f1",  }; //141
-$.a($135, $136, 335);
-var $137 = { n: ".", v: "sh-bo-co-title", r: 102, c: 33, s: "f1", u: "f1",  }; //142
-$.a($136, $137, 337);
-var $138 = { n: "+", v: "Ittf", r: 103, c: 37, s: "f1", u: "f1",  }; //143
-$.a($137, $138, 339);
-var $139 = { n: "#", v: "gen-ittf-editor", r: 104, c: 33, s: "f1", u: "f1",  }; //144
-$.a($136, $139, 341);
-var $140 = { n: ".", v: "sh-bo-co-ge-result", r: 106, c: 29, s: "f1", u: "f1",  }; //145
-$.a($135, $140, 343);
-var $141 = { n: ".", v: "sh-bo-co-title", r: 107, c: 33, s: "f1", u: "f1",  }; //146
-$.a($140, $141, 345);
-var $142 = { n: "+", v: "Generated", r: 108, c: 37, s: "f1", u: "f1",  }; //147
-$.a($141, $142, 347);
-var $143 = { n: "#", v: "gen-result-editor", r: 109, c: 33, s: "f1", u: "f1",  }; //148
-$.a($140, $143, 349);
-var $144 = { n: ".", v: "sh-bo-co-wi", r: 111, c: 25, s: "f1", u: "f1",  }; //149
-$.a($134, $144, 351);
-var $145 = { n: ".", v: "sh-bo-co-wi-snippet", r: 113, c: 29, s: "f1", u: "f1",  }; //150
-$.a($144, $145, 353);
-var $146 = { n: ".", v: "sh-bo-co-title", r: 114, c: 33, s: "f1", u: "f1",  }; //151
-$.a($145, $146, 355);
-var $147 = { n: "+", v: "Snippet", r: 115, c: 37, s: "f1", u: "f1",  }; //152
-$.a($146, $147, 357);
-var $148 = { n: "#", v: "snippet-source-editor", r: 116, c: 33, s: "f1", u: "f1",  }; //153
-$.a($145, $148, 359);
-var $149 = { n: ".", v: "sh-bo-co-wi-result", r: 118, c: 29, s: "f1", u: "f1",  }; //154
-$.a($144, $149, 361);
-var $150 = { n: ".", v: "sh-bo-co-title", r: 119, c: 33, s: "f1", u: "f1",  }; //155
-$.a($149, $150, 363);
-var $151 = { n: "+", v: "Wizzified", r: 120, c: 37, s: "f1", u: "f1",  }; //156
-$.a($150, $151, 365);
-var $152 = { n: "#", v: "snippet-result-editor", r: 121, c: 33, s: "f1", u: "f1",  }; //157
-$.a($149, $152, 367);
-var $153 = { n: ".", v: "sh-fo", r: 123, c: 17, s: "f1", u: "f1",  }; //158
-$.a($109, $153, 369);
-$.s("f2");
-if (isWizziStudio && !opt.useFirebase) { //301
-    $.n();
-    var $155 = { n: "div", v: "", r: 75, c: 13, s: "f2", u: "f2",  }; //302
-    $.a($107, $155, 374);
-    var $156 = { n: "#", v: "wizzi-browser-status", r: 76, c: 17, s: "f2", u: "f2",  }; //303
-    $.a($155, $156, 376);
-    var $157 = { n: "#", v: "wizzi-browser-log", r: 77, c: 17, s: "f2", u: "f2",  }; //304
-    $.a($155, $157, 378);
-    var $158 = { n: "#", v: "wizzi-browser-content", r: 78, c: 17, s: "f2", u: "f2",  }; //305
-    $.a($155, $158, 380);
-}
-$.s("f14");
-if (opt.useFirebase) { //557
-    $.n();
-    var $160 = { n: "js", v: "https://www.gstatic.com/firebasejs/5.8.1/firebase.js", r: 6, c: 9, s: "f14", u: "f6",  }; //558
-    $.a($107, $160, 386);
-    var $161 = { n: "js", v: "https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js", r: 7, c: 9, s: "f14", u: "f6",  }; //559
-    $.a($107, $161, 388);
-    var $162 = { n: "js", v: "https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js", r: 8, c: 9, s: "f14", u: "f6",  }; //560
-    $.a($107, $162, 390);
-    var $163 = { n: "js", v: "https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js", r: 9, c: 9, s: "f14", u: "f6",  }; //561
-    $.a($107, $163, 392);
-    var $164 = { n: "script", v: "", r: 16, c: 9, s: "f14", u: "f6",  }; //562
-    $.a($107, $164, 394);
-    var $165 = { n: "module", v: "", r: 17, c: 13, s: "f14", u: "f6",  }; //563
-    $.a($164, $165, 396);
-    var $166 = { n: "kind", v: "es6", r: 18, c: 17, s: "f14", u: "f6",  }; //564
-    $.a($165, $166, 398);
-    var $167 = { n: "#", v: "Initialize Firebase", r: 19, c: 17, s: "f14", u: "f6",  }; //565
-    $.a($165, $167, 400);
-    $.s("f14");
-    if (opt.project === 'wizzifactory') { //566
-        $.n();
-        var $169 = { n: "var", v: "config", r: 21, c: 21, s: "f14", u: "f6",  }; //567
-        $.a($165, $169, 405);
-        var $170 = { n: "{", v: "", r: 22, c: 25, s: "f14", u: "f6",  }; //568
-        $.a($169, $170, 407);
-        var $171 = { n: "@", v: "apiKey \"AIzaSyACBhxkQICMYxWeftA2DmsOzCAqVf3aTOQ\"", r: 23, c: 29, s: "f14", u: "f6",  }; //569
-        $.a($170, $171, 409);
-        var $172 = { n: "@", v: "authDomain \"wizzifactory.firebaseapp.com\"", r: 24, c: 29, s: "f14", u: "f6",  }; //570
-        $.a($170, $172, 411);
-        var $173 = { n: "@", v: "databaseURL \"https://wizzifactory.firebaseio.com\"", r: 25, c: 29, s: "f14", u: "f6",  }; //571
-        $.a($170, $173, 413);
-        var $174 = { n: "@", v: "projectId \"wizzifactory\"", r: 26, c: 29, s: "f14", u: "f6",  }; //572
-        $.a($170, $174, 415);
-        var $175 = { n: "#", v: "NOT YET storageBucket \"wizzifactory.appspot.com\"", r: 27, c: 29, s: "f14", u: "f6",  }; //573
-        $.a($170, $175, 417);
-        var $176 = { n: "@", v: "storageBucket \"\"", r: 28, c: 29, s: "f14", u: "f6",  }; //574
-        $.a($170, $176, 419);
-        var $177 = { n: "@", v: "messagingSenderId \"676985835415\"", r: 29, c: 29, s: "f14", u: "f6",  }; //575
-        $.a($170, $177, 421);
-        var $178 = { n: "_", v: "firebase.initializeApp(config)", r: 30, c: 21, s: "f14", u: "f6",  }; //576
-        $.a($165, $178, 423);
-        var $179 = { n: "log", v: "'firebase', firebase", r: 31, c: 21, s: "f14", u: "f6",  }; //577
-        $.a($165, $179, 425);
-        var $180 = { n: "var", v: "firestore = firebase.firestore();", r: 32, c: 21, s: "f14", u: "f6",  }; //578
-        $.a($165, $180, 427);
-    }
-}
-$.s("f14");
-if (opt.useAce) { //579
-    if (isWizziStudio) { //580
-        if (opt.production) { //581
+if (typeof(mpage.aspect) !== 'undefined') { //98
+    if (mpage.aspect.AnimateCss) { //99
+        if (mpage.aspect.production) { //100
             $.n();
-            var $184 = { n: "script", v: "", r: 3, c: 5, s: "f15", u: "f7",  }; //659
-            $.a($107, $184, 436);
-            var $185 = { n: "src", v: $.ip("f15", "${url}", "string", 437, false), r: 4, c: 9, s: "f15", u: "f7",  }; //660
-            $.a($184, $185, 438);
-            var $186 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f15", u: "f7",  }; //661
-            $.a($184, $186, 440);
+            var $13 = { n: "link", v: "", r: 3, c: 5, s: "f3", u: "f6",  }; //287
+            $.a($2, $13, 31);
+            var $14 = { n: "href", v: $.ip("f3", "${url}", "string", 32, false), r: 4, c: 9, s: "f3", u: "f6",  }; //288
+            $.a($13, $14, 33);
+            var $15 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f3", u: "f6",  }; //289
+            $.a($13, $15, 35);
         }
         else {
             $.n();
-            var $188 = { n: "script", v: "", r: 3, c: 5, s: "f16", u: "f7",  }; //663
-            $.a($107, $188, 445);
-            var $189 = { n: "src", v: $.ip("f16", "${url}", "string", 446, false), r: 4, c: 9, s: "f16", u: "f7",  }; //664
-            $.a($188, $189, 447);
-            var $190 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f16", u: "f7",  }; //665
-            $.a($188, $190, 449);
+            var $17 = { n: "link", v: "", r: 3, c: 5, s: "f4", u: "f6",  }; //291
+            $.a($2, $17, 40);
+            var $18 = { n: "href", v: $.ip("f4", "${url}", "string", 41, false), r: 4, c: 9, s: "f4", u: "f6",  }; //292
+            $.a($17, $18, 42);
+            var $19 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f4", u: "f6",  }; //293
+            $.a($17, $19, 44);
         }
     }
-    else {
+    $.s("f2");
+    if (mpage.aspect.Codemirror) { //104
         $.n();
-        var $192 = { n: "script", v: "", r: 3, c: 5, s: "f17", u: "f7",  }; //667
-        $.a($107, $192, 455);
-        var $193 = { n: "src", v: $.ip("f17", "${url}", "string", 456, false), r: 4, c: 9, s: "f17", u: "f7",  }; //668
-        $.a($192, $193, 457);
-        var $194 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f17", u: "f7",  }; //669
-        $.a($192, $194, 459);
+        var $21 = { n: "link", v: "", r: 3, c: 5, s: "f5", u: "f6",  }; //295
+        $.a($2, $21, 51);
+        var $22 = { n: "href", v: $.ip("f5", "${url}", "string", 52, false), r: 4, c: 9, s: "f5", u: "f6",  }; //296
+        $.a($21, $22, 53);
+        var $23 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f5", u: "f6",  }; //297
+        $.a($21, $23, 55);
+        var $24 = { n: "link", v: "", r: 3, c: 5, s: "f6", u: "f6",  }; //299
+        $.a($2, $24, 57);
+        var $25 = { n: "href", v: $.ip("f6", "${url}", "string", 58, false), r: 4, c: 9, s: "f6", u: "f6",  }; //300
+        $.a($24, $25, 59);
+        var $26 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f6", u: "f6",  }; //301
+        $.a($24, $26, 61);
+        var $27 = { n: "link", v: "", r: 3, c: 5, s: "f7", u: "f6",  }; //303
+        $.a($2, $27, 63);
+        var $28 = { n: "href", v: $.ip("f7", "${url}", "string", 64, false), r: 4, c: 9, s: "f7", u: "f6",  }; //304
+        $.a($27, $28, 65);
+        var $29 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f7", u: "f6",  }; //305
+        $.a($27, $29, 67);
+    }
+    $.s("f2");
+    if (mpage.aspect.Jarallax) { //108
+        $.n();
+        var $31 = { n: "link", v: "", r: 3, c: 5, s: "f8", u: "f6",  }; //307
+        $.a($2, $31, 73);
+        var $32 = { n: "href", v: $.ip("f8", "${url}", "string", 74, false), r: 4, c: 9, s: "f8", u: "f6",  }; //308
+        $.a($31, $32, 75);
+        var $33 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f8", u: "f6",  }; //309
+        $.a($31, $33, 77);
+    }
+    $.s("f2");
+    if (mpage.aspect.Monaco) { //110
+    }
+    $.s("f2");
+    if (mpage.aspect.Popper) { //111
+        $.n();
+        var $36 = { n: "link", v: "", r: 3, c: 5, s: "f9", u: "f6",  }; //311
+        $.a($2, $36, 86);
+        var $37 = { n: "href", v: $.ip("f9", "${url}", "string", 87, false), r: 4, c: 9, s: "f9", u: "f6",  }; //312
+        $.a($36, $37, 88);
+        var $38 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f9", u: "f6",  }; //313
+        $.a($36, $38, 90);
+    }
+    $.s("f2");
+    if (mpage.aspect.Social) { //113
+        $.n();
+        var $40 = { n: "link", v: "", r: 3, c: 5, s: "f10", u: "f6",  }; //315
+        $.a($2, $40, 96);
+        var $41 = { n: "href", v: $.ip("f10", "${url}", "string", 97, false), r: 4, c: 9, s: "f10", u: "f6",  }; //316
+        $.a($40, $41, 98);
+        var $42 = { n: "rel", v: "stylesheet", r: 5, c: 9, s: "f10", u: "f6",  }; //317
+        $.a($40, $42, 100);
     }
 }
-$.s("f14");
-if (opt.useEventEmitter) { //587
+$.n();
+var $43 = { n: "css", v: "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css", r: 4, c: 9, s: "f1", u: "f1",  }; //21
+$.a($2, $43, 105);
+var $44 = { n: "css", v: "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css", r: 5, c: 9, s: "f1", u: "f1",  }; //22
+$.a($2, $44, 107);
+var $45 = { n: "css", v: "https://cdn.jsdelivr.net/npm/icheck@1.0.2/skins/all.min.css", r: 6, c: 9, s: "f1", u: "f1",  }; //23
+$.a($2, $45, 109);
+var $46 = { n: "css", v: "https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css", r: 7, c: 9, s: "f1", u: "f1",  }; //24
+$.a($2, $46, 111);
+var $47 = { n: "css", v: "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css", r: 8, c: 9, s: "f1", u: "f1",  }; //25
+$.a($2, $47, 113);
+var $48 = { n: "body", v: "", r: 18, c: 5, s: "f2", u: "f2",  }; //71
+$.a($1, $48, 115);
+var $49 = { n: "#", v: "root", r: 21, c: 5, s: "f1", u: "f1",  }; //36
+$.a($48, $49, 117);
+$.s("f2");
+if (isWizziStudio) { //145
     $.n();
-    var $196 = { n: "script", v: "", r: 3, c: 5, s: "f18", u: "f7",  }; //671
-    $.a($107, $196, 466);
-    var $197 = { n: "src", v: $.ip("f18", "${url}", "string", 467, false), r: 4, c: 9, s: "f18", u: "f7",  }; //672
-    $.a($196, $197, 468);
-    var $198 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f18", u: "f7",  }; //673
-    $.a($196, $198, 470);
-}
-$.s("f14");
-if (opt.useCodemirror) { //589
-    $.n();
-    var $200 = { n: "script", v: "", r: 3, c: 5, s: "f19", u: "f7",  }; //675
-    $.a($107, $200, 476);
-    var $201 = { n: "src", v: $.ip("f19", "${url}", "string", 477, false), r: 4, c: 9, s: "f19", u: "f7",  }; //676
-    $.a($200, $201, 478);
-    var $202 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f19", u: "f7",  }; //677
-    $.a($200, $202, 480);
-    var $203 = { n: "script", v: "", r: 3, c: 5, s: "f20", u: "f7",  }; //679
-    $.a($107, $203, 482);
-    var $204 = { n: "src", v: $.ip("f20", "${url}", "string", 483, false), r: 4, c: 9, s: "f20", u: "f7",  }; //680
-    $.a($203, $204, 484);
-    var $205 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f20", u: "f7",  }; //681
-    $.a($203, $205, 486);
-    var $206 = { n: "script", v: "", r: 3, c: 5, s: "f21", u: "f7",  }; //683
-    $.a($107, $206, 488);
-    var $207 = { n: "src", v: $.ip("f21", "${url}", "string", 489, false), r: 4, c: 9, s: "f21", u: "f7",  }; //684
-    $.a($206, $207, 490);
-    var $208 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f21", u: "f7",  }; //685
-    $.a($206, $208, 492);
-}
-$.s("f14");
-if (opt.useDeepDiff) { //593
-    if (isWizziStudio) { //594
-        $.n();
-        var $211 = { n: "script", v: "", r: 3, c: 5, s: "f22", u: "f7",  }; //687
-        $.a($107, $211, 499);
-        var $212 = { n: "src", v: $.ip("f22", "${url}", "string", 500, false), r: 4, c: 9, s: "f22", u: "f7",  }; //688
-        $.a($211, $212, 501);
-        var $213 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f22", u: "f7",  }; //689
-        $.a($211, $213, 503);
-    }
-    else {
-        $.n();
-        var $215 = { n: "script", v: "", r: 3, c: 5, s: "f23", u: "f7",  }; //691
-        $.a($107, $215, 508);
-        var $216 = { n: "src", v: $.ip("f23", "${url}", "string", 509, false), r: 4, c: 9, s: "f23", u: "f7",  }; //692
-        $.a($215, $216, 510);
-        var $217 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f23", u: "f7",  }; //693
-        $.a($215, $217, 512);
-    }
-}
-$.s("f14");
-if (opt.useKeycode) { //598
-    if (isWizziStudio) { //599
-        $.n();
-        var $220 = { n: "script", v: "", r: 3, c: 5, s: "f24", u: "f7",  }; //695
-        $.a($107, $220, 520);
-        var $221 = { n: "src", v: $.ip("f24", "${url}", "string", 521, false), r: 4, c: 9, s: "f24", u: "f7",  }; //696
-        $.a($220, $221, 522);
-        var $222 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f24", u: "f7",  }; //697
-        $.a($220, $222, 524);
-    }
-    else {
-        $.n();
-        var $224 = { n: "script", v: "", r: 3, c: 5, s: "f25", u: "f7",  }; //699
-        $.a($107, $224, 529);
-        var $225 = { n: "src", v: $.ip("f25", "${url}", "string", 530, false), r: 4, c: 9, s: "f25", u: "f7",  }; //700
-        $.a($224, $225, 531);
-        var $226 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f25", u: "f7",  }; //701
-        $.a($224, $226, 533);
-    }
-}
-$.s("f14");
-if (opt.useHighlight) { //603
-    if (isWizziStudio) { //604
-        $.n();
-        var $229 = { n: "script", v: "", r: 3, c: 5, s: "f26", u: "f7",  }; //703
-        $.a($107, $229, 541);
-        var $230 = { n: "src", v: $.ip("f26", "${url}", "string", 542, false), r: 4, c: 9, s: "f26", u: "f7",  }; //704
-        $.a($229, $230, 543);
-        var $231 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f26", u: "f7",  }; //705
-        $.a($229, $231, 545);
-    }
-    else {
-        $.n();
-        var $233 = { n: "script", v: "", r: 3, c: 5, s: "f27", u: "f7",  }; //707
-        $.a($107, $233, 550);
-        var $234 = { n: "src", v: $.ip("f27", "${url}", "string", 551, false), r: 4, c: 9, s: "f27", u: "f7",  }; //708
-        $.a($233, $234, 552);
-        var $235 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f27", u: "f7",  }; //709
-        $.a($233, $235, 554);
-    }
-}
-$.s("f14");
-if (opt.useJsonFormatter) { //608
-    if (isWizziStudio) { //609
-        $.n();
-        var $238 = { n: "script", v: "", r: 3, c: 5, s: "f28", u: "f7",  }; //711
-        $.a($107, $238, 562);
-        var $239 = { n: "src", v: $.ip("f28", "${url}", "string", 563, false), r: 4, c: 9, s: "f28", u: "f7",  }; //712
-        $.a($238, $239, 564);
-        var $240 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f28", u: "f7",  }; //713
-        $.a($238, $240, 566);
-    }
-    else {
-        $.n();
-        var $242 = { n: "script", v: "", r: 3, c: 5, s: "f29", u: "f7",  }; //715
-        $.a($107, $242, 571);
-        var $243 = { n: "src", v: $.ip("f29", "${url}", "string", 572, false), r: 4, c: 9, s: "f29", u: "f7",  }; //716
-        $.a($242, $243, 573);
-        var $244 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f29", u: "f7",  }; //717
-        $.a($242, $244, 575);
-    }
-}
-$.s("f14");
-if (opt.useMarkdown) { //613
-    $.n();
-    var $246 = { n: "script", v: "", r: 3, c: 5, s: "f30", u: "f7",  }; //719
-    $.a($107, $246, 582);
-    var $247 = { n: "src", v: $.ip("f30", "${url}", "string", 583, false), r: 4, c: 9, s: "f30", u: "f7",  }; //720
-    $.a($246, $247, 584);
-    var $248 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f30", u: "f7",  }; //721
-    $.a($246, $248, 586);
-}
-$.s("f14");
-if (opt.useReact || opt.useMaterialUI) { //615
-    if (opt.production) { //616
-        $.n();
-        var $251 = { n: "script", v: "", r: 3, c: 5, s: "f31", u: "f7",  }; //723
-        $.a($107, $251, 593);
-        var $252 = { n: "src", v: $.ip("f31", "${url}", "string", 594, false), r: 4, c: 9, s: "f31", u: "f7",  }; //724
-        $.a($251, $252, 595);
-        var $253 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f31", u: "f7",  }; //725
-        $.a($251, $253, 597);
-    }
-    else {
-        $.n();
-        var $255 = { n: "script", v: "", r: 3, c: 5, s: "f32", u: "f7",  }; //727
-        $.a($107, $255, 602);
-        var $256 = { n: "src", v: $.ip("f32", "${url}", "string", 603, false), r: 4, c: 9, s: "f32", u: "f7",  }; //728
-        $.a($255, $256, 604);
-        var $257 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f32", u: "f7",  }; //729
-        $.a($255, $257, 606);
-    }
-    $.n();
-    var $258 = { n: "script", v: "", r: 3, c: 5, s: "f33", u: "f7",  }; //731
-    $.a($107, $258, 610);
-    var $259 = { n: "src", v: $.ip("f33", "${url}", "string", 611, false), r: 4, c: 9, s: "f33", u: "f7",  }; //732
-    $.a($258, $259, 612);
-    var $260 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f33", u: "f7",  }; //733
-    $.a($258, $260, 614);
-    var $261 = { n: "script", v: "", r: 3, c: 5, s: "f34", u: "f7",  }; //735
-    $.a($107, $261, 616);
-    var $262 = { n: "src", v: $.ip("f34", "${url}", "string", 617, false), r: 4, c: 9, s: "f34", u: "f7",  }; //736
-    $.a($261, $262, 618);
-    var $263 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f34", u: "f7",  }; //737
-    $.a($261, $263, 620);
-    $.s("f14");
-    if (opt.useClassNames) { //622
-        $.n();
-        var $265 = { n: "script", v: "", r: 3, c: 5, s: "f35", u: "f7",  }; //739
-        $.a($107, $265, 625);
-        var $266 = { n: "src", v: $.ip("f35", "${url}", "string", 626, false), r: 4, c: 9, s: "f35", u: "f7",  }; //740
-        $.a($265, $266, 627);
-        var $267 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f35", u: "f7",  }; //741
-        $.a($265, $267, 629);
-    }
-    $.s("f14");
-    if (opt.useMaterialUI) { //624
-        $.n();
-        var $269 = { n: "script", v: "", r: 3, c: 5, s: "f36", u: "f7",  }; //743
-        $.a($107, $269, 635);
-        var $270 = { n: "src", v: $.ip("f36", "${url}", "string", 636, false), r: 4, c: 9, s: "f36", u: "f7",  }; //744
-        $.a($269, $270, 637);
-        var $271 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f36", u: "f7",  }; //745
-        $.a($269, $271, 639);
-    }
-    $.s("f14");
-    if (opt.useDownshift) { //626
-        if (isWizziStudio) { //627
-            $.n();
-            var $274 = { n: "script", v: "", r: 3, c: 5, s: "f37", u: "f7",  }; //747
-            $.a($107, $274, 646);
-            var $275 = { n: "src", v: $.ip("f37", "${url}", "string", 647, false), r: 4, c: 9, s: "f37", u: "f7",  }; //748
-            $.a($274, $275, 648);
-            var $276 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f37", u: "f7",  }; //749
-            $.a($274, $276, 650);
-        }
-        else {
-            $.n();
-            var $278 = { n: "script", v: "", r: 3, c: 5, s: "f38", u: "f7",  }; //751
-            $.a($107, $278, 655);
-            var $279 = { n: "src", v: $.ip("f38", "${url}", "string", 656, false), r: 4, c: 9, s: "f38", u: "f7",  }; //752
-            $.a($278, $279, 657);
-            var $280 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f38", u: "f7",  }; //753
-            $.a($278, $280, 659);
-        }
-    }
-    $.s("f14");
-    if (opt.useRouter) { //631
-        if (isWizziStudio) { //632
-            $.n();
-            var $283 = { n: "script", v: "", r: 3, c: 5, s: "f39", u: "f7",  }; //755
-            $.a($107, $283, 667);
-            var $284 = { n: "src", v: $.ip("f39", "${url}", "string", 668, false), r: 4, c: 9, s: "f39", u: "f7",  }; //756
-            $.a($283, $284, 669);
-            var $285 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f39", u: "f7",  }; //757
-            $.a($283, $285, 671);
-        }
-        else {
-            $.n();
-            var $287 = { n: "script", v: "", r: 3, c: 5, s: "f40", u: "f7",  }; //759
-            $.a($107, $287, 676);
-            var $288 = { n: "src", v: $.ip("f40", "${url}", "string", 677, false), r: 4, c: 9, s: "f40", u: "f7",  }; //760
-            $.a($287, $288, 678);
-            var $289 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f40", u: "f7",  }; //761
-            $.a($287, $289, 680);
-        }
-    }
-    $.s("f14");
-    if (opt.useReactGrid) { //636
-        $.n();
-        var $291 = { n: "script", v: "", r: 3, c: 5, s: "f41", u: "f7",  }; //763
-        $.a($107, $291, 687);
-        var $292 = { n: "src", v: $.ip("f41", "${url}", "string", 688, false), r: 4, c: 9, s: "f41", u: "f7",  }; //764
-        $.a($291, $292, 689);
-        var $293 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f41", u: "f7",  }; //765
-        $.a($291, $293, 691);
-    }
-    $.s("f14");
-    if (opt.useMonaco) { //638
-        $.n();
-        var $295 = { n: "script", v: "", r: 3, c: 5, s: "f42", u: "f7",  }; //767
-        $.a($107, $295, 697);
-        var $296 = { n: "src", v: $.ip("f42", "${url}", "string", 698, false), r: 4, c: 9, s: "f42", u: "f7",  }; //768
-        $.a($295, $296, 699);
-        var $297 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f42", u: "f7",  }; //769
-        $.a($295, $297, 701);
-    }
-}
-$.s("f14");
-if (opt.useRxJs) { //640
-    $.n();
-    var $299 = { n: "script", v: "", r: 3, c: 5, s: "f43", u: "f7",  }; //771
-    $.a($107, $299, 708);
-    var $300 = { n: "src", v: $.ip("f43", "${url}", "string", 709, false), r: 4, c: 9, s: "f43", u: "f7",  }; //772
-    $.a($299, $300, 710);
-    var $301 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f43", u: "f7",  }; //773
-    $.a($299, $301, 712);
-}
-$.s("f14");
-if (opt.useSweetalert) { //642
-    $.n();
-    var $303 = { n: "script", v: "", r: 3, c: 5, s: "f44", u: "f7",  }; //775
-    $.a($107, $303, 718);
-    var $304 = { n: "src", v: $.ip("f44", "${url}", "string", 719, false), r: 4, c: 9, s: "f44", u: "f7",  }; //776
-    $.a($303, $304, 720);
-    var $305 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f44", u: "f7",  }; //777
-    $.a($303, $305, 722);
-}
-$.s("f14");
-if (opt.useVue) { //644
-    $.n();
-    var $307 = { n: "script", v: "", r: 3, c: 5, s: "f45", u: "f7",  }; //779
-    $.a($107, $307, 728);
-    var $308 = { n: "src", v: $.ip("f45", "${url}", "string", 729, false), r: 4, c: 9, s: "f45", u: "f7",  }; //780
-    $.a($307, $308, 730);
-    var $309 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f45", u: "f7",  }; //781
-    $.a($307, $309, 732);
-}
-$.s("f14");
-if (opt.useReact || opt.useMaterialUI) { //646
-    $.n();
-    var $311 = { n: "script", v: "", r: 3, c: 5, s: "f46", u: "f7",  }; //783
-    $.a($107, $311, 738);
-    var $312 = { n: "src", v: $.ip("f46", "${url}", "string", 739, false), r: 4, c: 9, s: "f46", u: "f7",  }; //784
-    $.a($311, $312, 740);
-    var $313 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f46", u: "f7",  }; //785
-    $.a($311, $313, 742);
-}
-$.s("f14");
-if (opt.useWizzi) { //648
-    if (isWizziStudio) { //649
-        $.n();
-        var $316 = { n: "script", v: "", r: 3, c: 5, s: "f47", u: "f7",  }; //787
-        $.a($107, $316, 749);
-        var $317 = { n: "src", v: $.ip("f47", "${url}", "string", 750, false), r: 4, c: 9, s: "f47", u: "f7",  }; //788
-        $.a($316, $317, 751);
-        var $318 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f47", u: "f7",  }; //789
-        $.a($316, $318, 753);
-    }
-    else {
-        $.n();
-        var $320 = { n: "script", v: "", r: 3, c: 5, s: "f48", u: "f7",  }; //791
-        $.a($107, $320, 758);
-        var $321 = { n: "src", v: $.ip("f48", "${url}", "string", 759, false), r: 4, c: 9, s: "f48", u: "f7",  }; //792
-        $.a($320, $321, 760);
-        var $322 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f48", u: "f7",  }; //793
-        $.a($320, $322, 762);
-    }
-}
-$.s("f1");
-if (isWizziStudio) { //109
-    $.n();
-    var $324 = { n: "js", v: "./index.js.ittf", r: 35, c: 17, s: "f1", u: "f1",  }; //110
-    $.a($107, $324, 769);
-}
-else {
-    $.n();
-    var $326 = { n: "js", v: "./index.js", r: 37, c: 17, s: "f1", u: "f1",  }; //112
-    $.a($107, $326, 774);
+    var $51 = { n: "script", v: "", r: 4, c: 9, s: "f2", u: "f4",  }; //146
+    $.a($48, $51, 122);
+    var $52 = { n: "module", v: "", r: 5, c: 13, s: "f2", u: "f4",  }; //147
+    $.a($51, $52, 124);
+    var $53 = { n: "_", v: "document.addEventListener", r: 6, c: 17, s: "f2", u: "f4",  }; //148
+    $.a($52, $53, 126);
+    var $54 = { n: "@", v: "'keydown'", r: 7, c: 21, s: "f2", u: "f4",  }; //149
+    $.a($53, $54, 128);
+    var $55 = { n: "=>", v: "", r: 8, c: 21, s: "f2", u: "f4",  }; //150
+    $.a($53, $55, 130);
+    var $56 = { n: "param", v: "event", r: 9, c: 25, s: "f2", u: "f4",  }; //151
+    $.a($55, $56, 132);
+    var $57 = { n: "var", v: "keyName = event.key", r: 10, c: 25, s: "f2", u: "f4",  }; //152
+    $.a($55, $57, 134);
+    var $58 = { n: "if", v: "keyName === 'Control'", r: 11, c: 25, s: "f2", u: "f4",  }; //153
+    $.a($55, $58, 136);
+    var $59 = { n: "#", v: "do not alert when only Control key is pressed.", r: 12, c: 29, s: "f2", u: "f4",  }; //154
+    $.a($58, $59, 138);
+    var $60 = { n: "return", v: "", r: 13, c: 29, s: "f2", u: "f4",  }; //155
+    $.a($58, $60, 140);
+    var $61 = { n: "if", v: "event.ctrlKey && keyName === 'j'", r: 15, c: 25, s: "f2", u: "f4",  }; //156
+    $.a($55, $61, 142);
+    var $62 = { n: "set", v: "location.href= location.pathname + '?meta=json'", r: 16, c: 29, s: "f2", u: "f4",  }; //157
+    $.a($61, $62, 144);
+    var $63 = { n: "_", v: "event.preventDefault", r: 17, c: 29, s: "f2", u: "f4",  }; //158
+    $.a($61, $63, 146);
+    var $64 = { n: "_", v: "event.stopPropagation", r: 18, c: 29, s: "f2", u: "f4",  }; //159
+    $.a($61, $64, 148);
+    var $65 = { n: "if", v: "event.ctrlKey && keyName === 'h'", r: 20, c: 25, s: "f2", u: "f4",  }; //160
+    $.a($55, $65, 150);
+    var $66 = { n: "set", v: "location.href= location.pathname + '?meta=html'", r: 21, c: 29, s: "f2", u: "f4",  }; //161
+    $.a($65, $66, 152);
+    var $67 = { n: "_", v: "event.preventDefault", r: 22, c: 29, s: "f2", u: "f4",  }; //162
+    $.a($65, $67, 154);
+    var $68 = { n: "_", v: "event.stopPropagation", r: 23, c: 29, s: "f2", u: "f4",  }; //163
+    $.a($65, $68, 156);
+    var $69 = { n: "if", v: "event.ctrlKey && keyName === 'b'", r: 25, c: 25, s: "f2", u: "f4",  }; //164
+    $.a($55, $69, 158);
+    var $70 = { n: "var", v: "i = location.pathname.lastIndexOf('/')", r: 26, c: 29, s: "f2", u: "f4",  }; //165
+    $.a($69, $70, 160);
+    var $71 = { n: "set", v: "location.href= location.pathname.substr(0, i) + '?meta=html'", r: 27, c: 29, s: "f2", u: "f4",  }; //166
+    $.a($69, $71, 162);
+    var $72 = { n: "_", v: "event.preventDefault", r: 28, c: 29, s: "f2", u: "f4",  }; //167
+    $.a($69, $72, 164);
+    var $73 = { n: "_", v: "event.stopPropagation", r: 29, c: 29, s: "f2", u: "f4",  }; //168
+    $.a($69, $73, 166);
+    var $74 = { n: "if", v: "event.ctrlKey && keyName === 'e'", r: 31, c: 25, s: "f2", u: "f4",  }; //169
+    $.a($55, $74, 168);
+    var $75 = { n: "set", v: "location.href= '/ittf/docs/cheatsheets/index.html.ittf'", r: 32, c: 29, s: "f2", u: "f4",  }; //170
+    $.a($74, $75, 170);
+    var $76 = { n: "_", v: "event.preventDefault", r: 33, c: 29, s: "f2", u: "f4",  }; //171
+    $.a($74, $76, 172);
+    var $77 = { n: "_", v: "event.stopPropagation", r: 34, c: 29, s: "f2", u: "f4",  }; //172
+    $.a($74, $77, 174);
 }
 $.s("f2");
-if (isWizziStudio) { //340
-    $.n();
-    var $328 = { n: "script", v: "", r: 4, c: 9, s: "f2", u: "f3",  }; //341
-    $.a($107, $328, 780);
-    var $329 = { n: "module", v: "", r: 5, c: 13, s: "f2", u: "f3",  }; //342
-    $.a($328, $329, 782);
-    var $330 = { n: "_", v: "document.addEventListener", r: 6, c: 17, s: "f2", u: "f3",  }; //343
-    $.a($329, $330, 784);
-    var $331 = { n: "@", v: "'keydown'", r: 7, c: 21, s: "f2", u: "f3",  }; //344
-    $.a($330, $331, 786);
-    var $332 = { n: "=>", v: "", r: 8, c: 21, s: "f2", u: "f3",  }; //345
-    $.a($330, $332, 788);
-    var $333 = { n: "param", v: "event", r: 9, c: 25, s: "f2", u: "f3",  }; //346
-    $.a($332, $333, 790);
-    var $334 = { n: "var", v: "keyName = event.key", r: 10, c: 25, s: "f2", u: "f3",  }; //347
-    $.a($332, $334, 792);
-    var $335 = { n: "if", v: "keyName === 'Control'", r: 11, c: 25, s: "f2", u: "f3",  }; //348
-    $.a($332, $335, 794);
-    var $336 = { n: "#", v: "do not alert when only Control key is pressed.", r: 12, c: 29, s: "f2", u: "f3",  }; //349
-    $.a($335, $336, 796);
-    var $337 = { n: "return", v: "", r: 13, c: 29, s: "f2", u: "f3",  }; //350
-    $.a($335, $337, 798);
-    var $338 = { n: "if", v: "event.ctrlKey && keyName === 'j'", r: 15, c: 25, s: "f2", u: "f3",  }; //351
-    $.a($332, $338, 800);
-    var $339 = { n: "set", v: "location.href= location.pathname + '?meta=json'", r: 16, c: 29, s: "f2", u: "f3",  }; //352
-    $.a($338, $339, 802);
-    var $340 = { n: "_", v: "event.preventDefault", r: 17, c: 29, s: "f2", u: "f3",  }; //353
-    $.a($338, $340, 804);
-    var $341 = { n: "_", v: "event.stopPropagation", r: 18, c: 29, s: "f2", u: "f3",  }; //354
-    $.a($338, $341, 806);
-    var $342 = { n: "if", v: "event.ctrlKey && keyName === 'h'", r: 20, c: 25, s: "f2", u: "f3",  }; //355
-    $.a($332, $342, 808);
-    var $343 = { n: "set", v: "location.href= location.pathname + '?meta=html'", r: 21, c: 29, s: "f2", u: "f3",  }; //356
-    $.a($342, $343, 810);
-    var $344 = { n: "_", v: "event.preventDefault", r: 22, c: 29, s: "f2", u: "f3",  }; //357
-    $.a($342, $344, 812);
-    var $345 = { n: "_", v: "event.stopPropagation", r: 23, c: 29, s: "f2", u: "f3",  }; //358
-    $.a($342, $345, 814);
-    var $346 = { n: "if", v: "event.ctrlKey && keyName === 'b'", r: 25, c: 25, s: "f2", u: "f3",  }; //359
-    $.a($332, $346, 816);
-    var $347 = { n: "var", v: "i = location.pathname.lastIndexOf('/')", r: 26, c: 29, s: "f2", u: "f3",  }; //360
-    $.a($346, $347, 818);
-    var $348 = { n: "set", v: "location.href= location.pathname.substr(0, i) + '?meta=html'", r: 27, c: 29, s: "f2", u: "f3",  }; //361
-    $.a($346, $348, 820);
-    var $349 = { n: "_", v: "event.preventDefault", r: 28, c: 29, s: "f2", u: "f3",  }; //362
-    $.a($346, $349, 822);
-    var $350 = { n: "_", v: "event.stopPropagation", r: 29, c: 29, s: "f2", u: "f3",  }; //363
-    $.a($346, $350, 824);
-    var $351 = { n: "if", v: "event.ctrlKey && keyName === 'e'", r: 31, c: 25, s: "f2", u: "f3",  }; //364
-    $.a($332, $351, 826);
-    var $352 = { n: "set", v: "location.href= '/ittf/docs/cheatsheets/index.html.ittf'", r: 32, c: 29, s: "f2", u: "f3",  }; //365
-    $.a($351, $352, 828);
-    var $353 = { n: "_", v: "event.preventDefault", r: 33, c: 29, s: "f2", u: "f3",  }; //366
-    $.a($351, $353, 830);
-    var $354 = { n: "_", v: "event.stopPropagation", r: 34, c: 29, s: "f2", u: "f3",  }; //367
-    $.a($351, $354, 832);
+if (typeof(mpage.aspect) !== 'undefined') { //228
+    if (mpage.aspect.React) { //229
+        if (mpage.aspect.production) { //230
+            $.n();
+            var $81 = { n: "script", v: "", r: 3, c: 5, s: "f11", u: "f7",  }; //324
+            $.a($48, $81, 182);
+            var $82 = { n: "src", v: $.ip("f11", "${url}", "string", 183, false), r: 4, c: 9, s: "f11", u: "f7",  }; //325
+            $.a($81, $82, 184);
+            var $83 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f11", u: "f7",  }; //326
+            $.a($81, $83, 186);
+        }
+        else {
+            $.n();
+            var $85 = { n: "script", v: "", r: 3, c: 5, s: "f12", u: "f7",  }; //328
+            $.a($48, $85, 191);
+            var $86 = { n: "src", v: $.ip("f12", "${url}", "string", 192, false), r: 4, c: 9, s: "f12", u: "f7",  }; //329
+            $.a($85, $86, 193);
+            var $87 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f12", u: "f7",  }; //330
+            $.a($85, $87, 195);
+        }
+        $.n();
+        var $88 = { n: "script", v: "", r: 3, c: 5, s: "f13", u: "f7",  }; //332
+        $.a($48, $88, 199);
+        var $89 = { n: "src", v: $.ip("f13", "${url}", "string", 200, false), r: 4, c: 9, s: "f13", u: "f7",  }; //333
+        $.a($88, $89, 201);
+        var $90 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f13", u: "f7",  }; //334
+        $.a($88, $90, 203);
+        var $91 = { n: "script", v: "", r: 3, c: 5, s: "f14", u: "f7",  }; //336
+        $.a($48, $91, 205);
+        var $92 = { n: "src", v: $.ip("f14", "${url}", "string", 206, false), r: 4, c: 9, s: "f14", u: "f7",  }; //337
+        $.a($91, $92, 207);
+        var $93 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f14", u: "f7",  }; //338
+        $.a($91, $93, 209);
+    }
+    $.s("f2");
+    if (mpage.aspect.InteractJs) { //236
+        $.n();
+        var $95 = { n: "script", v: "", r: 3, c: 5, s: "f15", u: "f7",  }; //340
+        $.a($48, $95, 215);
+        var $96 = { n: "src", v: $.ip("f15", "${url}", "string", 216, false), r: 4, c: 9, s: "f15", u: "f7",  }; //341
+        $.a($95, $96, 217);
+        var $97 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f15", u: "f7",  }; //342
+        $.a($95, $97, 219);
+    }
+    $.s("f2");
+    if (mpage.aspect.Jarallax) { //238
+        $.n();
+        var $99 = { n: "script", v: "", r: 3, c: 5, s: "f16", u: "f7",  }; //344
+        $.a($48, $99, 225);
+        var $100 = { n: "src", v: $.ip("f16", "${url}", "string", 226, false), r: 4, c: 9, s: "f16", u: "f7",  }; //345
+        $.a($99, $100, 227);
+        var $101 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f16", u: "f7",  }; //346
+        $.a($99, $101, 229);
+        $.s("f2");
+        if (mpage.aspect.production) { //240
+            $.n();
+            var $103 = { n: "script", v: "", r: 3, c: 5, s: "f17", u: "f7",  }; //348
+            $.a($48, $103, 234);
+            var $104 = { n: "src", v: $.ip("f17", "${url}", "string", 235, false), r: 4, c: 9, s: "f17", u: "f7",  }; //349
+            $.a($103, $104, 236);
+            var $105 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f17", u: "f7",  }; //350
+            $.a($103, $105, 238);
+            var $106 = { n: "script", v: "", r: 3, c: 5, s: "f18", u: "f7",  }; //352
+            $.a($48, $106, 240);
+            var $107 = { n: "src", v: $.ip("f18", "${url}", "string", 241, false), r: 4, c: 9, s: "f18", u: "f7",  }; //353
+            $.a($106, $107, 242);
+            var $108 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f18", u: "f7",  }; //354
+            $.a($106, $108, 244);
+            var $109 = { n: "script", v: "", r: 3, c: 5, s: "f19", u: "f7",  }; //356
+            $.a($48, $109, 246);
+            var $110 = { n: "src", v: $.ip("f19", "${url}", "string", 247, false), r: 4, c: 9, s: "f19", u: "f7",  }; //357
+            $.a($109, $110, 248);
+            var $111 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f19", u: "f7",  }; //358
+            $.a($109, $111, 250);
+        }
+        else {
+            $.n();
+            var $113 = { n: "script", v: "", r: 3, c: 5, s: "f20", u: "f7",  }; //360
+            $.a($48, $113, 255);
+            var $114 = { n: "src", v: $.ip("f20", "${url}", "string", 256, false), r: 4, c: 9, s: "f20", u: "f7",  }; //361
+            $.a($113, $114, 257);
+            var $115 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f20", u: "f7",  }; //362
+            $.a($113, $115, 259);
+            var $116 = { n: "script", v: "", r: 3, c: 5, s: "f21", u: "f7",  }; //364
+            $.a($48, $116, 261);
+            var $117 = { n: "src", v: $.ip("f21", "${url}", "string", 262, false), r: 4, c: 9, s: "f21", u: "f7",  }; //365
+            $.a($116, $117, 263);
+            var $118 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f21", u: "f7",  }; //366
+            $.a($116, $118, 265);
+            var $119 = { n: "script", v: "", r: 3, c: 5, s: "f22", u: "f7",  }; //368
+            $.a($48, $119, 267);
+            var $120 = { n: "src", v: $.ip("f22", "${url}", "string", 268, false), r: 4, c: 9, s: "f22", u: "f7",  }; //369
+            $.a($119, $120, 269);
+            var $121 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f22", u: "f7",  }; //370
+            $.a($119, $121, 271);
+        }
+    }
+    $.s("f2");
+    if (mpage.aspect.JQuery) { //248
+        if (mpage.aspect.production) { //249
+            $.n();
+            var $124 = { n: "script", v: "", r: 3, c: 5, s: "f23", u: "f7",  }; //372
+            $.a($48, $124, 279);
+            var $125 = { n: "src", v: $.ip("f23", "${url}", "string", 280, false), r: 4, c: 9, s: "f23", u: "f7",  }; //373
+            $.a($124, $125, 281);
+            var $126 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f23", u: "f7",  }; //374
+            $.a($124, $126, 283);
+        }
+        else {
+            $.n();
+            var $128 = { n: "script", v: "", r: 3, c: 5, s: "f24", u: "f7",  }; //376
+            $.a($48, $128, 288);
+            var $129 = { n: "src", v: $.ip("f24", "${url}", "string", 289, false), r: 4, c: 9, s: "f24", u: "f7",  }; //377
+            $.a($128, $129, 290);
+            var $130 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f24", u: "f7",  }; //378
+            $.a($128, $130, 292);
+        }
+    }
+    $.s("f2");
+    if (mpage.aspect.MaterialUI) { //253
+        $.n();
+        var $132 = { n: "script", v: "", r: 3, c: 5, s: "f25", u: "f7",  }; //380
+        $.a($48, $132, 299);
+        var $133 = { n: "src", v: $.ip("f25", "${url}", "string", 300, false), r: 4, c: 9, s: "f25", u: "f7",  }; //381
+        $.a($132, $133, 301);
+        var $134 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f25", u: "f7",  }; //382
+        $.a($132, $134, 303);
+    }
+    $.s("f2");
+    if (mpage.aspect.React) { //255
+        $.n();
+        var $136 = { n: "script", v: "", r: 3, c: 5, s: "f26", u: "f7",  }; //384
+        $.a($48, $136, 309);
+        var $137 = { n: "src", v: $.ip("f26", "${url}", "string", 310, false), r: 4, c: 9, s: "f26", u: "f7",  }; //385
+        $.a($136, $137, 311);
+        var $138 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f26", u: "f7",  }; //386
+        $.a($136, $138, 313);
+    }
+    $.s("f2");
+    if (mpage.aspect.Ace) { //257
+        if (mpage.aspect.production) { //258
+            $.n();
+            var $141 = { n: "script", v: "", r: 3, c: 5, s: "f27", u: "f7",  }; //388
+            $.a($48, $141, 320);
+            var $142 = { n: "src", v: $.ip("f27", "${url}", "string", 321, false), r: 4, c: 9, s: "f27", u: "f7",  }; //389
+            $.a($141, $142, 322);
+            var $143 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f27", u: "f7",  }; //390
+            $.a($141, $143, 324);
+        }
+        else {
+            $.n();
+            var $145 = { n: "script", v: "", r: 3, c: 5, s: "f28", u: "f7",  }; //392
+            $.a($48, $145, 329);
+            var $146 = { n: "src", v: $.ip("f28", "${url}", "string", 330, false), r: 4, c: 9, s: "f28", u: "f7",  }; //393
+            $.a($145, $146, 331);
+            var $147 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f28", u: "f7",  }; //394
+            $.a($145, $147, 333);
+        }
+    }
+    $.s("f2");
+    if (mpage.aspect.Codemirror) { //262
+        $.n();
+        var $149 = { n: "script", v: "", r: 3, c: 5, s: "f29", u: "f7",  }; //396
+        $.a($48, $149, 340);
+        var $150 = { n: "src", v: $.ip("f29", "${url}", "string", 341, false), r: 4, c: 9, s: "f29", u: "f7",  }; //397
+        $.a($149, $150, 342);
+        var $151 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f29", u: "f7",  }; //398
+        $.a($149, $151, 344);
+        var $152 = { n: "script", v: "", r: 3, c: 5, s: "f30", u: "f7",  }; //400
+        $.a($48, $152, 346);
+        var $153 = { n: "src", v: $.ip("f30", "${url}", "string", 347, false), r: 4, c: 9, s: "f30", u: "f7",  }; //401
+        $.a($152, $153, 348);
+        var $154 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f30", u: "f7",  }; //402
+        $.a($152, $154, 350);
+        var $155 = { n: "script", v: "", r: 3, c: 5, s: "f31", u: "f7",  }; //404
+        $.a($48, $155, 352);
+        var $156 = { n: "src", v: $.ip("f31", "${url}", "string", 353, false), r: 4, c: 9, s: "f31", u: "f7",  }; //405
+        $.a($155, $156, 354);
+        var $157 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f31", u: "f7",  }; //406
+        $.a($155, $157, 356);
+        var $158 = { n: "script", v: "", r: 3, c: 5, s: "f32", u: "f7",  }; //408
+        $.a($48, $158, 358);
+        var $159 = { n: "src", v: $.ip("f32", "${url}", "string", 359, false), r: 4, c: 9, s: "f32", u: "f7",  }; //409
+        $.a($158, $159, 360);
+        var $160 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f32", u: "f7",  }; //410
+        $.a($158, $160, 362);
+        var $161 = { n: "script", v: "", r: 3, c: 5, s: "f33", u: "f7",  }; //412
+        $.a($48, $161, 364);
+        var $162 = { n: "src", v: $.ip("f33", "${url}", "string", 365, false), r: 4, c: 9, s: "f33", u: "f7",  }; //413
+        $.a($161, $162, 366);
+        var $163 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f33", u: "f7",  }; //414
+        $.a($161, $163, 368);
+    }
+    $.s("f2");
+    if (mpage.aspect.Monaco) { //268
+        $.n();
+        var $165 = { n: "script", v: "", r: 3, c: 5, s: "f34", u: "f7",  }; //416
+        $.a($48, $165, 374);
+        var $166 = { n: "src", v: $.ip("f34", "${url}", "string", 375, false), r: 4, c: 9, s: "f34", u: "f7",  }; //417
+        $.a($165, $166, 376);
+        var $167 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f34", u: "f7",  }; //418
+        $.a($165, $167, 378);
+    }
+    $.s("f2");
+    if (mpage.aspect.Popper) { //270
+        $.n();
+        var $169 = { n: "script", v: "", r: 3, c: 5, s: "f35", u: "f7",  }; //420
+        $.a($48, $169, 384);
+        var $170 = { n: "src", v: $.ip("f35", "${url}", "string", 385, false), r: 4, c: 9, s: "f35", u: "f7",  }; //421
+        $.a($169, $170, 386);
+        var $171 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f35", u: "f7",  }; //422
+        $.a($169, $171, 388);
+    }
+    $.s("f2");
+    if (mpage.aspect.ScrollReveal) { //272
+        $.n();
+        var $173 = { n: "script", v: "", r: 3, c: 5, s: "f36", u: "f7",  }; //424
+        $.a($48, $173, 394);
+        var $174 = { n: "src", v: $.ip("f36", "${url}", "string", 395, false), r: 4, c: 9, s: "f36", u: "f7",  }; //425
+        $.a($173, $174, 396);
+        var $175 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f36", u: "f7",  }; //426
+        $.a($173, $175, 398);
+    }
+    $.s("f2");
+    if (mpage.aspect.Tooltip) { //274
+        $.n();
+        var $177 = { n: "script", v: "", r: 3, c: 5, s: "f37", u: "f7",  }; //428
+        $.a($48, $177, 404);
+        var $178 = { n: "src", v: $.ip("f37", "${url}", "string", 405, false), r: 4, c: 9, s: "f37", u: "f7",  }; //429
+        $.a($177, $178, 406);
+        var $179 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f37", u: "f7",  }; //430
+        $.a($177, $179, 408);
+    }
+    $.s("f2");
+    if (mpage.aspect.Underscore) { //276
+        if (mpage.aspect.production) { //277
+            $.n();
+            var $182 = { n: "script", v: "", r: 3, c: 5, s: "f38", u: "f7",  }; //432
+            $.a($48, $182, 415);
+            var $183 = { n: "src", v: $.ip("f38", "${url}", "string", 416, false), r: 4, c: 9, s: "f38", u: "f7",  }; //433
+            $.a($182, $183, 417);
+            var $184 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f38", u: "f7",  }; //434
+            $.a($182, $184, 419);
+        }
+        else {
+            $.n();
+            var $186 = { n: "script", v: "", r: 3, c: 5, s: "f39", u: "f7",  }; //436
+            $.a($48, $186, 424);
+            var $187 = { n: "src", v: $.ip("f39", "${url}", "string", 425, false), r: 4, c: 9, s: "f39", u: "f7",  }; //437
+            $.a($186, $187, 426);
+            var $188 = { n: "crossorigin", v: "anonymous", r: 5, c: 9, s: "f39", u: "f7",  }; //438
+            $.a($186, $188, 428);
+        }
+    }
 }
+$.n();
+var $189 = { n: "js", v: "https://code.jquery.com/jquery-3.5.1.min.js", r: 11, c: 9, s: "f1", u: "f1",  }; //27
+$.a($48, $189, 434);
+var $190 = { n: "js", v: "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js", r: 12, c: 9, s: "f1", u: "f1",  }; //28
+$.a($48, $190, 436);
+var $191 = { n: "js", v: "https://cdn.jsdelivr.net/momentjs/latest/moment.min.js", r: 13, c: 9, s: "f1", u: "f1",  }; //29
+$.a($48, $191, 438);
+var $192 = { n: "js", v: "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js", r: 14, c: 9, s: "f1", u: "f1",  }; //30
+$.a($48, $192, 440);
+var $193 = { n: "js", v: "https://cdn.jsdelivr.net/npm/icheck@1.0.2/icheck.min.js", r: 15, c: 9, s: "f1", u: "f1",  }; //31
+$.a($48, $193, 442);
+var $194 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js", r: 16, c: 9, s: "f1", u: "f1",  }; //32
+$.a($48, $194, 444);
+var $195 = { n: "js", v: "https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js", r: 17, c: 9, s: "f1", u: "f1",  }; //33
+$.a($48, $195, 446);
+var $196 = { n: "js", v: "https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js", r: 18, c: 9, s: "f1", u: "f1",  }; //34
+$.a($48, $196, 448);
+var $197 = { n: "js", v: "./scripts.js.ittf", r: 19, c: 9, s: "f1", u: "f1",  }; //35
+$.a($48, $197, 450);

@@ -1,0 +1,82 @@
+$group
+
+    var formFields
+        [
+            {
+                @ id "NWS_ID"
+                @ label "Id"
+                @ type ""
+            {
+                @ id "NWS_FK_TNW_ID"
+                @ label "Titolo"
+                @ type ""
+            {
+                @ id "NWS_FK_TCL_ID"
+                @ label "Categoria"
+                @ type ""
+            {
+                @ id "NWS_FK_TPN_ID"
+                @ label "Tipo"
+                @ type ""
+            {
+                @ id "NWS_SETTIMANA_DAL"
+                @ label "Settimana dal"
+                @ type ""
+                @ newId "SettimanaDal"
+            {
+                @ id "NWS_SETTIMANA_AL"
+                @ label "Settimana al"
+                @ type ""
+                @ newId "SettimanaAl"
+            {
+                @ id "NWS_DATA_DAL"
+                @ label "Data dal"
+                @ type ""
+            {
+                @ id "NWS_DATA_AL"
+                @ label "Data al"
+                @ type ""
+            {
+                @ id "NWS_TESTO"
+                @ label "Testo"
+                @ type ""
+                @ newId "Testo"
+            {
+                @ id "NWS_ABSTRACT"
+                @ label "Abstract"
+                @ type ""
+                @ newId "Abstract"
+            {
+                @ id "NWS_URL_SITOWEB"
+                @ label "Sito web"
+                @ type ""
+            {
+                @ id "NWS_URL_VIDEO"
+                @ label "Url video"
+                @ type ""
+            {
+                @ id "NWS_IMG_COPERTINA"
+                @ label "Immagine copertina"
+                @ type ""
+            {
+                @ id "NWS_IMG_ANTEPRIMA"
+                @ label "Immagine anteprima"
+                @ type ""
+
+    async-function extractFormData
+        param page
+        var result
+            {
+        foreach field in formFields
+            try
+                const value = await page.$eval('#' + field.id, input => { return input.value })
+                if field.newId
+                    set result[field.newId] = value
+                else
+                    set result[field.id] = value
+            catch ex
+                set result[field.id] = ex.message
+        set result.Titolo = TitById(result["NWS_FK_TNW_ID"])
+        set result.Categoria = CatById(result["NWS_FK_TCL_ID"])
+        log 'extractFormData.result', result
+        return result
