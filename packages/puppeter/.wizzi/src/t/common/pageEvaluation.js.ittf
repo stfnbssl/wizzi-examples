@@ -1,0 +1,28 @@
+$group
+    $params page
+
+    # document.querySelector('select[name="risultati_ricerca_length"]')
+    # document.querySelectorAll("#risultati_ricerca tr")
+    # document.querySelectorAll(".dataTables_paginate a.next")
+
+    const pageEvaluationResults
+        await 
+            _ ${page}.evaluate
+                => 
+                    var documentResults
+                        {
+                            $hook documentResults
+                            [ messages
+                    try
+                        $hook
+                        function addMessage
+                            param message
+                            _ documentResults.messages.push
+                                @ message
+                    catch ex         
+                        _ documentResults.messages.push
+                            @ "Error: " + ex.message
+                    
+                    return documentResults 
+
+    log "pageEvaluationResults", pageEvaluationResults

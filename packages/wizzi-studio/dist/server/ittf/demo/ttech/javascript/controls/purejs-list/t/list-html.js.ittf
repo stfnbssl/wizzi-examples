@@ -73,5 +73,3 @@ $group
             class list-cell
             div {{ value }}
                 class list-cell
-
-

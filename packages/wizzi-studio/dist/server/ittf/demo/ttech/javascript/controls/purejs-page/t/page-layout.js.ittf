@@ -1,0 +1,56 @@
+$group
+
+    function pageLayout
+        param __html
+        param page_type
+
+        log 'page_type.items', page_type.items.length
+
+        var ctx = {}
+        foreach item in page_type.items
+            _ pageItem
+                @ __html
+                @ item
+                @ null
+                @ ctx
+
+    function pageItem
+        param __html
+        param item_type
+        param parent_type
+        param ctx
+
+        log 'item_type.kind', item_type.kind
+
+        var temp = []
+        if item_type.items && item_type.kind != 'menu'
+            foreach item in item_type.items
+                _ pageItem
+                    @ temp
+                    @ item
+                    @ item_type
+                    @ ctx
+
+        if item_type.kind == 'header'
+            div {{ temp.join('\n') }}
+                class header flex-row
+        
+        elif item_type.kind == 'footer'
+            div {{ temp.join('\n') }}
+                class footer flex-row
+
+        elif item_type.kind == 'menu'
+            _ menuBarHtml
+                @ __html
+                @ item_type
+
+        elif item_type.kind == 'flex'
+            div {{ temp.join('\n') }}
+                class flex-{{ item_type.direction }}
+        
+        elif item_type.kind == 'panel'
+            div
+                id {{ item_type.id }}
+        
+        else
+            throw new Error('pageItem kind unknown ' + item_type.kind)

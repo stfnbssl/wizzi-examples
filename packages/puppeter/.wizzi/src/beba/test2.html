@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            function cleanTetx(Testo) {
+                var ch;
+                var len = Testo.length - 2;
+                console.log(len, Testo);
+                var buf = [];
+                for (var i=0; i<len; i++) {
+                    ch = Testo[i];
+                    console.log("ch", ch);
+                    buf.push(ch);
+                    if (".,;!?:".indexOf(ch) > -1 && isWhitespace(Testo[i+1]) == false) {
+                        buf.push(' ');
+                    }
+                    console.log('buf.length', buf.length);
+                }
+                console.log("buf.join('')", buf.join(''));
+                return buf.join('');
+            }
+            function isWhitespace(ch) {
+                return ch == ' ' || ch == '\t' || ch == '\r ' || ch == '\n';
+            }
+            var t1 = "alfa.Cosa e la prima ,che";
+            console.log(cleanTetx(t1));
+
+ </script>
+    </body>
+</html>

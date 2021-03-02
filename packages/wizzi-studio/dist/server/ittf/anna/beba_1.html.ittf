@@ -1,0 +1,59 @@
+html
+    body
+    
+    script
+    
+        function isWhitespace
+            param ch
+            return ch == ' ' || ch == '\t' || ch == '\r ' || ch == '\n'
+    
+        
+        function cleanText
+            param txt
+            var state
+                {
+                    @ tagOpen false
+                    @ punct false
+                    [ token
+        
+        function cleanText
+            var ch
+            var len = txt.length - 1
+            var buf = []
+            
+            for var i=0; i<len; i++
+                set ch = txt[i]
+                if isWhitespace(ch)
+                    if state.tagOpen
+                        # a tag with content, state.token contains tag name
+                    if state.punct
+                        _ buf.push(state.token.join(''))
+                        set state.token.length = 0
+                        set state.punct = false
+                if state.punct
+                    _ buf.push(state.token.join(''))
+                    _ buf.push(' ')
+                    set state.punct = false
+                if ".,;!?:".indexOf(ch) > -1
+                    set state.punct = true
+                    _ state.token.push(ch)
+                $*
+                elif ch == '>'
+                    if state.tagOpen
+                        _ buf.push('<')
+                        _ buf.push(state.token.join(''))
+                        set state.token.length = 0
+                        set state.tagOpen = false
+                *$
+                else
+                    _ buf.push(ch)
+                    
+        var txt1 = 'aa <span style="xx">bb</span> cc'
+        var txt = 'aa b.cc dd'
+        var result
+            _ cleanText                   
+                @ txt
+        log 'txt', txt
+        log 'result', result
+                
+        

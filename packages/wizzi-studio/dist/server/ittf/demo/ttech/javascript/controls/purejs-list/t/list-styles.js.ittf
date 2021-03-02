@@ -13,5 +13,7 @@ $group
                     @ "flex-direction" "row"
                     @ "justify-content" "space-between"
                     @ "font-weight" 600
-
-
+                { "table td, table th"
+                    @ padding "5px"
+                { ".td-hidden"
+                    @ display "none"

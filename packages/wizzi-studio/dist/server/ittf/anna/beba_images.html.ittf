@@ -1,0 +1,70 @@
+html
+    body
+    . upl-img-zone upl-text-center
+        id upl-img-zone
+        . upl-img-drop
+            input 
+                type file
+                name file[]
+                id file
+                multiple 
+                title puoi selezionare più immagini contemporaneamente
+        br 
+        . it-grid-list-wrapper it-image-label-grid
+            . grid-row
+                . col-6 col-lg-4
+                    id img_254
+                    input 
+                        type hidden
+                        name file_img[]
+                        id fileimg_254
+                        value 254
+                    . it-grid-item-wrapper
+                        id contenitore_img_254
+                        span 
+                            style cursor:pointer;padding: 1px 8px;
+                            class it-griditem-text-wrapper
+                            id 254
+                            span 
+                                class it-griditem-text
+                            svg 
+                                class icon
+                                use 
+                                    @ xlink:href /bootstrap-italia/dist/svg/sprite.svg#it-close-circle
+                        . img-responsive-wrapper
+                            . contenitore_immagine
+                                span 
+                                    style display: inline-block; vertical-align: middle; line-height: normal;
+                                    img 
+                                        class upl_img
+                                        src /image/upload/galleria/20201013093048_1_863.jpg
+                                        alt /image/upload/galleria/20201013093048_1_863.jpg
+                                        title 3a_a fior di pelle_1mese.jpg
+                . col-6 col-lg-4
+                    id img_376
+                    input 
+                        type hidden
+                        name file_img[]
+                        id fileimg_376
+                        value 376
+                    . it-grid-item-wrapper
+                        id contenitore_img_376
+                        span 
+                            style cursor:pointer;padding: 1px 8px;
+                            class it-griditem-text-wrapper
+                            id 376
+                            span 
+                                class it-griditem-text
+                            svg 
+                                class icon
+                                use 
+                                    @ xlink:href /bootstrap-italia/dist/svg/sprite.svg#it-close-circle
+                        . img-responsive-wrapper
+                            . contenitore_immagine
+                                span 
+                                    style display: inline-block; vertical-align: middle; line-height: normal;
+                                    img 
+                                        class upl_img
+                                        src /image/upload/galleria/20201016143320_0_863.jpg
+                                        alt /image/upload/galleria/20201016143320_0_863.jpg
+                                        title z_logo NpL.jpg

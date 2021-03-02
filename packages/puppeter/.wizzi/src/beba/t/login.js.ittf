@@ -1,16 +1,14 @@
 $group
+    $params page
 
-    const page
-        await
-            _ browser.newPage
     await 
-        _ page.goto(loginUrl)
+        _ ${page}.goto(backendLoginUrl)
     await 
-        _ page.type('#username', username)
+        _ ${page}.type('#username', username)
     await 
-        _ page.type('#password', psw)
+        _ ${page}.type('#password', psw)
     await 
-        _ page.click('button[type="submit"]')
+        _ ${page}.click('button[type="submit"]')
     await 
-        _ page.waitForNavigation
+        _ ${page}.waitForNavigation
     log 'logged in'

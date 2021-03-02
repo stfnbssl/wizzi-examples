@@ -4,4 +4,120 @@ $group
         param $
         param list
         param context
+        if list.type.kind == 'table'
+            _ startList_table
+                @ $
+                @ list
+                @ context 
+        else
+            _ startList_ul
+                @ $
+                @ list
+                @ context 
 
+    function startList_ul
+        param $
+        param list
+        param context
+
+    function startList_table
+        param $
+        param list
+        param context
+
+        var list_type = list.type
+
+        var keyId
+        var options
+            { 
+                [ valueNames
+        
+        foreach column_type in list_type.columns
+            if column_type.isKey
+                set keyId = column_type.id
+            _ options.valueNames.push
+                @ column_type.id
+
+        if !keyId || keyId.length < 1
+            throw new Error('Id key missing on list ' + list_type.id)
+        
+        log 'starting list', list_type.id, $('#' + list_type.id)[0]
+        
+        # Init list
+        var listObj = new List(list_type.id, options)
+        
+        var
+            decl addBtn = $('#add-' + list_type.id + '-btn')
+            decl editBtn = $('#edit-' + list_type.id + '-btn').hide()
+        
+        _ addBtn.click
+            function 
+                var valuesObj
+                    _ lt_formFieldsValues
+                set valuesObj[keyId]
+                    _ Math.floor
+                        @ Math.random() * 110000
+                _ listObj.add
+                    @ valuesObj
+                _ lt_clearFormFields
+                if list_type.onAdd
+                    _ list_type.onAdd
+                        @ 'add'
+                        @ valuesObj
+        
+        _ editBtn.click
+            function 
+                var item = listObj.get(keyId, $('#' + keyId + '_field').val())[0]
+                var oldValues = Object.assign({}, item.values())
+                var newValues = lt_formFieldsValues()
+                _ item.values
+                    @ newValues
+                if list_type.onUpdate
+                    _ list_type.onUpdate
+                        {
+                            @ old oldValues
+                            @ new newValues
+                _ lt_clearFormFields
+                _ editBtn.hide
+                _ addBtn.show
+
+        # Sets callbacks to the buttons in the list
+        _ lt_setItemsEventHandlers
+        
+        function lt_setItemsEventHandlers
+            _ $(document).on
+                @ 'click'
+                @ '.remove-' + list_type.id + '-item-btn'
+                function 
+                    var itemId
+                        _ $(this).closest('tr').find('.' + keyId).text
+                    var itemValues
+                        _ listObj.get(keyId, itemId)[0].values
+                    _ listObj.remove(keyId, itemId)
+                    if list_type.onRemove
+                        _ list_type.onRemove
+                            @ 'remove'
+                            @ itemValues
+            
+            _ $(document).on
+                @ 'click'
+                @ '.edit-' + list_type.id + '-item-btn'
+                function 
+                    var itemId
+                        _ $(this).closest('tr').find('.' + keyId).text
+                    var itemValues
+                        _ listObj.get(keyId, itemId)[0].values
+                    foreach column_type in list_type.columns
+                        _ $('#' + column_type.id + '_field').val(itemValues[column_type.id])
+                    _ editBtn.show
+                    _ addBtn.hide
+        
+        function lt_clearFormFields
+            foreach column_type in list_type.columns
+                _ $('#' + column_type.id + '_field').val('')
+
+        function lt_formFieldsValues
+            var ret = {}
+            foreach column_type in list_type.columns
+                set ret[column_type.id] = $('#' + column_type.id + '_field').val()
+            return ret

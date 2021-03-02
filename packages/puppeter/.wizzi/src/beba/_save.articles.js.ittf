@@ -1,0 +1,55 @@
+module
+    kind es6
+
+    # useful https://api.jquery.com/category/selectors/
+
+    $
+        var dollardollar = '$' + '$'
+
+    const fs = require('fs')
+    const path = require('path')
+    const puppeteer = require('puppeteer')
+    const stringify = require('json-stringify-safe') 
+    const wizziUtils = require('wizzi-utils')
+    const verify = wizziUtils.verify
+    const file = wizziUtils.file
+
+    var loginUrl = "https://cosie.lepida.it/"
+    var guideSearchUrl = "https://cosie.lepida.it/backoffice/newssearch"
+    
+    var username = "annamaria.davoli@ausl.re.it"
+    var psw = "AS2rROFo"
+
+    var category = "Tutti a tavola"
+
+    $include tables
+
+    async-function start
+
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless true
+
+        const page
+            await
+                _ browser.newPage
+
+        login( page )
+
+        $include category
+
+        _ file.write
+            _ path.join
+                @ __dirname
+                @ "extracted"
+                @ category + '.json'
+            _ stringify
+                @ evaluationResult.dataList
+                @ null
+                @ 4
+
+        _ browser.close()
+
+    + (async function() { await start(); console.log('DONE');}())                

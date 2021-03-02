@@ -1,0 +1,21 @@
+module
+    kind es6
+
+    $
+        var md = {
+            startPage: 'localPage',
+            startUrl: 'http://localhost:3014/ittf/anna/beba_images.html.ittf',
+        }
+
+    common/start(&md)
+
+        common/pageEvaluation(localPage)
+            $append documentResults
+                [ images
+
+            const images = document.querySelectorAll(".upl_img")
+            foreach img in images
+                _ documentResults.images.push
+                    {
+                        @ src img.src
+                        @ title img.title

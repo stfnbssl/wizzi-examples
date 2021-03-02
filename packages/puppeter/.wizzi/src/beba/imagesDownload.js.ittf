@@ -1,0 +1,43 @@
+module
+    kind es6
+
+    $
+        var md = {
+            startPage: 'backendPage',
+            startUrl: null,
+        }
+
+    $$ var category = "NpL-NpM"
+    $$ var category = "Tutti a tavola"
+    var category = "Famiglia"
+
+    common/start(&md)
+
+        const categoryDetails
+            _ file.readJSON
+                _ path.join
+                    @ __dirname
+                    @ "extracted"
+                    @ category + '.detail.json'
+
+        foreach item in categoryDetails.items
+            if item.images && item.images.length > 0
+                foreach image in item.images
+                    var viewSource
+                        await 
+                            _ backendPage.goto(image.src)
+                    _ fs.writeFile
+                        _ path.join
+                            @ "C:\\Users\\Stefano Bassoli\\Pictures\\Cosie\\Backend"
+                            @ image.title
+                        await 
+                            _ viewSource.buffer
+                        function 
+                            param err
+                            if err
+                                log err
+                                return 
+                            log "Image" + image.title + " saved!"
+
+
+

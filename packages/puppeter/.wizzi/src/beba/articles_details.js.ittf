@@ -1,0 +1,100 @@
+module
+    kind es6
+
+    # useful https://api.jquery.com/category/selectors/
+
+    $
+        var dollardollar = '$' + '$'
+
+    const fs = require('fs')
+    const path = require('path')
+    const puppeteer = require('puppeteer')
+    const stringify = require('json-stringify-safe') 
+    const wizziUtils = require('wizzi-utils')
+    const verify = wizziUtils.verify
+    const file = wizziUtils.file
+
+    var backendLoginUrl = "https://cosie.lepida.it/"
+    var username = "annamaria.davoli@ausl.re.it"
+    var psw = "AS2rROFo"
+
+    $$ var category = "Bambino"
+    $$ var category = "Tutti a tavola"
+    $$ var category = "NpL-NpM"
+    $$ var category = "Famiglia"
+    $$ var category = "Pediatra"
+    $$ var category = "Temi caldi"
+    var category = "Giochi-Movimento"
+
+    async-function start
+
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless true
+
+        const backEndPage
+            await
+                _ browser.newPage
+
+        const articlesLinks
+            _ file.readJSON
+                _ path.join
+                    @ __dirname
+                    @ "extracted"
+                    @ category + '.json'
+        
+        login( backEndPage )
+        
+        const extractedData
+            {
+                @ category category
+                [ items
+
+
+        foreach item in articlesLinks
+            if item.href.indexOf('remove') < 0
+                if i < 10000
+                    log "Goto", item.href
+                    await 
+                        _ backEndPage.goto(item.href)
+                    const itemData
+                        await
+                            _ extractFormData
+                                @ backEndPage
+                    set itemData.url = item.href
+                    set itemData.User = item.User
+                    set itemData.NewsOrGuida = item.NewsOrGuida
+
+                    common/pageEvaluation(backEndPage)
+                        $append documentResults
+                            [ images
+
+                        const images = document.querySelectorAll(".upl_img")
+                        foreach img in images
+                            _ documentResults.images.push
+                                {
+                                    @ src img.src
+                                    @ title img.title
+
+                    set itemData.images = pageEvaluationResults.images
+                    _ extractedData.items.push
+                        @ itemData
+
+        _ browser.close()
+
+        _ file.write
+            _ path.join
+                @ __dirname
+                @ "extracted"
+                @ category + '.detail.json'
+            _ stringify
+                @ extractedData
+                @ null
+                @ 4
+
+    + (async function() { await start(); console.log('DONE');}())         
+
+    $include tables
+    $include form-fields           

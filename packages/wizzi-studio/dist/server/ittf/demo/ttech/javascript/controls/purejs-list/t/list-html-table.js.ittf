@@ -1,0 +1,160 @@
+$group
+
+    function HtmlList_Table_getHtml
+        param __html
+        param list
+        
+        var temp_thead = []
+        _ HtmlList_Table_getHtml_thead
+            @ temp_thead
+            @ list.type
+
+        var temp_tbody = []
+        _ HtmlList_Table_getHtml_tbody
+            @ temp_tbody
+            @ list
+
+        if list.type.isEditAdd
+            var temp_tbody_edit_add = []
+            _ HtmlList_Table_getHtml_edit_add
+                @ temp_tbody_edit_add
+                @ list.type
+
+        div
+            class card card-2
+            div
+                class card-heading
+            div
+                class card-body
+                h2 {{ list.title }}
+                    class title
+            div
+                id {{ list.type.id }}
+                table
+                    thead {{ temp_thead.join('\n') }}
+                    tbody {{ temp_tbody.join('\n') }}
+                        class list
+                if list.type.isEditAdd
+                    table
+                        tbody {{ temp_tbody_edit_add.join('\n') }}
+
+    function HtmlList_Table_getHtml_thead
+        param __html
+        param type
+
+        foreach column_type in type.columns
+            _ HtmlList_Table_getHtml_th
+                @ __html
+                @ column_type
+
+        if type.hasSearch
+            th
+                @ colspan 2
+                input
+                    type text
+                    class search
+                    placeholder Search
+
+    function HtmlList_Table_getHtml_th
+        param __html
+        param column_type
+
+        th {{ column_type.label || column_type.id }}
+            class list-table-th sort
+            data-sort {{ column_type.id }}
+
+    function HtmlList_Table_getHtml_tbody
+        param __html
+        param list
+
+        foreach item in list.data.items
+            _ HtmlList_Table_getHtml_tr
+                @ __html
+                @ item
+                @ list.type
+
+    function HtmlList_Table_getHtml_tr
+        param __html
+        param data_item
+        param list_type
+
+        var temp = []
+        foreach column_type in list_type.columns
+            _ HtmlList_Table_getHtml_td
+                @ temp
+                @ data_item[column_type.id]
+                @ column_type
+
+        tr {{ temp.join('\n') }}
+            class list-table-td
+            td 
+                class edit
+                button Edit
+                    class edit-{{list_type.id}}-item-btn
+            td 
+                class remove
+                button Remove
+                    class remove-{{list_type.id}}-item-btn
+
+    function HtmlList_Table_getHtml_td
+        param __html
+        param value
+        param column_type
+
+        _ __html.push
+            @ '<td class="list-table-td ' + column_type.id + ' ' + (column_type.isKey ? 'td-hidden' : '') 
+                \b + '">' + value + '</td>'
+
+    function HtmlList_Table_getHtml_edit_add
+        param __html
+        param list_type
+
+        var first = true
+        foreach column_type in list_type.columns
+            if !!column_type.isKey == false
+                _ HtmlList_Table_getHtml_edit_add_td
+                    @ __html
+                    @ list_type
+                    @ column_type
+                    @ first
+                set first = false
+        td
+            class add
+            button Add
+                id add-{{list_type.id}}-btn
+        td
+            class edit
+            button Edit
+                id edit-{{list_type.id}}-btn
+
+    function HtmlList_Table_getHtml_edit_add_td
+        param __html
+        param list_type
+        param column_type
+        param first
+
+        var temp = []
+        if first
+            _ HtmlList_Table_getHtml_edit_add_key
+                @ temp
+                @ list_type
+        
+        td {{ temp.join('\n') }}
+            class list-table-edit-add-td {{ column_type.id }}
+            input
+                type text
+                id {{ column_type.id }}_field
+                placeholder {{ column_type.label }}
+
+    function HtmlList_Table_getHtml_edit_add_key
+        param __html
+        param list_type
+        
+        var keyId
+        foreach column_type in list_type.columns
+            if column_type.isKey
+                set keyId = column_type.id
+
+        input
+            type hidden
+            id {{ keyId }}_field

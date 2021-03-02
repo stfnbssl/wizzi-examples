@@ -1,0 +1,36 @@
+$group
+
+    function menuBarHtml
+        param __html
+        param menu_type
+
+        var temp = []
+        if menu_type.items
+            foreach item in menu_type.items
+                _ menuItemHtml
+                    @ temp
+                    @ item
+
+        ul {{ temp.join('\n') }}
+            class menu-ul-{{ menu_type.direction }}
+
+    function menuItemHtml
+        param __html
+        param item_type
+
+        var temp = []
+        if item_type.items
+            foreach item in item_type.items
+                _ menuItem
+                    @ temp
+                    @ item
+
+        if item_type.kind == 'sub'
+            ul {{ temp.join('\n') }}
+                class menu-ul-{{ item_type.direction }}
+        else
+            li 
+                class menu-li
+                div {{ temp.join('\n') }}
+                    class menu-li-div
+                    span {{ item_type.label }}

@@ -1,0 +1,43 @@
+module
+    kind react
+    const puppeteer = require('puppeteer')
+    const fs = require('fs')
+    
+    async-function run
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless false
+        const page
+            await 
+                _ browser.newPage
+        await 
+            _ page.setViewport
+                { 
+                    @ width 1200
+                    @ height 1200
+        await 
+            _ page.goto('${imagesPageUrl}')
+        const IMAGE_SELECTOR = '#tsf > div:nth-child(2) > div > div.logo > a > img'
+        let imageHref
+            await 
+                _ page.evaluate
+                    => 
+                        param sel
+                        return document.querySelector(sel).getAttribute('src').replace('/', '')
+                    @ IMAGE_SELECTOR
+        _ console.log("https://www.google.com/" + imageHref)
+        var viewSource
+            await 
+                _ page.goto("https://www.google.com/" + imageHref)
+        _ fs.writeFile
+            @ ".googles-20th-birthday-us-5142672481189888-s.png"
+            await 
+                _ viewSource.buffer
+            function 
+                param err
+                if err
+                    return console.log(err)
+                _ console.log("The file was saved!")
+        _ browser.close

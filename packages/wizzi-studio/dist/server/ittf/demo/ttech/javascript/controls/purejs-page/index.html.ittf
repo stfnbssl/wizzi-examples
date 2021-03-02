@@ -1,0 +1,9 @@
+h/std/empty_layout( Pure js page )
+
+    $append head-styles
+    
+    $append body-scripts
+        js https://code.jquery.com/jquery-3.5.1.min.js
+        js ./scripts.js.ittf
+        
+    # root

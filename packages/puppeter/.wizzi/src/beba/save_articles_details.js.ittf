@@ -1,0 +1,91 @@
+module
+    kind es6
+
+    # useful https://api.jquery.com/category/selectors/
+
+    $
+        var dollardollar = '$' + '$'
+
+    const fs = require('fs')
+    const path = require('path')
+    const puppeteer = require('puppeteer')
+    const stringify = require('json-stringify-safe') 
+    const wizziUtils = require('wizzi-utils')
+    const verify = wizziUtils.verify
+    const file = wizziUtils.file
+
+    var dataUrl = "http://localhost:3014/ittf/anna/beba_1.html.ittf"
+    var category = "Tutti a tavola"
+
+    async-function start
+
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless true
+
+        const page
+            await
+                _ browser.newPage
+        await 
+            _ page.goto(dataUrl)
+
+        const evaluationResult
+            await 
+                _ page.evaluate
+                    => 
+                        $include page_evaluation
+
+        log "evaluationResult", evaluationResult.length, evaluationResult
+
+        _ file.write
+            _ path.join
+                @ __dirname
+                @ "extracted"
+                @ category + '.json'
+            _ stringify
+                @ evaluationResult.dataList
+                @ null
+                @ 4
+
+        const extractedData
+            {
+                @ category category
+                [ items
+
+        const backEndPage
+            await
+                _ browser.newPage
+        
+        foreach item in evaluationResult.dataList
+            if item.href.indexOf('remove') < 0
+                if i < 2
+                    log "Goto", item.href
+                    await 
+                        _ backEndPage.goto(item.href)
+                    const itemData
+                        await
+                            _ extractFormData
+                                @ backEndPage
+                    set itemData.url = item.href
+                    set itemData.User = item.User
+                    _ extractedData.items.push
+                        @ itemData
+
+        _ browser.close()
+
+        _ file.write
+            _ path.join
+                @ __dirname
+                @ "extracted"
+                @ category + '.detail.json'
+            _ stringify
+                @ extractedData
+                @ null
+                @ 4
+
+    + (async function() { await start(); console.log('DONE');}())         
+
+    $include tables
+    $include form-fields           

@@ -15,24 +15,28 @@ $group
     # we are in the guide/news search page
     
     await 
-        _ page.type('select[name="categoria"', category)
+        _ page.select('select[name="categoria"]', IdByCat(category))
     
     await 
         _ page.click('#btn_cerca_mappe')
 
     const articles = await page.${dollardollar}('#risultati_ricerca a')
-
     log "articles", articles.length
 
-    const urls
+    const evaluationResult
         await 
             _ page.evaluate
                 => 
+                    $*
+                    # "#risultati_ricerca table tr"
+                    # "ul th:nth-child(8)"
                     _ Array.from
                         _ document.querySelectorAll('#risultati_ricerca a')
                         => 
                             param element
                             + element.href
+                    *$
+                    $include page_evaluation
 
-    log "urls", urls.length, urls
+    log "evaluationResult", evaluationResult.length, evaluationResult
 

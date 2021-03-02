@@ -1,0 +1,143 @@
+// 27/2/2021:13:15:15  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
+$.n(); // set the context state to NodeContext
+var $0 = {}; // the root node of the MTree buildup
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //71
+$.a($0, $1, 5);
+var $2 = { n: "body", v: "", r: 2, c: 5, s: "f1", u: "f1",  }; //72
+$.a($1, $2, 7);
+var $3 = { n: ".", v: "upl-img-zone upl-text-center", r: 3, c: 5, s: "f1", u: "f1",  }; //73
+$.a($1, $3, 9);
+var $4 = { n: "id", v: "upl-img-zone", r: 4, c: 9, s: "f1", u: "f1",  }; //74
+$.a($3, $4, 11);
+var $5 = { n: ".", v: "upl-img-drop", r: 5, c: 9, s: "f1", u: "f1",  }; //75
+$.a($3, $5, 13);
+var $6 = { n: "input", v: "", r: 6, c: 13, s: "f1", u: "f1",  }; //76
+$.a($5, $6, 15);
+var $7 = { n: "type", v: "file", r: 7, c: 17, s: "f1", u: "f1",  }; //77
+$.a($6, $7, 17);
+var $8 = { n: "name", v: "file[]", r: 8, c: 17, s: "f1", u: "f1",  }; //78
+$.a($6, $8, 19);
+var $9 = { n: "id", v: "file", r: 9, c: 17, s: "f1", u: "f1",  }; //79
+$.a($6, $9, 21);
+var $10 = { n: "multiple", v: "", r: 10, c: 17, s: "f1", u: "f1",  }; //80
+$.a($6, $10, 23);
+var $11 = { n: "title", v: "puoi selezionare più immagini contemporaneamente", r: 11, c: 17, s: "f1", u: "f1",  }; //81
+$.a($6, $11, 25);
+var $12 = { n: "br", v: "", r: 12, c: 9, s: "f1", u: "f1",  }; //82
+$.a($3, $12, 27);
+var $13 = { n: ".", v: "it-grid-list-wrapper it-image-label-grid", r: 13, c: 9, s: "f1", u: "f1",  }; //83
+$.a($3, $13, 29);
+var $14 = { n: ".", v: "grid-row", r: 14, c: 13, s: "f1", u: "f1",  }; //84
+$.a($13, $14, 31);
+var $15 = { n: ".", v: "col-6 col-lg-4", r: 15, c: 17, s: "f1", u: "f1",  }; //85
+$.a($14, $15, 33);
+var $16 = { n: "id", v: "img_254", r: 16, c: 21, s: "f1", u: "f1",  }; //86
+$.a($15, $16, 35);
+var $17 = { n: "input", v: "", r: 17, c: 21, s: "f1", u: "f1",  }; //87
+$.a($15, $17, 37);
+var $18 = { n: "type", v: "hidden", r: 18, c: 25, s: "f1", u: "f1",  }; //88
+$.a($17, $18, 39);
+var $19 = { n: "name", v: "file_img[]", r: 19, c: 25, s: "f1", u: "f1",  }; //89
+$.a($17, $19, 41);
+var $20 = { n: "id", v: "fileimg_254", r: 20, c: 25, s: "f1", u: "f1",  }; //90
+$.a($17, $20, 43);
+var $21 = { n: "value", v: "254", r: 21, c: 25, s: "f1", u: "f1",  }; //91
+$.a($17, $21, 45);
+var $22 = { n: ".", v: "it-grid-item-wrapper", r: 22, c: 21, s: "f1", u: "f1",  }; //92
+$.a($15, $22, 47);
+var $23 = { n: "id", v: "contenitore_img_254", r: 23, c: 25, s: "f1", u: "f1",  }; //93
+$.a($22, $23, 49);
+var $24 = { n: "span", v: "", r: 24, c: 25, s: "f1", u: "f1",  }; //94
+$.a($22, $24, 51);
+var $25 = { n: "style", v: "cursor:pointer;padding: 1px 8px;", r: 25, c: 29, s: "f1", u: "f1",  }; //95
+$.a($24, $25, 53);
+var $26 = { n: "class", v: "it-griditem-text-wrapper", r: 26, c: 29, s: "f1", u: "f1",  }; //96
+$.a($24, $26, 55);
+var $27 = { n: "id", v: "254", r: 27, c: 29, s: "f1", u: "f1",  }; //97
+$.a($24, $27, 57);
+var $28 = { n: "span", v: "", r: 28, c: 29, s: "f1", u: "f1",  }; //98
+$.a($24, $28, 59);
+var $29 = { n: "class", v: "it-griditem-text", r: 29, c: 33, s: "f1", u: "f1",  }; //99
+$.a($28, $29, 61);
+var $30 = { n: "svg", v: "", r: 30, c: 29, s: "f1", u: "f1",  }; //100
+$.a($24, $30, 63);
+var $31 = { n: "class", v: "icon", r: 31, c: 33, s: "f1", u: "f1",  }; //101
+$.a($30, $31, 65);
+var $32 = { n: "use", v: "", r: 32, c: 33, s: "f1", u: "f1",  }; //102
+$.a($30, $32, 67);
+var $33 = { n: "@", v: "xlink:href /bootstrap-italia/dist/svg/sprite.svg#it-close-circle", r: 33, c: 37, s: "f1", u: "f1",  }; //103
+$.a($32, $33, 69);
+var $34 = { n: ".", v: "img-responsive-wrapper", r: 34, c: 25, s: "f1", u: "f1",  }; //104
+$.a($22, $34, 71);
+var $35 = { n: ".", v: "contenitore_immagine", r: 35, c: 29, s: "f1", u: "f1",  }; //105
+$.a($34, $35, 73);
+var $36 = { n: "span", v: "", r: 36, c: 33, s: "f1", u: "f1",  }; //106
+$.a($35, $36, 75);
+var $37 = { n: "style", v: "display: inline-block; vertical-align: middle; line-height: normal;", r: 37, c: 37, s: "f1", u: "f1",  }; //107
+$.a($36, $37, 77);
+var $38 = { n: "img", v: "", r: 38, c: 37, s: "f1", u: "f1",  }; //108
+$.a($36, $38, 79);
+var $39 = { n: "class", v: "upl_img", r: 39, c: 41, s: "f1", u: "f1",  }; //109
+$.a($38, $39, 81);
+var $40 = { n: "src", v: "/image/upload/galleria/20201013093048_1_863.jpg", r: 40, c: 41, s: "f1", u: "f1",  }; //110
+$.a($38, $40, 83);
+var $41 = { n: "alt", v: "/image/upload/galleria/20201013093048_1_863.jpg", r: 41, c: 41, s: "f1", u: "f1",  }; //111
+$.a($38, $41, 85);
+var $42 = { n: "title", v: "3a_a fior di pelle_1mese.jpg", r: 42, c: 41, s: "f1", u: "f1",  }; //112
+$.a($38, $42, 87);
+var $43 = { n: ".", v: "col-6 col-lg-4", r: 43, c: 17, s: "f1", u: "f1",  }; //113
+$.a($14, $43, 89);
+var $44 = { n: "id", v: "img_376", r: 44, c: 21, s: "f1", u: "f1",  }; //114
+$.a($43, $44, 91);
+var $45 = { n: "input", v: "", r: 45, c: 21, s: "f1", u: "f1",  }; //115
+$.a($43, $45, 93);
+var $46 = { n: "type", v: "hidden", r: 46, c: 25, s: "f1", u: "f1",  }; //116
+$.a($45, $46, 95);
+var $47 = { n: "name", v: "file_img[]", r: 47, c: 25, s: "f1", u: "f1",  }; //117
+$.a($45, $47, 97);
+var $48 = { n: "id", v: "fileimg_376", r: 48, c: 25, s: "f1", u: "f1",  }; //118
+$.a($45, $48, 99);
+var $49 = { n: "value", v: "376", r: 49, c: 25, s: "f1", u: "f1",  }; //119
+$.a($45, $49, 101);
+var $50 = { n: ".", v: "it-grid-item-wrapper", r: 50, c: 21, s: "f1", u: "f1",  }; //120
+$.a($43, $50, 103);
+var $51 = { n: "id", v: "contenitore_img_376", r: 51, c: 25, s: "f1", u: "f1",  }; //121
+$.a($50, $51, 105);
+var $52 = { n: "span", v: "", r: 52, c: 25, s: "f1", u: "f1",  }; //122
+$.a($50, $52, 107);
+var $53 = { n: "style", v: "cursor:pointer;padding: 1px 8px;", r: 53, c: 29, s: "f1", u: "f1",  }; //123
+$.a($52, $53, 109);
+var $54 = { n: "class", v: "it-griditem-text-wrapper", r: 54, c: 29, s: "f1", u: "f1",  }; //124
+$.a($52, $54, 111);
+var $55 = { n: "id", v: "376", r: 55, c: 29, s: "f1", u: "f1",  }; //125
+$.a($52, $55, 113);
+var $56 = { n: "span", v: "", r: 56, c: 29, s: "f1", u: "f1",  }; //126
+$.a($52, $56, 115);
+var $57 = { n: "class", v: "it-griditem-text", r: 57, c: 33, s: "f1", u: "f1",  }; //127
+$.a($56, $57, 117);
+var $58 = { n: "svg", v: "", r: 58, c: 29, s: "f1", u: "f1",  }; //128
+$.a($52, $58, 119);
+var $59 = { n: "class", v: "icon", r: 59, c: 33, s: "f1", u: "f1",  }; //129
+$.a($58, $59, 121);
+var $60 = { n: "use", v: "", r: 60, c: 33, s: "f1", u: "f1",  }; //130
+$.a($58, $60, 123);
+var $61 = { n: "@", v: "xlink:href /bootstrap-italia/dist/svg/sprite.svg#it-close-circle", r: 61, c: 37, s: "f1", u: "f1",  }; //131
+$.a($60, $61, 125);
+var $62 = { n: ".", v: "img-responsive-wrapper", r: 62, c: 25, s: "f1", u: "f1",  }; //132
+$.a($50, $62, 127);
+var $63 = { n: ".", v: "contenitore_immagine", r: 63, c: 29, s: "f1", u: "f1",  }; //133
+$.a($62, $63, 129);
+var $64 = { n: "span", v: "", r: 64, c: 33, s: "f1", u: "f1",  }; //134
+$.a($63, $64, 131);
+var $65 = { n: "style", v: "display: inline-block; vertical-align: middle; line-height: normal;", r: 65, c: 37, s: "f1", u: "f1",  }; //135
+$.a($64, $65, 133);
+var $66 = { n: "img", v: "", r: 66, c: 37, s: "f1", u: "f1",  }; //136
+$.a($64, $66, 135);
+var $67 = { n: "class", v: "upl_img", r: 67, c: 41, s: "f1", u: "f1",  }; //137
+$.a($66, $67, 137);
+var $68 = { n: "src", v: "/image/upload/galleria/20201016143320_0_863.jpg", r: 68, c: 41, s: "f1", u: "f1",  }; //138
+$.a($66, $68, 139);
+var $69 = { n: "alt", v: "/image/upload/galleria/20201016143320_0_863.jpg", r: 69, c: 41, s: "f1", u: "f1",  }; //139
+$.a($66, $69, 141);
+var $70 = { n: "title", v: "z_logo NpL.jpg", r: 70, c: 41, s: "f1", u: "f1",  }; //140
+$.a($66, $70, 143);

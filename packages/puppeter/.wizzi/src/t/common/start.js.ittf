@@ -1,0 +1,38 @@
+$group
+    $params &md
+
+    # useful https://api.jquery.com/category/selectors/
+
+    $
+        var dollardollar = '$' + '$'
+
+    const fs = require('fs')
+    const path = require('path')
+    const puppeteer = require('puppeteer')
+    const stringify = require('json-stringify-safe') 
+    const wizziUtils = require('wizzi-utils')
+    const verify = wizziUtils.verify
+    const file = wizziUtils.file
+    $hook imports
+
+    async-function start
+
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless true
+
+        const ${md.startPage}
+            await
+                _ browser.newPage
+
+        $if md.startUrl
+            await 
+                _ ${md.startPage}.goto("${md.startUrl}")
+
+        $hook
+
+        _ browser.close()
+
+    + (async function() { await start(); console.log('DONE');}())

@@ -1,0 +1,69 @@
+$group
+    
+    try
+        var evaluationResult
+            {
+                [ dataList
+                [ messages
+
+        var risultati_ricerca_length
+            _ document.querySelector('select[name="risultati_ricerca_length"]')
+        
+        if risultati_ricerca_length
+            _ evaluationResult.messages.push
+                @ 'risultati_ricerca_length found'
+            set risultati_ricerca_length.value = 100
+
+        function getItem
+            var divRisultati = document.querySelectorAll(".dataTables_wrapper")
+            _ evaluationResult.messages.push
+                @ 'divRisultati ' + divRisultati.length
+            var trs = document.querySelectorAll("#risultati_ricerca tr")
+            _ evaluationResult.messages.push
+                @ 'trs ' + trs.length
+            
+            _ trs.forEach
+                function 
+                    param item
+                    param index
+                    var ths = item.querySelectorAll("th")
+                    # _ console.log('index ths', index, ths)
+                    var dataItem = {}
+                    _ ths.forEach
+                        function 
+                            param item2
+                            param index2
+                            var aNode = item2.querySelector("a")
+                            if aNode && !dataItem.href
+                                # _ console.log(index2, 'href', aNode.href)
+                                set dataItem.href = aNode.href
+                            var pNode = item2.querySelector("p")
+                            if pNode
+                                # _ console.log(index2, 'p.innerText', pNode.innerText)
+                                if index2 == 0
+                                    set dataItem.Titolo = pNode.innerText
+                                if index2 == 1
+                                    set dataItem.NewsOrGuida = pNode.innerText
+                                if index2 == 2
+                                    set dataItem.Categoria = pNode.innerText
+                                if index2 == 7
+                                    set dataItem.User = pNode.innerText
+                    if dataItem.href
+                        log 'dataItem', dataItem
+                        _ evaluationResult.dataList.push(dataItem)
+        _ getItem
+
+        # var linkNextPage = document.querySelectorAll("#risultati_ricerca_paginate a.next")
+        var linkNextPage = document.querySelectorAll(".dataTables_paginate a.next")
+        _ evaluationResult.messages.push
+            @ 'linkNextPage ' + linkNextPage.length
+
+        if linkNextPage.length > 0
+            _ linkNextPage[0].click
+            _ getItem
+
+        # _ console.log('dataList', dataList)
+        return evaluationResult 
+    catch ex         
+        _ evaluationResult.messages.push
+            @ "Error: " + ex.message

@@ -1,0 +1,69 @@
+﻿module
+    kind jsfile
+
+    $
+        var md = {
+        }
+
+    const pageType
+        {
+            @ kind "app"
+            @ reset "default"
+            @ elementId "page_container"
+            [ items
+                {
+                    @ kind "header"
+                    @ height 40
+                    [ items
+                        {
+                            @ kind "menu"
+                            @ direction "row"
+                            [ items
+                                {
+                                    @ label "Wizzi"
+                                {
+                                    @ label "Blog"
+                                {
+                                    @ label "Github"
+                {
+                    @ kind "flex"
+                    @ direction "row"
+                    [ items
+                        {
+                            @ kind "panel"
+                            @ id "list-container"
+                        {
+                            @ kind "panel"
+                            @ id "form-container"
+                {
+                    @ kind "footer"
+                    [ items
+
+    const jq2
+        _ jQuery.noConflict
+    
+    _ jq2
+        function 
+            param $
+            
+            _ inject_page_styles
+            _ inject_menu_styles
+
+            set document.getElementById("root").innerHTML
+                _ getContainer
+                    @ pageType
+
+    html_f getContainer
+        var temp = []
+        _ pageLayout
+            @ temp
+            @ ctx
+
+        < div {{ temp.join('') }}
+            id {{ ctx.elementId }}
+
+    $include inject
+    $include page-styles
+    $include menu-styles
+    $include page-layout
+    $include menu-bar

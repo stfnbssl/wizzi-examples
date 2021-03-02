@@ -77,6 +77,7 @@ $group
             catch ex
                 set result[field.id] = ex.message
         set result.Titolo = TitById(result["NWS_FK_TNW_ID"])
+        set result.sort = SortByTitId(result["NWS_FK_TNW_ID"])
         set result.Categoria = CatById(result["NWS_FK_TCL_ID"])
         log 'extractFormData.result', result
         return result

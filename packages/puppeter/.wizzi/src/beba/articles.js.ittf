@@ -1,0 +1,106 @@
+module
+    kind es6
+
+    # useful https://api.jquery.com/category/selectors/
+
+    $
+        var dollardollar = '$' + '$'
+
+    const fs = require('fs')
+    const path = require('path')
+    const puppeteer = require('puppeteer')
+    const stringify = require('json-stringify-safe') 
+    const wizziUtils = require('wizzi-utils')
+    const verify = wizziUtils.verify
+    const file = wizziUtils.file
+
+    var localUrl = "http://localhost:3014/"
+    var dataUrl = "http://localhost:3014/ittf/anna/beba_1.html.ittf"
+    $$ var category = "Tutti a tavola"
+    var category = "NpL-NpM"
+
+    var backendLoginUrl = "https://cosie.lepida.it/"
+    var username = "annamaria.davoli@ausl.re.it"
+    var psw = "AS2rROFo"
+
+    async-function start
+
+        const browser
+            await 
+                _ puppeteer.launch
+                    { 
+                        @ headless true
+
+        const page
+            await
+                _ browser.newPage
+        await 
+            _ page.goto(dataUrl)
+
+        const evaluationResult
+            await 
+                _ page.evaluate
+                    => 
+                        $include page_evaluation
+
+        log "evaluationResult", evaluationResult.length, evaluationResult
+
+        foreach item in evaluationResult.dataList
+            set item.href = verify.replaceAll(item.href, localUrl, backendLoginUrl)
+
+        _ file.write
+            _ path.join
+                @ __dirname
+                @ "extracted"
+                @ category + '.json'
+            _ stringify
+                @ evaluationResult.dataList
+                @ null
+                @ 4
+
+        const extractedData
+            {
+                @ category category
+                [ items
+
+        const backEndPage
+            await
+                _ browser.newPage
+
+        login( backEndPage )
+        
+        foreach item in evaluationResult.dataList
+            if item.href.indexOf('remove') < 0
+                if i < 10000
+                    log "Goto", item.href
+                    await 
+                        _ backEndPage.goto(item.href)
+                    await
+                        _ page.setViewport({ width: 1280, height: 800 })
+                    await
+                        _ page.screenshot({ path: 'images/item_' + i + '_.png', fullPage: true })
+                    const itemData
+                        await
+                            _ extractFormData
+                                @ backEndPage
+                    set itemData.url = item.href
+                    set itemData.User = item.User
+                    _ extractedData.items.push
+                        @ itemData
+
+        _ browser.close()
+
+        _ file.write
+            _ path.join
+                @ __dirname
+                @ "extracted"
+                @ category + '.detail.json'
+            _ stringify
+                @ extractedData
+                @ null
+                @ 4
+
+    + (async function() { await start(); console.log('DONE');}())         
+
+    $include tables
+    $include form-fields           

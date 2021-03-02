@@ -1,0 +1,87 @@
+// 26/2/2021:23:8:33  by C:\My\wizzi\stfnbssl\wizzi-examples\packages\wizzi-studio\dist\node_modules\wizzi\node_modules\wizzi-mtree\lib\loader\evaluator.js
+$.n(); // set the context state to NodeContext
+var $0 = {}; // the root node of the MTree buildup
+var $1 = { n: "html", v: "", r: 1, c: 1, s: "f1", u: "f1",  }; //43
+$.a($0, $1, 5);
+var $2 = { n: "body", v: "", r: 2, c: 5, s: "f1", u: "f1",  }; //44
+$.a($1, $2, 7);
+var $3 = { n: "script", v: "", r: 4, c: 5, s: "f1", u: "f1",  }; //45
+$.a($1, $3, 9);
+var $4 = { n: "function", v: "isWhitespace", r: 6, c: 9, s: "f1", u: "f1",  }; //46
+$.a($3, $4, 11);
+var $5 = { n: "param", v: "ch", r: 7, c: 13, s: "f1", u: "f1",  }; //47
+$.a($4, $5, 13);
+var $6 = { n: "return", v: "ch == ' ' || ch == '\\t' || ch == '\\r ' || ch == '\\n'", r: 8, c: 13, s: "f1", u: "f1",  }; //48
+$.a($4, $6, 15);
+var $7 = { n: "function", v: "cleanText", r: 11, c: 9, s: "f1", u: "f1",  }; //49
+$.a($3, $7, 17);
+var $8 = { n: "param", v: "txt", r: 12, c: 13, s: "f1", u: "f1",  }; //50
+$.a($7, $8, 19);
+var $9 = { n: "var", v: "state", r: 13, c: 13, s: "f1", u: "f1",  }; //51
+$.a($7, $9, 21);
+var $10 = { n: "{", v: "", r: 14, c: 17, s: "f1", u: "f1",  }; //52
+$.a($9, $10, 23);
+var $11 = { n: "@", v: "tagOpen false", r: 15, c: 21, s: "f1", u: "f1",  }; //53
+$.a($10, $11, 25);
+var $12 = { n: "@", v: "punct false", r: 16, c: 21, s: "f1", u: "f1",  }; //54
+$.a($10, $12, 27);
+var $13 = { n: "[", v: "token", r: 17, c: 21, s: "f1", u: "f1",  }; //55
+$.a($10, $13, 29);
+var $14 = { n: "function", v: "cleanText", r: 19, c: 9, s: "f1", u: "f1",  }; //56
+$.a($3, $14, 31);
+var $15 = { n: "var", v: "ch", r: 20, c: 13, s: "f1", u: "f1",  }; //57
+$.a($14, $15, 33);
+var $16 = { n: "var", v: "len = txt.length - 1", r: 21, c: 13, s: "f1", u: "f1",  }; //58
+$.a($14, $16, 35);
+var $17 = { n: "var", v: "buf = []", r: 22, c: 13, s: "f1", u: "f1",  }; //59
+$.a($14, $17, 37);
+var $18 = { n: "for", v: "var i=0; i<len; i++", r: 24, c: 13, s: "f1", u: "f1",  }; //60
+$.a($14, $18, 39);
+var $19 = { n: "set", v: "ch = txt[i]", r: 25, c: 17, s: "f1", u: "f1",  }; //61
+$.a($18, $19, 41);
+var $20 = { n: "if", v: "isWhitespace(ch)", r: 26, c: 17, s: "f1", u: "f1",  }; //62
+$.a($18, $20, 43);
+var $21 = { n: "if", v: "state.tagOpen", r: 27, c: 21, s: "f1", u: "f1",  }; //63
+$.a($20, $21, 45);
+var $22 = { n: "#", v: "a tag with content, state.token contains tag name", r: 28, c: 25, s: "f1", u: "f1",  }; //64
+$.a($21, $22, 47);
+var $23 = { n: "if", v: "state.punct", r: 29, c: 21, s: "f1", u: "f1",  }; //65
+$.a($20, $23, 49);
+var $24 = { n: "_", v: "buf.push(state.token.join(''))", r: 30, c: 25, s: "f1", u: "f1",  }; //66
+$.a($23, $24, 51);
+var $25 = { n: "set", v: "state.token.length = 0", r: 31, c: 25, s: "f1", u: "f1",  }; //67
+$.a($23, $25, 53);
+var $26 = { n: "set", v: "state.punct = false", r: 32, c: 25, s: "f1", u: "f1",  }; //68
+$.a($23, $26, 55);
+var $27 = { n: "if", v: "state.punct", r: 33, c: 17, s: "f1", u: "f1",  }; //69
+$.a($18, $27, 57);
+var $28 = { n: "_", v: "buf.push(state.token.join(''))", r: 34, c: 21, s: "f1", u: "f1",  }; //70
+$.a($27, $28, 59);
+var $29 = { n: "_", v: "buf.push(' ')", r: 35, c: 21, s: "f1", u: "f1",  }; //71
+$.a($27, $29, 61);
+var $30 = { n: "set", v: "state.punct = false", r: 36, c: 21, s: "f1", u: "f1",  }; //72
+$.a($27, $30, 63);
+var $31 = { n: "if", v: "\".,;!?:\".indexOf(ch) > -1", r: 37, c: 17, s: "f1", u: "f1",  }; //73
+$.a($18, $31, 65);
+var $32 = { n: "set", v: "state.punct = true", r: 38, c: 21, s: "f1", u: "f1",  }; //74
+$.a($31, $32, 67);
+var $33 = { n: "_", v: "state.token.push(ch)", r: 39, c: 21, s: "f1", u: "f1",  }; //75
+$.a($31, $33, 69);
+var $34 = { n: "else", v: "", r: 48, c: 17, s: "f1", u: "f1",  }; //76
+$.a($18, $34, 71);
+var $35 = { n: "_", v: "buf.push(ch)", r: 49, c: 21, s: "f1", u: "f1",  }; //77
+$.a($34, $35, 73);
+var $36 = { n: "var", v: "txt1 = 'aa <span style=\"xx\">bb</span> cc'", r: 51, c: 9, s: "f1", u: "f1",  }; //78
+$.a($3, $36, 75);
+var $37 = { n: "var", v: "txt = 'aa b.cc dd'", r: 52, c: 9, s: "f1", u: "f1",  }; //79
+$.a($3, $37, 77);
+var $38 = { n: "var", v: "result", r: 53, c: 9, s: "f1", u: "f1",  }; //80
+$.a($3, $38, 79);
+var $39 = { n: "_", v: "cleanText", r: 54, c: 13, s: "f1", u: "f1",  }; //81
+$.a($38, $39, 81);
+var $40 = { n: "@", v: "txt", r: 55, c: 17, s: "f1", u: "f1",  }; //82
+$.a($39, $40, 83);
+var $41 = { n: "log", v: "'txt', txt", r: 56, c: 9, s: "f1", u: "f1",  }; //83
+$.a($3, $41, 85);
+var $42 = { n: "log", v: "'result', result", r: 57, c: 9, s: "f1", u: "f1",  }; //84
+$.a($3, $42, 87);

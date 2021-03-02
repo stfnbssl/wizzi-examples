@@ -9,12 +9,15 @@
         {
             @ id "postList"
             @ title "Posts"
+            @ kind "table"
+            @ isEditAdd true
+            @ hasSearch true
             [ columns
                 {
                     @ id "id"
                     @ label "id"
                     @ type "text"
-                    @ key true
+                    @ isKey true
                 {
                     @ id "author"
                     @ label "author"
@@ -23,6 +26,9 @@
                     @ id "title"
                     @ label "title"
                     @ type "text"
+            @ onRemove console.log
+            @ onAdd console.log
+            @ onUpdate console.log
 
     const listData
         {
@@ -66,26 +72,42 @@
                         function
                             param id
                             log 'Request delete', id
-            
-            _ startList
-                @ $
-                {
-                    @ type listType
-                    @ data listData
+
+            _ setTimeout
+                function
+                    _ startList
+                        @ $
+                        {
+                            @ type listType
+                            @ data listData
+                @ 0
 
     html_f getContainer
-        var temp = []    
+        var temp_a = []    
         _ getListHtml
-            @ temp
+            @ temp_a
             {
                 @ type listType
                 @ data listData
+
+        var temp_b = []    
+        _ HtmlList_Table_getHtml
+            @ temp_b
+            {
+                @ type listType
+                @ data listData
+
         < div
             id container
             class page-wrapper bg-red p-t-30 p-b-100 font-robo
+            $*
             div
-                id content
-                + {{ temp.join('') }}
+                id content_a
+                + {{ temp_a.join('') }}
+            *$
+            div
+                id content_b
+                + {{ temp_b.join('') }}
             div
                 id footer
 
@@ -93,4 +115,5 @@
     $include page-styles
     $include list-styles
     $include list-html
+    $include list-html-table
     $include list-start
